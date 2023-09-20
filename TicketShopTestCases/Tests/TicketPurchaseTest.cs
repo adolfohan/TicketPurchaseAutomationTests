@@ -38,4 +38,7 @@ public class TicketPurchaseTest
         ticketPurchaseSteps.ClickThContinuarButton();
         ticketPurchaseSteps.DownloadTheTickets();
     }
+    
+    [TearDown]
+    public void TearDown() => driver.Quit();
 }

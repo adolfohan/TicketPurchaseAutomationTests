@@ -53,16 +53,16 @@ public class TicketPurchaseSteps
             ticketPurchasePage.SelectSession();
         else if (ticketPurchasePage.HaveMoreSessions()) ticketPurchasePage.SelectMoreSessions(); 
         
-        else
-        {
-           ticketPurchasePage.CompletePersonalInformation("Adolfo", "Han", "33511838A", "ahan@experticket.com", "123456789");
-        }
+        // else
+        // {
+        //    ticketPurchasePage.CompletePersonalInformation("Adolfo", "Han", "33511838A", "ahan@experticket.com", "123456789");
+        // }
     }
 
     [When(@"completes personal information")]
     public void CompletePersonalInformation()
     {
-        ticketPurchasePage.CompletePersonalInformation("Adolfo", "Han", "33511838A", "ahan@experticket.com",
+        ticketPurchasePage.CompletePersonalInformation("Adolfo", "Test", "33511838A", "ahan@test.com",
             "123456789");
     }
 
