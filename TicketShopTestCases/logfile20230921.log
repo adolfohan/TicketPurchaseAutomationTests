@@ -1,0 +1,24 @@
+2023-09-21 10:21:53.819 +02:00 [INF] Navigated to the URL.
+2023-09-21 10:21:54.661 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-21 10:21:54.708 +02:00 [ERR] El test falló en el paso: 'Paso N' debido a un error: element not interactable
+  (Session info: chrome=117.0.5938.89)
+2023-09-21 10:30:26.852 +02:00 [INF] Navigated to the URL.
+2023-09-21 10:30:27.237 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-21 10:30:27.282 +02:00 [ERR] The test failed at step: 'Step SelectDesiredTicket' due to an error: element not interactable
+  (Session info: chrome=117.0.5938.89)
+2023-09-21 10:30:46.167 +02:00 [INF] Navigated to the URL.
+2023-09-21 10:30:47.088 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-21 10:30:47.169 +02:00 [INF] Selected the desired ticket.
+2023-09-21 10:30:47.217 +02:00 [INF] Confirmed the date.
+2023-09-21 10:30:47.258 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-21 10:30:57.466 +02:00 [INF] Completed 'Have Sessions' step.
+2023-09-21 10:31:07.599 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-21 10:31:17.734 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-21 10:31:27.879 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-21 10:31:37.995 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-21 10:31:48.106 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-21 10:31:58.203 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-21 10:31:58.210 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-21 10:31:58.216 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-21 10:32:08.357 +02:00 [INF] Downloaded the tickets.
+2023-09-21 10:32:08.357 +02:00 [INF] TestTicketPurchase completed successfully.

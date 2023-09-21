@@ -122,3 +122,7 @@ C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\obj\Debug\net7.0\refi
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\obj\Debug\net7.0\TicketShopTestCases.pdb
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\obj\Debug\net7.0\TicketShopTestCases.genruntimeconfig.cache
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\obj\Debug\net7.0\ref\TicketShopTestCases.dll
+C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\log4net.dll
+C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Serilog.dll
+C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Serilog.Sinks.File.dll
