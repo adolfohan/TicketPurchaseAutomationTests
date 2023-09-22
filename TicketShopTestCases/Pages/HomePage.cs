@@ -51,7 +51,7 @@ public class HomePage
             var jsExecutor = (IJavaScriptExecutor)driver;
             jsExecutor.ExecuteScript("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});",
                 buttonToClick);
-            //Thread.Sleep(1000);
+
             wait.Until(ExpectedConditions.ElementToBeClickable(buttonToClick));
 
             buttonToClick.SendKeys(Keys.Enter);

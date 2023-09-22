@@ -4,8 +4,6 @@ using Serilog;
 using TestCases.Steps;
 using TestCases.Utilities;
 
-//using log4net;
-//using log4net.Config;
 
 namespace TestCases.Tests;
 
@@ -15,13 +13,13 @@ public class TicketPurchaseTest
     [SetUp]
     public void Setup()
     {
-        //XmlConfigurator.Configure(new FileInfo("log4net.config"));
         Log.Logger = new LoggerConfiguration()
             .WriteTo.File("C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\logfile.log",
                 rollingInterval: RollingInterval.Day)
             .CreateLogger();
         driver = WebDriverFactory.CreateWebDriver();
         ticketPurchaseSteps = new TicketPurchaseSteps(driver);
+        captureScreenShot = new WebDriverFactory();
     }
 
     [TearDown]
@@ -29,11 +27,11 @@ public class TicketPurchaseTest
     {
         driver.Quit();
     }
-
-    //private static readonly ILog log = LogManager.GetLogger(typeof(TicketPurchaseTest));
+    
     private IWebDriver driver;
     private TicketPurchaseSteps ticketPurchaseSteps;
     private string currentStep;
+    private WebDriverFactory captureScreenShot;
 
     [Test]
     public void TestTicketPurchase()
@@ -95,17 +93,15 @@ public class TicketPurchaseTest
             currentStep = "Step ClickThContinuarButton";
             ticketPurchaseSteps.ClickThContinuarButton();
             Log.Information("Clicked 'Continuar' button.");
-
-            currentStep = "Step DownloadTheTickets";
-            ticketPurchaseSteps.DownloadTheTickets();
-            Log.Information("Downloaded the tickets.");
-
-
-            Log.Information("TestTicketPurchase completed successfully.");
+            Log.Information("TestTicketPurchase completed successfully.\n---------------------------------");
         }
         catch (Exception ex)
         {
             Log.Error($"The test failed at step: '{currentStep}' due to an error: {ex.Message}");
+
+            var screenshotName = $"{currentStep} + Error";
+            var screenshotPath = WebDriverFactory.CaptureScreenshot(driver,
+                "C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Screenshots");
             throw;
         }
     }

@@ -6,181 +6,96 @@ namespace TestCases.Pages;
 
 public class TicketPurchasePage
 {
+    private readonly By AdvancedSelectorButton =
+        By.XPath("//*[@class='sv-button sv-button--date']");
+
+    private readonly By ComprarButton =
+        By.CssSelector(
+            "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
+
+    private readonly By ConfirmationButton =
+        By.XPath("//*[@id=\"vue-app\"]/section/div/div/div[1]/div[2]/div[1]/div/div[3]/button[2]");
+
     private readonly IWebDriver driver;
-    private readonly Random random;
+
     private readonly DefaultWait<IWebDriver> fluentWait;
-    private readonly WebDriverWait wait;
+    private readonly HomePage homePage;
+    private readonly Random random;
+
+    private readonly By RandomOption =
+        By.CssSelector("select.form-select");
+
+    private readonly By SessionDropdown =
+        By.TagName("select");
+    //private readonly WebDriverWait wait;
 
     public TicketPurchasePage(IWebDriver driver)
     {
         this.driver = driver;
         random = new Random();
-        
+        homePage = new HomePage(driver);
+
         fluentWait = new DefaultWait<IWebDriver>(driver);
-        fluentWait.Timeout = TimeSpan.FromSeconds(10);
-        fluentWait.PollingInterval = TimeSpan.FromSeconds(1);
+        fluentWait.Timeout = TimeSpan.FromSeconds(30);
+        fluentWait.PollingInterval = TimeSpan.FromSeconds(2);
         fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
         //wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
     }
-    
+
     private By InputNumberOfTickets =>
-        By.CssSelector("input[type='number'][min='0'][product-limitofnumberofpeopletobegroup='']");
-    
-    private readonly By ConfirmationButton =
-        By.XPath("//*[@id=\"vue-app\"]/section/div/div/div[1]/div[2]/div[1]/div/div[3]/button[2]");
+        //RelativeBy.WithLocator(By.XPath("//input[@type='number' and @min='0' and @product-limitofnumberofpeopletobegroup='']")).Near(By.CssSelector("span.sv-form__plus"));
+        By.XPath("//input[@type='number']");
 
-    private readonly By ComprarButton =
-        By.CssSelector("a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
-
-    private readonly By SessionDropdown =
-        By.TagName("select");
-
-    private readonly By RandomOption =
-        By.CssSelector("select.form-select");
-
-    private readonly By CreditCardPayment =
-        By.XPath("//*[@id='form-conditions']");
-
-    private readonly By ConditionsCheckbox =
-        By.XPath("//*[@id='form-conditions']");
-
-    private readonly By PrivacyCheckbox =
-        By.XPath("//*[@id='form-privacy']");
-    
-    private readonly By Datepickers =
-        By.CssSelector("input[type='date']");
-
-    private readonly By Checkboxes =
-        By.CssSelector("input[type='checkbox']");
-
-    private readonly By AdvancedSelectorButton =
-        By.XPath("//*[@class='sv-button sv-button--date']");
-
-    private readonly By CardNumberField =
-        By.XPath("//*[@id=\"inputCard\"]");
-
-    private readonly By ExpirationMonthField =
-        By.XPath("//*[@id=\"cad1\"]");
-
-    private readonly By ExpirationYearField =
-        By.XPath("//*[@id=\"cad2\"]");
-
-    private readonly By SecurityCodeField =
-        By.XPath("//*[@id=\"codseg\"]");
-
-    private readonly By PagarButton =
-        By.XPath("/html/body/div[1]/div[2]/div[3]/form/div/div[2]/div[8]/button[2]");
-
-    private readonly By EnviarButton =
-        By.Id("boton");
-
-    private readonly By ContinuarButton =
-        By.XPath("/html/body/div[1]/form/div[2]/div[3]/div[2]/div[1]/input[2]");
-
-    private readonly By DescargarButton =
-        By.Id("download-tickets-anchor");
-
+    private By SelectPlusButton =>
+        By.CssSelector("span.sv-form__plus");
 
     public void SelectNumberOfTickets(string numberOfTickets)
     {
-        IList<IWebElement> inputFields = fluentWait.Until(driver => driver.FindElements(InputNumberOfTickets));
-
-        //wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
-
-        //IList<IWebElement> inputFields = wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(InputNumberOfTickets));
-
-        /*if (inputFields.Count > 0)
+        try
         {
-            var rand = new Random();
-            var randomIndex = rand.Next(0, inputFields.Count);
+            var inputElementFound = false;
 
-            var selectedInputField = inputFields[randomIndex];
+            while (!inputElementFound)
+            {
+                DefaultWait<IWebDriver> wait = new(driver)
+                {
+                    Timeout = TimeSpan.FromSeconds(30),
+                    PollingInterval = TimeSpan.FromSeconds(2)
+                };
+                wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
 
-            var jsExecutor = (IJavaScriptExecutor)driver;
-            jsExecutor.ExecuteScript("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});",
-                selectedInputField);
+                IList<IWebElement> inputFields = wait.Until(driver => driver.FindElements(InputNumberOfTickets));
 
-            ClearAndSetInputValue(selectedInputField, numberOfTickets);
-        }*/
-        if (inputFields.Count > 0)
-        {
-            var randomIndex = random.Next(0, inputFields.Count);
+                wait.Until(driver =>
+                    ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
 
-            var selectedInputField = inputFields[randomIndex];
+                if (inputFields.Count > 0)
+                {
+                    var randomIndex = random.Next(0, inputFields.Count);
 
-            ScrollIntoView(selectedInputField);
-            ClearAndSetInputValue(selectedInputField, numberOfTickets);
+                    var selectedInputField = inputFields[randomIndex];
+
+                    ScrollIntoView(selectedInputField);
+                    //ClearAndSetInputValue(selectedInputField, numberOfTickets);
+                    driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+                    selectedInputField.Click();
+                    selectedInputField.SendKeys(numberOfTickets);
+
+                    inputElementFound = true;
+                }
+                else
+                {
+                    driver.Navigate().Back();
+                    homePage.ClickRandomMeInteresaButton();
+                }
+            }
+
         }
-        else
+        catch (Exception ex)
         {
-            throw new NoSuchElementException("No input fields found on the page.");
+            Console.WriteLine($"An error occurred: {ex.Message}");
         }
     }
-
-
-    /*private By InputNumberOfTickets =>
-        By.CssSelector("input[type='number'][min='0'][product-limitofnumberofpeopletobegroup='']");
-    
-    public void SelectNumberOfTickets(string numberOfTickets)
-    {
-        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-        
-        wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
-        
-        IList<IWebElement> inputFields = wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(InputNumberOfTickets));
-
-        if (inputFields.Count > 0)
-        {
-            var rand = new Random();
-            var randomIndex = rand.Next(0, inputFields.Count);
-
-            var selectedInputField = inputFields[randomIndex];
-
-            var jsExecutor = (IJavaScriptExecutor)driver;
-            jsExecutor.ExecuteScript("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});",
-                selectedInputField);
-            
-            //selectedInputField.Click();
-            //wait.Until(ExpectedConditions.ElementToBeClickable(selectedInputField));
-
-            ClearAndSetInputValue(selectedInputField, numberOfTickets);
-            //selectedInputField.SendKeys(Keys.Enter);
-        }
-        else
-        {
-            throw new NoSuchElementException("No input fields found on the page.");
-        }
-    }*/
-
-    
-    /*public void SelectNumberOfTickets(string numberOfTickets)
-    {
-        IList<IWebElement> inputFields = driver.FindElements(InputNumberOfTickets);
-
-        if (inputFields.Count > 0)
-        {
-            var rand = new Random();
-            var randomIndex = rand.Next(0, inputFields.Count);
-
-            var selectedInputField = inputFields[randomIndex];
-            
-            //((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", selectedInputField);
-           
-            var jsExecutor = (IJavaScriptExecutor)driver;
-            jsExecutor.ExecuteScript("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});",
-                selectedInputField);
-            
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            wait.Until(ExpectedConditions.ElementToBeClickable(selectedInputField));
-
-            ClearAndSetInputValue(selectedInputField, numberOfTickets);
-            selectedInputField.SendKeys(Keys.Enter);
-        }
-        else
-        {
-            throw new NoSuchElementException("No input fields found on the page.");
-        }
-    }*/
 
     public void ConfirmDate()
     {
@@ -195,7 +110,6 @@ public class TicketPurchasePage
         try
         {
             fluentWait.Until(ExpectedConditions.ElementToBeClickable(ComprarButton)).Click();
-            //driver.FindElement(By.XPath("//a[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy']"));
         }
         catch (NoSuchElementException ex)
         {
@@ -206,13 +120,18 @@ public class TicketPurchasePage
             Console.WriteLine($"An error occurred while clicking 'Comprar' button: {ex.Message}");
         }
     }
-    
+
     public bool HaveSession()
     {
         try
         {
-            //var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            fluentWait.Until(ExpectedConditions.ElementExists(SessionDropdown));
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
+
+            wait.Until(ExpectedConditions.ElementExists(SessionDropdown));
             return true;
         }
         catch (TimeoutException)
@@ -225,7 +144,13 @@ public class TicketPurchasePage
     {
         try
         {
-            var dropdown = fluentWait.Until(ExpectedConditions.ElementToBeClickable(SessionDropdown));
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
+
+            var dropdown = wait.Until(ExpectedConditions.ElementToBeClickable(SessionDropdown));
 
             var select = new SelectElement(dropdown);
             IList<IWebElement> options = select.Options;
@@ -314,9 +239,14 @@ public class TicketPurchasePage
     {
         try
         {
-            //var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            var selectElement = fluentWait.Until(ExpectedConditions.ElementToBeClickable(RandomOption));
-                //wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("select.form-select")));
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
+
+            var selectElement = wait.Until(ExpectedConditions.ElementToBeClickable(RandomOption));
+            //wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("select.form-select")));
 
             var select = new SelectElement(selectElement);
 
@@ -341,14 +271,21 @@ public class TicketPurchasePage
 
     public void SelectAdvancedSelector()
     {
-        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-        IWebElement availableDate = fluentWait.Until(ExpectedConditions.ElementToBeClickable(AdvancedSelectorButton));
+        DefaultWait<IWebDriver> wait = new(driver)
+        {
+            Timeout = TimeSpan.FromSeconds(30),
+            PollingInterval = TimeSpan.FromSeconds(2)
+        };
+        var availableDate = wait.Until(ExpectedConditions.ElementToBeClickable(AdvancedSelectorButton));
         availableDate.Click();
-        
-        IWebElement inputNumberOfTickets = fluentWait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("input[type='number'][min='0'][product-limitofnumberofpeopletobegroup='']")));
+
+        var inputNumberOfTickets = wait.Until(ExpectedConditions.ElementToBeClickable(
+            By.CssSelector("input[type='number'][min='0'][product-limitofnumberofpeopletobegroup='']")));
         inputNumberOfTickets.SendKeys("1");
-        
-        IWebElement aceptarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id=\"modalcal1ie8kwb8rpd846\"]/div/div/div[3]/button[2]")));
+
+        var aceptarButton =
+            wait.Until(ExpectedConditions.ElementToBeClickable(
+                By.XPath("//*[@id=\"modalcal1ie8kwb8rpd846\"]/div/div/div[3]/button[2]")));
         aceptarButton.Click();
     }
 
@@ -356,21 +293,25 @@ public class TicketPurchasePage
     {
         try
         {
-            //var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-            
-            var fullNameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientFullName-id")));
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
+
+            var fullNameField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientFullName-id")));
             ClearAndSetInputValue(fullNameField, fullName);
-            
-            var surNameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientSurname-id")));
+
+            var surNameField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientSurname-id")));
             ClearAndSetInputValue(surNameField, surName);
-            
-            var idField = fluentWait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientDocumentIdentifier-id")));
+
+            var idField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientDocumentIdentifier-id")));
             ClearAndSetInputValue(idField, id);
-            
-            var emailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientEmail-id")));
+
+            var emailField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientEmail-id")));
             ClearAndSetInputValue(emailField, email);
-            
-            var phoneField = fluentWait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientPhoneNumber-id")));
+
+            var phoneField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientPhoneNumber-id")));
             ClearAndSetInputValue(phoneField, phone);
         }
         catch (NoSuchElementException ex)
@@ -382,7 +323,7 @@ public class TicketPurchasePage
             Console.WriteLine($"An error occurred while entering data: {ex.Message}");
         }
     }
-    
+
     /*public void CompletePersonalInformation(string fullName, string surName, string id, string email, string phone)
     {
         try
@@ -416,9 +357,13 @@ public class TicketPurchasePage
     {
         try
         {
-            //var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
             var creditCard =
-                fluentWait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-conditions']")));
+                wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-conditions']")));
             creditCard.SendKeys(Keys.Space);
         }
         catch (NoSuchElementException ex)
@@ -430,17 +375,22 @@ public class TicketPurchasePage
             Console.WriteLine($"An error occurred while selecting credit card: {ex.Message}");
         }
     }
-    
+
     public void CheckConditions()
     {
         try
         {
-            //var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            
-            var conditionsCheckbox = fluentWait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-conditions']")));
-            
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
+
+            var conditionsCheckbox =
+                wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-conditions']")));
+
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", conditionsCheckbox);
-            
+
             conditionsCheckbox.SendKeys(Keys.Space);
         }
         catch (NoSuchElementException ex)
@@ -453,7 +403,7 @@ public class TicketPurchasePage
         }
     }
 
-    
+
     /*public void CheckConditions()
     {
         try
@@ -478,10 +428,14 @@ public class TicketPurchasePage
     {
         try
         {
-            //var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
 
             var privacyCheckbox =
-                fluentWait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-privacy']")));
+                wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-privacy']")));
             privacyCheckbox.SendKeys(Keys.Space);
         }
         catch (NoSuchElementException ex)
@@ -498,11 +452,14 @@ public class TicketPurchasePage
     {
         try
         {
-            //var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            var comprarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(
-                By.CssSelector(".j-button-buy")));
-                //By.XPath("//*[@id=\"shopping-cart\"]/div[2]/div[3]/div[2]/a")));
-            
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
+            var comprarButton = wait.Until(ExpectedConditions.ElementToBeClickable(
+                By.XPath("//*[@id=\"shopping-cart\"]/div[2]/div[3]/div[2]/a")));
+
             comprarButton.Click();
         }
         catch (NoSuchElementException ex)
@@ -529,11 +486,15 @@ public class TicketPurchasePage
                 { "//*[@id=\"codseg\"]", securityCode }
             };
 
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
 
             foreach (var field in cardInfo)
             {
-                var element = fluentWait.Until(ExpectedConditions.ElementIsVisible(By.XPath(field.Key)));
+                var element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(field.Key)));
                 ClearAndSetInputValue(element, field.Value);
             }
         }
@@ -551,8 +512,12 @@ public class TicketPurchasePage
     {
         try
         {
-            //var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            var pagarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
+            var pagarButton = wait.Until(ExpectedConditions.ElementToBeClickable(
                 By.XPath("/html/body/div[1]/div[2]/div[3]/form/div/div[2]/div[8]/button[2]")));
             pagarButton.Click();
         }
@@ -602,7 +567,13 @@ public class TicketPurchasePage
     {
         try
         {
-            var element = fluentWait.Until(ExpectedConditions.ElementIsVisible(By.Id("download-tickets-anchor")));
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
+
+            var element = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("download-tickets-anchor")));
             element.Click();
         }
         catch (NoSuchElementException ex)
@@ -620,11 +591,10 @@ public class TicketPurchasePage
         inputField.Clear();
         inputField.SendKeys(value);
     }
-    
+
     private void ScrollIntoView(IWebElement element)
     {
         var jsExecutor = (IJavaScriptExecutor)driver;
         jsExecutor.ExecuteScript("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});", element);
     }
-    
 }

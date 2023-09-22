@@ -1,5 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=07177e1e_002D9602_002D4176_002Db434_002D1664a77d1766/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from CancellationTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=07177e1e_002D9602_002D4176_002Db434_002D1664a77d1766/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from CancellationTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;ProjectFile&gt;CE7F702F-C01B-4957-80C0-02968B2843EF/d:Tests/f:CancellationTest.cs&lt;/ProjectFile&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
@@ -8,7 +8,7 @@
     &lt;ProjectFile&gt;CE7F702F-C01B-4957-80C0-02968B2843EF/d:Tests/f:TicketPurchaseTest.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=85926204_002D97ad_002D4917_002D8309_002D5b2b2f3d3691/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from CancellationTest.cs #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=85926204_002D97ad_002D4917_002D8309_002D5b2b2f3d3691/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from CancellationTest.cs #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;ProjectFile&gt;CE7F702F-C01B-4957-80C0-02968B2843EF/d:Tests/f:CancellationTest.cs&lt;/ProjectFile&gt;&#xD;
     &lt;ProjectFile&gt;CE7F702F-C01B-4957-80C0-02968B2843EF/d:Tests/f:TicketPurchaseTest.cs&lt;/ProjectFile&gt;&#xD;

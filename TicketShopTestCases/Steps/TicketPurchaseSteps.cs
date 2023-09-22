@@ -51,8 +51,8 @@ public class TicketPurchaseSteps
     {
         if (ticketPurchasePage.HaveSession())
             ticketPurchasePage.SelectSession();
-        else if (ticketPurchasePage.HaveMoreSessions()) ticketPurchasePage.SelectMoreSessions(); 
-        
+        else if (ticketPurchasePage.HaveMoreSessions()) ticketPurchasePage.SelectMoreSessions();
+
         // else
         // {
         //    ticketPurchasePage.CompletePersonalInformation("Adolfo", "Han", "33511838A", "ahan@experticket.com", "123456789");
