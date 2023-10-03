@@ -4,7 +4,6 @@ using Serilog;
 using TestCases.Steps;
 using TestCases.Utilities;
 
-
 namespace TestCases.Tests;
 
 [TestFixture]
@@ -14,25 +13,34 @@ public class TicketPurchaseTest
     public void Setup()
     {
         Log.Logger = new LoggerConfiguration()
-            .WriteTo.File("C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\logfile.log",
+            .WriteTo.File("C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Logs\\logfile.log",
                 rollingInterval: RollingInterval.Day)
             .CreateLogger();
         driver = WebDriverFactory.CreateWebDriver();
         ticketPurchaseSteps = new TicketPurchaseSteps(driver);
-        captureScreenShot = new WebDriverFactory();
+        homePageSteps = new HomePageSteps(driver);
     }
 
     [TearDown]
     public void TearDown()
     {
-        driver.Quit();
+        //driver.Quit();
     }
     
     private IWebDriver driver;
     private TicketPurchaseSteps ticketPurchaseSteps;
+    private HomePageSteps homePageSteps;
     private string currentStep;
-    private WebDriverFactory captureScreenShot;
 
+
+    [Test]
+    public void HomePageTest()
+    {
+        homePageSteps.GoToURL();
+        homePageSteps.ClickRandomMeInteresaButton();
+    }
+    
+    
     [Test]
     public void TestTicketPurchase()
     {
@@ -93,14 +101,14 @@ public class TicketPurchaseTest
             currentStep = "Step ClickThContinuarButton";
             ticketPurchaseSteps.ClickThContinuarButton();
             Log.Information("Clicked 'Continuar' button.");
-            Log.Information("TestTicketPurchase completed successfully.\n---------------------------------");
+            Log.Information("TestTicketPurchase completed successfully.\n------------------------------------------------------------------");
         }
         catch (Exception ex)
         {
             Log.Error($"The test failed at step: '{currentStep}' due to an error: {ex.Message}");
 
             var screenshotName = $"{currentStep} + Error";
-            var screenshotPath = WebDriverFactory.CaptureScreenshot(driver,
+            string? screenshotPath = TestUtil.CaptureScreenshot(driver,
                 "C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Screenshots");
             throw;
         }

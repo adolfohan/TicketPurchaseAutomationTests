@@ -1,0 +1,526 @@
+2023-09-25 09:31:56.270 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:31:57.459 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:32:09.553 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:32:43.605 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 09:33:11.371 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:33:11.872 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:33:21.640 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:33:55.754 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 09:34:05.212 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:34:06.220 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:34:12.227 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:34:20.643 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: disconnected: unable to send message to renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 09:40:07.247 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:40:08.517 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:40:09.604 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:40:43.722 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 09:42:05.626 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:42:06.930 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:42:16.977 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:42:53.104 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 09:50:25.902 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:50:26.963 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:50:37.015 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:50:47.071 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such element: Unable to locate element: {"method":"css selector","selector":"button.btn.sv-button--type-contained.sv-button--color-secondary"}
+  (Session info: chrome=117.0.5938.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-09-25 09:51:51.735 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:51:52.724 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:52:02.806 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:52:14.929 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 09:52:20.154 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:52:21.360 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:52:31.163 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:52:51.321 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 09:54:19.471 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:54:20.662 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:54:30.753 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:55:01.056 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 09:56:02.386 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:56:03.444 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:56:03.539 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:56:13.564 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such element: Unable to locate element: {"method":"css selector","selector":"button.btn.sv-button--type-contained.sv-button--color-secondary"}
+  (Session info: chrome=117.0.5938.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-09-25 09:56:24.694 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:56:25.485 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:56:32.907 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:57:03.158 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 09:59:44.736 +02:00 [INF] Navigated to the URL.
+2023-09-25 09:59:45.712 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 09:59:45.797 +02:00 [INF] Selected the desired ticket.
+2023-09-25 09:59:45.844 +02:00 [INF] Confirmed the date.
+2023-09-25 09:59:45.887 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 09:59:46.025 +02:00 [INF] Completed 'Have Sessions' step.
+2023-09-25 09:59:47.450 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 09:59:47.492 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 09:59:47.532 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 09:59:47.568 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 09:59:57.607 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 10:00:07.659 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 10:00:17.698 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 10:00:27.710 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 10:00:27.710 +02:00 [INF] TestTicketPurchase completed successfully.
+---------------------------------
+2023-09-25 10:01:52.563 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:01:53.457 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:02:04.798 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:02:35.086 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 10:02:44.066 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:02:45.018 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:02:51.312 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:03:21.583 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 10:07:12.001 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:07:13.028 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:07:23.090 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:07:47.312 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 10:07:59.361 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:08:00.653 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:08:10.733 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:08:26.876 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 10:10:25.535 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:10:25.925 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:10:36.044 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:10:36.046 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 10:11:07.521 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:11:08.053 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:11:38.290 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:12:08.523 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 10:12:27.998 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:12:29.221 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:12:35.287 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:12:35.289 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 10:13:16.178 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:13:17.098 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:13:17.210 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:13:17.257 +02:00 [INF] Confirmed the date.
+2023-09-25 10:13:17.300 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 10:13:17.428 +02:00 [INF] Completed 'Have Sessions' step.
+2023-09-25 10:13:23.007 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 10:13:23.050 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 10:13:23.091 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 10:13:23.127 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 10:13:33.143 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 10:13:34.538 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 10:13:35.805 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 10:13:36.160 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 10:13:36.160 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 10:23:47.541 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:23:48.325 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:23:48.434 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:23:48.479 +02:00 [INF] Confirmed the date.
+2023-09-25 10:23:48.521 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 10:23:48.647 +02:00 [INF] Completed 'Have Sessions' step.
+2023-09-25 10:23:54.537 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 10:23:54.544 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 10:23:54.549 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 10:23:54.554 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 10:23:54.558 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 10:23:54.562 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 10:23:54.566 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 10:23:54.569 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 10:23:54.569 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 10:24:33.140 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:24:33.993 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:24:34.091 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:25:04.356 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 10:25:18.089 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:25:18.400 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:25:28.261 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:25:32.300 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 10:25:59.324 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:25:59.812 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:26:02.031 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:26:21.001 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 10:26:45.018 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:26:45.334 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:26:45.441 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:26:45.484 +02:00 [INF] Confirmed the date.
+2023-09-25 10:26:45.526 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 10:26:45.649 +02:00 [INF] Completed 'Have Sessions' step.
+2023-09-25 10:26:51.220 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 10:26:51.228 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 10:26:51.233 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 10:26:51.236 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 10:26:51.238 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 10:26:51.240 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 10:26:51.242 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 10:26:51.244 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 10:26:51.244 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 10:29:51.563 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:29:52.840 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:29:53.927 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:30:24.164 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 10:38:35.546 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:38:36.817 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:38:46.866 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:39:17.150 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 10:45:52.933 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:45:53.460 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:45:55.309 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:46:01.381 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 10:46:11.551 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:46:12.041 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:46:21.406 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:46:29.467 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 10:47:31.766 +02:00 [INF] Navigated to the URL.
+2023-09-25 10:47:32.270 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 10:47:37.159 +02:00 [INF] Selected the desired ticket.
+2023-09-25 10:47:43.227 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 11:03:56.259 +02:00 [INF] Navigated to the URL.
+2023-09-25 11:03:56.668 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 11:04:08.086 +02:00 [INF] Selected the desired ticket.
+2023-09-25 11:04:38.346 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 11:04:51.762 +02:00 [INF] Navigated to the URL.
+2023-09-25 11:04:52.118 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 11:04:53.342 +02:00 [INF] Selected the desired ticket.
+2023-09-25 11:04:53.383 +02:00 [INF] Confirmed the date.
+2023-09-25 11:04:53.426 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 11:04:53.549 +02:00 [INF] Completed 'Have Sessions' step.
+2023-09-25 11:05:01.756 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 11:05:01.798 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 11:05:01.835 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 11:05:01.875 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 11:05:09.772 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 11:05:11.221 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 11:05:12.263 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 11:05:13.186 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 11:05:13.186 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 11:05:32.035 +02:00 [INF] Navigated to the URL.
+2023-09-25 11:05:32.436 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 11:05:43.596 +02:00 [INF] Selected the desired ticket.
+2023-09-25 11:05:53.680 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 11:06:30.094 +02:00 [INF] Navigated to the URL.
+2023-09-25 11:06:30.574 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 11:06:40.648 +02:00 [INF] Selected the desired ticket.
+2023-09-25 11:07:10.973 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 11:23:07.780 +02:00 [INF] Navigated to the URL.
+2023-09-25 11:23:09.039 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 11:23:19.104 +02:00 [INF] Selected the desired ticket.
+2023-09-25 11:23:49.387 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-25 11:28:33.303 +02:00 [INF] Navigated to the URL.
+2023-09-25 11:28:34.083 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 11:29:56.812 +02:00 [INF] Selected the desired ticket.
+2023-09-25 11:29:56.815 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 14:01:37.542 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:01:37.569 +02:00 [ERR] The test failed at step: 'Step SelectMeInteresaButton' due to an error: No 'Me interesa' buttons found on the page.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-09-25 14:09:09.187 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:09:09.213 +02:00 [ERR] The test failed at step: 'Step SelectMeInteresaButton' due to an error: No 'Me interesa' buttons found on the page.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-09-25 14:09:15.564 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:09:15.591 +02:00 [ERR] The test failed at step: 'Step SelectMeInteresaButton' due to an error: No 'Me interesa' buttons found on the page.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-09-25 14:10:31.531 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:10:31.555 +02:00 [ERR] The test failed at step: 'Step SelectMeInteresaButton' due to an error: No 'Me interesa' buttons found on the page.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-09-25 14:11:30.336 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:11:31.405 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 14:11:35.067 +02:00 [INF] Selected the desired ticket.
+2023-09-25 14:11:35.070 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 14:46:24.347 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:46:24.372 +02:00 [ERR] The test failed at step: 'Step SelectMeInteresaButton' due to an error: No 'Me interesa' buttons found on the page.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-09-25 14:50:28.646 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:50:28.670 +02:00 [ERR] The test failed at step: 'Step SelectMeInteresaButton' due to an error: No 'Me interesa' buttons found on the page.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-09-25 14:51:22.182 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:51:22.593 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 14:51:26.322 +02:00 [INF] Selected the desired ticket.
+2023-09-25 14:51:26.325 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 14:51:47.642 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:51:48.241 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 14:51:50.819 +02:00 [INF] Selected the desired ticket.
+2023-09-25 14:51:50.823 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 14:59:24.244 +02:00 [INF] Navigated to the URL.
+2023-09-25 14:59:24.694 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 14:59:32.117 +02:00 [INF] Selected the desired ticket.
+2023-09-25 14:59:32.121 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 15:00:02.699 +02:00 [INF] Navigated to the URL.
+2023-09-25 15:00:02.712 +02:00 [ERR] The test failed at step: 'Step SelectMeInteresaButton' due to an error: Object reference not set to an instance of an object.
+2023-09-25 15:50:19.290 +02:00 [INF] Navigated to the URL.
+2023-09-25 15:50:19.711 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 15:50:19.741 +02:00 [INF] Selected the desired ticket.
+2023-09-25 15:50:29.830 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 15:50:41.424 +02:00 [INF] Navigated to the URL.
+2023-09-25 15:50:41.775 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 15:50:44.688 +02:00 [INF] Selected the desired ticket.
+2023-09-25 15:50:44.692 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-25 16:31:42.610 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:31:43.022 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:31:43.094 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:31:43.145 +02:00 [INF] Confirmed the date.
+2023-09-25 16:31:43.177 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:31:48.513 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:31:58.769 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:32:09.021 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:32:19.230 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:32:29.493 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:32:39.788 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:32:39.795 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:32:39.802 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:32:39.802 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:35:13.349 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:35:13.624 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:35:13.732 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:35:13.784 +02:00 [INF] Confirmed the date.
+2023-09-25 16:35:13.817 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:35:13.832 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:35:24.253 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:35:34.479 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:35:44.729 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:35:44.731 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:35:44.733 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:35:44.734 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:35:44.735 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:35:44.735 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:41:10.737 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:41:11.128 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:41:11.218 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:41:11.267 +02:00 [INF] Confirmed the date.
+2023-09-25 16:41:11.311 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:41:11.327 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:41:21.797 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:41:31.983 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:41:42.194 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:41:42.196 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:41:42.197 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:41:42.198 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:41:42.200 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:41:42.200 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:43:27.595 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:43:27.867 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:43:27.958 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:43:28.010 +02:00 [INF] Confirmed the date.
+2023-09-25 16:43:28.055 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:43:30.347 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:43:31.401 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:43:31.442 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:43:31.499 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:44:01.709 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:44:31.926 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:44:31.927 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:44:31.928 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:44:31.928 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:45:15.463 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:45:15.787 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:45:15.860 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:45:15.909 +02:00 [INF] Confirmed the date.
+2023-09-25 16:45:15.952 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:45:19.984 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:45:19.986 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:45:19.987 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:45:19.989 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:45:19.990 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:45:19.991 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:45:19.992 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:45:19.993 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:45:19.993 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:45:31.548 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:45:31.816 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:45:31.905 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:45:31.953 +02:00 [INF] Confirmed the date.
+2023-09-25 16:45:31.998 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:45:36.031 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:45:36.033 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:45:36.035 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:45:36.036 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:45:36.037 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:45:36.039 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:45:36.040 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:45:36.041 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:45:36.041 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:45:47.719 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:45:48.013 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:45:48.085 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:45:48.133 +02:00 [INF] Confirmed the date.
+2023-09-25 16:45:48.178 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:45:54.228 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:45:54.230 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:45:54.231 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:45:54.232 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:45:54.234 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:45:54.235 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:45:54.236 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:45:54.237 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:45:54.237 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:46:05.104 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:46:05.372 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:46:05.469 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:46:05.518 +02:00 [INF] Confirmed the date.
+2023-09-25 16:46:05.563 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:46:07.865 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:46:07.915 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:46:07.953 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:46:07.996 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:46:20.530 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:46:21.904 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:46:22.974 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:46:23.412 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:46:23.412 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:47:59.737 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:48:00.157 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:48:00.230 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:48:00.282 +02:00 [INF] Confirmed the date.
+2023-09-25 16:48:00.327 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:48:04.355 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:48:04.357 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:48:04.358 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:48:04.360 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:48:04.361 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:48:04.362 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:48:04.363 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:48:04.365 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:48:04.365 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:48:16.130 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:48:16.459 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:48:16.532 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:48:16.581 +02:00 [INF] Confirmed the date.
+2023-09-25 16:48:16.626 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:48:18.657 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:48:18.658 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:48:18.660 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:48:18.662 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:48:18.663 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:48:18.664 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:48:18.666 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:48:18.667 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:48:18.667 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:48:28.495 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:48:28.758 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:48:28.851 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:48:28.900 +02:00 [INF] Confirmed the date.
+2023-09-25 16:48:28.946 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:48:32.978 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:48:32.980 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:48:32.981 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:48:32.983 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:48:32.985 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:48:32.986 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:48:32.988 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:48:32.989 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:48:32.989 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:49:29.178 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:49:29.444 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:49:29.537 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:49:29.586 +02:00 [INF] Confirmed the date.
+2023-09-25 16:49:29.631 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:49:32.192 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:49:32.194 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:49:32.197 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:49:32.199 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:49:32.202 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:49:32.204 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:49:32.207 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:49:32.209 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:49:32.209 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:50:10.988 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:50:11.253 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:50:11.341 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:50:11.393 +02:00 [INF] Confirmed the date.
+2023-09-25 16:50:11.553 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:50:13.863 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:50:13.913 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:50:13.950 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:50:13.991 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:50:38.385 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:50:39.699 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:50:40.591 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:50:40.949 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:50:40.949 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:51:38.984 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:51:39.287 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:51:39.361 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:51:39.412 +02:00 [INF] Confirmed the date.
+2023-09-25 16:51:40.469 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:51:42.495 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:51:42.497 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:51:43.513 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:51:43.515 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:51:43.516 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:51:43.518 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:51:43.519 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:51:43.520 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:51:43.520 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:51:55.910 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:51:56.171 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:51:56.260 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:51:56.309 +02:00 [INF] Confirmed the date.
+2023-09-25 16:51:57.364 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:51:59.395 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:51:59.397 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:52:00.403 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:52:00.405 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:52:00.407 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:52:00.408 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:52:00.410 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:52:00.411 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:52:00.411 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-25 16:53:02.304 +02:00 [INF] Navigated to the URL.
+2023-09-25 16:53:02.714 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-25 16:53:02.787 +02:00 [INF] Selected the desired ticket.
+2023-09-25 16:53:02.836 +02:00 [INF] Confirmed the date.
+2023-09-25 16:53:03.895 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-25 16:53:05.925 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-25 16:53:05.926 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-25 16:53:06.928 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-25 16:53:06.930 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-25 16:53:06.932 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-25 16:53:06.933 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-25 16:53:06.934 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-25 16:53:06.935 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-25 16:53:06.935 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------

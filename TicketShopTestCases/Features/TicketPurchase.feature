@@ -30,9 +30,13 @@ Feature: Ticket Purchase
         And checks the Conditions checkbox
         And checks the Privacy checkbox
         And clicks the "Comprar" button again
-        And completes with wrong card information
+        And completes with wrong "<card number>"
         And clicks the "Pagar" button
         Then the ticket purchase should be unsuccessful
+        
+        Examples: 
+            | card number  |
+            | 12345678912 |
 
     Scenario: Purchase ticket with personal information in blank unsuccessfully
         Given the user is on the website

@@ -5,83 +5,85 @@ using TestCases.Pages;
 namespace TestCases.Steps;
 
 [Binding]
-public class TicketPurchaseeeeSteps
+public class TestSteps
 {
     //private IWebDriver driver;
-    private readonly TicketPurchasePageeee _ticketPurchasePageeee;
+    private readonly TestPage testPage;
+    private readonly TicketsSelectionPage ticketsSelectionPage;
 
-    public TicketPurchaseeeeSteps(IWebDriver driver)
+    public TestSteps(IWebDriver driver)
     {
         //this.driver = driver;
-        _ticketPurchasePageeee = new TicketPurchasePageeee(driver);
+        testPage = new TestPage(driver);
+        ticketsSelectionPage = new TicketsSelectionPage(driver);
     }
 
     //[Given(@"the user is on the website")]
     public void GoToURL()
     {
-        _ticketPurchasePageeee.NavigateToUrl();
+        testPage.NavigateToUrl();
     }
 
     //[When(@"the user selects the ""Me interesa"" button")]
     public void SelectMeInteresaButton()
     {
-        _ticketPurchasePageeee.ClickMeInteresaButton();
+        testPage.ClickMeInteresaButton();
     }
 
     [When(@"selects the desired date")]
     public void SelectDesiredDate()
     {
-        _ticketPurchasePageeee.SelectDate("01/09/2023");
+        testPage.SelectDate("01/09/2023");
     }
 
     //[When(@"selects the desired tickets")]
     public void SelectDesiredTicket()
     {
-        _ticketPurchasePageeee.SelectTickets("1");
+        testPage.SelectTickets("1");
     }
 
     //[When(@"clicks the ""Comprar"" button")]
     public void ClickComprarButton()
     {
-        _ticketPurchasePageeee.ClickComprarButton();
+        testPage.ClickComprarButton();
     }
 
     //[When(@"completes personal information")]
     public void CompletePersonalInformation()
     {
-        _ticketPurchasePageeee.CompletePersonalInformation("Adolfo", "Han", "33511838A", "ahan@experticket.com",
+        testPage.CompletePersonalInformation("Adolfo", "Han", "33511838A", "ahan@experticket.com",
             "123456789");
     }
 
     [When(@"does not completes personal information")]
     public void PersonalInformationInBlank()
     {
-        _ticketPurchasePageeee.CompletePersonalInformation("", "", "", "ahan@.com", "");
+        testPage.CompletePersonalInformation("", "", "", "ahan@.com", "");
     }
 
     [When(@"completes with incorrect personal information")]
     public void IncorrectPersonalInformation()
     {
-        _ticketPurchasePageeee.CompletePersonalInformation("49521244", "|@#@~|@!", "ASDASDASD", "?¿)@gmail.com",
+        testPage.CompletePersonalInformation("49521244", "|@#@~|@!", "ASDASDASD", "?¿)@gmail.com",
             "AAAAAA");
     }
 
     [When(@"selects credit card as the payment method")]
     public void SelectCreditCard()
     {
-        _ticketPurchasePageeee.SelectCreditCardPayment();
+        testPage.SelectCreditCardPayment();
     }
 
     [When(@"checks the Conditions checkbox")]
     public void CheckTheConditionsCheckbox()
     {
-        _ticketPurchasePageeee.CheckConditions();
+        testPage.CheckConditions();
     }
 
     [When(@"checks the Privacy checkbox")]
     public void CheckThePrivacyCheckbox()
     {
-        _ticketPurchasePageeee.CheckPrivacy();
+        testPage.CheckPrivacy();
     }
 
     [When(@"does not checks the Conditions and Privacy checkboxes")]
@@ -92,37 +94,37 @@ public class TicketPurchaseeeeSteps
     [When(@"clicks the ""Comprar"" button again")]
     public void ClicksComprarButtonAgain()
     {
-        _ticketPurchasePageeee.ClickComprarButtonAgain();
+        testPage.ClickComprarButtonAgain();
     }
 
     [When(@"completes the card information")]
     public void CompleteTheCardInformation()
     {
-        _ticketPurchasePageeee.CompleteCardInformation("4548810000000003", "12", "49", "123");
+        testPage.CompleteCardInformation("4548810000000003", "12", "49", "123");
     }
 
-    [When(@"completes with wrong card information")]
+    [When(@"completes with wrong ""<card number>""")]
     public void CompleteTheCardWithWrongInformation()
     {
-        _ticketPurchasePageeee.CompleteCardInformation("4548810000000002", "12", "49", "123");
+        testPage.CompleteCardInformation("4548810000000002", "12", "49", "123");
     }
 
     [When(@"clicks the ""Pagar"" button")]
     public void ClickPagarButton()
     {
-        _ticketPurchasePageeee.ClickPagarButton();
+        testPage.ClickPagarButton();
     }
 
     [Then(@"the user cannot proceed to the payment with the fields in blank")]
     public void CannotProceedToThePaymentBlankFields()
     {
-        _ticketPurchasePageeee.CannotProceedToThePaymentBlankFields();
+        testPage.CannotProceedToThePaymentBlankFields();
     }
 
     [Then(@"clicks the ""Comprar"" button again and the user cannot proceed to the payment")]
     public void ProceedToThePaymentIncorrectInformation()
     {
-        _ticketPurchasePageeee.CannotProceedToThePayment();
+        testPage.CannotProceedToThePayment();
     }
 
     // [Then(@"the ticket purchase should be successful")]
@@ -138,25 +140,25 @@ public class TicketPurchaseeeeSteps
     [Then(@"the ticket purchase should be unsuccessful")]
     public void TicketPurchaseShouldBeUnSuccessful()
     {
-        _ticketPurchasePageeee.TicketPurchaseUnsuccessful();
+        testPage.TicketPurchaseUnsuccessful();
     }
 
     //AssertionHelper.AssertTrue(isSuccess, "Ticket purchase was unsuccessful.");
     [When(@"clicks the ""Enviar"" button")]
     public void ClickThEnviarButton()
     {
-        _ticketPurchasePageeee.ClickEnviarButton();
+        testPage.ClickEnviarButton();
     }
 
     [When(@"clicks the ""Continuar"" button")]
     public void ClickThContinuarButton()
     {
-        _ticketPurchasePageeee.ClickContinuarButton();
+        testPage.ClickContinuarButton();
     }
 
     [Then(@"should be able to download the tickets")]
     public void DownloadTheTickets()
     {
-        _ticketPurchasePageeee.ClickDescargarButton();
+        testPage.ClickDescargarButton();
     }
 }

@@ -9,7 +9,7 @@ public class WebDriverFactory
     {
         return new ChromeDriver();
     }
-
+    
     public static string CaptureScreenshot(IWebDriver driver, string screenshotDirectory)
     {
         try

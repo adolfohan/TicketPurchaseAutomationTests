@@ -13,7 +13,10 @@
     <ItemGroup>
         <PackageReference Include="Cucumber.CucumberExpressions" Version="16.1.1"/>
         <PackageReference Include="Cucumber.Messages" Version="21.0.1"/>
+        <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+        <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="4.3.0" />
         <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0"/>
+        <PackageReference Include="ExtentReports" Version="5.0.0" />
         <PackageReference Include="Gherkin" Version="26.0.3"/>
         <PackageReference Include="log4net" Version="2.0.15"/>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0"/>

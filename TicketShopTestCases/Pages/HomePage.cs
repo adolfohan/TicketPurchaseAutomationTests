@@ -1,19 +1,15 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
+using TestCases.Base;
 using TestCases.Utilities;
 
 namespace TestCases.Pages;
 
-public class HomePage
+public class HomePage : BasePage
 {
-    private readonly IWebDriver driver;
-    private readonly WebDriverWait wait;
-
-    public HomePage(IWebDriver driver)
+    public HomePage(IWebDriver driver) : base(driver)
     {
-        this.driver = driver;
-        wait = new WebDriverWait(this.driver, TimeSpan.FromSeconds(10));
+
     }
 
     private By MeInteresaButton =>
@@ -24,8 +20,8 @@ public class HomePage
     {
         try
         {
-            var baseUrl = ConfigReader.GetBaseUrl();
-            driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/");
+            string baseUrl = ConfigReader.GetBaseUrl();
+            driver.Navigate().GoToUrl(baseUrl);
             driver.Manage().Window.Maximize();
         }
         catch (NoSuchElementException ex)
@@ -38,23 +34,25 @@ public class HomePage
         }
     }
 
-    public void ClickRandomMeInteresaButton()
+    public TicketPurchasePage ClickRandomMeInteresaButton()
     {
-        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-        var meInteresaButtons = driver.FindElements(MeInteresaButton);
+        IList<IWebElement> meInteresaButtons = driver.FindElements(MeInteresaButton);
 
         if (meInteresaButtons.Count > 0)
         {
             var randomIndex = new Random().Next(0, meInteresaButtons.Count);
             var buttonToClick = meInteresaButtons[randomIndex];
 
-            var jsExecutor = (IJavaScriptExecutor)driver;
-            jsExecutor.ExecuteScript("arguments[0].scrollIntoView({behavior: 'auto', block: 'center'});",
-                buttonToClick);
+            ScrollIntoView(buttonToClick);
 
-            wait.Until(ExpectedConditions.ElementToBeClickable(buttonToClick));
+            fluentWait.Until(ExpectedConditions.ElementToBeClickable(buttonToClick));
+            
+            //TestUtil.DrawBorder(buttonToClick);
 
             buttonToClick.SendKeys(Keys.Enter);
+            //buttonToClick.Click();
+
+            return new TicketPurchasePage(driver);
         }
         else
         {

@@ -12,12 +12,13 @@ public class TicketPurchasePage
     private readonly By ComprarButton =
         By.CssSelector(
             "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
+    //By.XPath("type-contained sv-button--color-primary sv-button--size-lg sv-button--buy']/span[@class='sv-button__label']");
+
 
     private readonly By ConfirmationButton =
-        By.XPath("//*[@id=\"vue-app\"]/section/div/div/div[1]/div[2]/div[1]/div/div[3]/button[2]");
+        By.XPath("//button[@class='btn sv-button--type-contained sv-button--color-secondary']");
 
     private readonly IWebDriver driver;
-
     private readonly DefaultWait<IWebDriver> fluentWait;
     private readonly HomePage homePage;
     private readonly Random random;
@@ -43,18 +44,16 @@ public class TicketPurchasePage
     }
 
     private By InputNumberOfTickets =>
-        //RelativeBy.WithLocator(By.XPath("//input[@type='number' and @min='0' and @product-limitofnumberofpeopletobegroup='']")).Near(By.CssSelector("span.sv-form__plus"));
-        By.XPath("//input[@type='number']");
-
+        By.XPath("//input[@input='number']");
+        
     private By SelectPlusButton =>
         By.CssSelector("span.sv-form__plus");
 
     public void SelectNumberOfTickets(string numberOfTickets)
     {
+        var inputElementFound = false;
         try
         {
-            var inputElementFound = false;
-
             while (!inputElementFound)
             {
                 DefaultWait<IWebDriver> wait = new(driver)
@@ -66,19 +65,30 @@ public class TicketPurchasePage
 
                 IList<IWebElement> inputFields = wait.Until(driver => driver.FindElements(InputNumberOfTickets));
 
-                wait.Until(driver =>
-                    ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
-
-                if (inputFields.Count > 0)
+                //wait.Until(driver =>
+                //    ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
+                
+                List<IWebElement> filteredNumberInputs = new List<IWebElement>();
+                
+                foreach (var input in inputFields)
                 {
-                    var randomIndex = random.Next(0, inputFields.Count);
+                    // Verifica si el elemento no está dentro del div modal fade
+                    if (!IsElementInsideModal(input, driver))
+                    {
+                        filteredNumberInputs.Add(input);
+                    }
+                }
+                
+                if (filteredNumberInputs.Count > 0)
+                {
+                    var randomIndex = random.Next(0, filteredNumberInputs.Count);
 
-                    var selectedInputField = inputFields[randomIndex];
+                    var selectedInputField = filteredNumberInputs[randomIndex];
 
                     ScrollIntoView(selectedInputField);
-                    //ClearAndSetInputValue(selectedInputField, numberOfTickets);
-                    driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-                    selectedInputField.Click();
+                    ClearAndSetInputValue(selectedInputField, numberOfTickets);
+                    //selectedInputField.Click();
+                    //selectedInputField.Clear();
                     selectedInputField.SendKeys(numberOfTickets);
 
                     inputElementFound = true;
@@ -97,11 +107,27 @@ public class TicketPurchasePage
         }
     }
 
+    private static bool IsElementInsideModal(IWebElement element, IWebDriver driver)
+    {
+        try
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            return (bool)js.ExecuteScript(
+                "var modal = document.querySelector('.modal.fade');" +
+                "if (modal.contains(arguments[0])) { return true; } else { return false; }",
+                element);
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+    }
+
     public void ConfirmDate()
     {
-        var confirmationBox = fluentWait.Until(ExpectedConditions.ElementIsVisible(ConfirmationButton));
+        IWebElement confirmationBox = fluentWait.Until(ExpectedConditions.ElementIsVisible(ConfirmationButton));
 
-        var confirmButton = confirmationBox.FindElement(ConfirmationButton);
+        IWebElement confirmButton = confirmationBox.FindElement(ConfirmationButton);
         confirmButton.Click();
     }
 
@@ -150,7 +176,7 @@ public class TicketPurchasePage
                 PollingInterval = TimeSpan.FromSeconds(2)
             };
 
-            var dropdown = wait.Until(ExpectedConditions.ElementToBeClickable(SessionDropdown));
+            IWebElement dropdown = wait.Until(ExpectedConditions.ElementToBeClickable(SessionDropdown));
 
             var select = new SelectElement(dropdown);
             IList<IWebElement> options = select.Options;
@@ -380,18 +406,13 @@ public class TicketPurchasePage
     {
         try
         {
-            DefaultWait<IWebDriver> wait = new(driver)
-            {
-                Timeout = TimeSpan.FromSeconds(30),
-                PollingInterval = TimeSpan.FromSeconds(2)
-            };
-
-            var conditionsCheckbox =
-                wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-conditions']")));
+            IWebElement conditionsCheckbox =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-conditions']")));
 
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", conditionsCheckbox);
-
-            conditionsCheckbox.SendKeys(Keys.Space);
+            
+            conditionsCheckbox.Click();
+            //conditionsCheckbox.SendKeys(Keys.Space);
         }
         catch (NoSuchElementException ex)
         {
@@ -402,41 +423,15 @@ public class TicketPurchasePage
             Console.WriteLine($"An error occurred while checking Conditions checkbox: {ex.Message}");
         }
     }
-
-
-    /*public void CheckConditions()
-    {
-        try
-        {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-
-            var conditionsCheckbox =
-                wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-conditions']")));
-            conditionsCheckbox.Click();
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while checking Conditions checkbox: {ex.Message}");
-        }
-    }*/
-
+    
     public void CheckPrivacy()
     {
         try
         {
-            DefaultWait<IWebDriver> wait = new(driver)
-            {
-                Timeout = TimeSpan.FromSeconds(30),
-                PollingInterval = TimeSpan.FromSeconds(2)
-            };
-
-            var privacyCheckbox =
-                wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-privacy']")));
-            privacyCheckbox.SendKeys(Keys.Space);
+            IWebElement privacyCheckbox =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-privacy']")));
+            privacyCheckbox.Click();
+            //privacyCheckbox.SendKeys(Keys.Space);
         }
         catch (NoSuchElementException ex)
         {
@@ -452,13 +447,8 @@ public class TicketPurchasePage
     {
         try
         {
-            DefaultWait<IWebDriver> wait = new(driver)
-            {
-                Timeout = TimeSpan.FromSeconds(30),
-                PollingInterval = TimeSpan.FromSeconds(2)
-            };
-            var comprarButton = wait.Until(ExpectedConditions.ElementToBeClickable(
-                By.XPath("//*[@id=\"shopping-cart\"]/div[2]/div[3]/div[2]/a")));
+            IWebElement comprarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(
+                By.CssSelector("a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy")));
 
             comprarButton.Click();
         }

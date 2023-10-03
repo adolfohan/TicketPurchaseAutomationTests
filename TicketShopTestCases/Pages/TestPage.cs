@@ -5,15 +5,19 @@ using TestCases.Utilities;
 
 namespace TestCases.Pages;
 
-public class TicketPurchasePageeee
+public class TestPage
 {
     private readonly IWebDriver driver;
-    private readonly WebDriverWait wait;
+    private readonly DefaultWait<IWebDriver> wait;
+    private ConfigReader configReader;
 
-    public TicketPurchasePageeee(IWebDriver driver)
+    public TestPage(IWebDriver driver)
     {
         this.driver = driver;
-        wait = new WebDriverWait(this.driver, TimeSpan.FromSeconds(10));
+        wait = new DefaultWait<IWebDriver>(driver);
+        wait.Timeout = TimeSpan.FromSeconds(30);
+        wait.PollingInterval = TimeSpan.FromSeconds(2);
+        wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
     }
 
     public IWebElement numberOfTicket =>
@@ -46,7 +50,7 @@ public class TicketPurchasePageeee
     {
         try
         {
-            var baseUrl = ConfigReader.GetBaseUrl();
+            string baseUrl = ConfigReader.GetBaseUrl();
             driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/");
             driver.Manage().Window.Maximize();
         }
@@ -64,21 +68,17 @@ public class TicketPurchasePageeee
     {
         try
         {
-            var meInteresaButton =
+            IWebElement meInteresaButton =
                 driver.FindElement(By.XPath("//*[@id=\"funnel-list\"]/div[1]/div/div[2]/div[2]/div/div[2]/a"));
             meInteresaButton.Click();
         }
         catch (NoSuchElementException ex)
         {
-            // Handle the exception for missing elements (e.g., if the button cannot be found)
             Console.WriteLine($"Element not found: {ex.Message}");
-            // You might want to throw or log this exception depending on your error-handling strategy.
         }
         catch (Exception ex)
         {
-            // Handle other exceptions that might occur during the operation
             Console.WriteLine($"An error occurred while clicking 'Me interesa' button: {ex.Message}");
-            // You might want to throw or log this exception depending on your error-handling strategy.
         }
     }
 
@@ -118,13 +118,13 @@ public class TicketPurchasePageeee
             Console.WriteLine($"An error occurred while selecting tickets: {ex.Message}");
         }
     }
-
+    
     public void ClickComprarButton()
     {
         try
         {
-            driver.FindElement(
-                By.XPath("/html/body/div[1]/section/div/div/div[2]/div/div[2]/div[2]/div[3]/div[2]/a/span[1]")).Click();
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("/html/body/div[1]/section/div/div/div[2]/div/div[2]/div[2]/div[3]/div[2]/a/span[1]"))).Click();
+            Thread.Sleep(1000);
         }
         catch (NoSuchElementException ex)
         {
@@ -141,26 +141,20 @@ public class TicketPurchasePageeee
     {
         try
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            var fullNameField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientFullName-id")));
+            ClearAndSetInputValue(fullNameField, fullName);
 
-            var fullNameField = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("clientFullName-id")));
-            var surNameField = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("clientSurname-id")));
-            var idField =
-                wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("clientDocumentIdentifier-id")));
-            var emailField = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("clientEmail-id")));
-            var phoneField = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("clientPhoneNumber-id")));
+            var surNameField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientSurname-id")));
+            ClearAndSetInputValue(surNameField, surName);
 
-            fullNameField.Clear();
-            surNameField.Clear();
-            idField.Clear();
-            emailField.Clear();
-            phoneField.Clear();
+            var idField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientDocumentIdentifier-id")));
+            ClearAndSetInputValue(idField, id);
 
-            fullNameField.SendKeys(fullName);
-            surNameField.SendKeys(surName);
-            idField.SendKeys(id);
-            emailField.SendKeys(email);
-            phoneField.SendKeys(phone);
+            var emailField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientEmail-id")));
+            ClearAndSetInputValue(emailField, email);
+
+            var phoneField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("clientPhoneNumber-id")));
+            ClearAndSetInputValue(phoneField, phone);
         }
         catch (NoSuchElementException ex)
         {
@@ -176,8 +170,7 @@ public class TicketPurchasePageeee
     {
         try
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            var creditCard =
+            IWebElement creditCard =
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-conditions']")));
             creditCard.SendKeys(Keys.Space);
         }
@@ -195,11 +188,18 @@ public class TicketPurchasePageeee
     {
         try
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            DefaultWait<IWebDriver> wait = new(driver)
+            {
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromSeconds(2)
+            };
 
-            var conditionsCheckbox =
+            IWebElement conditionsCheckbox =
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-conditions']")));
-            conditionsCheckbox.Click();
+
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", conditionsCheckbox);
+
+            conditionsCheckbox.SendKeys(Keys.Space);
         }
         catch (NoSuchElementException ex)
         {
@@ -215,9 +215,7 @@ public class TicketPurchasePageeee
     {
         try
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-
-            var privacyCheckbox =
+            IWebElement privacyCheckbox =
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='form-privacy']")));
             privacyCheckbox.SendKeys(Keys.Space);
         }
@@ -229,15 +227,15 @@ public class TicketPurchasePageeee
         {
             Console.WriteLine($"An error occurred while checking Privacy checkbox: {ex.Message}");
         }
+        Thread.Sleep(1000);
     }
 
     public void ClickComprarButtonAgain()
     {
         try
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            var ComprarButton = wait.Until(ExpectedConditions.ElementToBeClickable(
-                By.XPath("//*[@id=\"shopping-cart\"]/div[2]/div[3]/div[2]/a")));
+            IWebElement ComprarButton = wait.Until(ExpectedConditions.ElementToBeClickable(
+                By.XPath("/html/body/div[1]/section/div/div/div[2]/div/div[2]/div[2]/div[3]/div[2]/a")));
             ComprarButton.Click();
         }
         catch (NoSuchElementException ex)
@@ -255,7 +253,6 @@ public class TicketPurchasePageeee
     {
         try
         {
-            // Create a dictionary to map field names to values
             var cardInfo = new Dictionary<string, string>
             {
                 { "//*[@id=\"inputCard\"]", cardNumber },
@@ -264,14 +261,10 @@ public class TicketPurchasePageeee
                 { "//*[@id=\"codseg\"]", securityCode }
             };
 
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-
             foreach (var field in cardInfo)
             {
-                // Find the element by XPath and enter the corresponding value
-                var element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(field.Key)));
-                element.Clear();
-                element.SendKeys(field.Value);
+                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(field.Key)));
+                ClearAndSetInputValue(element, field.Value);
             }
         }
         catch (NoSuchElementException ex)
@@ -288,10 +281,9 @@ public class TicketPurchasePageeee
     {
         try
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            var PagarButton = wait.Until(ExpectedConditions.ElementToBeClickable(
+            IWebElement pagarButton = wait.Until(ExpectedConditions.ElementToBeClickable(
                 By.XPath("/html/body/div[1]/div[2]/div[3]/form/div/div[2]/div[8]/button[2]")));
-            PagarButton.Click();
+            pagarButton.Click();
         }
         catch (NoSuchElementException ex)
         {
@@ -307,11 +299,11 @@ public class TicketPurchasePageeee
     {
         try
         {
-            var firstName = driver.FindElement(By.Id("clientFullName-id"));
-            var surName = driver.FindElement(By.Id("clientSurname-id"));
-            var id = driver.FindElement(By.Id("clientDocumentIdentifier-id"));
-            var email = driver.FindElement(By.Id("clientEmail-id"));
-            var phone = driver.FindElement(By.Id("clientPhoneNumber-id"));
+            IWebElement firstName = driver.FindElement(By.Id("clientFullName-id"));
+            IWebElement surName = driver.FindElement(By.Id("clientSurname-id"));
+            IWebElement id = driver.FindElement(By.Id("clientDocumentIdentifier-id"));
+            IWebElement email = driver.FindElement(By.Id("clientEmail-id"));
+            IWebElement phone = driver.FindElement(By.Id("clientPhoneNumber-id"));
 
             var firstNameNotEmpty = !string.IsNullOrWhiteSpace(firstName.GetAttribute("value"));
             var surNameNotEmpty = !string.IsNullOrWhiteSpace(surName.GetAttribute("value"));
@@ -421,5 +413,11 @@ public class TicketPurchasePageeee
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
+    }
+    
+    private void ClearAndSetInputValue(IWebElement inputField, string value)
+    {
+        inputField.Clear();
+        inputField.SendKeys(value);
     }
 }

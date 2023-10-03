@@ -1,0 +1,157 @@
+2023-09-27 10:17:07.630 +02:00 [INF] Navigated to the URL.
+2023-09-27 10:17:07.659 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 10:17:07.668 +02:00 [INF] Selected the desired ticket.
+2023-09-27 10:17:33.846 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-27 10:18:33.502 +02:00 [INF] Navigated to the URL.
+2023-09-27 10:18:33.528 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 10:18:33.536 +02:00 [INF] Selected the desired ticket.
+2023-09-27 10:18:45.636 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-27 10:25:43.474 +02:00 [INF] Navigated to the URL.
+2023-09-27 10:25:43.500 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 10:25:43.509 +02:00 [INF] Selected the desired ticket.
+2023-09-27 10:26:13.701 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Timed out after 30 seconds
+2023-09-27 10:29:01.494 +02:00 [INF] Navigated to the URL.
+2023-09-27 10:29:01.521 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 10:29:01.529 +02:00 [INF] Selected the desired ticket.
+2023-09-27 10:29:13.643 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.89)
+2023-09-27 10:32:58.090 +02:00 [INF] Navigated to the URL.
+2023-09-27 10:32:59.421 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 10:32:59.510 +02:00 [INF] Selected the desired ticket.
+2023-09-27 10:32:59.560 +02:00 [INF] Confirmed the date.
+2023-09-27 10:33:00.619 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-27 10:33:04.876 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-27 10:33:04.880 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-27 10:33:05.884 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-27 10:33:05.886 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-27 10:33:05.887 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-27 10:33:05.889 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-27 10:33:05.890 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-27 10:33:05.891 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-27 10:33:05.891 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-27 11:13:55.174 +02:00 [INF] Navigated to the URL.
+2023-09-27 11:13:56.340 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 11:13:56.436 +02:00 [INF] Selected the desired ticket.
+2023-09-27 11:13:56.486 +02:00 [INF] Confirmed the date.
+2023-09-27 11:13:57.538 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-27 11:14:02.574 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-27 11:14:02.576 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-27 11:14:03.593 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-27 11:14:03.596 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-27 11:14:03.597 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-27 11:14:03.599 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-27 11:14:03.600 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-27 11:14:03.602 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-27 11:14:03.602 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-27 11:14:26.074 +02:00 [INF] Navigated to the URL.
+2023-09-27 11:14:26.345 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 11:14:26.437 +02:00 [INF] Selected the desired ticket.
+2023-09-27 11:14:26.492 +02:00 [INF] Confirmed the date.
+2023-09-27 11:14:27.544 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-27 11:14:39.949 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-27 11:14:40.005 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-27 11:14:41.053 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-27 11:14:41.096 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-27 11:14:44.276 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-27 11:14:45.481 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-27 11:14:46.389 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-27 11:14:46.754 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-27 11:14:46.754 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-27 12:02:57.581 +02:00 [INF] Navigated to the URL.
+2023-09-27 12:02:58.728 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 12:02:58.824 +02:00 [INF] Selected the desired ticket.
+2023-09-27 12:02:58.873 +02:00 [INF] Confirmed the date.
+2023-09-27 12:03:04.929 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-27 12:03:05.195 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-27 12:03:05.246 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-27 12:03:06.299 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-27 12:03:06.340 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-27 12:03:10.231 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-27 12:03:11.736 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-27 12:03:12.627 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-27 12:03:13.467 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-27 12:03:13.467 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-27 12:03:27.592 +02:00 [INF] Navigated to the URL.
+2023-09-27 12:03:27.860 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 12:03:27.953 +02:00 [INF] Selected the desired ticket.
+2023-09-27 12:03:28.002 +02:00 [INF] Confirmed the date.
+2023-09-27 12:03:32.062 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-27 12:03:32.071 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-27 12:03:32.073 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-27 12:03:33.076 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-27 12:03:33.079 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-27 12:03:33.081 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-27 12:03:33.083 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-27 12:03:33.084 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-27 12:03:33.086 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-27 12:03:33.086 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-27 12:03:45.277 +02:00 [INF] Navigated to the URL.
+2023-09-27 12:03:45.543 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 12:03:45.638 +02:00 [INF] Selected the desired ticket.
+2023-09-27 12:03:45.686 +02:00 [INF] Confirmed the date.
+2023-09-27 12:03:51.762 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-27 12:03:51.772 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-27 12:03:51.773 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-27 12:03:52.778 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-27 12:03:52.780 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-27 12:03:52.782 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-27 12:03:52.783 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-27 12:03:52.784 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-27 12:03:52.785 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-27 12:03:52.785 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-27 12:04:49.016 +02:00 [INF] Navigated to the URL.
+2023-09-27 12:04:49.291 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 12:04:49.379 +02:00 [INF] Selected the desired ticket.
+2023-09-27 12:04:49.430 +02:00 [INF] Confirmed the date.
+2023-09-27 12:04:55.501 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-27 12:04:55.779 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-27 12:04:55.828 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-27 12:04:56.881 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-27 12:04:56.922 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-27 12:04:59.702 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-27 12:05:00.595 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-27 12:05:01.264 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-27 12:05:02.091 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-27 12:05:02.091 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-27 13:17:59.219 +02:00 [INF] Navigated to the URL.
+2023-09-27 13:18:00.307 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 13:18:00.405 +02:00 [INF] Selected the desired ticket.
+2023-09-27 13:18:00.461 +02:00 [INF] Confirmed the date.
+2023-09-27 13:18:06.537 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-27 13:18:12.852 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-27 13:18:12.904 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-27 13:18:13.948 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-27 13:18:13.992 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-27 13:18:22.051 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-27 13:18:22.053 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-27 13:18:22.054 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-27 13:18:22.055 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-27 13:18:22.055 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------
+2023-09-27 13:18:42.184 +02:00 [INF] Navigated to the URL.
+2023-09-27 13:18:42.496 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-09-27 13:18:42.588 +02:00 [INF] Selected the desired ticket.
+2023-09-27 13:18:42.640 +02:00 [INF] Confirmed the date.
+2023-09-27 13:18:48.701 +02:00 [INF] Clicked on 'Comprar' button.
+2023-09-27 13:18:48.968 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-09-27 13:18:49.017 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-09-27 13:18:50.058 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-09-27 13:18:50.101 +02:00 [INF] Clicked 'Comprar' button again.
+2023-09-27 13:18:54.343 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-09-27 13:18:56.018 +02:00 [INF] Clicked 'Pagar' button.
+2023-09-27 13:18:56.970 +02:00 [INF] Clicked 'Enviar' button.
+2023-09-27 13:18:57.887 +02:00 [INF] Clicked 'Continuar' button.
+2023-09-27 13:18:57.887 +02:00 [INF] TestTicketPurchase completed successfully.
+------------------------------------------------------------------

@@ -9,11 +9,13 @@ public class TicketPurchaseSteps
 {
     private readonly HomePage homePage;
     private readonly TicketPurchasePage ticketPurchasePage;
+    private readonly TicketsSelectionPage ticketsSelectionPage;
 
     public TicketPurchaseSteps(IWebDriver driver)
     {
         ticketPurchasePage = new TicketPurchasePage(driver);
         homePage = new HomePage(driver);
+        ticketsSelectionPage = new TicketsSelectionPage(driver);
     }
 
     [Given(@"the user is on the website")]
@@ -31,19 +33,19 @@ public class TicketPurchaseSteps
     [When(@"selects the desired tickets")]
     public void SelectDesiredTicket()
     {
-        ticketPurchasePage.SelectNumberOfTickets("1");
+        ticketsSelectionPage.SelectNumberOfTickets("1");
     }
 
     [When(@"confirms the date")]
     public void ConfirmDate()
     {
-        ticketPurchasePage.ConfirmDate();
+        ticketsSelectionPage.ConfirmDate();
     }
 
     [When(@"clicks the ""Comprar"" button")]
     public void ClickComprarButton()
     {
-        ticketPurchasePage.ClickComprarButton();
+        ticketsSelectionPage.ClickComprarButton();
     }
 
     [When(@"checks if it has sessions or advanced date picker")]

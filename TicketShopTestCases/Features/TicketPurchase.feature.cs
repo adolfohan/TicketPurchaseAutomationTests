@@ -147,10 +147,12 @@ namespace TestCases.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Purchase ticket with invalid credit card unsuccessfully")]
-        public async System.Threading.Tasks.Task PurchaseTicketWithInvalidCreditCardUnsuccessfully()
+        [NUnit.Framework.TestCaseAttribute("12345678912", null)]
+        public async System.Threading.Tasks.Task PurchaseTicketWithInvalidCreditCardUnsuccessfully(string cardNumber, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("card number", cardNumber);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Purchase ticket with invalid credit card unsuccessfully", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 22
     this.ScenarioInitialize(scenarioInfo);
@@ -193,7 +195,7 @@ namespace TestCases.Features
         await testRunner.AndAsync("clicks the \"Comprar\" button again", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 33
-        await testRunner.AndAsync("completes with wrong card information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        await testRunner.AndAsync(string.Format("completes with wrong \"{0}\"", cardNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
         await testRunner.AndAsync("clicks the \"Pagar\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -212,7 +214,7 @@ namespace TestCases.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Purchase ticket with personal information in blank unsuccessfully", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 37
+#line 41
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -222,37 +224,37 @@ namespace TestCases.Features
             else
             {
                 await this.ScenarioStartAsync();
-#line 38
+#line 42
         await testRunner.GivenAsync("the user is on the website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 39
+#line 43
         await testRunner.WhenAsync("the user selects the \"Me interesa\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 40
+#line 44
         await testRunner.AndAsync("selects the desired date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 45
         await testRunner.AndAsync("selects the desired tickets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 42
+#line 46
         await testRunner.AndAsync("clicks the \"Comprar\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 43
+#line 47
         await testRunner.AndAsync("does not completes personal information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 44
+#line 48
         await testRunner.AndAsync("selects credit card as the payment method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 45
+#line 49
         await testRunner.AndAsync("checks the Conditions checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 46
+#line 50
         await testRunner.AndAsync("checks the Privacy checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 47
+#line 51
         await testRunner.AndAsync("clicks the \"Comprar\" button again", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 48
+#line 52
         await testRunner.ThenAsync("the user cannot proceed to the payment with the fields in blank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -266,7 +268,7 @@ namespace TestCases.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Purchase ticket with incorrect personal information unsuccessfully", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 50
+#line 54
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -276,34 +278,34 @@ namespace TestCases.Features
             else
             {
                 await this.ScenarioStartAsync();
-#line 51
+#line 55
         await testRunner.GivenAsync("the user is on the website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 52
+#line 56
         await testRunner.WhenAsync("the user selects the \"Me interesa\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 53
+#line 57
         await testRunner.AndAsync("selects the desired date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 54
+#line 58
         await testRunner.AndAsync("selects the desired tickets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 55
+#line 59
         await testRunner.AndAsync("clicks the \"Comprar\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 56
+#line 60
         await testRunner.AndAsync("completes with incorrect personal information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 61
         await testRunner.AndAsync("selects credit card as the payment method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 58
+#line 62
         await testRunner.AndAsync("checks the Conditions checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 59
+#line 63
         await testRunner.AndAsync("checks the Privacy checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 60
+#line 64
         await testRunner.ThenAsync("clicks the \"Comprar\" button again and the user cannot proceed to the payment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -317,7 +319,7 @@ namespace TestCases.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Purchase ticket without checking the checkboxes unsuccessfully", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 62
+#line 66
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -327,31 +329,31 @@ namespace TestCases.Features
             else
             {
                 await this.ScenarioStartAsync();
-#line 63
+#line 67
         await testRunner.GivenAsync("the user is on the website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 64
+#line 68
         await testRunner.WhenAsync("the user selects the \"Me interesa\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 65
+#line 69
         await testRunner.AndAsync("selects the desired date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 66
+#line 70
         await testRunner.AndAsync("selects the desired tickets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 67
+#line 71
         await testRunner.AndAsync("clicks the \"Comprar\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 68
+#line 72
         await testRunner.AndAsync("completes personal information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 69
+#line 73
         await testRunner.AndAsync("selects credit card as the payment method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 70
+#line 74
         await testRunner.AndAsync("does not checks the Conditions and Privacy checkboxes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 71
+#line 75
         await testRunner.ThenAsync("clicks the \"Comprar\" button again and the user cannot proceed to the payment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

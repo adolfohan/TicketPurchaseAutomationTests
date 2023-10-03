@@ -12,27 +12,27 @@ public class CancellationTest
     public void Setup()
     {
         driver = WebDriverFactory.CreateWebDriver();
-        _ticketPurchaseeeeSteps = new TicketPurchaseeeeSteps(driver);
+        testSteps = new TestSteps(driver);
         cancellationSteps = new CancellationSteps(driver);
     }
 
     private IWebDriver driver;
-    private TicketPurchaseeeeSteps _ticketPurchaseeeeSteps;
+    private TestSteps testSteps;
     private CancellationSteps cancellationSteps;
 
     [Test]
     public void TestCancellation()
     {
-        _ticketPurchaseeeeSteps.GoToURL();
-        _ticketPurchaseeeeSteps.SelectMeInteresaButton();
-        _ticketPurchaseeeeSteps.SelectDesiredDate();
-        _ticketPurchaseeeeSteps.SelectDesiredTicket();
-        _ticketPurchaseeeeSteps.ClickComprarButton();
-        _ticketPurchaseeeeSteps.CompletePersonalInformation();
-        _ticketPurchaseeeeSteps.SelectCreditCard();
-        _ticketPurchaseeeeSteps.CheckTheConditionsCheckbox();
-        _ticketPurchaseeeeSteps.CheckThePrivacyCheckbox();
-        _ticketPurchaseeeeSteps.ClicksComprarButtonAgain();
+        testSteps.GoToURL();
+        testSteps.SelectMeInteresaButton();
+        testSteps.SelectDesiredDate();
+        testSteps.SelectDesiredTicket();
+        testSteps.ClickComprarButton();
+        testSteps.CompletePersonalInformation();
+        testSteps.SelectCreditCard();
+        testSteps.CheckTheConditionsCheckbox();
+        testSteps.CheckThePrivacyCheckbox();
+        testSteps.ClicksComprarButtonAgain();
         cancellationSteps.ClickCancelarButton();
         cancellationSteps.ClickContinuarButton();
         cancellationSteps.CancellationSuccessful("Venta cancelada");
