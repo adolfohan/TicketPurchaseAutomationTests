@@ -16,6 +16,7 @@ public class BaseTest
     protected ReservationSteps reservationSteps;
     protected CardSteps cardSteps;
     protected PurchaseOkSteps purchaseOkSteps;
+    protected string currentStep;
     
     [SetUp]
     public void Setup()

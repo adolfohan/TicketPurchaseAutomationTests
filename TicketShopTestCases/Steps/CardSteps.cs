@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using TestCases.Pages;
 
@@ -19,22 +20,36 @@ public class CardSteps
     {
         cardPage.CompleteCardInformation("4548810000000003", "12", "49", "123");
     }
-
-    [When(@"clicks the ""Pagar"" button")]
-    public void ClickPagarButton()
+    
+    [When(@"clicks on the ""Pagar"" button")]
+    public void ClickOnPagarButton()
     {
-        cardPage.ClickPagarButton();
-    }
-/*
-    [When(@"clicks the ""Enviar"" button")]
-    public void ClickThEnviarButton()
-    {
-        cardPage.ClickEnviarButton();
+        cardPage.ClickOnPagarButton();
     }
 
-    [When(@"clicks the ""Continuar"" button")]
-    public void ClickThContinuarButton()
+    [When(@"clicks on the ""Enviar"" button")]
+    public void ClickOnEnviarButton()
     {
-        cardPage.ClickContinuarButton();
-    }*/
+        cardPage.ClickOnEnviarButton();
+    }
+
+    [When(@"clicks on the ""Continuar"" button")]
+    public void ClickOnContinuarButton()
+    {
+        cardPage.ClickOnContinuarButton();
+    }
+    
+    [When(@"completes with wrong card number")]
+    public void CompleteTheCardWithWrongInformation()
+    {
+        cardPage.CompleteCardInformation("123456789", "12", "49", "123");
+    }
+    
+    [Then(@"the ticket purchase should be unsuccessful")]
+    public void ThenTheTicketPurchaseShouldBeUnsuccessful()
+    {
+        bool isPurchaseUnsuccessful = cardPage.IsPurchaseUnsuccessful();
+        
+        Assert.That(isPurchaseUnsuccessful, Is.True, "The ticket purchase should be unsuccessful.");
+    }
 }

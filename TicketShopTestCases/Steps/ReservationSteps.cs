@@ -33,10 +33,10 @@ public class ReservationSteps
         reservationPage.CheckPrivacy();
     }
     
-    [When(@"clicks the ""Comprar"" button again")]
-    public void ClicksComprarButtonAgain()
+    [When(@"clicks on the ""Comprar"" button again")]
+    public void ClicksOnComprarButtonAgain()
     {
-        reservationPage.ClickComprarButtonAgain();
+        reservationPage.ClickOnComprarButtonAgain();
     }
     
 }

@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using TestCases.Base;
-using TestCases.Utilities;
 
 namespace TestCases.Pages;
 
@@ -94,20 +93,20 @@ public class ReservationPage : BasePage
         }
     }
 
-    public CardPage ClickComprarButtonAgain()
+    public CardPage ClickOnComprarButtonAgain()
     {
         try
         {
             IList<IWebElement> comprarButtons = fluentWait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(comprarButtonElement));
-
+            
             if (comprarButtons.Count > 0)
             {
                 var randomIndex = random.Next(0, comprarButtons.Count);
                 var selectedComprarButton = comprarButtons[randomIndex];
                 //IWebElement firstComprarButton = comprarButtons[0];
                 ScrollIntoView(selectedComprarButton);
-                //selectedComprarButton.Click();
-                selectedComprarButton.SendKeys(Keys.Space);
+                Thread.Sleep(3000);
+                selectedComprarButton.Click();
             }
             else
             {

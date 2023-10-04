@@ -8,12 +8,8 @@ using TestCases.Utilities;
 namespace TestCases.Tests;
 
 [TestFixture]
-
 public class TicketPurchaseBaseTest : BaseTest
 { 
-    private string currentStep;
-
-
     [Test, Order(1)]
     public void TicketPurchaseTest()
     {
@@ -24,7 +20,7 @@ public class TicketPurchaseBaseTest : BaseTest
             Log.Information("Navigated to the URL.");
             
             currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps.ClickRandomMeInteresaButton();
+            homePageSteps.ClickOnRandomMeInteresaButton();
             Log.Information("Clicked on 'Me Interesa' button.");
             
             currentStep = "Step SelectDesiredTicket";
@@ -36,7 +32,7 @@ public class TicketPurchaseBaseTest : BaseTest
             Log.Information("Confirmed the date.");
             
             currentStep = "Step ClickComprarButton";
-            ticketsSelectionSteps.ClickComprarButton();
+            ticketsSelectionSteps.ClickOnComprarButton();
             Log.Information("Clicked on 'Comprar' button.");
             
             currentStep = "Step CompletePersonalInformation";
@@ -52,7 +48,7 @@ public class TicketPurchaseBaseTest : BaseTest
             Log.Information("Completed 'Check Privacy Checkbox' step.");
 
             currentStep = "Step ClicksComprarButtonAgain";
-            reservationSteps.ClicksComprarButtonAgain();
+            reservationSteps.ClicksOnComprarButtonAgain();
             Log.Information("Clicked 'Comprar' button again.");
             
             currentStep = "Step CompleteTheCardInformation";
@@ -60,8 +56,16 @@ public class TicketPurchaseBaseTest : BaseTest
             Log.Information("Completed 'Complete Card Information' step.");
             
             currentStep = "Step ClickPagarButton";
-            cardSteps.ClickPagarButton();
+            cardSteps.ClickOnPagarButton();
             Log.Information("Clicked 'Pagar' button.");
+            
+            currentStep = "Step ClickOnEnviarButton";
+            cardSteps.ClickOnEnviarButton();
+            Log.Information("Clicked 'Enviar' button.");
+            
+            currentStep = "Step ClickOnContinuarButton";
+            cardSteps.ClickOnContinuarButton();
+            Log.Information("Clicked 'Continuar' button.");
 
             currentStep = "PurchaseOKMessage";
             purchaseOkSteps.PurchaseOkMessage();
@@ -79,36 +83,69 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    
-    /*
-    [Test]
-    public void TestTicketPurchase()
+    [Test, Order(2)]
+    public void TicketPurchaseWrongCardTest()
     {
         try
         {
-            currentStep = "Step HaveSessions";
-            ticketPurchaseSteps.HaveSessions();
-            Log.Information("Completed 'Have Sessions' step.");
+            currentStep = "Step GoToURL";
+            homePageSteps.GoToURL();
+            Log.Information("Navigated to the URL.");
+            
+            currentStep = "Step ClickRandomMeInteresaButton";
+            homePageSteps.ClickOnRandomMeInteresaButton();
+            Log.Information("Clicked on 'Me Interesa' button.");
+            
+            currentStep = "Step SelectDesiredTicket";
+            ticketsSelectionSteps.SelectDesiredTicket();
+            Log.Information("Selected the desired ticket.");
+            
+            currentStep = "Step ConfirmDate";
+            ticketsSelectionSteps.ConfirmDate();
+            Log.Information("Confirmed the date.");
+            
+            currentStep = "Step ClickComprarButton";
+            ticketsSelectionSteps.ClickOnComprarButton();
+            Log.Information("Clicked on 'Comprar' button.");
+            
+            currentStep = "Step CompletePersonalInformation";
+            reservationSteps.CompletePersonalInformation();
+            Log.Information("Completed 'Complete Personal Information' step.");
 
-        
+            currentStep = "Step CheckTheConditionsCheckbox";
+            reservationSteps.CheckTheConditionsCheckbox();
+            Log.Information("Completed 'Check Conditions Checkbox' step.");
 
-            currentStep = "Step ClickThEnviarButton";
-            ticketPurchaseSteps.ClickThEnviarButton();
-            Log.Information("Clicked 'Enviar' button.");
+            currentStep = "Step CheckThePrivacyCheckbox";
+            reservationSteps.CheckThePrivacyCheckbox();
+            Log.Information("Completed 'Check Privacy Checkbox' step.");
 
-            currentStep = "Step ClickThContinuarButton";
-            ticketPurchaseSteps.ClickThContinuarButton();
-            Log.Information("Clicked 'Continuar' button.");
-            Log.Information("TestTicketPurchase completed successfully.\n------------------------------------------------------------------");
+            currentStep = "Step ClicksComprarButtonAgain";
+            reservationSteps.ClicksOnComprarButtonAgain();
+            Log.Information("Clicked 'Comprar' button again.");
+            
+            currentStep = "Step CompleteTheCardWithWrongInformation";
+            cardSteps.CompleteTheCardWithWrongInformation();
+            Log.Information("Completed 'Complete Card With Wrong Information' step.");
+            
+            currentStep = "Step ClickPagarButton";
+            cardSteps.ClickOnPagarButton();
+            Log.Information("Clicked 'Pagar' button.");
+            
+            currentStep = "Step ThenTheTicketPurchaseShouldBeUnsuccessful";
+            cardSteps.ThenTheTicketPurchaseShouldBeUnsuccessful();
+            Log.Information("Displayed 'Debe Introducir un número de tarjeta válido (sin espacios ni guiones).' message");
+            Log.Information("Ticket Purchase is unsuccessful.\n------------------------------------------------------------------");
         }
         catch (Exception ex)
         {
             Log.Error($"The test failed at step: '{currentStep}' due to an error: {ex.Message}");
 
             var screenshotName = $"{currentStep} + Error";
-            string? screenshotPath = TestUtil.CaptureScreenshot(driver,
+            string? screenshotPath = CaptureScreenshot(driver,
                 "C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Screenshots");
             throw;
         }
-        */
+    }
+    
 }

@@ -78,7 +78,7 @@ public class AdvancedSelectorPage : BasePage
         }
     }
     
-    public ReservationPage ClickComprarButton()
+    public ReservationPage ClickOnComprarButton()
     {
         try
         {

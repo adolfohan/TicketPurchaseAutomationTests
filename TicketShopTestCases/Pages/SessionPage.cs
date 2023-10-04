@@ -49,7 +49,7 @@ public class SessionPage : BasePage
         }
     }
     
-    public ReservationPage ClickComprarButton()
+    public ReservationPage ClickOnComprarButton()
     {
         try
         {

@@ -21,8 +21,8 @@ public class HomePageSteps
     }
     
     [When(@"the user selects a random ""Me interesa"" button")]
-    public void ClickRandomMeInteresaButton()
+    public void ClickOnRandomMeInteresaButton()
     {
-        homePage.ClickRandomMeInteresaButton();
+        homePage.ClickOnRandomMeInteresaButton();
     }
 }

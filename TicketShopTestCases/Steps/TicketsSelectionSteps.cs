@@ -4,6 +4,7 @@ using TestCases.Pages;
 
 namespace TestCases.Steps;
 
+[Binding]
 public class TicketsSelectionSteps
 {
     private readonly TicketsSelectionPage ticketsSelectionPage;
@@ -25,9 +26,9 @@ public class TicketsSelectionSteps
         ticketsSelectionPage.ConfirmDate();
     }
     
-    [When(@"clicks the ""Comprar"" button")]
-    public void ClickComprarButton()
+    [When(@"clicks on the ""Comprar"" button")]
+    public void ClickOnComprarButton()
     {
-        ticketsSelectionPage.ClickComprarButton();
+        ticketsSelectionPage.ClickOnComprarButton();
     }
 }

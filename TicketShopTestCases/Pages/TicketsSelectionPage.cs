@@ -57,7 +57,7 @@ public class TicketsSelectionPage : BasePage
                 else
                 {
                     driver.Navigate().Back();
-                    homePage.ClickRandomMeInteresaButton();
+                    homePage.ClickOnRandomMeInteresaButton();
                     SelectNumberOfTickets(numberOfTickets);
                 }
             }
@@ -76,7 +76,7 @@ public class TicketsSelectionPage : BasePage
         confirmButton.Click();
     }
     
-    public ReservationPage ClickComprarButton()
+    public ReservationPage ClickOnComprarButton()
     {
         try
         {

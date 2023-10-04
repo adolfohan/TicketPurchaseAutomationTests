@@ -34,7 +34,7 @@ public class HomePage : BasePage
         }
     }
 
-    public TicketPurchasePage ClickRandomMeInteresaButton()
+    public TicketsSelectionPage ClickOnRandomMeInteresaButton()
     {
         IList<IWebElement> meInteresaButtons = driver.FindElements(MeInteresaButton);
 
@@ -52,7 +52,7 @@ public class HomePage : BasePage
             buttonToClick.SendKeys(Keys.Enter);
             //buttonToClick.Click();
 
-            return new TicketPurchasePage(driver);
+            return new TicketsSelectionPage(driver);
         }
         else
         {

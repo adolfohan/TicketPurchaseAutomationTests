@@ -44,16 +44,44 @@ public class CardPage : BasePage
         }
     }
     
-    public PurchaseOkPage ClickPagarButton()
+    public void ClickOnPagarButton()
     {
         try
         {
             IWebElement pagarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(pagarBtnElement));
-            pagarButton.Click(); 
-            
+            pagarButton.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+    }
+    
+    public void ClickOnEnviarButton()
+    {
+        try
+        {
             IWebElement enviarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(enviarBtnElement));
             enviarButton.Click(); 
-            
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+    }
+    
+    public PurchaseOkPage ClickOnContinuarButton()
+    {
+        try
+        {
             IWebElement continuarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(continuarBtnElement));
             continuarButton.Click(); 
         }
@@ -65,7 +93,29 @@ public class CardPage : BasePage
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
-
         return new PurchaseOkPage(driver);
     }
+
+    public bool IsPurchaseUnsuccessful()
+    {
+        try
+        {
+            fluentWait.Until(ExpectedConditions.AlertIsPresent());
+
+            IAlert alert = driver.SwitchTo().Alert();
+
+            string text = alert.Text;
+
+            if (!text.Contains("Debe Introducir un número de tarjeta válido (sin espacios ni guiones).")) return false;
+            alert.Accept();
+            return true;
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
 }
