@@ -24,7 +24,7 @@ public class PurchaseOkPage : BasePage
         }
         catch (NoSuchElementException ex)
         {
-            Assert.Fail("Elemento no encontrado: " + ex.Message);
+            Assert.Fail("Element not found: " + ex.Message);
         }
         catch (Exception ex)
         {

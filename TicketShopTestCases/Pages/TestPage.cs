@@ -50,7 +50,7 @@ public class TestPage
     {
         try
         {
-            string baseUrl = ConfigReader.GetBaseUrl();
+            string? baseUrl = ConfigReader.GetBaseUrl();
             driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/");
             driver.Manage().Window.Maximize();
         }

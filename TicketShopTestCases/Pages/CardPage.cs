@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using TestCases.Base;
-using TestCases.Utilities;
 
 namespace TestCases.Pages;
 

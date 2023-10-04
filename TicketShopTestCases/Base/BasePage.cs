@@ -8,7 +8,7 @@ public class BasePage
     protected IWebDriver driver;
     protected readonly DefaultWait<IWebDriver> fluentWait;
 
-    public BasePage(IWebDriver driver)
+    protected BasePage(IWebDriver driver)
     {
         this.driver = driver;
         fluentWait = new DefaultWait<IWebDriver>(driver)
@@ -20,15 +20,27 @@ public class BasePage
         fluentWait.IgnoreExceptionTypes(typeof(WebDriverTimeoutException));
     }
     
-    public void ClearAndSetInputValue(IWebElement inputField, string value)
+    protected void ClearAndSetInputValue(IWebElement inputField, string value)
     {
         inputField.Clear();
         inputField.SendKeys(value);
     }
 
-    public void ScrollIntoView(IWebElement element)
+    protected void ScrollIntoView(IWebElement element)
     {
         IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
         jsExecutor.ExecuteScript("arguments[0].scrollIntoView(true);", element); //{behavior: 'auto', block: 'center'}
+    }
+    
+    protected void DrawBorder(IWebElement element)
+    {
+        IJavaScriptExecutor js = (IJavaScriptExecutor) driver;
+        js.ExecuteScript("arguments[0].style.border='2px solid red'", element);
+    }
+
+    protected void clickByJS(IWebElement element)
+    {
+        IJavaScriptExecutor js = (IJavaScriptExecutor) driver;
+        js.ExecuteScript("arguments[0].click();", element);
     }
 }

@@ -7,6 +7,7 @@ namespace TestCases.Pages;
 
 public class ReservationPage : BasePage
 {
+    private readonly Random random;
     private readonly By nameElement = By.Id("clientFullName-id");
     private readonly By surNameElement = By.Id("clientSurname-id");
     private readonly By idElement = By.Id("clientDocumentIdentifier-id");
@@ -18,6 +19,7 @@ public class ReservationPage : BasePage
             "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
     public ReservationPage(IWebDriver driver) : base(driver)
     {
+        random = new Random();
     }
     
     public void CompletePersonalInformation(string fullName, string surName, string id, string email, string phone)
@@ -56,10 +58,10 @@ public class ReservationPage : BasePage
             IWebElement conditionsCheckbox =
                 fluentWait.Until(ExpectedConditions.ElementToBeClickable(conditionsCheckboxElement));
 
-            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", conditionsCheckbox);
+            ScrollIntoView(conditionsCheckbox);
             
-            conditionsCheckbox.Click();
-            //conditionsCheckbox.SendKeys(Keys.Space);
+            //conditionsCheckbox.Click();
+            conditionsCheckbox.SendKeys(Keys.Space);
         }
         catch (NoSuchElementException ex)
         {
@@ -77,8 +79,10 @@ public class ReservationPage : BasePage
         {
             IWebElement privacyCheckbox =
                 fluentWait.Until(ExpectedConditions.ElementToBeClickable(privacyCheckboxElement));
-            privacyCheckbox.Click();
-            //privacyCheckbox.SendKeys(Keys.Space);
+
+            ScrollIntoView(privacyCheckbox);
+            //privacyCheckbox.Click();
+            privacyCheckbox.SendKeys(Keys.Space);
         }
         catch (NoSuchElementException ex)
         {
@@ -94,9 +98,21 @@ public class ReservationPage : BasePage
     {
         try
         {
-            IWebElement comprarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement));
+            IList<IWebElement> comprarButtons = fluentWait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(comprarButtonElement));
 
-            comprarButton.Click();
+            if (comprarButtons.Count > 0)
+            {
+                var randomIndex = random.Next(0, comprarButtons.Count);
+                var selectedComprarButton = comprarButtons[randomIndex];
+                //IWebElement firstComprarButton = comprarButtons[0];
+                ScrollIntoView(selectedComprarButton);
+                //selectedComprarButton.Click();
+                selectedComprarButton.SendKeys(Keys.Space);
+            }
+            else
+            {
+                Console.WriteLine("No 'Comprar' buttons found.");
+            }
         }
         catch (NoSuchElementException ex)
         {

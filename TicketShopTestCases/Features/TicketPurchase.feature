@@ -17,7 +17,7 @@ Feature: Ticket Purchase
         And clicks the "Pagar" button
         And clicks the "Enviar" button
         And clicks the "Continuar" button
-        Then should be able to download the tickets
+        Then should be able to see a 'Gracias por tu compra' message
 
     Scenario: Purchase ticket with invalid credit card unsuccessfully
         Given the user is on the website

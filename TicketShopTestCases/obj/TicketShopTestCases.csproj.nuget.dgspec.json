@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "ExtentReports.Core": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Gherkin": {
               "target": "Package",
               "version": "[26.0.3, )"

@@ -1,98 +1,96 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using Serilog;
+using TestCases.Base;
 using TestCases.Steps;
 using TestCases.Utilities;
 
 namespace TestCases.Tests;
 
 [TestFixture]
-public class TicketPurchaseTest
-{
-    [SetUp]
-    public void Setup()
-    {
-        Log.Logger = new LoggerConfiguration()
-            .WriteTo.File("C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Logs\\logfile.log",
-                rollingInterval: RollingInterval.Day)
-            .CreateLogger();
-        driver = WebDriverFactory.CreateWebDriver();
-        ticketPurchaseSteps = new TicketPurchaseSteps(driver);
-        homePageSteps = new HomePageSteps(driver);
-    }
 
-    [TearDown]
-    public void TearDown()
-    {
-        //driver.Quit();
-    }
-    
-    private IWebDriver driver;
-    private TicketPurchaseSteps ticketPurchaseSteps;
-    private HomePageSteps homePageSteps;
+public class TicketPurchaseBaseTest : BaseTest
+{ 
     private string currentStep;
 
 
-    [Test]
-    public void HomePageTest()
+    [Test, Order(1)]
+    public void TicketPurchaseTest()
     {
-        homePageSteps.GoToURL();
-        homePageSteps.ClickRandomMeInteresaButton();
+        try
+        {
+            currentStep = "Step GoToURL";
+            homePageSteps.GoToURL();
+            Log.Information("Navigated to the URL.");
+            
+            currentStep = "Step ClickRandomMeInteresaButton";
+            homePageSteps.ClickRandomMeInteresaButton();
+            Log.Information("Clicked on 'Me Interesa' button.");
+            
+            currentStep = "Step SelectDesiredTicket";
+            ticketsSelectionSteps.SelectDesiredTicket();
+            Log.Information("Selected the desired ticket.");
+            
+            currentStep = "Step ConfirmDate";
+            ticketsSelectionSteps.ConfirmDate();
+            Log.Information("Confirmed the date.");
+            
+            currentStep = "Step ClickComprarButton";
+            ticketsSelectionSteps.ClickComprarButton();
+            Log.Information("Clicked on 'Comprar' button.");
+            
+            currentStep = "Step CompletePersonalInformation";
+            reservationSteps.CompletePersonalInformation();
+            Log.Information("Completed 'Complete Personal Information' step.");
+
+            currentStep = "Step CheckTheConditionsCheckbox";
+            reservationSteps.CheckTheConditionsCheckbox();
+            Log.Information("Completed 'Check Conditions Checkbox' step.");
+
+            currentStep = "Step CheckThePrivacyCheckbox";
+            reservationSteps.CheckThePrivacyCheckbox();
+            Log.Information("Completed 'Check Privacy Checkbox' step.");
+
+            currentStep = "Step ClicksComprarButtonAgain";
+            reservationSteps.ClicksComprarButtonAgain();
+            Log.Information("Clicked 'Comprar' button again.");
+            
+            currentStep = "Step CompleteTheCardInformation";
+            cardSteps.CompleteTheCardInformation();
+            Log.Information("Completed 'Complete Card Information' step.");
+            
+            currentStep = "Step ClickPagarButton";
+            cardSteps.ClickPagarButton();
+            Log.Information("Clicked 'Pagar' button.");
+
+            currentStep = "PurchaseOKMessage";
+            purchaseOkSteps.PurchaseOkMessage();
+            Log.Information("Displayed 'Gracias por tu compra' message");
+            Log.Information("Ticket Purchase completed successfully.\n------------------------------------------------------------------");
+        }
+        catch (Exception ex)
+        {
+            Log.Error($"The test failed at step: '{currentStep}' due to an error: {ex.Message}");
+
+            var screenshotName = $"{currentStep} + Error";
+            string? screenshotPath = CaptureScreenshot(driver,
+                "C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Screenshots");
+            throw;
+        }
     }
+
     
-    
+    /*
     [Test]
     public void TestTicketPurchase()
     {
         try
         {
-            currentStep = "Step GoToURL";
-            ticketPurchaseSteps.GoToURL();
-            Log.Information("Navigated to the URL.");
-
-            currentStep = "Step SelectMeInteresaButton";
-            ticketPurchaseSteps.SelectMeInteresaButton();
-            Log.Information("Clicked on 'Me Interesa' button.");
-
-            currentStep = "Step SelectDesiredTicket";
-            ticketPurchaseSteps.SelectDesiredTicket();
-            Log.Information("Selected the desired ticket.");
-
-            currentStep = "Step ConfirmDate";
-            ticketPurchaseSteps.ConfirmDate();
-            Log.Information("Confirmed the date.");
-
-            currentStep = "Step ClickComprarButton";
-            ticketPurchaseSteps.ClickComprarButton();
-            Log.Information("Clicked on 'Comprar' button.");
-
             currentStep = "Step HaveSessions";
             ticketPurchaseSteps.HaveSessions();
             Log.Information("Completed 'Have Sessions' step.");
 
-            currentStep = "Step CompletePersonalInformation";
-            ticketPurchaseSteps.CompletePersonalInformation();
-            Log.Information("Completed 'Complete Personal Information' step.");
-
-            currentStep = "Step CheckTheConditionsCheckbox";
-            ticketPurchaseSteps.CheckTheConditionsCheckbox();
-            Log.Information("Completed 'Check Conditions Checkbox' step.");
-
-            currentStep = "Step CheckThePrivacyCheckbox";
-            ticketPurchaseSteps.CheckThePrivacyCheckbox();
-            Log.Information("Completed 'Check Privacy Checkbox' step.");
-
-            currentStep = "Step ClicksComprarButtonAgain";
-            ticketPurchaseSteps.ClicksComprarButtonAgain();
-            Log.Information("Clicked 'Comprar' button again.");
-
-            currentStep = "Step CompleteTheCardInformation";
-            ticketPurchaseSteps.CompleteTheCardInformation();
-            Log.Information("Completed 'Complete Card Information' step.");
-
-            currentStep = "Step ClickPagarButton";
-            ticketPurchaseSteps.ClickPagarButton();
-            Log.Information("Clicked 'Pagar' button.");
+        
 
             currentStep = "Step ClickThEnviarButton";
             ticketPurchaseSteps.ClickThEnviarButton();
@@ -112,5 +110,5 @@ public class TicketPurchaseTest
                 "C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Screenshots");
             throw;
         }
-    }
+        */
 }

@@ -139,7 +139,7 @@ namespace TestCases.Features
         await testRunner.AndAsync("clicks the \"Continuar\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
-        await testRunner.ThenAsync("should be able to download the tickets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        await testRunner.ThenAsync("should be able to see a \'Gracias por tu compra\' message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

@@ -1,13 +1,11 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using TestCases.Base;
-using TestCases.Utilities;
 
 namespace TestCases.Pages;
 
 public class TicketsSelectionPage : BasePage
 {
-
     private readonly HomePage homePage;
     private readonly Random random;
     
@@ -26,39 +24,50 @@ public class TicketsSelectionPage : BasePage
     private readonly By comprarButton =
         By.CssSelector(
             "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
+
     
     public void SelectNumberOfTickets(string numberOfTickets)
     {
         try
         {
-            IList<IWebElement> inputFields = fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
-
-            fluentWait.Until(webDriver =>
-                ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));
-
-            if (inputFields.Count > 0)
+            while (true)
             {
-                var randomIndex = random.Next(0, inputFields.Count);
+                IList<IWebElement> inputFields = fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
+                
+                /*if (inputFields.Count > 0)
 
-                var selectedInputField = inputFields[randomIndex];
-                //IWebElement firstInput = inputFields[0];
-                ScrollIntoView(selectedInputField);
-                ClearAndSetInputValue(selectedInputField, numberOfTickets);
-            }
-            else
-            {
-                driver.Navigate().Back();
-                homePage.ClickRandomMeInteresaButton();
-            }
-            
+                    fluentWait.Until(webDriver =>
+                        ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));*/
 
+                if (inputFields.Count > 0)
+                {
+                    var randomIndex = random.Next(0, inputFields.Count);
+                    var selectedInputField = inputFields[randomIndex];
+                    
+                    while (!selectedInputField.Displayed)
+                    {
+                        randomIndex = random.Next(0, inputFields.Count);
+                        selectedInputField = inputFields[randomIndex];
+                    }
+                    ScrollIntoView(selectedInputField);
+                    ClearAndSetInputValue(selectedInputField, numberOfTickets);
+                    break;
+                    //var firstInput = inputFields[0];
+                }
+                else
+                {
+                    driver.Navigate().Back();
+                    homePage.ClickRandomMeInteresaButton();
+                    SelectNumberOfTickets(numberOfTickets);
+                }
+            }
         }
         catch (Exception ex)
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
     }
-    
+
     public void ConfirmDate()
     {
         IWebElement confirmationBox = fluentWait.Until(ExpectedConditions.ElementIsVisible(confirmationButtonElement));

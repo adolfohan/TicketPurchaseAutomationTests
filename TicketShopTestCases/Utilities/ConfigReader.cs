@@ -2,13 +2,13 @@
 
 namespace TestCases.Utilities;
 
-public class ConfigReader
+public abstract class ConfigReader
 {
-    public static string GetBaseUrl()
+    public static string? GetBaseUrl()
     {
         try
         {
-            const string configFilePath = "C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Configuration\\config.xml"; 
+            const string configFilePath = @"C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\Configuration\config.xml"; 
             var configFileMap = new ExeConfigurationFileMap { ExeConfigFilename = configFilePath };
             Configuration config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
 

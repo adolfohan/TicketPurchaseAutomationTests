@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using TestCases.Pages;
 using TestCases.Steps;
-using TestCases.Utilities;
 using Serilog;
 
 namespace TestCases.Tests;
@@ -23,7 +23,7 @@ public class Test
             .WriteTo.File("C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Logs\\logfile.log",
                 rollingInterval: RollingInterval.Day)
             .CreateLogger();
-        driver = WebDriverFactory.CreateWebDriver();
+        driver = new ChromeDriver();
         homePage = new HomePage(driver);
         ticketsSelectionPage = new TicketsSelectionPage(driver);
         testSteps = new TestSteps(driver);
@@ -92,10 +92,7 @@ public class Test
         catch (Exception ex)
         {
             Log.Error($"The test failed at step: '{currentStep}' due to an error: {ex.Message}");
-
-            var screenshotName = $"{currentStep} + Error";
-            string screenshotPath = WebDriverFactory.CaptureScreenshot(driver,
-                "C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\Screenshots");
+            
             throw;
         }
     }

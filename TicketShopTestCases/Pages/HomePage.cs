@@ -20,7 +20,7 @@ public class HomePage : BasePage
     {
         try
         {
-            string baseUrl = ConfigReader.GetBaseUrl();
+            string? baseUrl = ConfigReader.GetBaseUrl();
             driver.Navigate().GoToUrl(baseUrl);
             driver.Manage().Window.Maximize();
         }
