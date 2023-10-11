@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System.Security.Principal;
+using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using TestCases.Base;
 
@@ -25,6 +26,9 @@ public class TicketsSelectionPage : BasePage
         By.CssSelector(
             "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
 
+    private readonly By priceElement = By.ClassName("sv-cart__price");
+    private readonly By error500Element = By.XPath("//div[@class='sv-page404__title' and text()='Error 500']");
+    private readonly By step2Element = By.XPath("//span[text()='Configura tus actividades']");
     
     public void SelectNumberOfTickets(string numberOfTickets)
     {
@@ -32,8 +36,9 @@ public class TicketsSelectionPage : BasePage
         {
             while (true)
             {
-                IList<IWebElement> inputFields = fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
-                
+                IList<IWebElement> inputFields =
+                    fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
+
                 /*if (inputFields.Count > 0)
 
                     fluentWait.Until(webDriver =>
@@ -43,16 +48,22 @@ public class TicketsSelectionPage : BasePage
                 {
                     var randomIndex = random.Next(0, inputFields.Count);
                     var selectedInputField = inputFields[randomIndex];
-                    
+
                     while (!selectedInputField.Displayed)
                     {
                         randomIndex = random.Next(0, inputFields.Count);
                         selectedInputField = inputFields[randomIndex];
                     }
+
                     ScrollIntoView(selectedInputField);
                     ClearAndSetInputValue(selectedInputField, numberOfTickets);
-                    break;
-                    //var firstInput = inputFields[0];
+                    
+                    //Thread.Sleep(TimeSpan.FromSeconds(2));
+                    
+                    if (checkPrice() < 0)
+                    {
+                        ClearAndSetInputValue(selectedInputField, numberOfTickets);
+                    }
                 }
                 else
                 {
@@ -60,6 +71,7 @@ public class TicketsSelectionPage : BasePage
                     homePage.ClickOnRandomMeInteresaButton();
                     SelectNumberOfTickets(numberOfTickets);
                 }
+                
             }
         }
         catch (Exception ex)
@@ -68,6 +80,19 @@ public class TicketsSelectionPage : BasePage
         }
     }
 
+    private int checkPrice()
+    {
+        IWebElement priceElement = fluentWait.Until(ExpectedConditions.ElementIsVisible(this.priceElement));
+
+        string priceText = priceElement.Text;
+
+        priceText = priceText.Replace(" ", "").Replace("€", "");
+        
+        int priceValue = int.Parse(priceText);
+        
+        return priceValue;
+
+    }
     public void ConfirmDate()
     {
         IWebElement confirmationBox = fluentWait.Until(ExpectedConditions.ElementIsVisible(confirmationButtonElement));
@@ -80,7 +105,12 @@ public class TicketsSelectionPage : BasePage
     {
         try
         {
-            fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton)).Click();
+            IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
+            comprarBtn.Click();
+            if (!haveSession() && !error500())
+            {
+                Console.WriteLine("No session or error 500 occurred. Continue with the next step...");
+            }
         }
         catch (NoSuchElementException ex)
         {
@@ -92,5 +122,31 @@ public class TicketsSelectionPage : BasePage
         }
 
         return new ReservationPage(driver);
+    }
+
+    private bool error500()
+    {
+        IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
+        IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
+
+        if (error500Message.Displayed)
+        {
+            driver.Navigate().Back();
+            comprarBtn.Click();
+            return true;
+        }
+        return false;
+    }
+    private bool haveSession()
+    {
+        IWebElement step2Title = fluentWait.Until(ExpectedConditions.ElementIsVisible(step2Element));
+        IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
+        
+        if (step2Title.Displayed)
+        {
+            comprarBtn.Click();
+            return true;
+        }
+        return false;
     }
 }

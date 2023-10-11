@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bmoYZUc4juB2DSbs+3sbSqKXW56XtdraYuVapZWYR4eaiYX+ZtAFoqmc8XtuozHAe9pneHfyRvvPIPozbMBa9w==",
+  "dgSpecHash": "9VudCpnjfGlI24q7wQwg7IwW3FLkSj++vQxfYKaPN8H/RJqcweO3vMJnFVQ6rGzjTl5iPkkzyOw5v47DCda7gA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\TicketShopTestCases.csproj",
   "expectedPackageFiles": [
@@ -17,10 +17,7 @@
     "C:\\Users\\Adolfo\\.nuget\\packages\\gherkin\\26.0.3\\gherkin.26.0.3.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\google.protobuf\\3.21.12\\google.protobuf.3.21.12.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\log4net\\2.0.15\\log4net.2.0.15.nupkg.sha512",
-    "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
-    "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
-    "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.2.0\\microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0\\microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.codeanalysis.common\\3.9.0\\microsoft.codeanalysis.common.3.9.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.codeanalysis.csharp\\3.9.0\\microsoft.codeanalysis.csharp.3.9.0.nupkg.sha512",
@@ -54,7 +51,7 @@
     "C:\\Users\\Adolfo\\.nuget\\packages\\nunit.extension.teamcityeventlistener\\1.0.7\\nunit.extension.teamcityeventlistener.1.0.7.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\nunit.extension.vsprojectloader\\3.8.0\\nunit.extension.vsprojectloader.3.8.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\nunit3testadapter\\4.4.2\\nunit3testadapter.4.4.2.nupkg.sha512",
-    "C:\\Users\\Adolfo\\.nuget\\packages\\razorengine.netcore\\2.2.6\\razorengine.netcore.2.2.6.nupkg.sha512",
+    "C:\\Users\\Adolfo\\.nuget\\packages\\razorengine.netcore\\3.1.0\\razorengine.netcore.3.1.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\razorengine.netcore.nixfix\\1.0.1\\razorengine.netcore.nixfix.1.0.1.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

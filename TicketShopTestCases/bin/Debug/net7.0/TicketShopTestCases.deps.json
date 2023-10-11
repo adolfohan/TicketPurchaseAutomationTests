@@ -20,6 +20,7 @@
           "NUnit": "3.13.3",
           "NUnit.Analyzers": "3.6.1",
           "NUnit3TestAdapter": "4.4.2",
+          "RazorEngine.NetCore": "3.1.0",
           "Selenium.Support": "4.12.4",
           "Selenium.WebDriver": "4.12.4",
           "Selenium.WebDriver.ChromeDriver": "117.0.5938.8800",
@@ -121,7 +122,7 @@
           "MongoDB.Driver": "2.8.0",
           "MongoDB.Driver.Core": "2.8.0",
           "Newtonsoft.Json": "13.0.3",
-          "RazorEngine.NetCore": "2.2.6",
+          "RazorEngine.NetCore": "3.1.0",
           "System.Configuration.ConfigurationManager": "4.5.0"
         }
       },
@@ -152,45 +153,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
-        "dependencies": {
-          "System.Text.Encodings.Web": "6.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.18316"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Razor/2.2.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Html.Abstractions": "2.2.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.18316"
-          }
-        }
-      },
       "Microsoft.AspNetCore.Razor.Language/3.1.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {
             "assemblyVersion": "3.1.0.0",
             "fileVersion": "3.100.19.56505"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Razor.Runtime/2.2.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Html.Abstractions": "2.2.0",
-          "Microsoft.AspNetCore.Razor": "2.2.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Runtime.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.18316"
           }
         }
       },
@@ -750,18 +717,16 @@
       "NUnit.Extension.TeamCityEventListener/1.0.7": {},
       "NUnit.Extension.VSProjectLoader/3.8.0": {},
       "NUnit3TestAdapter/4.4.2": {},
-      "RazorEngine.NetCore/2.2.6": {
+      "RazorEngine.NetCore/3.1.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Razor": "2.2.0",
           "Microsoft.AspNetCore.Razor.Language": "3.1.0",
-          "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.CodeAnalysis.CSharp": "3.9.0",
           "System.Reflection.Emit": "4.7.0",
           "System.Security.Permissions": "5.0.0"
         },
         "runtime": {
-          "lib/netcoreapp2.2/RazorEngine.NetCore.dll": {
+          "lib/netcoreapp3.1/RazorEngine.NetCore.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           }
@@ -1763,33 +1728,12 @@
       "path": "log4net/2.0.15",
       "hashPath": "log4net.2.0.15.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Y4rs5aMEXY8G7wJo5S3EEt6ltqyOTr/qOeZzfn+hw/fuQj5GppGckMY5psGLETo1U9hcT5MmAhaT5xtusM1b5g==",
-      "path": "microsoft.aspnetcore.html.abstractions/2.2.0",
-      "hashPath": "microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Razor/2.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-V54PIyDCFl8COnTp9gezNHpUNHk7F9UnerGeZy3UfbnwYvfzbo+ipqQmSgeoESH8e0JvKhRTyQyZquW2EPtCmg==",
-      "path": "microsoft.aspnetcore.razor/2.2.0",
-      "hashPath": "microsoft.aspnetcore.razor.2.2.0.nupkg.sha512"
-    },
     "Microsoft.AspNetCore.Razor.Language/3.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-e/atqZ5CzmJWuG/yaYOzbWNON+oqNKfk1M/xTYW+hje/RoiUUjVP88wrX1s9rEHzaAU4UljIOSvMxLABc2X2gg==",
       "path": "microsoft.aspnetcore.razor.language/3.1.0",
       "hashPath": "microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Razor.Runtime/2.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7YqK+H61lN6yj9RiQUko7oaOhKtRR9Q/kBcoWNRemhJdTIWOh1OmdvJKzZrMWOlff3BAjejkPQm+0V0qXk+B1w==",
-      "path": "microsoft.aspnetcore.razor.runtime/2.2.0",
-      "hashPath": "microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
       "type": "package",
@@ -2022,12 +1966,12 @@
       "path": "nunit3testadapter/4.4.2",
       "hashPath": "nunit3testadapter.4.4.2.nupkg.sha512"
     },
-    "RazorEngine.NetCore/2.2.6": {
+    "RazorEngine.NetCore/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oL2pH5SakFEYbqINDU8KTuCFopzyiw/ryiotEcidjatzGSSvLXz1/QXwZWp1y+oWpx7LI8sKD6yvWU+F1y3cQw==",
-      "path": "razorengine.netcore/2.2.6",
-      "hashPath": "razorengine.netcore.2.2.6.nupkg.sha512"
+      "sha512": "sha512-hBSLpX1dnQEdaXREWV7R94GEvLlWpq/4y11K687ZWenw+PqtntMLmGbwh+l6ptmrk8og6lrVJSKWMbO96gStGw==",
+      "path": "razorengine.netcore/3.1.0",
+      "hashPath": "razorengine.netcore.3.1.0.nupkg.sha512"
     },
     "RazorEngine.NetCore.nixFix/1.0.1": {
       "type": "package",

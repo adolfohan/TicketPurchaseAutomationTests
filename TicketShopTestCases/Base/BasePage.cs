@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
 namespace TestCases.Base;
@@ -13,7 +14,7 @@ public class BasePage
         this.driver = driver;
         fluentWait = new DefaultWait<IWebDriver>(driver)
         {
-            Timeout = TimeSpan.FromSeconds(30),
+            Timeout = TimeSpan.FromSeconds(10),
             PollingInterval = TimeSpan.FromSeconds(2)
         };
         fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
@@ -31,6 +32,14 @@ public class BasePage
         IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
         jsExecutor.ExecuteScript("arguments[0].scrollIntoView(true);", element); //{behavior: 'auto', block: 'center'}
     }
+
+    protected void CheckValidity(IWebElement element)
+    {
+        IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+        bool isInvalid = (bool)js.ExecuteScript("return arguments[0].checkValidity();", element);
+        
+        Assert.That(isInvalid, Is.False, "The input text is invalid");
+    }
     
     protected void DrawBorder(IWebElement element)
     {
@@ -38,7 +47,7 @@ public class BasePage
         js.ExecuteScript("arguments[0].style.border='2px solid red'", element);
     }
 
-    protected void clickByJS(IWebElement element)
+    protected void ClickByJS(IWebElement element)
     {
         IJavaScriptExecutor js = (IJavaScriptExecutor) driver;
         js.ExecuteScript("arguments[0].click();", element);

@@ -1,0 +1,478 @@
+2023-10-05 09:31:05.416 +02:00 [INF] Navigated to the URL.
+2023-10-05 09:31:05.682 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 09:31:05.782 +02:00 [INF] Selected the desired ticket.
+2023-10-05 09:31:05.825 +02:00 [INF] Confirmed the date.
+2023-10-05 09:31:05.864 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 09:31:17.069 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 09:31:17.109 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 09:31:17.151 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 09:31:20.203 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 09:31:24.435 +02:00 [INF] Completed 'Complete Card With Wrong Information' step.
+2023-10-05 09:31:24.472 +02:00 [INF] Clicked 'Pagar' button.
+2023-10-05 09:31:24.477 +02:00 [INF] Displayed 'Debe Introducir un número de tarjeta válido (sin espacios ni guiones).' message
+2023-10-05 09:31:24.477 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 09:32:40.516 +02:00 [INF] Navigated to the URL.
+2023-10-05 09:32:40.951 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 09:32:41.039 +02:00 [INF] Selected the desired ticket.
+2023-10-05 09:32:41.084 +02:00 [INF] Confirmed the date.
+2023-10-05 09:32:41.132 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 09:32:47.455 +02:00 [INF] Completed 'Personal Information With Wrong Email' step.
+2023-10-05 09:32:47.494 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 09:32:47.533 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 09:32:50.603 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 09:33:00.680 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 09:33:00.680 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 10:16:15.584 +02:00 [INF] Navigated to the URL.
+2023-10-05 10:16:16.628 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 10:16:16.704 +02:00 [INF] Selected the desired ticket.
+2023-10-05 10:16:16.750 +02:00 [INF] Confirmed the date.
+2023-10-05 10:16:16.793 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 10:16:25.225 +02:00 [INF] Completed 'Personal Information With Wrong Phone Number' step.
+2023-10-05 10:16:25.268 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 10:16:25.313 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 10:16:28.375 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 10:16:28.395 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 10:16:28.395 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 10:22:09.227 +02:00 [INF] Navigated to the URL.
+2023-10-05 10:22:09.697 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 10:22:10.735 +02:00 [INF] Selected the desired ticket.
+2023-10-05 10:22:10.802 +02:00 [INF] Confirmed the date.
+2023-10-05 10:22:10.872 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 10:22:13.254 +02:00 [INF] Completed 'Personal Information With Wrong Phone Number' step.
+2023-10-05 10:22:13.311 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 10:22:13.363 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 10:22:16.447 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 10:22:16.468 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 10:22:16.468 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 10:24:06.648 +02:00 [INF] Navigated to the URL.
+2023-10-05 10:24:07.532 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 10:24:07.649 +02:00 [INF] Selected the desired ticket.
+2023-10-05 10:24:07.713 +02:00 [INF] Confirmed the date.
+2023-10-05 10:24:07.771 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 10:24:10.143 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 10:24:10.201 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 10:24:10.260 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 10:24:13.332 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 10:24:13.371 +02:00 [ERR] The test failed at step: 'Step ThenTheUserCannotProceedToThePayment' due to an error:   The input text is invalid
+  Expected: False
+  But was:  True
+
+2023-10-05 10:31:19.271 +02:00 [INF] Navigated to the URL.
+2023-10-05 10:31:20.125 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 10:31:20.270 +02:00 [INF] Selected the desired ticket.
+2023-10-05 10:31:20.328 +02:00 [INF] Confirmed the date.
+2023-10-05 10:31:20.384 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 10:31:26.779 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 10:31:26.828 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 10:31:26.879 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 10:31:29.950 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 10:31:30.003 +02:00 [ERR] The test failed at step: 'Step CheckInvalidNameAndSurname' due to an error:   The input text is invalid
+  Expected: False
+  But was:  True
+
+2023-10-05 10:34:42.775 +02:00 [INF] Navigated to the URL.
+2023-10-05 10:34:43.294 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 10:34:43.429 +02:00 [INF] Selected the desired ticket.
+2023-10-05 10:34:43.489 +02:00 [INF] Confirmed the date.
+2023-10-05 10:34:43.556 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 10:34:49.924 +02:00 [INF] Completed 'Personal Information In Blank' step.
+2023-10-05 10:34:49.982 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 10:34:50.041 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 10:34:53.138 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 10:34:53.228 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 10:34:53.228 +02:00 [INF] Displayed 'Completar este campo' message
+2023-10-05 10:34:53.228 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 10:37:30.570 +02:00 [INF] Navigated to the URL.
+2023-10-05 10:37:31.178 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 10:37:33.710 +02:00 [INF] Selected the desired ticket.
+2023-10-05 10:37:33.771 +02:00 [INF] Confirmed the date.
+2023-10-05 10:37:33.836 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 10:37:36.198 +02:00 [INF] Completed 'Personal Information With Wrong Email' step.
+2023-10-05 10:37:36.254 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 10:37:36.313 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 10:37:39.397 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 10:37:39.424 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 10:37:39.425 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 11:01:31.790 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:01:33.607 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:01:33.872 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:01:33.945 +02:00 [INF] Confirmed the date.
+2023-10-05 11:01:34.019 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:01:36.397 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:01:39.487 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:01:39.580 +02:00 [ERR] The test failed at step: 'Step CheckCheckboxesSelected' due to an error:   Expected: True
+  But was:  False
+
+2023-10-05 11:02:09.038 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:02:10.659 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:02:10.811 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:02:10.874 +02:00 [INF] Confirmed the date.
+2023-10-05 11:02:10.941 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:02:18.680 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:02:21.765 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:02:21.825 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 11:02:21.825 +02:00 [INF] Ticket Purchase is unsuccessfully.
+------------------------------------------------------------------
+2023-10-05 11:03:07.130 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:03:08.656 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:03:08.781 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:03:08.847 +02:00 [INF] Confirmed the date.
+2023-10-05 11:03:08.904 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:03:11.303 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:03:14.403 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:03:14.465 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 11:03:14.465 +02:00 [INF] Ticket Purchase is unsuccessfully.
+------------------------------------------------------------------
+2023-10-05 11:03:50.021 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:03:50.992 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:03:51.203 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:03:51.265 +02:00 [INF] Confirmed the date.
+2023-10-05 11:03:51.324 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:03:53.705 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:03:56.803 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:03:56.871 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 11:03:56.871 +02:00 [INF] Ticket Purchase is unsuccessfully.
+------------------------------------------------------------------
+2023-10-05 11:50:04.180 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:50:05.260 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:50:05.394 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:50:05.466 +02:00 [INF] Confirmed the date.
+2023-10-05 11:50:05.525 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:50:15.615 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:50:18.654 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:50:18.734 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 11:50:18.734 +02:00 [INF] Ticket Purchase is unsuccessfully.
+------------------------------------------------------------------
+2023-10-05 11:50:32.697 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:50:33.261 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:50:34.875 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:50:34.935 +02:00 [INF] Confirmed the date.
+2023-10-05 11:50:35.004 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:50:40.761 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:50:43.859 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:50:43.949 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 11:50:43.950 +02:00 [INF] Ticket Purchase is unsuccessfully.
+------------------------------------------------------------------
+2023-10-05 11:51:59.419 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:52:01.151 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:52:01.334 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:52:01.405 +02:00 [INF] Confirmed the date.
+2023-10-05 11:52:01.465 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:52:03.856 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:52:06.946 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:52:07.024 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 11:52:07.025 +02:00 [INF] Ticket Purchase is unsuccessfully.
+------------------------------------------------------------------
+2023-10-05 11:52:48.482 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:52:49.925 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:52:50.246 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:52:50.302 +02:00 [INF] Confirmed the date.
+2023-10-05 11:52:50.370 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:52:56.795 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:52:59.880 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:52:59.947 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 11:52:59.948 +02:00 [INF] Ticket Purchase is unsuccessfully.
+------------------------------------------------------------------
+2023-10-05 11:53:55.089 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:53:56.278 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:53:56.420 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:53:56.488 +02:00 [INF] Confirmed the date.
+2023-10-05 11:53:56.547 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:53:58.988 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:54:02.081 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:54:02.144 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 11:54:02.144 +02:00 [INF] Ticket Purchase is unsuccessfully.
+------------------------------------------------------------------
+2023-10-05 11:55:20.495 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:55:20.848 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:55:20.989 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:55:21.048 +02:00 [INF] Confirmed the date.
+2023-10-05 11:55:21.101 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:55:26.414 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 11:55:29.500 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:55:29.564 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 11:55:29.564 +02:00 [INF] Ticket Purchase is unsuccessfully.
+------------------------------------------------------------------
+2023-10-05 11:57:28.905 +02:00 [INF] Navigated to the URL.
+2023-10-05 11:57:29.527 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 11:57:31.114 +02:00 [INF] Selected the desired ticket.
+2023-10-05 11:57:31.175 +02:00 [INF] Confirmed the date.
+2023-10-05 11:57:31.243 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 11:57:36.673 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 11:57:36.724 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 11:57:36.774 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 11:57:39.853 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 11:57:39.909 +02:00 [ERR] The test failed at step: 'Step CheckInvalidNameAndSurname' due to an error:   The input text is invalid
+  Expected: False
+  But was:  True
+
+2023-10-05 12:02:13.442 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:02:13.880 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:02:15.459 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:02:15.505 +02:00 [INF] Confirmed the date.
+2023-10-05 12:02:15.570 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:02:17.921 +02:00 [INF] Completed 'Personal Information With Wrong Phone Number' step.
+2023-10-05 12:02:17.986 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:02:18.042 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:02:21.122 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:02:21.163 +02:00 [ERR] The test failed at step: 'Step CheckInvalidPhoneNumber' due to an error:   The input text is invalid
+  Expected: True
+  But was:  False
+
+2023-10-05 12:04:17.889 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:04:18.275 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:04:18.420 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:04:18.477 +02:00 [INF] Confirmed the date.
+2023-10-05 12:04:18.540 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:04:20.905 +02:00 [INF] Completed 'Personal Information With Wrong Phone Number' step.
+2023-10-05 12:04:20.970 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:04:21.024 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:04:24.109 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:04:24.132 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 12:04:24.132 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 12:04:57.603 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:04:58.858 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:04:59.008 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:04:59.081 +02:00 [INF] Confirmed the date.
+2023-10-05 12:04:59.145 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:05:01.500 +02:00 [INF] Completed 'Personal Information With Wrong Email' step.
+2023-10-05 12:05:01.552 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:05:01.601 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:05:04.690 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:05:04.716 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 12:05:04.716 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 12:21:39.635 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:21:40.259 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:21:42.311 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:21:42.380 +02:00 [INF] Confirmed the date.
+2023-10-05 12:21:42.450 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:21:44.851 +02:00 [INF] Completed 'Personal Information With Wrong Phone Number' step.
+2023-10-05 12:21:44.911 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:21:44.963 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:21:48.051 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:21:48.089 +02:00 [ERR] The test failed at step: 'Step CheckInvalidPhoneNumber' due to an error: The input text should be invalid, but it is valid.
+2023-10-05 12:24:59.195 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:24:59.605 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:24:59.755 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:24:59.830 +02:00 [INF] Confirmed the date.
+2023-10-05 12:24:59.905 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:25:02.317 +02:00 [INF] Completed 'Personal Information With Wrong Phone Number' step.
+2023-10-05 12:25:02.371 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:25:02.431 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:25:05.519 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:25:05.554 +02:00 [ERR] The test failed at step: 'Step CheckInvalidPhoneNumber' due to an error: The input text is invalid as expected.
+2023-10-05 12:26:47.588 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:26:48.017 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:26:50.208 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:26:50.269 +02:00 [INF] Confirmed the date.
+2023-10-05 12:26:50.336 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:26:52.714 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:26:52.776 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:26:52.834 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:26:55.893 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:26:55.947 +02:00 [ERR] The test failed at step: 'Step CheckInvalidNameAndSurname' due to an error: The input text is invalid as expected.
+2023-10-05 12:28:28.065 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:28:29.116 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:28:29.256 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:28:29.315 +02:00 [INF] Confirmed the date.
+2023-10-05 12:28:29.372 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:28:31.762 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 12:28:31.814 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:28:31.876 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:28:34.949 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:28:34.988 +02:00 [ERR] The test failed at step: 'Step CheckInvalidId' due to an error: The input text is invalid as expected.
+2023-10-05 12:32:12.907 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:32:13.878 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:32:14.012 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:32:14.076 +02:00 [INF] Confirmed the date.
+2023-10-05 12:32:14.119 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:32:21.610 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:32:21.663 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:32:21.715 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:32:24.816 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:32:24.868 +02:00 [ERR] The test failed at step: 'Step CheckInvalidNameAndSurname' due to an error: The input text is invalid as expected.
+2023-10-05 12:32:46.515 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:32:48.315 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:32:48.530 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:32:48.583 +02:00 [INF] Confirmed the date.
+2023-10-05 12:32:48.638 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:32:57.687 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:32:57.748 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:32:57.809 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:33:00.878 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:33:00.886 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 12:33:00.886 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 12:36:22.994 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:36:24.121 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:36:24.228 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:36:24.279 +02:00 [INF] Confirmed the date.
+2023-10-05 12:36:24.334 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:36:34.416 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:36:34.482 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:36:34.557 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:36:37.651 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:36:37.660 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 12:36:37.660 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 12:37:10.320 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:37:10.896 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:37:13.313 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:37:13.375 +02:00 [INF] Confirmed the date.
+2023-10-05 12:37:13.448 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:37:15.807 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:37:15.861 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:37:15.923 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:37:18.995 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:37:19.007 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 12:37:19.007 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 12:38:56.688 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:38:57.758 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:38:57.922 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:38:57.982 +02:00 [INF] Confirmed the date.
+2023-10-05 12:38:58.034 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:39:00.419 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:39:00.484 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:39:00.541 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:39:03.624 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:39:03.635 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 12:39:03.635 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 12:43:03.724 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:43:04.704 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:43:04.815 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:43:04.863 +02:00 [INF] Confirmed the date.
+2023-10-05 12:43:04.921 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:43:14.534 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:43:14.589 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:43:14.640 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:43:17.700 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:43:17.711 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 12:43:17.711 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 12:43:57.820 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:43:58.341 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:43:58.494 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:43:58.553 +02:00 [INF] Confirmed the date.
+2023-10-05 12:43:58.609 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:44:00.989 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:44:01.046 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:44:01.102 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:44:05.184 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:44:05.184 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 12:44:33.717 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:44:34.809 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:44:34.913 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:44:34.971 +02:00 [INF] Confirmed the date.
+2023-10-05 12:44:35.026 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:44:39.976 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:44:40.036 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:44:40.100 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:44:43.173 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:44:43.173 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 12:46:34.997 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:46:35.377 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:46:35.504 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:46:35.558 +02:00 [INF] Confirmed the date.
+2023-10-05 12:46:35.615 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:46:38.007 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:46:38.065 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:46:38.115 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:46:44.196 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:46:44.735 +02:00 [ERR] The test failed at step: 'Step CheckInvalidNameAndSurname' due to an error: The element is displayed, which is unexpected
+2023-10-05 12:47:22.679 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:47:23.672 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:47:23.773 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:47:23.834 +02:00 [INF] Confirmed the date.
+2023-10-05 12:47:23.891 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:47:26.285 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:47:26.340 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:47:26.398 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:47:32.480 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:47:43.097 +02:00 [ERR] The test failed at step: 'Step CheckInvalidNameAndSurname' due to an error: Timed out after 10 seconds
+2023-10-05 12:48:17.165 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:48:17.551 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:48:17.682 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:48:17.743 +02:00 [INF] Confirmed the date.
+2023-10-05 12:48:17.797 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:48:20.224 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:48:20.279 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:48:20.329 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:48:26.410 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:48:36.476 +02:00 [ERR] The test failed at step: 'Step CheckInvalidNameAndSurname' due to an error: Timed out after 10 seconds
+2023-10-05 12:51:44.227 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:51:45.059 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:51:49.882 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:51:51.911 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 12:52:05.752 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:52:06.923 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:52:07.063 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:52:07.119 +02:00 [INF] Confirmed the date.
+2023-10-05 12:52:07.174 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:52:12.079 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:52:12.133 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:52:12.190 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:52:18.259 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:52:18.305 +02:00 [ERR] The test failed at step: 'Step CheckInvalidNameAndSurname' due to an error: The input text is invalid as expected.
+2023-10-05 12:52:37.966 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:52:38.360 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:52:38.541 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:52:38.598 +02:00 [INF] Confirmed the date.
+2023-10-05 12:52:38.658 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:52:41.037 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:52:41.092 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:52:41.146 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:52:47.232 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:52:57.542 +02:00 [ERR] The test failed at step: 'Step CheckInvalidNameAndSurname' due to an error: Timed out after 10 seconds
+2023-10-05 12:53:55.962 +02:00 [INF] Navigated to the URL.
+2023-10-05 12:53:57.243 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 12:53:57.385 +02:00 [INF] Selected the desired ticket.
+2023-10-05 12:53:57.461 +02:00 [INF] Confirmed the date.
+2023-10-05 12:53:57.545 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 12:53:59.962 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 12:54:00.026 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 12:54:00.093 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 12:54:06.181 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 12:54:06.181 +02:00 [INF] Completed Checking Invalid Name and Surname
+2023-10-05 12:54:06.955 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 13:03:46.166 +02:00 [INF] Navigated to the URL.
+2023-10-05 13:03:47.251 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 13:03:47.462 +02:00 [INF] Selected the desired ticket.
+2023-10-05 13:03:47.519 +02:00 [INF] Confirmed the date.
+2023-10-05 13:03:47.576 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 13:03:49.902 +02:00 [INF] Completed 'Personal Information In Blank' step.
+2023-10-05 13:03:49.955 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 13:03:50.004 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 13:03:53.083 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 13:03:53.168 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 13:03:53.168 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 13:06:00.604 +02:00 [INF] Navigated to the URL.
+2023-10-05 13:06:00.968 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 13:06:01.093 +02:00 [INF] Selected the desired ticket.
+2023-10-05 13:06:01.152 +02:00 [INF] Confirmed the date.
+2023-10-05 13:06:01.207 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 13:06:03.627 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 13:06:03.691 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 13:06:03.744 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 13:06:06.816 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 13:06:10.867 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-10-05 13:06:12.502 +02:00 [INF] Clicked 'Pagar' button.
+2023-10-05 13:06:13.258 +02:00 [INF] Clicked 'Enviar' button.
+2023-10-05 13:06:13.711 +02:00 [INF] Clicked 'Continuar' button.
+2023-10-05 13:06:13.783 +02:00 [INF] Displayed 'Gracias por tu compra' message
+2023-10-05 13:06:13.783 +02:00 [INF] Ticket Purchase completed successfully.
+------------------------------------------------------------------

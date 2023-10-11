@@ -1,9 +1,8 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bf1434b9_002Df084_002D4f93_002D8e06_002Dc4d84f1b44e4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TicketPurchaseWrongCardTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::CE7F702F-C01B-4957-80C0-02968B2843EF::net7.0::TestCases.Tests.TicketPurchaseBaseTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea919920_002D16a0_002D43e7_002D9dbd_002D0f180d075f4f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TicketPurchaseTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;CE7F702F-C01B-4957-80C0-02968B2843EF/d:Tests/f:TicketPurchaseBaseTest.cs&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	
 	
 	
 	

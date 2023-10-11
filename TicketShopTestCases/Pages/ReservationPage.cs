@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Events;
 using SeleniumExtras.WaitHelpers;
 using TestCases.Base;
 
@@ -16,6 +18,7 @@ public class ReservationPage : BasePage
     private readonly By privacyCheckboxElement = By.Id("form-privacy");
     private readonly By comprarButtonElement = By.CssSelector(
             "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
+    private readonly By datosDeLaOperacionElement = By.XPath("//h1[@class='datosDeLaOperacion']");
     public ReservationPage(IWebDriver driver) : base(driver)
     {
         random = new Random();
@@ -61,14 +64,13 @@ public class ReservationPage : BasePage
             
             //conditionsCheckbox.Click();
             conditionsCheckbox.SendKeys(Keys.Space);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
+            
+            Assert.That(conditionsCheckbox, Is.Not.Null, "The Condition Checkbox not found");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"An error occurred while checking Conditions checkbox: {ex.Message}");
+            //Console.WriteLine($"An error occurred while checking Conditions checkbox: {ex.Message}");
+            Assert.Fail($"An error occurred while checking Conditions checkbox: {ex.Message}");
         }
     }
     
@@ -103,10 +105,11 @@ public class ReservationPage : BasePage
             {
                 var randomIndex = random.Next(0, comprarButtons.Count);
                 var selectedComprarButton = comprarButtons[randomIndex];
-                //IWebElement firstComprarButton = comprarButtons[0];
+
                 ScrollIntoView(selectedComprarButton);
                 Thread.Sleep(3000);
                 selectedComprarButton.Click();
+                Thread.Sleep(3000);
             }
             else
             {
@@ -124,4 +127,117 @@ public class ReservationPage : BasePage
 
         return new CardPage(driver);
     }
+    
+    public void BlankFields()
+    {
+        IWebElement nameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
+        IWebElement surNameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
+        IWebElement idField = fluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
+        IWebElement emailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
+        IWebElement phoneField = fluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
+        CheckValidity(nameField); 
+        CheckValidity(surNameField); 
+        CheckValidity(idField); 
+        CheckValidity(emailField);        
+        CheckValidity(phoneField);
+    }
+
+    public void InvalidNameAndSurname()
+    {
+        IWebElement nameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
+        IWebElement surNameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
+        
+        try
+        {
+            CheckValidity(nameField);        
+            CheckValidity(surNameField);
+
+            Assert.Fail("The input text should be invalid, but it is valid.");
+        }
+        catch (Exception ex)
+        {
+            Assert.Pass("The input text is invalid as expected.");
+        }
+    }
+
+    public void InvalidId()
+    {
+        IWebElement phoneField = fluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
+        try
+        {
+            CheckValidity(phoneField);
+
+            Assert.Fail("The input text should be invalid, but it is valid.");
+        }
+        catch (Exception ex)
+        {
+            Assert.Pass("The input text is invalid as expected.");
+        }
+    }
+    
+    public void InvalidEmail()
+    {
+        IWebElement emailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
+        try
+        {
+            CheckValidity(emailField);
+
+            Assert.Fail("The input text should be invalid, but it is valid.");
+        }
+        catch (Exception)
+        {
+            Assert.Pass("The input text is invalid as expected.");
+        }
+    }
+    
+    public void InvalidPhone()
+    {
+        IWebElement phoneField = fluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
+        try
+        {
+            CheckValidity(phoneField);
+
+            Assert.Fail("The input text should be invalid, but it is valid.");
+        }
+        catch (Exception)
+        {
+            Assert.Pass("The input text is invalid as expected.");
+        }
+    }
+
+    public void AreCheckboxesSelected()
+    {
+        IWebElement conditionsCheckbox =
+            fluentWait.Until(ExpectedConditions.ElementToBeClickable(conditionsCheckboxElement));
+        IWebElement privacyCheckbox =
+            fluentWait.Until(ExpectedConditions.ElementToBeClickable(privacyCheckboxElement));
+        
+        bool isConditionsCheckboxSelected = conditionsCheckbox.Selected;
+        bool isPrivacyCheckboxSelected = privacyCheckbox.Selected;
+        
+        Assert.That(isConditionsCheckboxSelected || isPrivacyCheckboxSelected, Is.False, "The Conditions and Privacy Checkbox is not selected and Card Page is not displayed");
+        
+    }
+
+    public void IsCardPageDisplayed()
+    {
+        try
+        {
+            IWebElement datosElement = driver.FindElement(datosDeLaOperacionElement);
+
+            if (datosElement.Displayed)
+            {
+                Assert.Fail("The element is displayed, which is unexpected");
+            }
+            else
+            {
+                Console.WriteLine("The element is not displayed, as expected");
+            }
+        }
+        catch (NoSuchElementException)
+        {
+            Console.WriteLine("The element is not present, as expected");
+        }
+    }
+
 }
