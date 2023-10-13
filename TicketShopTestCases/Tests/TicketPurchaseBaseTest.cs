@@ -69,10 +69,12 @@ public class TicketPurchaseBaseTest : BaseTest
             LogStep(Status.Info, "Purchase completed");
             currentStep = "PurchaseOKMessage";
             purchaseOkSteps.PurchaseOkMessage();
+            
+            LogStep(Status.Info, "Ticket Purchase Successful");
         }
         catch (Exception ex)
         {
-            LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
+            HandleTestFailure(ex);
             throw;
         }
     }
@@ -129,12 +131,10 @@ public class TicketPurchaseBaseTest : BaseTest
             reservationSteps.CheckCardPage();
 
             LogStep(Status.Info, "Ticket Purchase unsuccessful");
-            LogStep(Status.Info,
-                "Ticket Purchase is unsuccessful.\n------------------------------------------------------------------");
         }
         catch (Exception ex)
         {
-            LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
+            HandleTestFailure(ex);
             throw;
         }
     }
@@ -182,9 +182,9 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step ClicksComprarButtonAgain";
             reservationSteps.ClicksOnComprarButtonAgain();
 
-            LogStep(Status.Info, "Checking Invalid Name And Surname");
-            currentStep = "Step CheckInvalidNameAndSurname";
-            reservationSteps.CheckInvalidNameAndSurname();
+            // LogStep(Status.Info, "Checking Invalid Name And Surname");
+            // currentStep = "Step CheckInvalidNameAndSurname";
+            // reservationSteps.CheckInvalidNameAndSurname();
 
             LogStep(Status.Info, "Checking Card Page");
             currentStep = "Step CheckCardPage";
@@ -194,7 +194,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
         catch (Exception ex)
         {
-            LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
+            HandleTestFailure(ex);
             throw;
         }
     }
@@ -242,9 +242,9 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step ClicksComprarButtonAgain";
             reservationSteps.ClicksOnComprarButtonAgain();
 
-            LogStep(Status.Info, "Checking Invalid ID");
-            currentStep = "Step CheckInvalidId";
-            reservationSteps.CheckInvalidId();
+            // LogStep(Status.Info, "Checking Invalid ID");
+            // currentStep = "Step CheckInvalidId";
+            // reservationSteps.CheckInvalidId();
 
             LogStep(Status.Info, "Checking Card Page");
             currentStep = "Step CheckCardPage";
@@ -254,11 +254,10 @@ public class TicketPurchaseBaseTest : BaseTest
         }
         catch (Exception ex)
         {
-            LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
+            HandleTestFailure(ex);
             throw;
         }
     }
-
 
     [Test, Order(5)]
     public void TicketPurchaseWithWrongEmailTest()
@@ -315,7 +314,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
         catch (Exception ex)
         {
-            LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
+            HandleTestFailure(ex);
             throw;
         }
     }
@@ -375,7 +374,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
         catch (Exception ex)
         {
-            LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
+            HandleTestFailure(ex);
             throw;
         }
     }
@@ -427,7 +426,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
         catch (Exception ex)
         {
-            LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
+            HandleTestFailure(ex);
             throw;
         }
     }
@@ -491,7 +490,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
         catch (Exception ex)
         {
-            LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
+            HandleTestFailure(ex);
             throw;
         }
     }

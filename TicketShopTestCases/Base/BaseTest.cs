@@ -60,8 +60,10 @@ public class BaseTest
                 test.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Skipped", ExtentColor.Orange));
                 break;
             case TestStatus.Inconclusive:
+                test.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Inconclusive", ExtentColor.Blue));
                 break;
             case TestStatus.Warning:
+                test.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Warning", ExtentColor.Purple));
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -120,5 +122,10 @@ public class BaseTest
     protected void LogStep(Status status, string message)
     {
         test.Log(status, message);
+    }
+    
+    protected void HandleTestFailure(Exception ex)
+    {
+        LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
     }
 }

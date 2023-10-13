@@ -23,7 +23,6 @@ C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Sele
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\ExtentReports.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Gherkin.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Google.Protobuf.dll
-C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\log4net.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -49,8 +48,6 @@ C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\nuni
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\RazorEngine.NetCore.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\WebDriver.Support.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\WebDriver.dll
-C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Serilog.dll
-C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\Serilog.Sinks.File.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\TechTalk.SpecFlow.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\SpecFlow.Internal.Json.dll
 C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll

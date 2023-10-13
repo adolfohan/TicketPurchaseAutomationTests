@@ -24,14 +24,11 @@
           "Selenium.Support": "4.12.4",
           "Selenium.WebDriver": "4.12.4",
           "Selenium.WebDriver.ChromeDriver": "117.0.5938.8800",
-          "Serilog": "3.0.2-dev-02056",
-          "Serilog.Sinks.File": "5.0.1-dev-00947",
           "SpecFlow": "4.0.31-beta",
           "SpecFlow.NUnit": "4.0.31-beta",
           "SpecFlow.NUnit.Runners": "4.0.31-beta",
           "SpecFlow.Tools.MsBuild.Generation": "4.0.31-beta",
-          "coverlet.collector": "3.2.0",
-          "log4net": "2.0.15"
+          "coverlet.collector": "3.2.0"
         },
         "runtime": {
           "TicketShopTestCases.dll": {}
@@ -139,17 +136,6 @@
           "lib/net5.0/Google.Protobuf.dll": {
             "assemblyVersion": "3.21.12.0",
             "fileVersion": "3.21.12.0"
-          }
-        }
-      },
-      "log4net/2.0.15": {
-        "dependencies": {
-          "System.Configuration.ConfigurationManager": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/log4net.dll": {
-            "assemblyVersion": "2.0.15.0",
-            "fileVersion": "2.0.15.0"
           }
         }
       },
@@ -814,25 +800,6 @@
         }
       },
       "Selenium.WebDriver.ChromeDriver/117.0.5938.8800": {},
-      "Serilog/3.0.2-dev-02056": {
-        "runtime": {
-          "lib/net7.0/Serilog.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "3.0.2.0"
-          }
-        }
-      },
-      "Serilog.Sinks.File/5.0.1-dev-00947": {
-        "dependencies": {
-          "Serilog": "3.0.2-dev-02056"
-        },
-        "runtime": {
-          "lib/net5.0/Serilog.Sinks.File.dll": {
-            "assemblyVersion": "5.0.1.0",
-            "fileVersion": "5.0.1.0"
-          }
-        }
-      },
       "SpecFlow/4.0.31-beta": {
         "dependencies": {
           "BoDi": "1.5.0",
@@ -1721,13 +1688,6 @@
       "path": "google.protobuf/3.21.12",
       "hashPath": "google.protobuf.3.21.12.nupkg.sha512"
     },
-    "log4net/2.0.15": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-GahnO9ZgFka+xYcFwAfIFjW+k86P2nxFoaEpH6t3v4hiGj7tv2ksVZphxCVIHmJxoySS0HeU3dgCW+bSCcfD0A==",
-      "path": "log4net/2.0.15",
-      "hashPath": "log4net.2.0.15.nupkg.sha512"
-    },
     "Microsoft.AspNetCore.Razor.Language/3.1.0": {
       "type": "package",
       "serviceable": true,
@@ -2112,20 +2072,6 @@
       "sha512": "sha512-xFQ/329nVh5hukULvFjVp3S+ggx82LI6SNrAxRUhtrrm0qzNwMI4RMB6kskRrMmxJCbVl8q5sGSkZWzVV+bpDw==",
       "path": "selenium.webdriver.chromedriver/117.0.5938.8800",
       "hashPath": "selenium.webdriver.chromedriver.117.0.5938.8800.nupkg.sha512"
-    },
-    "Serilog/3.0.2-dev-02056": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2JyDPAD7xnt5jiEm2NpvHAbDzHuuQlXpFgT5/pipxo4lQdij8PfNtREUY+Kq7STrs2G5oUAVjBd6u3eHhs4DDg==",
-      "path": "serilog/3.0.2-dev-02056",
-      "hashPath": "serilog.3.0.2-dev-02056.nupkg.sha512"
-    },
-    "Serilog.Sinks.File/5.0.1-dev-00947": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-rCxuBUTC4v/Mawa2bCD0CkEODiCIJqQvxZfWmZb9O2W1hcZ77WCrNGw2nKnXCuSII4cuWip9QwWbn9wmLzS5sA==",
-      "path": "serilog.sinks.file/5.0.1-dev-00947",
-      "hashPath": "serilog.sinks.file.5.0.1-dev-00947.nupkg.sha512"
     },
     "SpecFlow/4.0.31-beta": {
       "type": "package",

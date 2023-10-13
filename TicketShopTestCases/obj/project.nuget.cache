@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9VudCpnjfGlI24q7wQwg7IwW3FLkSj++vQxfYKaPN8H/RJqcweO3vMJnFVQ6rGzjTl5iPkkzyOw5v47DCda7gA==",
+  "dgSpecHash": "ni9nQxiAIU+dysLEss6RHWEWzGFJ5ZSkThmqEywtGzZyL+ZP6b1ivLIM18Ee3meIIXvFZssGlYHldt+zwnrpOA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\Repositories\\Git\\TestCases\\TicketShopTestCases\\TicketShopTestCases.csproj",
   "expectedPackageFiles": [
@@ -16,7 +16,6 @@
     "C:\\Users\\Adolfo\\.nuget\\packages\\extentreports.core\\1.0.3\\extentreports.core.1.0.3.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\gherkin\\26.0.3\\gherkin.26.0.3.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\google.protobuf\\3.21.12\\google.protobuf.3.21.12.nupkg.sha512",
-    "C:\\Users\\Adolfo\\.nuget\\packages\\log4net\\2.0.15\\log4net.2.0.15.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0\\microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\microsoft.codeanalysis.common\\3.9.0\\microsoft.codeanalysis.common.3.9.0.nupkg.sha512",
@@ -72,8 +71,6 @@
     "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.support\\4.12.4\\selenium.support.4.12.4.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.webdriver\\4.12.4\\selenium.webdriver.4.12.4.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.webdriver.chromedriver\\117.0.5938.8800\\selenium.webdriver.chromedriver.117.0.5938.8800.nupkg.sha512",
-    "C:\\Users\\Adolfo\\.nuget\\packages\\serilog\\3.0.2-dev-02056\\serilog.3.0.2-dev-02056.nupkg.sha512",
-    "C:\\Users\\Adolfo\\.nuget\\packages\\serilog.sinks.file\\5.0.1-dev-00947\\serilog.sinks.file.5.0.1-dev-00947.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\specflow\\4.0.31-beta\\specflow.4.0.31-beta.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\specflow.internal.json\\1.0.8\\specflow.internal.json.1.0.8.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\specflow.nunit\\4.0.31-beta\\specflow.nunit.4.0.31-beta.nupkg.sha512",

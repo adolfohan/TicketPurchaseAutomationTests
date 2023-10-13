@@ -12,7 +12,8 @@ public class HomePage : BasePage
 
     }
 
-    private By MeInteresaButton =>
+    private By pageSize20Element = By.XPath("//a[contains(text(), '20')]");
+    private By meInteresaButton =>
         By.XPath(
             "//a[contains(@class, 'sv-button sv-button--type-contained sv-button--size-sm sv-button--color-primary') and contains(text(), 'Me interesa')]");
 
@@ -34,9 +35,16 @@ public class HomePage : BasePage
         }
     }
 
+    private void PressPageSize20()
+    {
+        IWebElement pageSize20 = fluentWait.Until(ExpectedConditions.ElementIsVisible(pageSize20Element));
+        ScrollIntoView(pageSize20);
+        pageSize20.Click();
+    }
+    
     public TicketsSelectionPage ClickOnRandomMeInteresaButton()
     {
-        IList<IWebElement> meInteresaButtons = driver.FindElements(MeInteresaButton);
+        IList<IWebElement> meInteresaButtons = driver.FindElements(meInteresaButton);
 
         if (meInteresaButtons.Count > 0)
         {

@@ -129,13 +129,10 @@ public class TicketsSelectionPage : BasePage
         IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
         IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
 
-        if (error500Message.Displayed)
-        {
-            driver.Navigate().Back();
-            comprarBtn.Click();
-            return true;
-        }
-        return false;
+        if (!error500Message.Displayed) return false;
+        driver.Navigate().Back();
+        comprarBtn.Click();
+        return true;
     }
     private bool haveSession()
     {
