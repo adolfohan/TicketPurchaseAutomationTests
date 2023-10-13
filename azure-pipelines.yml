@@ -18,12 +18,6 @@ steps:
     restoreSolution: '$(solution)'
     
 
-- task: PublishTestResults@2
-  inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/TestResults/*.trx'
-    searchFolder: '$(Build.SourcesDirectory)'
-
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
@@ -32,15 +26,30 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: |
-    # Instalar las dependencias necesarias para las pruebas de Selenium, como Selenium WebDriver, WebDriver para el navegador que utilices y MSTest (u otra herramienta de pruebas).
     dotnet restore
 
-    # Compilar el proyecto de pruebas de Selenium (si es necesario).
     dotnet build
 
-    # Ejecutar las pruebas de Selenium utilizando MSTest.    
-    dotnet test 'C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\TicketShopTestCases.dll'
+    dotnet test C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\TicketShopTestCases.dll
   displayName: 'Tests de compra de tickets'
+
+- task: PublishTestResults@2
+  inputs:
+    testRunner: VSTest
+    testResultsFiles: '**/TestResults/*.trx'
+    searchFolder: '$(Build.SourcesDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\Reports' 
+    ArtifactName: 'ExtentReports'
+
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'ExtentReports' # Nombre del artefacto definido en la tarea de publicación de artefactos
+    downloadPath: '$(System.ArtifactsDirectory)/ExtentReports' # Ruta donde se descargarán los informes
 
 - task: VSTest@2
   inputs:
