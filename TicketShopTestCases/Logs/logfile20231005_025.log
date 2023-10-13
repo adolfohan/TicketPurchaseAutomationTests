@@ -1,0 +1,11 @@
+2023-10-05 15:20:55.558 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:20:55.910 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:20:58.070 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:20:58.125 +02:00 [INF] Confirmed the date.
+2023-10-05 15:21:08.438 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:21:18.509 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 15:21:24.571 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:21:24.629 +02:00 [INF] Completed 'Check the checkboxes' step.
+2023-10-05 15:21:24.640 +02:00 [INF] Completed 'The user cannot proceed to the payment' step.
+2023-10-05 15:21:24.640 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------

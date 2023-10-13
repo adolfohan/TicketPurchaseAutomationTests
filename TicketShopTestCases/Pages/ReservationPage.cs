@@ -154,7 +154,7 @@ public class ReservationPage : BasePage
 
             Assert.Fail("The input text should be invalid, but it is valid.");
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             Assert.Pass("The input text is invalid as expected.");
         }
@@ -169,7 +169,7 @@ public class ReservationPage : BasePage
 
             Assert.Fail("The input text should be invalid, but it is valid.");
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             Assert.Pass("The input text is invalid as expected.");
         }

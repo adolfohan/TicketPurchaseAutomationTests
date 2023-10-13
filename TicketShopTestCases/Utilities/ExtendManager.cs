@@ -13,7 +13,7 @@ public abstract class ExtentManager
     public static ExtentReports GetExtent(string testName)
     {
         if (extent != null) return extent;
-        var reportDirectory = Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
+        var reportDirectory = baseReportDirectory;//Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
         if (!Directory.Exists(reportDirectory))
         {
             Directory.CreateDirectory(reportDirectory);

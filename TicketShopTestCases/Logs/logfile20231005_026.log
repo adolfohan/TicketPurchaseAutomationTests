@@ -1,0 +1,348 @@
+2023-10-05 15:21:27.972 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:21:28.444 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:21:33.479 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:21:33.535 +02:00 [INF] Confirmed the date.
+2023-10-05 15:21:43.688 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:21:44.170 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 15:21:44.276 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:21:44.345 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:21:48.455 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:21:59.283 +02:00 [INF] Completed 'Complete Card With Wrong Information' step.
+2023-10-05 15:22:09.374 +02:00 [INF] Clicked 'Pagar' button.
+2023-10-05 15:22:17.418 +02:00 [ERR] The test failed at step: 'Step ThenTheTicketPurchaseShouldBeUnsuccessful' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:22:30.985 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:22:31.481 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:22:33.818 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:22:33.885 +02:00 [INF] Confirmed the date.
+2023-10-05 15:22:44.045 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:22:44.427 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 15:22:44.494 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:22:44.559 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:22:50.634 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:22:50.922 +02:00 [INF] Completed 'Complete Card With Wrong Information' step.
+2023-10-05 15:22:50.972 +02:00 [INF] Clicked 'Pagar' button.
+2023-10-05 15:22:50.980 +02:00 [INF] Displayed 'Debe Introducir un número de tarjeta válido (sin espacios ni guiones).' message
+2023-10-05 15:22:50.980 +02:00 [INF] Ticket Purchase is unsuccessful.
+------------------------------------------------------------------
+2023-10-05 15:23:11.427 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:23:11.812 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:23:13.979 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:23:14.033 +02:00 [INF] Confirmed the date.
+2023-10-05 15:23:24.193 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:23:24.559 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:23:24.619 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:23:24.679 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:23:30.769 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:23:31.021 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 15:23:42.241 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:23:42.657 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:23:50.710 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:23:50.773 +02:00 [INF] Confirmed the date.
+2023-10-05 15:24:00.934 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:24:01.281 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:24:01.338 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:24:01.392 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:24:07.459 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:24:07.499 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 15:34:03.670 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:34:04.885 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:34:07.049 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:34:07.102 +02:00 [INF] Confirmed the date.
+2023-10-05 15:34:15.235 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:34:15.238 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:34:15.240 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:34:15.242 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:34:15.254 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:34:15.256 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:34:20.672 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:34:21.413 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:34:23.584 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:34:23.642 +02:00 [INF] Confirmed the date.
+2023-10-05 15:34:29.798 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:34:29.801 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:34:29.805 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:34:29.809 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:34:29.813 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:34:29.817 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:34:37.277 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:34:37.648 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:34:39.774 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:34:39.823 +02:00 [INF] Confirmed the date.
+2023-10-05 15:34:41.917 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:34:41.919 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:34:41.920 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:34:41.921 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:34:41.923 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:34:41.924 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:34:54.240 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:34:54.650 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:34:56.808 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:34:56.864 +02:00 [INF] Confirmed the date.
+2023-10-05 15:35:07.239 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:35:15.312 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:35:15.314 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:35:15.315 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:35:15.317 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:35:15.319 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:36:30.623 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:36:31.711 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:36:33.867 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:36:33.919 +02:00 [INF] Confirmed the date.
+2023-10-05 15:36:42.053 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:36:42.057 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:36:42.060 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:36:42.062 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:36:42.064 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:36:42.066 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:36:49.471 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:36:49.992 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:36:59.750 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:37:03.802 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:37:11.682 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:37:12.646 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:37:14.815 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:37:14.869 +02:00 [INF] Confirmed the date.
+2023-10-05 15:37:19.003 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:37:19.004 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:37:19.006 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:37:19.007 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:37:19.009 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:37:19.010 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:37:25.721 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:37:26.070 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:37:28.223 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:37:28.277 +02:00 [INF] Confirmed the date.
+2023-10-05 15:37:38.591 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:37:38.592 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:37:38.594 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:37:38.596 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:37:38.600 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:37:38.602 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:37:44.457 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:37:44.872 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:37:47.060 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:37:47.118 +02:00 [INF] Confirmed the date.
+2023-10-05 15:37:51.258 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:37:51.261 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:37:51.263 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:37:51.264 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:37:51.266 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:37:51.267 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:37:56.842 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:37:57.222 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:37:59.373 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:37:59.420 +02:00 [INF] Confirmed the date.
+2023-10-05 15:38:03.533 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:38:03.535 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:38:03.537 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:38:03.538 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:38:03.541 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:38:03.542 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:38:11.862 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:38:12.303 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:38:17.208 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:38:17.260 +02:00 [INF] Confirmed the date.
+2023-10-05 15:38:27.805 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:38:27.808 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:38:27.811 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:38:27.814 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:38:27.817 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:38:27.819 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:38:47.664 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:38:48.134 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:38:55.742 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:38:55.800 +02:00 [INF] Confirmed the date.
+2023-10-05 15:39:05.952 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:39:06.284 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:39:06.339 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:39:06.391 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:39:12.475 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:39:12.511 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 15:39:31.283 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:39:31.804 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:39:36.832 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:39:36.891 +02:00 [INF] Confirmed the date.
+2023-10-05 15:39:40.998 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:39:41.003 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:39:41.006 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:39:41.008 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:39:41.010 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:39:41.012 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:39:46.143 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:39:46.552 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:39:48.809 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:39:48.873 +02:00 [INF] Confirmed the date.
+2023-10-05 15:39:58.997 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:39:58.999 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:39:59.001 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:39:59.002 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:39:59.004 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:39:59.005 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:40:05.701 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:40:06.082 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:40:09.779 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:40:09.788 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:40:15.496 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:40:15.985 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:40:18.149 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:40:18.215 +02:00 [INF] Confirmed the date.
+2023-10-05 15:40:30.517 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:40:30.859 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:40:30.916 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:40:30.969 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:40:37.052 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:40:37.089 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 15:46:05.910 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:46:06.655 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:46:08.804 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:46:08.859 +02:00 [INF] Confirmed the date.
+2023-10-05 15:46:19.011 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:46:19.442 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:46:19.509 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:46:19.571 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:46:25.664 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:46:25.983 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 15:46:35.214 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:46:35.691 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:46:37.843 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:46:37.896 +02:00 [INF] Confirmed the date.
+2023-10-05 15:46:44.012 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:46:44.014 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:46:44.016 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:46:44.018 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:46:44.020 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:46:44.022 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:47:35.207 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:47:35.778 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:47:36.925 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:47:36.981 +02:00 [INF] Confirmed the date.
+2023-10-05 15:47:47.119 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:47:47.503 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:47:47.560 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:47:47.615 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:47:53.692 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:47:53.727 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 15:48:08.054 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:48:09.223 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:48:09.386 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:48:09.447 +02:00 [INF] Confirmed the date.
+2023-10-05 15:48:19.590 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:48:19.938 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:48:19.991 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:48:20.045 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:48:26.122 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:48:26.157 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 15:48:33.385 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:48:33.782 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:48:33.942 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:48:33.989 +02:00 [INF] Confirmed the date.
+2023-10-05 15:48:44.155 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:48:44.509 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:48:44.569 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:48:44.622 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:48:50.696 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:48:50.733 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 15:48:59.909 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:49:00.293 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:49:00.479 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:49:00.536 +02:00 [INF] Confirmed the date.
+2023-10-05 15:49:04.638 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:49:04.642 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:49:04.646 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:49:04.650 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:49:04.653 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:49:04.655 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:49:11.390 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:49:11.760 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:49:11.888 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:49:11.945 +02:00 [INF] Confirmed the date.
+2023-10-05 15:49:16.040 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:49:16.044 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:49:16.047 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:49:16.049 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:49:16.052 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:49:16.054 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.132)
+2023-10-05 15:49:30.966 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:49:31.531 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:49:32.957 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:49:33.026 +02:00 [INF] Confirmed the date.
+2023-10-05 15:49:35.765 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:49:38.126 +02:00 [INF] Completed 'Personal Information With Wrong ID' step.
+2023-10-05 15:49:38.176 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:49:38.243 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:49:44.321 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:49:44.360 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected
+2023-10-05 15:53:51.285 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:53:51.322 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:53:51.545 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:53:51.697 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:53:51.913 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:53:51.914 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:53:51.915 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:53:52.360 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:53:52.368 +02:00 [ERR] The test failed at step: 'Step SelectDesiredTicket' due to an error: stale element reference: stale element not found
+  (Session info: chrome=117.0.5938.132); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+2023-10-05 15:53:52.368 +02:00 [ERR] The test failed at step: 'Step SelectDesiredTicket' due to an error: stale element reference: stale element not found
+  (Session info: chrome=117.0.5938.132); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+2023-10-05 15:53:52.368 +02:00 [ERR] The test failed at step: 'Step SelectDesiredTicket' due to an error: stale element reference: stale element not found
+  (Session info: chrome=117.0.5938.132); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+2023-10-05 15:53:52.380 +02:00 [ERR] The test failed at step: 'Step SelectDesiredTicket' due to an error: No 'Me interesa' buttons found on the page.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-10-05 15:53:52.393 +02:00 [ERR] The test failed at step: 'Step SelectDesiredTicket' due to an error: No 'Me interesa' buttons found on the page.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-10-05 15:53:52.400 +02:00 [ERR] The test failed at step: 'Step SelectDesiredTicket' due to an error: No 'Me interesa' buttons found on the page.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2023-10-05 15:53:52.685 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:53:53.827 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:53:53.832 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: Cannot access a disposed object.
+Object name: 'System.Net.Http.HttpClient'.
+2023-10-05 15:53:53.833 +02:00 [ERR] The test failed at step: 'Step ConfirmDate' due to an error: The HTTP request to the remote WebDriver server for URL http://localhost:53153/session/f10be3395247c706b147c022c5d887b3/elements timed out after 60 seconds.
+2023-10-05 15:58:17.304 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:58:18.377 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:58:18.520 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:58:18.570 +02:00 [INF] Confirmed the date.
+2023-10-05 15:58:21.116 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:58:23.455 +02:00 [INF] Completed 'Complete Personal Information' step.
+2023-10-05 15:58:23.506 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:58:23.557 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:58:29.647 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:58:29.927 +02:00 [INF] Completed 'Complete Card Information' step.
+2023-10-05 15:58:32.248 +02:00 [INF] Clicked 'Pagar' button.
+2023-10-05 15:58:35.090 +02:00 [INF] Clicked 'Enviar' button.
+2023-10-05 15:58:36.088 +02:00 [INF] Clicked 'Continuar' button.
+2023-10-05 15:58:36.125 +02:00 [INF] Displayed 'Gracias por tu compra' message
+2023-10-05 15:58:36.125 +02:00 [INF] Ticket Purchase completed successfully.
+------------------------------------------------------------------

@@ -1,0 +1,10 @@
+2023-10-05 15:58:54.419 +02:00 [INF] Navigated to the URL.
+2023-10-05 15:58:55.189 +02:00 [INF] Clicked on 'Me Interesa' button.
+2023-10-05 15:58:55.361 +02:00 [INF] Selected the desired ticket.
+2023-10-05 15:58:55.415 +02:00 [INF] Confirmed the date.
+2023-10-05 15:59:05.600 +02:00 [INF] Clicked on 'Comprar' button.
+2023-10-05 15:59:05.957 +02:00 [INF] Completed 'Personal Information With Wrong Name And Surname' step.
+2023-10-05 15:59:06.014 +02:00 [INF] Completed 'Check Conditions Checkbox' step.
+2023-10-05 15:59:06.064 +02:00 [INF] Completed 'Check Privacy Checkbox' step.
+2023-10-05 15:59:12.155 +02:00 [INF] Clicked 'Comprar' button again.
+2023-10-05 15:59:12.191 +02:00 [ERR] The test failed at step: 'Step CheckCardPage' due to an error: The element is displayed, which is unexpected

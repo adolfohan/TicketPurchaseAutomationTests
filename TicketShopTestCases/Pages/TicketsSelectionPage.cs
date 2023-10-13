@@ -1,5 +1,4 @@
-﻿using System.Security.Principal;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using TestCases.Base;
 
