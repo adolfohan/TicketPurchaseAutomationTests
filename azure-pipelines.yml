@@ -38,8 +38,8 @@ steps:
     # Compilar el proyecto de pruebas de Selenium (si es necesario).
     dotnet build
 
-    # Ejecutar las pruebas de Selenium utilizando MSTest.
-    dotnet test C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\TicketShopTestCases.dll
+    # Ejecutar las pruebas de Selenium utilizando MSTest.    
+    dotnet test 'C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\TicketShopTestCases.dll'
   displayName: 'Tests de compra de tickets'
 
 - task: VSTest@2
