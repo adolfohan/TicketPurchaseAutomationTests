@@ -1,0 +1,48 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  testProjectPath: 'C:\Projects\Repositories\Git\TestCases\TicketShopTestCases'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+    
+
+- task: PublishTestResults@2
+  inputs:
+    testRunner: VSTest
+    testResultsFiles: '**/TestResults/*.trx'
+    searchFolder: '$(Build.SourcesDirectory)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- script: |
+    # Instalar las dependencias necesarias para las pruebas de Selenium, como Selenium WebDriver, WebDriver para el navegador que utilices y MSTest (u otra herramienta de pruebas).
+    dotnet restore
+
+    # Compilar el proyecto de pruebas de Selenium (si es necesario).
+    dotnet build
+
+    # Ejecutar las pruebas de Selenium utilizando MSTest.
+    dotnet test C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\bin\Debug\net7.0\TicketShopTestCases.dll
+  displayName: 'Tests de compra de tickets'
+
+- task: VSTest@2
+  inputs:
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
