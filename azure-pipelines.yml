@@ -1,8 +1,3 @@
-# ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting the full .NET Framework.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
-
 trigger:
 - master
 
@@ -13,9 +8,14 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  currentDate: $(date:yyyyMMdd)
+  currentTime: $(date:HHmmss)
 
 steps:
 - task: NuGetToolInstaller@1
+
+- script: dotnet restore
+  displayName: 'Restore Dependencies'
 
 - task: NuGetCommand@2
   inputs:
@@ -35,3 +35,38 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: '**/TestResults.xml'
+    testRunTitle: 'Selenium Tests'
+
+- script: |
+    # List all HTML report files in the current directory and its subdirectories
+    report_files=($(find . -name "*.html"))
+
+    if [ ${#report_files[@]} -eq 0 ]; then
+        echo "No HTML Reports found."
+    else
+        # Sort the report files by modification time in descending order
+        IFS=$'\n' sorted=($(sort -r -t$'\0' -n < <(for file in "${report_files[@]}"; do printf "%s\0" "$file"; done)))
+        unset IFS
+
+        # Get the first (most recent) report file
+        latest_report="${sorted[0]}"
+
+        # Create a dynamic file name with date and time
+        report_name="report_$currentDate_$currentTime.html"
+
+        # Copy the most recent report to the artifact directory with the dynamic name
+        cp "$latest_report" $(Build.ArtifactStagingDirectory)/$report_name
+
+        echo "Latest HTML Report found: $latest_report"
+    fi
+  displayName: 'ExtentReport HTML'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: 'artifacts'
