@@ -1,0 +1,28 @@
+trigger:
+- master
+
+pool:
+vmImage: "windows-lastest"
+
+steps:
+- task: NodeTool@1
+  inputs:
+    version: "16.x"
+
+- task: Npm@1
+  inputs:
+    command: "install"
+    cwd: "$(Build.SourcesDirectory)"
+
+- task: SeleniumTestRunner@1
+  inputs:
+    testCommand: "dotnet test"
+    testFiles: "tests/*.csproj"
+    testFramework: "MSTest"
+    testRunner: "MSTest"
+    testResultsFile: "test-results.xml"
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: "JUnit"
+    testResultsFiles: "test-results.xml"
