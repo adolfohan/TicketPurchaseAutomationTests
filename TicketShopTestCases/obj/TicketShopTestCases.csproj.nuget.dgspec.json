@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "BoDi": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
             "Cucumber.CucumberExpressions": {
               "target": "Package",
               "version": "[16.1.1, )"

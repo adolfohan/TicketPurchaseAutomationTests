@@ -224,6 +224,7 @@ public class ReservationPage : BasePage
         try
         {
             IWebElement datosElement = driver.FindElement(datosDeLaOperacionElement);
+            DrawBorder(datosElement);
 
             if (datosElement.Displayed)
             {
