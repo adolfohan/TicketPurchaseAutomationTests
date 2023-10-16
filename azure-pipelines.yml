@@ -1,39 +1,37 @@
 trigger:
 - master
 
-jobs:
-- job: Build
-  steps:
-  - task: UseDotNet@2
-    displayName: Use .NET Core 3.1
-    enabled: true
-    inputs:
-      version: 3.1.x
+pool:
+  vmImage: 'windows-latest'
 
-  - task: DotnetBuild@1
-    displayName: Build solution
-    enabled: true
-    inputs:
-      projects: '**/*.csproj'
-      configuration: Release
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  currentDate: $(date:yyyyMMdd)
+  currentTime: $(date:HHmmss)
 
-- job: Test
-  dependsOn: Build
-  steps:
-  - task: UseDotNet@2
-    displayName: Use .NET Core 3.1
-    enabled: true
-    inputs:
-      version: 3.1.x
+steps:
+- task: NuGetToolInstaller@1
 
-  - task: Run Tests on BrowserStack@1
-    displayName: Run tests on BrowserStack
-    enabled: true
-    inputs:
-      testCommand: 'dotnet test'
-      testFiles: 'tests/*.csproj'
-      testFramework: 'MSTest'
-      testRunner: 'MSTest'
-      testResultsFile: '>test-results.xml'
-      os: 'Windows'
-      browser: 'Chrome'
+- script: dotnet restore
+  displayName: 'Restore Dependencies'
+
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: '**\TicketShopTestCases.csproj'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: '**/TestResults.xml'
+    testRunTitle: 'Selenium Tests'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: 'artifacts'
