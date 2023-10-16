@@ -17,15 +17,13 @@ steps:
 - script: dotnet restore
   displayName: 'Restore Dependencies'
 
-
-- task: DotNetCoreCLI@2
+- task: VSTest@2
   inputs:
-    command: 'test'
-    projects: |
-      **\TicketPurchaseBaseTest.cs
-      **\NUnit3.TestAdapter.dll
-    testRunTitle: 'Test'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: '**\TicketShopTestCases.dll'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
 
 - task: PublishTestResults@2
   inputs:
