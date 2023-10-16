@@ -20,7 +20,9 @@ steps:
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
-    testAssemblyVer2: '**\*TicketPurchaseBaseTest.cs'
+    testAssemblyVer2: |
+      **\TicketPurchaseBaseTest.cs
+      **\TestAdapter.dll
     searchFolder: '$(System.DefaultWorkingDirectory)'
 
 - task: PublishTestResults@2
