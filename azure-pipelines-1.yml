@@ -24,6 +24,6 @@ steps:
   displayName: 'Ticket Shop Tests'
   inputs:
     testAssemblyVer2: '**\TicketShopTestCases.csproj'
-    searchFolder: 'TicketShopTestCases/Tests/TicketPurchaseBaseTest.cs'
+    searchFolder: 'TicketShopTestCases\Tests\TicketPurchaseBaseTest.cs'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
