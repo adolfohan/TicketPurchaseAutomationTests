@@ -31,9 +31,12 @@ public class TicketsSelectionPage : BasePage
     
     public void SelectNumberOfTickets(string numberOfTickets)
     {
+        int maxAttempts = 3;  // Establecer el número máximo de intentos
+        int attempts = 0;
+        
         try
         {
-            while (true)
+            while (attempts < maxAttempts)
             {
                 IList<IWebElement> inputFields =
                     fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
@@ -61,7 +64,7 @@ public class TicketsSelectionPage : BasePage
                 {
                     driver.Navigate().Back();
                     homePage.ClickOnRandomMeInteresaButton();
-                    SelectNumberOfTickets(numberOfTickets);
+                    attempts++;
                 }
                 
             }
