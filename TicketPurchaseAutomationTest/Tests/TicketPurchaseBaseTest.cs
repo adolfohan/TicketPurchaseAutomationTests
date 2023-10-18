@@ -197,7 +197,7 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }
+    }*/
 
     [Test, Order(4)]
     public void TicketPurchaseWithWrongIdTest()
@@ -493,5 +493,5 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }*/
+    }
 }
