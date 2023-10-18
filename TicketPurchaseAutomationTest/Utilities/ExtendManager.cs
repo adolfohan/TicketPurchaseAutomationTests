@@ -7,12 +7,12 @@ public abstract class ExtentManager
 {
     private static ExtentReports extent;
 
-    // private static readonly string baseReportDirectory =
-    //     @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
+    private static readonly string baseReportDirectory =
+        @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
     
-    private static readonly string baseReportDirectory = 
-    Environment.GetEnvironmentVariable("REPORT_PATH") ?? 
-    @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
+    // private static readonly string baseReportDirectory = 
+    // Environment.GetEnvironmentVariable("REPORT_PATH") ?? 
+    // @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
 
 
     public static ExtentReports GetExtent(string testName)
