@@ -1,62 +1,66 @@
 trigger:
-- pipelineTest
+  - pipelineTest
 
 pool:
-  vmImage: 'windows-latest' 
+  vmImage: 'windows-latest'
 
 steps:
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    installationPath: $(Agent.ToolsDirectory)/dotnet
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      installationPath: $(Agent.ToolsDirectory)/dotnet
 
-- task: NuGetToolInstaller@1
+  - task: NuGetToolInstaller@1
 
-- script: dotnet restore
-  displayName: 'Restore Dependencies'
+  - script: dotnet restore
+    displayName: 'Restore Dependencies'
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
+  - task: NuGetCommand@2
+    inputs:
+      restoreSolution: '$(solution)'
 
-- task: VSBuild@1
-  inputs:
-    solution: '**/*.sln'
-    platform: 'Any CPU'
-    configuration: 'Release'
+  - task: VSBuild@1
+    inputs:
+      solution: '**/*.sln'
+      platform: 'Any CPU'
+      configuration: 'Release'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    codeCoverageEnabled: true
-    runInParallel: false
-    
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'NUnit'
-    testResultsFiles: '**/TestResults.xml'
-    testRunTitle: 'Selenium Tests'
-    
-- script: |
-    $trxFile = Get-Item -Path $(System.DefaultWorkingDirectory)\**\*.trx
+  - script: |
+      if (-not (Test-Path -Path "$(System.DefaultWorkingDirectory)/artifacts" -PathType Container)) {
+          New-Item -Path "$(System.DefaultWorkingDirectory)/artifacts" -ItemType Directory
+      }
+    displayName: 'Create artifacts directory'
 
-    $htmlReportFile = "$(System.DefaultWorkingDirectory)\TestResults.html"
+  - task: VSTest@2
+    inputs:
+      platform: '$(BuildPlatform)'
+      configuration: '$(BuildConfiguration)'
+      testSelector: 'testAssemblies'
+      testAssemblyVer2: |
+        **\*test*.dll
+        !**\*TestAdapter.dll
+        !**\obj\**
+      searchFolder: '$(System.DefaultWorkingDirectory)'
+      codeCoverageEnabled: true
+      runInParallel: false
 
-    Install-Module -Name PSTestReport -Force -Scope CurrentUser -AllowClobber
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'NUnit'
+      testResultsFiles: '**/TestResults.xml'
+      testRunTitle: 'Selenium Tests'
 
-    ConvertTo-PSTestReport -Path $trxFile -OutputPath $htmlReportFile
-
-    Write-Host "##vso[artifact.upload containerfolder=TestResults;artifactname=TestResults;]$(System.DefaultWorkingDirectory)\TestResults.html"
-  displayName: 'Generate and Publish Custom Test Report'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathtoPublish: $(Build.ArtifactStagingDirectory)
-    artifactName: 'artifacts'
+  - script: |
+      $options = @{
+        BuildNumber = $(Build.BuildNumber)
+        GitRepo = $(Build.Repository.Name)
+        GitRepoURL = $(Build.Repository.GitUrl)
+        CiURL = $(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results?buildId=$(Build.BuildId)
+        ShowHitCommands = $false
+        Compliance = 0.4
+        ScriptAnalyzerFile = "$(System.DefaultWorkingDirectory)/Utilities/Invoke-PSTestReport.ps1"
+        PesterFile = "$(System.DefaultWorkingDirectory)/artifacts/PesterResults.json"
+        OutputDir = "$(System.DefaultWorkingDirectory)/artifacts"
+      }
+      .\Utilities\Invoke-PSTestReport.ps1 @options
+    displayName: 'Generate Custom Test Report'
