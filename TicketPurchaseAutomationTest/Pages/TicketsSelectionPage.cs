@@ -31,12 +31,10 @@ public class TicketsSelectionPage : BasePage
     
     public void SelectNumberOfTickets(string numberOfTickets)
     {
-        int maxAttempts = 3;
-        int attempts = 0;
         
         try
         {
-            while (attempts < maxAttempts)
+            while (true)
             {
                 IList<IWebElement> inputFields =
                     fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
@@ -59,14 +57,13 @@ public class TicketsSelectionPage : BasePage
 
                     ScrollIntoView(selectedInputField);
                     ClearAndSetInputValue(selectedInputField, numberOfTickets);
+                    break;
                 }
-                else
-                {
-                    driver.Navigate().Back();
-                    homePage.ClickOnRandomMeInteresaButton();
-                    attempts++;
-                }
-                
+
+                driver.Navigate().Back();
+                homePage.ClickOnRandomMeInteresaButton();
+                SelectNumberOfTickets(numberOfTickets);
+
             }
         }
         catch (Exception ex)
