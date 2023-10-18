@@ -25,8 +25,6 @@ steps:
       platform: 'Any CPU'
       configuration: 'Release'
 
-    displayName: 'Create artifacts directory'
-
   - task: VSTest@2
     inputs:
       platform: '$(BuildPlatform)'
