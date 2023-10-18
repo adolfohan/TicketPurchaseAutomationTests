@@ -56,13 +56,6 @@ public class TicketsSelectionPage : BasePage
 
                     ScrollIntoView(selectedInputField);
                     ClearAndSetInputValue(selectedInputField, numberOfTickets);
-                    
-                    //Thread.Sleep(TimeSpan.FromSeconds(2));
-                    
-                    if (checkPrice() < 0)
-                    {
-                        ClearAndSetInputValue(selectedInputField, numberOfTickets);
-                    }
                 }
                 else
                 {
@@ -78,20 +71,7 @@ public class TicketsSelectionPage : BasePage
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
     }
-
-    private int checkPrice()
-    {
-        IWebElement priceElement = fluentWait.Until(ExpectedConditions.ElementIsVisible(this.priceElement));
-
-        string priceText = priceElement.Text;
-
-        priceText = priceText.Replace(" ", "").Replace("€", "");
-        
-        int priceValue = int.Parse(priceText);
-        
-        return priceValue;
-
-    }
+    
     public void ConfirmDate()
     {
         IWebElement confirmationBox = fluentWait.Until(ExpectedConditions.ElementIsVisible(confirmationButtonElement));

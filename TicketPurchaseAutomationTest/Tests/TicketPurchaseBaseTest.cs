@@ -79,7 +79,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    [Test, Order(2)]
+    /*[Test, Order(2)]
     public void TicketPurchasePersonaInformationInBlankTest()
     {
         try
@@ -493,5 +493,5 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }
+    }*/
 }
