@@ -86,7 +86,7 @@ public class TicketsSelectionPage : BasePage
         {
             IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
-            if (!haveSession() && !error500())
+            if (!haveSession() || !error500())
             {
                 Console.WriteLine("No session or error 500 occurred. Continue with the next step...");
             }
