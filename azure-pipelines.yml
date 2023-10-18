@@ -43,6 +43,18 @@ steps:
     testResultsFormat: 'NUnit'
     testResultsFiles: '**/TestResults.xml'
     testRunTitle: 'Selenium Tests'
+    
+- script: |
+    $trxFile = Get-Item -Path $(System.DefaultWorkingDirectory)\**\*.trx
+
+    $htmlReportFile = "$(System.DefaultWorkingDirectory)\TestResults.html"
+
+    Install-Module -Name PSTestReport -Force -Scope CurrentUser -AllowClobber
+
+    ConvertTo-PSTestReport -Path $trxFile -OutputPath $htmlReportFile
+
+    Write-Host "##vso[artifact.upload containerfolder=TestResults;artifactname=TestResults;]$(System.DefaultWorkingDirectory)\TestResults.html"
+  displayName: 'Generate and Publish Custom Test Report'
 
 - task: PublishBuildArtifacts@1
   inputs:
