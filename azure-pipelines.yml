@@ -36,7 +36,7 @@ steps:
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
-    runInParallel: true
+    runInParallel: false
     
 - task: PublishTestResults@2
   inputs:
