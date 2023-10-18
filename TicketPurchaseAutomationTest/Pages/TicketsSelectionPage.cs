@@ -31,7 +31,7 @@ public class TicketsSelectionPage : BasePage
     
     public void SelectNumberOfTickets(string numberOfTickets)
     {
-        int maxAttempts = 3;  // Establecer el número máximo de intentos
+        int maxAttempts = 3;
         int attempts = 0;
         
         try

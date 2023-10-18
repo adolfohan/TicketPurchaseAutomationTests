@@ -10,6 +10,21 @@ steps:
     packageType: 'sdk'
     installationPath: $(Agent.ToolsDirectory)/dotnet
 
+- task: NuGetToolInstaller@1
+
+- script: dotnet restore
+  displayName: 'Restore Dependencies'
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
 - task: VSTest@2
   inputs:
     platform: '$(BuildPlatform)'
@@ -22,3 +37,14 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     codeCoverageEnabled: true
     runInParallel: true
+    
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: '**/TestResults.xml'
+    testRunTitle: 'Selenium Tests'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: 'artifacts'
