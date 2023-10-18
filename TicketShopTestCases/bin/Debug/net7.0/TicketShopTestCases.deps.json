@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "TicketShopTestCases/1.0.0": {
         "dependencies": {
+          "BoDi": "1.5.0",
           "Cucumber.CucumberExpressions": "16.1.1",
           "Cucumber.Messages": "21.0.1",
           "DotNetSeleniumExtras.PageObjects": "3.11.0",
