@@ -21,8 +21,7 @@ public class HomePage : BasePage
     {
         try
         {
-            string? baseUrl = ConfigReader.GetBaseUrl();
-            driver.Navigate().GoToUrl(baseUrl);
+            driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/");
             driver.Manage().Window.Maximize();
         }
         catch (NoSuchElementException ex)
