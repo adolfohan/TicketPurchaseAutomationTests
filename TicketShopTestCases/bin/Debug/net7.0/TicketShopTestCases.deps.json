@@ -28,7 +28,6 @@
           "SpecFlow": "4.0.31-beta",
           "SpecFlow.NUnit": "4.0.31-beta",
           "SpecFlow.NUnit.Runners": "4.0.31-beta",
-          "SpecFlow.Tools.MsBuild.Generation": "4.0.31-beta",
           "coverlet.collector": "3.2.0"
         },
         "runtime": {

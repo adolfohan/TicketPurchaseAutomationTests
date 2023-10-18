@@ -74,14 +74,6 @@
               "target": "Package",
               "version": "[26.0.3, )"
             },
-            "MSTest.TestAdapter": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
-            "MSTest.TestFramework": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.5.0, )"
@@ -118,19 +110,11 @@
               "target": "Package",
               "version": "[4.0.31-beta, )"
             },
-            "SpecFlow.MsTest": {
-              "target": "Package",
-              "version": "[4.0.31-beta, )"
-            },
             "SpecFlow.NUnit": {
               "target": "Package",
               "version": "[4.0.31-beta, )"
             },
             "SpecFlow.NUnit.Runners": {
-              "target": "Package",
-              "version": "[4.0.31-beta, )"
-            },
-            "SpecFlow.Tools.MsBuild.Generation": {
               "target": "Package",
               "version": "[4.0.31-beta, )"
             },
