@@ -1,0 +1,7 @@
+<configuration>
+    <appSettings>
+        <add key="BaseUrl" value="https://pre-tixalia.publicticketshop.experticket.com/" />
+        <add key="browser" value="chrome" />
+    </appSettings>
+    
+</configuration>
