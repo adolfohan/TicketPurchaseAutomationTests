@@ -79,7 +79,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    /*[Test, Order(2)]
+    [Test, Order(2)]
     public void TicketPurchasePersonaInformationInBlankTest()
     {
         try
@@ -139,7 +139,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    [Test, Order(3)]
+    /*[Test, Order(3)]
     public void TicketPurchaseWithWrongNameAndSurnameTest()
     {
         try
@@ -197,7 +197,7 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }*/
+    }
 
     [Test, Order(4)]
     public void TicketPurchaseWithWrongIdTest()
@@ -257,7 +257,7 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }
+    }*/
 
     [Test, Order(5)]
     public void TicketPurchaseWithWrongEmailTest()
