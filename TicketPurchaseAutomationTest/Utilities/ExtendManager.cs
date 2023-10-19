@@ -15,7 +15,7 @@ public abstract class ExtentManager
     // @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
 
 
-    public static ExtentReports GetExtent(string testName)
+    public static ExtentReports? GetExtent(string testName)
     {
         if (extent != null) return extent;
         var reportDirectory = baseReportDirectory;//Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));

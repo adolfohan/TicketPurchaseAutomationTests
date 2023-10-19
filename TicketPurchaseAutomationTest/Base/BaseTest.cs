@@ -18,7 +18,7 @@ public class BaseTest
     protected CardSteps cardSteps;
     protected PurchaseOkSteps purchaseOkSteps;
     protected string currentStep;
-    private ExtentReports extent;
+    private ExtentReports? extent;
     private ExtentTest test;
 
     [SetUp]
