@@ -8,24 +8,18 @@ public abstract class ExtentManager
     private static ExtentReports extent;
 
     private static readonly string baseReportDirectory =
-        //@"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
-        Environment.GetEnvironmentVariable("REPORT_PATH");
+        @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
+        //Environment.GetEnvironmentVariable("REPORT_PATH");
 
 
-    public static ExtentReports? GetExtent(string testName, string reportDirectory)
+    public static ExtentReports? GetExtent(string testName)
     {
         if (extent != null) return extent;
-        //var reportDirectory = baseReportDirectory;//Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
-        
-        if (string.IsNullOrEmpty(reportDirectory))
-        {
-            Console.WriteLine("La variable de entorno REPORT_DIRECTORY no está configurada. Usando directorio predeterminado.");
-            reportDirectory = @"$(System.DefaultWorkingDirectory)/Reports";
-        }
-        /*if (!Directory.Exists(reportDirectory))
+        var reportDirectory = baseReportDirectory;//Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
+        if (!Directory.Exists(reportDirectory))
         {
             Directory.CreateDirectory(reportDirectory);
-        }*/
+        }
 
         var reportFileName = $"report_{testName}_{DateTime.Now:yyyyMMddHHmmss}.html";
         var reportPath = Path.Combine(reportDirectory, reportFileName);

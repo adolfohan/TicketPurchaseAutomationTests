@@ -19,7 +19,7 @@ public class BaseTest
     protected PurchaseOkSteps purchaseOkSteps;
     protected string currentStep;
     private ExtentReports? extent;
-    private ExtentTest test;
+    private ExtentTest? test;
 
     [SetUp]
     public void SetUp()
@@ -32,9 +32,9 @@ public class BaseTest
         purchaseOkSteps = new PurchaseOkSteps(driver);
         //extent = ExtentManager.GetExtent();
         //test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
-        var testName = TestContext.CurrentContext.Test.Name;
-        var reportDirectory = Environment.GetEnvironmentVariable("REPORT_DIRECTORY");
-        if (reportDirectory != null) extent = ExtentManager.GetExtent(testName, reportDirectory);
+        string testName = TestContext.CurrentContext.Test.Name;
+        
+        extent = ExtentManager.GetExtent(testName);
         test = extent.CreateTest(testName);
     }
 
@@ -48,7 +48,7 @@ public class BaseTest
         switch (status)
         {
             case TestStatus.Failed:
-                test.Log(Status.Fail, MarkupHelper.CreateLabel("Test Case Failed", ExtentColor.Red));
+                test?.Log(Status.Fail, MarkupHelper.CreateLabel("Test Case Failed", ExtentColor.Red));
                 test.Log(Status.Fail, "Failure Message: " + errorMessage);
                 test.Log(Status.Fail, "Stack Trace: " + stackTrace);
                 AttachScreenshotOnFailure();
@@ -124,7 +124,7 @@ public class BaseTest
     
     protected void LogStep(Status status, string message)
     {
-        test.Log(status, message);
+        test?.Log(status, message);
     }
     
     protected void HandleTestFailure(Exception ex)
