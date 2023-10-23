@@ -32,9 +32,9 @@ public class BaseTest
         purchaseOkSteps = new PurchaseOkSteps(driver);
         //extent = ExtentManager.GetExtent();
         //test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
-        string testName = TestContext.CurrentContext.Test.Name;
-        
-        extent = ExtentManager.GetExtent(testName);
+        var testName = TestContext.CurrentContext.Test.Name;
+        var reportDirectory = Environment.GetEnvironmentVariable("REPORT_DIRECTORY");
+        if (reportDirectory != null) extent = ExtentManager.GetExtent(testName, reportDirectory);
         test = extent.CreateTest(testName);
     }
 
@@ -87,12 +87,13 @@ public class BaseTest
     {
         try
         {
+            const string screenshotDirectory = "$(System.DefaultWorkingDirectory)/Screenshots";
+            // var screenshotDirectory =
+            //     @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
             var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            var screenshotPath = Path.Combine(@"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots",
-                screenshotName);
-            // var screenshotPath = Path.Combine(Environment.GetEnvironmentVariable("SCREENSHOT_PATH") ??
-            // @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots", screenshotName);
+            var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
+            
 
             ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
             CleanUpOldScreenshots();

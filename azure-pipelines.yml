@@ -43,18 +43,3 @@ steps:
       testResultsFormat: 'NUnit'
       testResultsFiles: '**/TestResults.xml'
       testRunTitle: 'Selenium Tests'
-
-  - script: |
-      $options = @{
-        BuildNumber = $(Build.BuildNumber)
-        GitRepo = $(Build.Repository.Name)
-        GitRepoURL = $(Build.Repository.GitUrl)
-        CiURL = $(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results?buildId=$(Build.BuildId)
-        ShowHitCommands = $false
-        Compliance = 0.4
-        ScriptAnalyzerFile = "$(System.DefaultWorkingDirectory)/Utilities/Invoke-PSTestReport.ps1"
-        PesterFile = "$(System.DefaultWorkingDirectory)/artifacts/PesterResults.json"
-        OutputDir = "$(System.DefaultWorkingDirectory)/artifacts"
-      }
-      .\Utilities\Invoke-PSTestReport.ps1 @options
-    displayName: 'Generate Custom Test Report'
