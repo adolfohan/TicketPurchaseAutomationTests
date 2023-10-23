@@ -87,7 +87,7 @@ public class BaseTest
     {
         try
         {
-            const string screenshotDirectory = "$(System.DefaultWorkingDirectory)/Screenshots";
+            var screenshotDirectory = $"{TestContext.CurrentContext.TestDirectory}\\{TestContext.CurrentContext.Test.MethodName}.png";
             // var screenshotDirectory =
             //     @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
             var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
@@ -95,7 +95,8 @@ public class BaseTest
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
             
 
-            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
+            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath);
+            TestContext.AddTestAttachment(screenshotPath);
             CleanUpOldScreenshots();
 
             return screenshotPath;
