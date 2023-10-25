@@ -87,16 +87,11 @@ public class BaseTest
     {
         try
         {
-            var screenshotDirectory = $"{TestContext.CurrentContext.TestDirectory}\\{TestContext.CurrentContext.Test.MethodName}.png";
-            // var screenshotDirectory =
-            //     @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
             var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
-            
+            var screenshotPath = Path.Combine("Screenshots", screenshotName);
 
-            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath);
-            TestContext.AddTestAttachment(screenshotPath);
+            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
             CleanUpOldScreenshots();
 
             return screenshotPath;
@@ -108,12 +103,12 @@ public class BaseTest
         }
     }
 
-    private void CleanUpOldScreenshots()
+    private static void CleanUpOldScreenshots()
     {
-        var screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
+        const string screenshotDirectory = "Screenshots";
         var screenshotFiles = Directory.GetFiles(screenshotDirectory, "screenshot_*.png");
 
-        var maxScreenshotsToKeep = 10;
+        const int maxScreenshotsToKeep = 10;
 
         if (screenshotFiles.Length <= maxScreenshotsToKeep) return;
         Array.Sort(screenshotFiles);
