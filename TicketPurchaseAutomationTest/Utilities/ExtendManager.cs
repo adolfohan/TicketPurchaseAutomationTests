@@ -6,13 +6,13 @@ namespace TicketPurchaseAutomationTest.Utilities;
 public abstract class ExtentManager
 {
     private static ExtentReports extent;
-    private static readonly string baseReportDirectory = "Reports";
+    //private static readonly string baseReportDirectory = "Reports";
 
-    //private static readonly string baseReportDirectory =
-    //    @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
+    private static readonly string baseReportDirectory =
+        @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
     //Environment.GetEnvironmentVariable("REPORT_PATH");
 
-    public static string GetReportPath(string testName)
+    /*private static string GetReportPath(string testName)
     {
         var workingDirectory = Environment.GetEnvironmentVariable("SYSTEM_DEFAULTWORKINGDIRECTORY");
         var reportDirectory = Path.Combine(workingDirectory, baseReportDirectory);
@@ -38,10 +38,10 @@ public abstract class ExtentManager
         extent.AddSystemInfo("Tester", "Adolfo");
         extent.AddSystemInfo("Environment", "Pre-Producción");
         return extent;
-    }
+    }*/
 
 
-    /*public static ExtentReports? GetExtent(string testName)
+    public static ExtentReports? GetExtent(string testName)
     {
         if (extent != null) return extent;
         var reportDirectory =
@@ -61,7 +61,5 @@ public abstract class ExtentManager
         extent.AddSystemInfo("Tester", "Adolfo");
         extent.AddSystemInfo("Environment", "Pre-Producción");
         return extent;
-    }*/
-    
-    
+    }
 }

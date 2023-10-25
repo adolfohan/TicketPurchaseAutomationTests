@@ -45,10 +45,3 @@ steps:
       testRunTitle: 'Selenium Tests'
       searchFolder: '$(System.DefaultWorkingDirectory)'
       mergeTestResults: true
-      
-  - task: PublishBuildArtifacts@1
-    inputs:
-      pathtoPublish: |
-        Screenshots
-        Reports
-      artifactName: 'TestResults'    
