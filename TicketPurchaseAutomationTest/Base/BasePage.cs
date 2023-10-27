@@ -14,7 +14,7 @@ public class BasePage
         this.driver = driver;
         fluentWait = new DefaultWait<IWebDriver>(driver)
         {
-            Timeout = TimeSpan.FromSeconds(60),
+            Timeout = TimeSpan.FromSeconds(30),
             PollingInterval = TimeSpan.FromSeconds(2)
         };
         fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
