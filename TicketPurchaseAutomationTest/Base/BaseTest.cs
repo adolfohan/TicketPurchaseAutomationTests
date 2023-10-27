@@ -17,7 +17,7 @@ public class BaseTest
     protected ReservationSteps reservationSteps;
     protected CardSteps cardSteps;
     protected PurchaseOkSteps purchaseOkSteps;
-    protected string currentStep;
+    protected string? currentStep;
     private ExtentReports? extent;
     private ExtentTest? test;
 
@@ -33,7 +33,7 @@ public class BaseTest
         string testName = TestContext.CurrentContext.Test.Name;
         
         extent = ExtentManager.GetExtent(testName);
-        test = extent.CreateTest(testName);
+        if (extent != null) test = extent.CreateTest(testName);
     }
 
     [TearDown]
@@ -47,28 +47,28 @@ public class BaseTest
         {
             case TestStatus.Failed:
                 test?.Log(Status.Fail, MarkupHelper.CreateLabel("Test Case Failed", ExtentColor.Red));
-                test.Log(Status.Fail, "Failure Message: " + errorMessage);
-                test.Log(Status.Fail, "Stack Trace: " + stackTrace);
+                test?.Log(Status.Fail, "Failure Message: " + errorMessage);
+                test?.Log(Status.Fail, "Stack Trace: " + stackTrace);
                 AttachScreenshotOnFailure();
                 break;
             case TestStatus.Passed:
-                test.Log(Status.Pass, MarkupHelper.CreateLabel("Test Case Passed", ExtentColor.Green));
+                test?.Log(Status.Pass, MarkupHelper.CreateLabel("Test Case Passed", ExtentColor.Green));
                 break;
             case TestStatus.Skipped:
-                test.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Skipped", ExtentColor.Orange));
+                test?.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Skipped", ExtentColor.Orange));
                 break;
             case TestStatus.Inconclusive:
-                test.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Inconclusive", ExtentColor.Blue));
+                test?.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Inconclusive", ExtentColor.Blue));
                 break;
             case TestStatus.Warning:
-                test.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Warning", ExtentColor.Purple));
+                test?.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Warning", ExtentColor.Purple));
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
 
         driver.Quit();
-        extent.Flush();
+        extent?.Flush();
     }
 
     private void AttachScreenshotOnFailure()
@@ -77,7 +77,7 @@ public class BaseTest
         var screenshotPath = CaptureScreenshot();
         if (screenshotPath != null)
         {
-            test.AddScreenCaptureFromPath(screenshotPath);
+            test?.AddScreenCaptureFromPath(screenshotPath);
         }
     }
 
@@ -102,14 +102,14 @@ public class BaseTest
         }
     }
     
-    private string GetScreenshotDirectory()
+    private static string GetScreenshotDirectory()
     {
         var artifactStagingDirectory = Environment.GetEnvironmentVariable("Build.ArtifactStagingDirectory");
 
         return string.IsNullOrEmpty(artifactStagingDirectory) ? @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots" : Path.Combine(artifactStagingDirectory, "TicketPurchaseAutomationTest", "Screenshots");
     }
     
-    private void CleanUpOldScreenshots()
+    private static void CleanUpOldScreenshots()
     {
         var screenshotDirectory = GetScreenshotDirectory();
         var screenshotFiles = Directory.GetFiles(screenshotDirectory, "screenshot_*.png");

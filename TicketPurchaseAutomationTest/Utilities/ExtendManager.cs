@@ -5,7 +5,7 @@ namespace TicketPurchaseAutomationTest.Utilities;
 
 public abstract class ExtentManager
 {
-    private static ExtentReports extent;
+    private static ExtentReports? extent;
     //private static readonly string baseReportDirectory = @"$(Build.ArtifactStagingDirectory)\TicketPurchaseAutomationTest\Reports";
 
     private const string baseReportDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
