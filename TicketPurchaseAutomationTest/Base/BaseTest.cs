@@ -87,8 +87,11 @@ public class BaseTest
         {
             var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            var screenshotPath = Path.Combine(@"$(Build.ArtifactStagingDirectory)\TicketPurchaseAutomationTest\Screenshots",
-                screenshotName);
+            // var screenshotPath = Path.Combine(@"$(Build.ArtifactStagingDirectory)\TicketPurchaseAutomationTest\Screenshots",
+            //     screenshotName);
+            var artifactStagingDirectory = Environment.GetEnvironmentVariable("Build.ArtifactStagingDirectory");
+            var screenshotPath = Path.Combine(artifactStagingDirectory, "TicketPurchaseAutomationTest", "Screenshots", screenshotName);
+
 
             ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
             CleanUpOldScreenshots();

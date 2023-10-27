@@ -41,7 +41,7 @@ steps:
   - task: PublishTestResults@2
     inputs:
       testResultsFormat: 'NUnit'
-      testResultsFiles: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/TestResults.xml'
+      testResultsFiles: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/*.xml'
       testRunTitle: 'Selenium Tests'
       searchFolder: '$(System.DefaultWorkingDirectory)'
       mergeTestResults: true

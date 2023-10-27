@@ -14,6 +14,9 @@ public abstract class ExtentManager
     public static ExtentReports? GetExtent(string testName)
     {
         if (extent != null) return extent;
+        var artifactStagingDirectory = Environment.GetEnvironmentVariable("Build.ArtifactStagingDirectory");
+        var baseReportDirectory = Path.Combine(artifactStagingDirectory, "TicketPurchaseAutomationTest", "Reports");
+
         var reportDirectory =
             baseReportDirectory; //Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
         if (!Directory.Exists(reportDirectory))
