@@ -30,8 +30,6 @@ public class BaseTest
         reservationSteps = new ReservationSteps(driver);
         cardSteps = new CardSteps(driver);
         purchaseOkSteps = new PurchaseOkSteps(driver);
-        //extent = ExtentManager.GetExtent();
-        //test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
         string testName = TestContext.CurrentContext.Test.Name;
         
         extent = ExtentManager.GetExtent(testName);
@@ -89,7 +87,7 @@ public class BaseTest
         {
             var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            var screenshotPath = Path.Combine(@"C:\Projects\Repositories\Git\TestCases\TicketShopTestCases\Screenshots",
+            var screenshotPath = Path.Combine(@"$(Build.ArtifactStagingDirectory)\TicketPurchaseAutomationTest\Screenshots",
                 screenshotName);
 
             ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
@@ -106,7 +104,7 @@ public class BaseTest
 
     private static void CleanUpOldScreenshots()
     {
-        const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
+        const string screenshotDirectory = @"$(Build.ArtifactStagingDirectory)\TicketPurchaseAutomationTest\Screenshots";
         var screenshotFiles = Directory.GetFiles(screenshotDirectory, "screenshot_*.png");
 
         const int maxScreenshotsToKeep = 10;

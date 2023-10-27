@@ -45,3 +45,13 @@ steps:
       testRunTitle: 'Selenium Tests'
       searchFolder: '$(System.DefaultWorkingDirectory)'
       mergeTestResults: true
+      
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Reports'
+      artifact: 'TestReports'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Screenshots'
+      artifact: 'Screenshots'    
