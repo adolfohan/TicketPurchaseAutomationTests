@@ -87,11 +87,8 @@ public class BaseTest
         {
             var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            // var screenshotPath = Path.Combine(@"$(Build.ArtifactStagingDirectory)\TicketPurchaseAutomationTest\Screenshots",
-            //     screenshotName);
-            var artifactStagingDirectory = Environment.GetEnvironmentVariable("Build.ArtifactStagingDirectory");
-            var screenshotPath = Path.Combine(artifactStagingDirectory, "TicketPurchaseAutomationTest", "Screenshots", screenshotName);
-
+            var screenshotDirectory = GetScreenshotDirectory();
+            var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
 
             ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
             CleanUpOldScreenshots();
@@ -104,10 +101,17 @@ public class BaseTest
             return null;
         }
     }
-
-    private static void CleanUpOldScreenshots()
+    
+    private string GetScreenshotDirectory()
     {
-        const string screenshotDirectory = @"$(Build.ArtifactStagingDirectory)\TicketPurchaseAutomationTest\Screenshots";
+        var artifactStagingDirectory = Environment.GetEnvironmentVariable("Build.ArtifactStagingDirectory");
+
+        return string.IsNullOrEmpty(artifactStagingDirectory) ? @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots" : Path.Combine(artifactStagingDirectory, "TicketPurchaseAutomationTest", "Screenshots");
+    }
+    
+    private void CleanUpOldScreenshots()
+    {
+        var screenshotDirectory = GetScreenshotDirectory();
         var screenshotFiles = Directory.GetFiles(screenshotDirectory, "screenshot_*.png");
 
         const int maxScreenshotsToKeep = 10;
