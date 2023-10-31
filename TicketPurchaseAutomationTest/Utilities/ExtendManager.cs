@@ -14,13 +14,11 @@ public abstract class ExtentManager
     public static ExtentReports GetExtent(string testName)
     {
         if (_extent != null) return _extent;
-        
-        if (_extent != null) return _extent;
 
-        //var reportDirectory = GetReportDirectory(); //Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
-        if (!Directory.Exists(BaseReportDirectory))
+        var reportDirectory = GetReportDirectory(); //Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
+        if (!Directory.Exists(reportDirectory))
         {
-            Directory.CreateDirectory(BaseReportDirectory);
+            Directory.CreateDirectory(reportDirectory);
         }
 
         var reportFileName = $"report_{testName}_{DateTime.Now:yyyyMMddHHmmss}.html";
