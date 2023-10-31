@@ -106,9 +106,9 @@ public class CardPage : BasePage
 
             string text = alert.Text;
 
-            if (!text.Contains("Debe Introducir un número de tarjeta válido (sin espacios ni guiones).")) return false;
+            if (!text.Contains("Debe Introducir un número de tarjeta válido (sin espacios ni guiones).")) return true;
             alert.Accept();
-            return true;
+            return false;
 
         }
         catch (Exception e)

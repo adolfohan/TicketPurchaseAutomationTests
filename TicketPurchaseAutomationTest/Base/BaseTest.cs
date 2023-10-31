@@ -87,7 +87,8 @@ public class BaseTest
         {
             var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            var screenshotDirectory = GetScreenshotDirectory();
+            const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
+            //var screenshotDirectory = GetScreenshotDirectory();
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
 
             ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
@@ -111,7 +112,7 @@ public class BaseTest
     
     private static void CleanUpOldScreenshots()
     {
-        var screenshotDirectory = GetScreenshotDirectory();
+        const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
         var screenshotFiles = Directory.GetFiles(screenshotDirectory, "screenshot_*.png");
 
         const int maxScreenshotsToKeep = 10;
