@@ -41,17 +41,21 @@ steps:
   - task: PublishTestResults@2
     inputs:
       testResultsFormat: 'NUnit'
-      testResultsFiles: '$(Build.SourcesDirectory)/*.xml'
+      testResultsFiles: '**/TestResults.xml'
       testRunTitle: 'Selenium Tests'
-      searchFolder: '$(Build.SourcesDirectory)'
       mergeTestResults: true
+      
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(System.DefaultWorkingDirectory)'
+      artifact: 'TestResults'      
 
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: '$(Build.SourcesDirectory)/Reports'
+      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest//Reports'
       artifact: 'TestReports'
 
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: '$(Build.SourcesDirectory)/Screenshots'
+      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest//Screenshots'
       artifact: 'Screenshots'
