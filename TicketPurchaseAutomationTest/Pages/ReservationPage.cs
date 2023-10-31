@@ -107,7 +107,7 @@ public class ReservationPage : BasePage
                 var selectedComprarButton = comprarButtons[randomIndex];
 
                 ScrollIntoView(selectedComprarButton);
-                Thread.Sleep(3000);
+                //Thread.Sleep(3000);
                 selectedComprarButton.Click();
                 Thread.Sleep(3000);
             }

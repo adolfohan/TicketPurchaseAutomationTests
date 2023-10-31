@@ -86,7 +86,7 @@ public class TicketsSelectionPage : BasePage
         {
             IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
-            if (!haveSession() || !error500())
+            if (!haveSession() || !Error500())
             {
                 Console.WriteLine("No session or error 500 occurred. Continue with the next step...");
             }
@@ -103,15 +103,18 @@ public class TicketsSelectionPage : BasePage
         return new ReservationPage(driver);
     }
 
-    private bool error500()
+    private bool Error500()
     {
         IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
         IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
 
-        if (!error500Message.Displayed) return false;
-        driver.Navigate().Back();
-        comprarBtn.Click();
-        return true;
+        if (!error500Message.Displayed)
+        {
+            driver.Navigate().Back();
+            comprarBtn.Click();
+            return true;
+        }
+        return false;
     }
     private bool haveSession()
     {

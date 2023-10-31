@@ -30,7 +30,7 @@ public class BaseTest
         reservationSteps = new ReservationSteps(driver);
         cardSteps = new CardSteps(driver);
         purchaseOkSteps = new PurchaseOkSteps(driver);
-        string testName = TestContext.CurrentContext.Test.Name;
+        var testName = TestContext.CurrentContext.Test.Name;
         
         extent = ExtentManager.GetExtent(testName);
         if (extent != null) test = extent.CreateTest(testName);
