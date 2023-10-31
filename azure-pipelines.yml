@@ -48,12 +48,12 @@ steps:
   - task: PublishPipelineArtifact@1
     inputs:
       targetPath: '$(System.DefaultWorkingDirectory)'
-      artifact: 'TestResults'      
+      artifact: 'TestResults'
 
   - task: PublishPipelineArtifact@1
     inputs:
       targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Reports'
-      artifact: 'TestReports'
+      artifact: 'ExtentReport'
 
   - task: PublishPipelineArtifact@1
     inputs:

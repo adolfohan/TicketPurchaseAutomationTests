@@ -15,10 +15,10 @@ public abstract class ExtentManager
     {
         if (_extent != null) return _extent;
 
-        var reportDirectory = GetReportDirectory(); //Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
-        if (!Directory.Exists(reportDirectory))
+        //var reportDirectory = GetReportDirectory(); //Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
+        if (!Directory.Exists(BaseReportDirectory))
         {
-            Directory.CreateDirectory(reportDirectory);
+            Directory.CreateDirectory(BaseReportDirectory);
         }
 
         var reportFileName = $"report_{testName}_{DateTime.Now:yyyy-MM-dd-HHmmss}.html";
