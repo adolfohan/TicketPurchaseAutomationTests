@@ -21,7 +21,7 @@ public abstract class ExtentManager
             Directory.CreateDirectory(reportDirectory);
         }
 
-        var reportFileName = $"report_{testName}_{DateTime.Now:yyyyMMddHHmmss}.html";
+        var reportFileName = $"report_{testName}_{DateTime.Now:yyyy-MM-dd-HHmmss}.html";
         var reportPath = Path.Combine(BaseReportDirectory, reportFileName);
 
         var htmlReporter = new ExtentSparkReporter(reportPath);
