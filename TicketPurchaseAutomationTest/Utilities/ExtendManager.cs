@@ -35,8 +35,8 @@ public abstract class ExtentManager
 
     private static string GetReportDirectory()
     {
-        var artifactStagingDirectory = Environment.GetEnvironmentVariable("Build.ArtifactStagingDirectory");
+        var artifactStagingDirectory = Environment.GetEnvironmentVariable("REPORT_PATH");
 
-        return string.IsNullOrEmpty(artifactStagingDirectory) ? BaseReportDirectory : Path.Combine(artifactStagingDirectory, "TicketPurchaseAutomationTest", "Reports");
+        return string.IsNullOrEmpty(artifactStagingDirectory) ? BaseReportDirectory : artifactStagingDirectory;
     }
 }    

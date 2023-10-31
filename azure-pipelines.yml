@@ -52,10 +52,10 @@ steps:
 
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest//Reports'
+      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Reports'
       artifact: 'TestReports'
 
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest//Screenshots'
+      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Screenshots'
       artifact: 'Screenshots'
