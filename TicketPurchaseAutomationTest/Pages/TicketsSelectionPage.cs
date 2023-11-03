@@ -83,27 +83,22 @@ public class TicketsSelectionPage : BasePage
         confirmButton.Click();
     }
     
-    public ReservationPage ClickOnComprarButton()
+    public void ClickOnComprarButton()
     {
         try
         {
             IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
-            IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
-            IWebElement step2Title = fluentWait.Until(ExpectedConditions.ElementIsVisible(step2Element));
-            IWebElement dropdown = fluentWait.Until(ExpectedConditions.ElementIsVisible(sessionDropdownElement));
-            
             comprarBtn.Click();
-            
+            IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
             while (error500Message.Displayed)
             {
                 driver.Navigate().Back();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                comprarBtn.Click();
+                IWebElement comprarBtn1 = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
+                comprarBtn1.Click();
             }
-            if (step2Title.Displayed)
+            if (!haveSession())
             {
-                Thread.Sleep(TimeSpan.FromSeconds(2));
-                comprarBtn.Click();
                 Console.WriteLine("No session. Continue with the next step...");
             }
         }
@@ -115,15 +110,12 @@ public class TicketsSelectionPage : BasePage
         {
             Console.WriteLine($"An error occurred while clicking 'Comprar' button: {ex.Message}");
         }
-
-        return new ReservationPage(driver);
     }
 
     private bool haveSession()
     {
         IWebElement step2Title = fluentWait.Until(ExpectedConditions.ElementIsVisible(step2Element));
         IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
-        IWebElement dropdown = fluentWait.Until(ExpectedConditions.ElementIsVisible(sessionDropdownElement));
         
         if (step2Title.Displayed)
         {
