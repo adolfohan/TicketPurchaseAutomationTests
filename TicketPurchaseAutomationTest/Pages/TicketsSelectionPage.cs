@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using TicketPurchaseAutomationTest.Base;
 
@@ -9,8 +8,6 @@ public class TicketsSelectionPage : BasePage
 {
     private readonly HomePage homePage;
     private readonly Random random;
-    private readonly SessionPage sessionPage;
-    private readonly Error500Page error500Page;
     
     private By inputNumberOfTicketsElement =>
         By.XPath("//input[@type='number']");
@@ -22,10 +19,10 @@ public class TicketsSelectionPage : BasePage
         By.CssSelector(
             "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
 
-    private readonly By priceElement = By.ClassName("sv-cart__price");
+    //private readonly By priceElement = By.ClassName("sv-cart__price");
     private readonly By error500Element = By.XPath("//div[@class='sv-page404__title' and text()='Error 500']");
     private readonly By step2Element = By.XPath("//span[text()='Configura tus actividades']");
-    private readonly By sessionDropdownElement = By.XPath("//div[@class='sessions-item-select']");
+    private readonly By panelWrapperElement = By.CssSelector("a.sv-panel__wrapper[aria-expanded='false']");
     public TicketsSelectionPage(IWebDriver driver) : base(driver)
     {
         random = new Random();
@@ -41,6 +38,16 @@ public class TicketsSelectionPage : BasePage
             {
                 IList<IWebElement> inputFields =
                     fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
+                
+                IList<IWebElement> panelWrapper = fluentWait.Until(webDriver => webDriver.FindElements(panelWrapperElement));
+
+                if (panelWrapper.Count > 0)
+                {
+                    foreach (IWebElement element in panelWrapper)
+                    {
+                        element.Click();
+                    }
+                }
 
                 /*if (inputFields.Count > 0)
 
@@ -97,7 +104,7 @@ public class TicketsSelectionPage : BasePage
                 IWebElement comprarBtn1 = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
                 comprarBtn1.Click();
             }
-            if (!haveSession())
+            if (!HaveSession())
             {
                 Console.WriteLine("No session. Continue with the next step...");
             }
@@ -112,7 +119,7 @@ public class TicketsSelectionPage : BasePage
         }
     }
 
-    private bool haveSession()
+    private bool HaveSession()
     {
         IWebElement step2Title = fluentWait.Until(ExpectedConditions.ElementIsVisible(step2Element));
         IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
