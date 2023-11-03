@@ -8,6 +8,7 @@ public class TicketsSelectionPage : BasePage
 {
     private readonly HomePage homePage;
     private readonly Random random;
+    private SessionPage sessionPage;
     
     public TicketsSelectionPage(IWebDriver driver) : base(driver)
     {
@@ -129,6 +130,7 @@ public class TicketsSelectionPage : BasePage
         
         if (step2Title.Displayed)
         {
+            sessionPage.SelectSession();
             comprarBtn.Click();
             return true;
         }
