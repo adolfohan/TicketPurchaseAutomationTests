@@ -7,13 +7,6 @@
     <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/ReservationPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/ReservationPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +43,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04a0eb0557dd4c24a73812c8be2af0061dea00/4e/ed559935/ExtentReports.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1032c086c16d4409806d73939b7000b59200/79/7539fb0e/SelectElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/917936d1f2e040debd252d18a829883b3200/eb/a27a470e/ExpectedConditions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/a2/e0e34f6e/Actions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -59,26 +55,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;pipelineTest&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "pipelineTest",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "RiderDotCoverContinuousTestingPageId",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Adolfo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Adolfo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Adolfo\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Adolfo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Adolfo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Adolfo\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697621830097</updated>
       <workItem from="1697621831186" duration="25638000" />
-      <workItem from="1698050944242" duration="36957000" />
+      <workItem from="1698050944242" duration="67601000" />
     </task>
     <servers />
   </component>
