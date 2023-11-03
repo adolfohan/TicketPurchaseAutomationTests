@@ -86,9 +86,15 @@ public class TicketsSelectionPage : BasePage
         {
             IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
-            if (!haveSession() || !Error500())
+            IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
+            while (error500Message.Displayed)
             {
-                Console.WriteLine("No session or error 500 occurred. Continue with the next step...");
+                driver.Navigate().Back();
+                comprarBtn.Click();
+            }
+            if (!haveSession())
+            {
+                Console.WriteLine("No session. Continue with the next step...");
             }
         }
         catch (NoSuchElementException ex)
@@ -108,7 +114,7 @@ public class TicketsSelectionPage : BasePage
         IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
         IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
 
-        if (!error500Message.Displayed)
+        if (error500Message.Displayed)
         {
             driver.Navigate().Back();
             comprarBtn.Click();
