@@ -495,4 +495,136 @@ public class TicketPurchaseBaseTest : BaseTest
             throw;
         }
     }
+
+    [Test, Order(9)]
+    public void SelectAllFiltersTest()
+    {
+        try
+        {
+            LogStep(Status.Info, "Starting Home Page Filters Test");
+
+            LogStep(Status.Info, "Navigating to URL");
+            currentStep = "Step GoToURL";
+            homePageSteps.GoToURL();
+
+            LogStep(Status.Info, "Clicked Leisure Parks Filter");
+            currentStep = "Step ClickOnLeisureParksFilter";
+            homePageSteps.ClickOnLeisureParksFilter();
+
+            LogStep(Status.Info, "Clicked Culture, Visits and Tours Filter");
+            currentStep = "Step ClickOnCultureVisitsToursFilter";
+            homePageSteps.ClickOnCultureVisitsToursFilter();
+            
+            LogStep(Status.Info, "Clicked Excursions and Tourist Mobility Filter");
+            currentStep = "Step ClickOnExcursionsTouristsMobilityFilter";
+            homePageSteps.ClickOnExcursionsTouristsMobilityFilter();
+            
+            LogStep(Status.Info, "Clicked Experiences and Relax Filter");
+            currentStep = "Step ClickOnExperiencesRelaxFilter";
+            homePageSteps.ClickOnExperiencesRelaxFilter();
+            
+            LogStep(Status.Info, "Clicked Gastronomy and Wine Tourism Filter");
+            currentStep = "Step ClickOnGastronomyWineTourismFilter";
+            homePageSteps.ClickOnGastronomyWineTourismFilter();
+            
+            LogStep(Status.Info, "Clicked Musicals and Shows Filter");
+            currentStep = "Step ClickOnMusicalsShowFilter";
+            homePageSteps.ClickOnMusicalsShowFilter();
+            
+            LogStep(Status.Info, "Clicked Sports Filter");
+            currentStep = "Step ClickOnSportsFilter";
+            homePageSteps.ClickOnSportsFilter();
+            
+            LogStep(Status.Info, "Clicked Active Tourism Filter");
+            currentStep = "Step ClickOnActiveTourismFilter";
+            homePageSteps.ClickOnActiveTourismFilter();
+            
+            LogStep(Status.Info, "Clicked Snow Filter");
+            currentStep = "Step ClickOnSnowFilter";
+            homePageSteps.ClickOnSnowFilter();
+            
+            LogStep(Status.Info, "Clicked Cinema and Drive-in Filter");
+            currentStep = "Step ClickOnCinemaDriveInFilter";
+            homePageSteps.ClickOnCinemaDriveInFilter();
+            
+            LogStep(Status.Info, "Clicked Escape Room Experiences Filter");
+            currentStep = "Step ClickOnEscapeRoomExperiencesFilter";
+            homePageSteps.ClickOnEscapeRoomExperiencesFilter();
+            
+            LogStep(Status.Info, "Filters Tests Successful");
+        }
+        catch (Exception ex)
+        {
+            HandleTestFailure(ex);
+            throw;
+        }
+    }
+    
+    [Test, Order(10)]
+    public void DeselectFiltersTest()
+    {
+        try
+        {
+            LogStep(Status.Info, "Starting Home Page Filters Test");
+
+            LogStep(Status.Info, "Navigating to URL");
+            currentStep = "Step GoToURL";
+            homePageSteps.GoToURL();
+
+            LogStep(Status.Info, "Clicked Leisure Parks Filter");
+            currentStep = "Step ClickOnLeisureParksFilter";
+            homePageSteps.ClickOnLeisureParksFilter();
+
+            LogStep(Status.Info, "Clicked Culture, Visits and Tours Filter");
+            currentStep = "Step ClickOnCultureVisitsToursFilter";
+            homePageSteps.ClickOnCultureVisitsToursFilter();
+            
+            LogStep(Status.Info, "Clicked Excursions and Tourist Mobility Filter");
+            currentStep = "Step ClickOnExcursionsTouristsMobilityFilter";
+            homePageSteps.ClickOnExcursionsTouristsMobilityFilter();
+            
+            LogStep(Status.Info, "Clicked Experiences and Relax Filter");
+            currentStep = "Step ClickOnExperiencesRelaxFilter";
+            homePageSteps.ClickOnExperiencesRelaxFilter();
+            
+            LogStep(Status.Info, "Clicked Gastronomy and Wine Tourism Filter");
+            currentStep = "Step ClickOnGastronomyWineTourismFilter";
+            homePageSteps.ClickOnGastronomyWineTourismFilter();
+            
+            LogStep(Status.Info, "Clicked Musicals and Shows Filter");
+            currentStep = "Step ClickOnMusicalsShowFilter";
+            homePageSteps.ClickOnMusicalsShowFilter();
+            
+            LogStep(Status.Info, "Clicked Sports Filter");
+            currentStep = "Step ClickOnSportsFilter";
+            homePageSteps.ClickOnSportsFilter();
+            
+            LogStep(Status.Info, "Clicked Active Tourism Filter");
+            currentStep = "Step ClickOnActiveTourismFilter";
+            homePageSteps.ClickOnActiveTourismFilter();
+            
+            LogStep(Status.Info, "Clicked Snow Filter");
+            currentStep = "Step ClickOnSnowFilter";
+            homePageSteps.ClickOnSnowFilter();
+            
+            LogStep(Status.Info, "Clicked Cinema and Drive-in Filter");
+            currentStep = "Step ClickOnCinemaDriveInFilter";
+            homePageSteps.ClickOnCinemaDriveInFilter();
+            
+            LogStep(Status.Info, "Clicked Escape Room Experiences Filter");
+            currentStep = "Step ClickOnEscapeRoomExperiencesFilter";
+            homePageSteps.ClickOnEscapeRoomExperiencesFilter();
+            
+            LogStep(Status.Info, "Deselected All Filter");
+            currentStep = "Step DeselectAllFilters";
+            homePageSteps.DeselectAllFilters();
+            
+            LogStep(Status.Info, "Deselect Filters Tests Successful");
+        }
+        catch (Exception ex)
+        {
+            HandleTestFailure(ex);
+            throw;
+        }
+    }
 }

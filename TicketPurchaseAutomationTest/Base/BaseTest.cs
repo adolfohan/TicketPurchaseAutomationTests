@@ -10,7 +10,7 @@ using TicketPurchaseAutomationTest.Utilities;
 namespace TicketPurchaseAutomationTest.Base;
 
 public class BaseTest
-{
+{  
     private IWebDriver driver;
     protected HomePageSteps homePageSteps;
     protected TicketsSelectionSteps ticketsSelectionSteps;
