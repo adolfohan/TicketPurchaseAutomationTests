@@ -4,6 +4,7 @@ using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using TicketPurchaseAutomationTest.Pages;
 using TicketPurchaseAutomationTest.Steps;
 using TicketPurchaseAutomationTest.Utilities;
 
@@ -12,6 +13,7 @@ namespace TicketPurchaseAutomationTest.Base;
 public class BaseTest
 {  
     private IWebDriver driver;
+    protected HomePage homePage;
     protected HomePageSteps homePageSteps;
     protected TicketsSelectionSteps ticketsSelectionSteps;
     protected ReservationSteps reservationSteps;
@@ -25,6 +27,7 @@ public class BaseTest
     public void SetUp()
     {
         driver = new ChromeDriver();
+        homePage = new HomePage(driver);
         homePageSteps = new HomePageSteps(driver);
         ticketsSelectionSteps = new TicketsSelectionSteps(driver);
         reservationSteps = new ReservationSteps(driver);

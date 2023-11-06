@@ -27,6 +27,13 @@ public class HomePage : BasePage
     private By cinemaDriveInElement => By.Id("c166");
     private By halloweenElement => By.Id("c310");
     private By escapeRoomExperiencesElement => By.Id("c313");
+    private By spainElement => By.Id("c201");
+    private By andorraElement => By.Id("c309");
+    private By franceElement => By.Id("c202");
+    private By gibraltarElement => By.Id("c321");
+    private By italyElement => By.Id("c319");
+    private By portugalElement => By.Id("c203");
+    private By unitedKingdomElement => By.Id("c323");
     
     
     public void NavigateToUrl()
@@ -405,6 +412,201 @@ public class HomePage : BasePage
             cinemaDriveIn.Click();
             halloween.Click();
             escapeRoomExperiences.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void ClickOnSpainFilter()
+    {
+        try
+        {
+            IWebElement spainFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(spainElement));
+            spainFilter.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void ClickOnAndorraFilter()
+    {
+        try
+        {
+            IWebElement andorraFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(andorraElement));
+            andorraFilter.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void ClickOnFranceFilter()
+    {
+        try
+        {
+            IWebElement franceFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(franceElement));
+            franceFilter.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void ClickOnGibraltarFilter()
+    {
+        try
+        {
+            IWebElement gibraltarFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(gibraltarElement));
+            gibraltarFilter.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void ClickOnItalyFilter()
+    {
+        try
+        {
+            IWebElement italyFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(italyElement));
+            italyFilter.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void ClickOnPortugalFilter()
+    {
+        try
+        {
+            IWebElement portugalFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(portugalElement));
+            portugalFilter.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void ClickOnUnitedKingdomFilter()
+    {
+        try
+        {
+            IWebElement unitedKingdomFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(unitedKingdomElement));
+            unitedKingdomFilter.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void ClickOnAllCountryFilters()
+    {
+        try
+        {
+            ClickOnSpainFilter();
+            ClickOnAndorraFilter();
+            ClickOnFranceFilter();
+            ClickOnGibraltarFilter();
+            ClickOnItalyFilter();
+            ClickOnPortugalFilter();
+            ClickOnUnitedKingdomFilter();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void DeselectAllCountryFilters()
+    {
+        try
+        {
+            IWebElement spainFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(spainElement));
+            IWebElement andorraFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(andorraElement));
+            IWebElement franceFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(franceElement));
+            IWebElement gibraltarFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(gibraltarElement));
+            IWebElement italyFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(italyElement));
+            IWebElement portugalFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(portugalElement));
+            IWebElement unitedKingdomFilter =
+                fluentWait.Until(ExpectedConditions.ElementToBeClickable(unitedKingdomElement));
+            ClickOnSpainFilter();
+            ClickOnAndorraFilter();
+            ClickOnFranceFilter();
+            ClickOnGibraltarFilter();
+            ClickOnItalyFilter();
+            ClickOnPortugalFilter();
+            ClickOnUnitedKingdomFilter();
+
+            if (!spainFilter.Selected || !andorraFilter.Selected || !franceFilter.Selected ||
+                !gibraltarFilter.Selected ||
+                !italyFilter.Selected || !portugalFilter.Selected || !unitedKingdomFilter.Selected) return;
+            ClickOnSpainFilter();
+            ClickOnAndorraFilter();
+            ClickOnFranceFilter();
+            ClickOnGibraltarFilter();
+            ClickOnItalyFilter();
+            ClickOnPortugalFilter();
+            ClickOnUnitedKingdomFilter();
         }
         catch (NoSuchElementException ex)
         {
