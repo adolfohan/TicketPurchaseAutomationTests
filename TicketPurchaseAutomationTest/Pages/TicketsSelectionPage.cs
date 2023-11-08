@@ -23,6 +23,7 @@ public class TicketsSelectionPage : BasePage
     private readonly By error500Element = By.XPath("//div[@class='sv-page404__title' and text()='Error 500']");
     private readonly By step2Element = By.XPath("//span[text()='Configura tus actividades']");
     private readonly By panelWrapperElement = By.CssSelector("a.sv-panel__wrapper[aria-expanded='false']");
+    private readonly By navBarElement = By.Id("funnelmenu");
     public TicketsSelectionPage(IWebDriver driver) : base(driver)
     {
         random = new Random();
@@ -126,9 +127,63 @@ public class TicketsSelectionPage : BasePage
         
         if (step2Title.Displayed)
         {
+            Thread.Sleep(2000);
             comprarBtn.Click();
             return true;
         }
         return false;
+    }
+
+    public void SelectRandomNavBar()
+    {
+        IWebElement navBar = fluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
+        IWebElement input = fluentWait.Until(ExpectedConditions.ElementToBeClickable(inputNumberOfTicketsElement));
+        IList<IWebElement> navBarItems = navBar.FindElements(By.CssSelector("li.nav-item"));    
+
+        if (navBarItems.Count > 0)
+        {
+            do
+            {
+                var randomIndex = random.Next(0, navBarItems.Count);
+                var selectedNavBarItem = navBarItems[randomIndex];
+                selectedNavBarItem.Click();
+            } while (!input.Displayed);
+        }
+        
+        /*while (true)
+        {
+            //bool inputVisible = ;
+
+            if (IsElementVisible(inputNumberOfTicketsElement))
+            {
+                IWebElement navBar = fluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
+                IList<IWebElement> navBarItems = navBar.FindElements(By.CssSelector("li.nav-item"));
+
+                if (navBarItems.Count > 0)
+                {
+                    var randomIndex = random.Next(0, navBarItems.Count);
+                    var selectedNavBarItem = navBarItems[randomIndex];
+                    selectedNavBarItem.Click();
+                }
+                break;
+            }
+            {
+                driver.Navigate().Back();
+                homePage.ClickOnRandomMeInteresaButton();
+            }
+        }*/
+    }
+    
+    private bool IsElementVisible(By elementSelector)
+    {
+        try
+        {
+            IWebElement element = fluentWait.Until(ExpectedConditions.ElementIsVisible(elementSelector));
+            return element.Displayed;
+        }
+        catch (NoSuchElementException)
+        {
+            return false;
+        }
     }
 }

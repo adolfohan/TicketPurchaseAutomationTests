@@ -8,36 +8,28 @@
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-105001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-105136.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-120949.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-131713.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-132655.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-133222.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-134602.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-140407.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-140627.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Steps/HomePageSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Steps/HomePageSteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-163546.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-163854.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-164118.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-164407.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-164441.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-164831.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-03-165025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-06-102610.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-06-102814.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-06-103718.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +71,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/917936d1f2e040debd252d18a829883b3200/eb/a27a470e/ExpectedConditions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/a2/e0e34f6e/Actions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/a9/aeb2ff6a/IWebElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ceec133fcd760776ba1fabf806fb48546972372bf0f4d9bbf5c27c3c45342a/MainThreadWorkItemDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -119,7 +112,7 @@
       <updated>1697621830097</updated>
       <workItem from="1697621831186" duration="25638000" />
       <workItem from="1698050944242" duration="75860000" />
-      <workItem from="1699257220093" duration="3857000" />
+      <workItem from="1699257220093" duration="32291000" />
     </task>
     <servers />
   </component>

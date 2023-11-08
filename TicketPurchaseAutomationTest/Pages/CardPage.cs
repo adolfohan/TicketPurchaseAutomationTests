@@ -78,7 +78,7 @@ public class CardPage : BasePage
         }
     }
     
-    public PurchaseOkPage ClickOnContinuarButton()
+    public void ClickOnContinuarButton()
     {
         try
         {
@@ -93,7 +93,6 @@ public class CardPage : BasePage
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
-        return new PurchaseOkPage(driver);
     }
 
     public bool IsPurchaseUnsuccessful()
@@ -106,9 +105,9 @@ public class CardPage : BasePage
 
             string text = alert.Text;
 
-            if (!text.Contains("Debe Introducir un número de tarjeta válido (sin espacios ni guiones).")) return true;
+            if (!text.Contains("Debe Introducir un número de tarjeta válido (sin espacios ni guiones).")) return false;
             alert.Accept();
-            return false;
+            return true;
 
         }
         catch (Exception e)

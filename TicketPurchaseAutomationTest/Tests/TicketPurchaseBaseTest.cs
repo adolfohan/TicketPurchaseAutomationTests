@@ -69,7 +69,7 @@ public class TicketPurchaseBaseTest : BaseTest
             LogStep(Status.Info, "Purchase completed");
             currentStep = "PurchaseOKMessage";
             purchaseOkSteps.PurchaseOkMessage();
-            
+
             LogStep(Status.Info, "Ticket Purchase Successful");
         }
         catch (Exception ex)
@@ -125,7 +125,7 @@ public class TicketPurchaseBaseTest : BaseTest
             LogStep(Status.Info, "Check Blank Fields");
             currentStep = "Step CheckBlankFields";
             reservationSteps.CheckBlankFields();
-            
+
             LogStep(Status.Info, "Checking Card Page");
             currentStep = "Step CheckCardPage";
             reservationSteps.CheckCardPage();
@@ -497,61 +497,73 @@ public class TicketPurchaseBaseTest : BaseTest
     }
 
     [Test, Order(9)]
-    public void SelectAllFiltersTest()
+    public void LeisureParksTicketPurchaseTest()
     {
         try
         {
-            LogStep(Status.Info, "Starting Home Page Filters Test");
-
-            LogStep(Status.Info, "Navigating to URL");
+            LogStep(Status.Info, "Starting Leisure Parks Filter Purchase Ticket Test");
+            
+            LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePageSteps.GoToURL();
-
-            LogStep(Status.Info, "Clicked Leisure Parks Filter");
+            homePage.NavigateToUrl();
+            
+            LogStep(Status.Info, "Clicked On Leisure Parks Filter");
             currentStep = "Step ClickOnLeisureParksFilter";
-            homePageSteps.ClickOnLeisureParksFilter();
+            homePage.ClickOnLeisureParksFilter();
 
-            LogStep(Status.Info, "Clicked Culture, Visits and Tours Filter");
-            currentStep = "Step ClickOnCultureVisitsToursFilter";
-            homePageSteps.ClickOnCultureVisitsToursFilter();
-            
-            LogStep(Status.Info, "Clicked Excursions and Tourist Mobility Filter");
-            currentStep = "Step ClickOnExcursionsTouristsMobilityFilter";
-            homePageSteps.ClickOnExcursionsTouristsMobilityFilter();
-            
-            LogStep(Status.Info, "Clicked Experiences and Relax Filter");
-            currentStep = "Step ClickOnExperiencesRelaxFilter";
-            homePageSteps.ClickOnExperiencesRelaxFilter();
-            
-            LogStep(Status.Info, "Clicked Gastronomy and Wine Tourism Filter");
-            currentStep = "Step ClickOnGastronomyWineTourismFilter";
-            homePageSteps.ClickOnGastronomyWineTourismFilter();
-            
-            LogStep(Status.Info, "Clicked Musicals and Shows Filter");
-            currentStep = "Step ClickOnMusicalsShowFilter";
-            homePageSteps.ClickOnMusicalsShowFilter();
-            
-            LogStep(Status.Info, "Clicked Sports Filter");
-            currentStep = "Step ClickOnSportsFilter";
-            homePageSteps.ClickOnSportsFilter();
-            
-            LogStep(Status.Info, "Clicked Active Tourism Filter");
-            currentStep = "Step ClickOnActiveTourismFilter";
-            homePageSteps.ClickOnActiveTourismFilter();
-            
-            LogStep(Status.Info, "Clicked Snow Filter");
-            currentStep = "Step ClickOnSnowFilter";
-            homePageSteps.ClickOnSnowFilter();
-            
-            LogStep(Status.Info, "Clicked Cinema and Drive-in Filter");
-            currentStep = "Step ClickOnCinemaDriveInFilter";
-            homePageSteps.ClickOnCinemaDriveInFilter();
-            
-            LogStep(Status.Info, "Clicked Escape Room Experiences Filter");
-            currentStep = "Step ClickOnEscapeRoomExperiencesFilter";
-            homePageSteps.ClickOnEscapeRoomExperiencesFilter();
-            
-            LogStep(Status.Info, "Filters Tests Successful");
+            LogStep(Status.Info, "Clicked Me Interesa button");
+            currentStep = "Step ClickRandomMeInteresaButton";
+            homePage.ClickOnRandomMeInteresaButton();
+
+            LogStep(Status.Info, "Selected desired ticket");
+            currentStep = "Step SelectDesiredTicket";
+            ticketsSelectionSteps.SelectDesiredTicket();
+
+            LogStep(Status.Info, "Date confirmed");
+            currentStep = "Step ConfirmDate";
+            ticketsSelectionSteps.ConfirmDate();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClickComprarButton";
+            ticketsSelectionSteps.ClickOnComprarButton();
+
+            LogStep(Status.Info, "Completed personal information");
+            currentStep = "Step CompletePersonalInformation";
+            reservationSteps.CompletePersonalInformation();
+
+            LogStep(Status.Info, "Checked conditions checkbox");
+            currentStep = "Step CheckTheConditionsCheckbox";
+            reservationSteps.CheckTheConditionsCheckbox();
+
+            LogStep(Status.Info, "Checked privacy checkbox");
+            currentStep = "Step CheckThePrivacyCheckbox";
+            reservationSteps.CheckThePrivacyCheckbox();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClicksComprarButtonAgain";
+            reservationSteps.ClicksOnComprarButtonAgain();
+
+            LogStep(Status.Info, "Completed card information");
+            currentStep = "Step CompleteTheCardInformation";
+            cardSteps.CompleteTheCardInformation();
+
+            LogStep(Status.Info, "Clicked on Pagar button");
+            currentStep = "Step ClickPagarButton";
+            cardSteps.ClickOnPagarButton();
+
+            LogStep(Status.Info, "Clicked on Enviar button");
+            currentStep = "Step ClickOnEnviarButton";
+            cardSteps.ClickOnEnviarButton();
+
+            LogStep(Status.Info, "Clicked on Continuar button");
+            currentStep = "Step ClickOnContinuarButton";
+            cardSteps.ClickOnContinuarButton();
+
+            LogStep(Status.Info, "Purchase completed");
+            currentStep = "PurchaseOKMessage";
+            purchaseOkSteps.PurchaseOkMessage();
+
+            LogStep(Status.Info, "Ticket Purchase Successful");
         }
         catch (Exception ex)
         {
@@ -561,21 +573,73 @@ public class TicketPurchaseBaseTest : BaseTest
     }
     
     [Test, Order(10)]
-    public void DeselectFiltersTest()
+    public void CultureVisitsToursTicketPurchaseTest()
     {
         try
         {
-            LogStep(Status.Info, "Starting Home Page Filters Test");
-
-            LogStep(Status.Info, "Navigating to URL");
+            LogStep(Status.Info, "Starting Culture Visits and Tours Filter Purchase Ticket Test");
+            
+            LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePageSteps.GoToURL();
+            homePage.NavigateToUrl();
             
-            LogStep(Status.Info, "Deselected All Filter");
-            currentStep = "Step DeselectAllFilters";
-            homePageSteps.DeselectAllFilters();
-            
-            LogStep(Status.Info, "Deselect Filters Tests Successful");
+            LogStep(Status.Info, "Clicked On Culture Visits and Tours Filter");
+            currentStep = "Step ClickOnCultureVisitsToursFilter";
+            homePage.ClickOnCultureVisitsToursFilter();
+
+            LogStep(Status.Info, "Clicked Me Interesa button");
+            currentStep = "Step ClickRandomMeInteresaButton";
+            homePage.ClickOnRandomMeInteresaButton();
+
+            LogStep(Status.Info, "Selected desired ticket");
+            currentStep = "Step SelectDesiredTicket";
+            ticketsSelectionSteps.SelectDesiredTicket();
+
+            LogStep(Status.Info, "Date confirmed");
+            currentStep = "Step ConfirmDate";
+            ticketsSelectionSteps.ConfirmDate();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClickComprarButton";
+            ticketsSelectionSteps.ClickOnComprarButton();
+
+            LogStep(Status.Info, "Completed personal information");
+            currentStep = "Step CompletePersonalInformation";
+            reservationSteps.CompletePersonalInformation();
+
+            LogStep(Status.Info, "Checked conditions checkbox");
+            currentStep = "Step CheckTheConditionsCheckbox";
+            reservationSteps.CheckTheConditionsCheckbox();
+
+            LogStep(Status.Info, "Checked privacy checkbox");
+            currentStep = "Step CheckThePrivacyCheckbox";
+            reservationSteps.CheckThePrivacyCheckbox();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClicksComprarButtonAgain";
+            reservationSteps.ClicksOnComprarButtonAgain();
+
+            LogStep(Status.Info, "Completed card information");
+            currentStep = "Step CompleteTheCardInformation";
+            cardSteps.CompleteTheCardInformation();
+
+            LogStep(Status.Info, "Clicked on Pagar button");
+            currentStep = "Step ClickPagarButton";
+            cardSteps.ClickOnPagarButton();
+
+            LogStep(Status.Info, "Clicked on Enviar button");
+            currentStep = "Step ClickOnEnviarButton";
+            cardSteps.ClickOnEnviarButton();
+
+            LogStep(Status.Info, "Clicked on Continuar button");
+            currentStep = "Step ClickOnContinuarButton";
+            cardSteps.ClickOnContinuarButton();
+
+            LogStep(Status.Info, "Purchase completed");
+            currentStep = "PurchaseOKMessage";
+            purchaseOkSteps.PurchaseOkMessage();
+
+            LogStep(Status.Info, "Ticket Purchase Successful");
         }
         catch (Exception ex)
         {
@@ -584,79 +648,79 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(11)]
-    public void ClickOnAllCountryFiltersTest()
+    /*[Test, Order(11)]
+    public void RandomNavBarTicketPurchaseTest()
     {
         try
         {
-            LogStep(Status.Info, "Starting Home Page Country Filters Test");
-
-            LogStep(Status.Info, "Navigating to URL");
+            LogStep(Status.Info, "Starting Random NavBar Purchase Ticket Test");
+            
+            LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
             homePage.NavigateToUrl();
 
-            LogStep(Status.Info, "Clicked on Spain Filter");
-            currentStep = "Step ClickOnSpainFilter";
-            homePage.ClickOnSpainFilter();
+            LogStep(Status.Info, "Clicked on Me Interesa button");
+            currentStep = "Step ClickRandomMeInteresaButton";
+            homePage.ClickOnRandomMeInteresaButton();
             
-            LogStep(Status.Info, "Clicked on Spain Filter");
-            currentStep = "Step ClickOnSpainFilter";
-            homePage.ClickOnSpainFilter();
-            
-            LogStep(Status.Info, "Clicked on Andorra Filter");
-            currentStep = "Step ClickOnAndorraFilter";
-            homePage.ClickOnAndorraFilter();
-            
-            LogStep(Status.Info, "Clicked on France Filter");
-            currentStep = "Step ClickOnFranceFilter";
-            homePage.ClickOnFranceFilter();
-            
-            LogStep(Status.Info, "Clicked on Gibraltar Filter");
-            currentStep = "Step ClickOnGibraltarFilter";
-            homePage.ClickOnGibraltarFilter();
-            
-            LogStep(Status.Info, "Clicked on Italy Filter");
-            currentStep = "Step ClickOnItalyFilter";
-            homePage.ClickOnItalyFilter();
-            
-            LogStep(Status.Info, "Clicked on Portugal Filter");
-            currentStep = "Step ClickOnPortugalFilter";
-            homePage.ClickOnPortugalFilter();
-            
-            LogStep(Status.Info, "Clicked on United Kingdom Filter");
-            currentStep = "Step ClickOnUnitedKingdomFilter";
-            homePage.ClickOnUnitedKingdomFilter();
-            
-            LogStep(Status.Info, "Deselect Filters Tests Successful");
+            LogStep(Status.Info, "Clicked on Random NavBar Item");
+            currentStep = "Step SelectRandomNavBar";
+            ticketsSelectionPage.SelectRandomNavBar();
+
+            LogStep(Status.Info, "Selected desired ticket");
+            currentStep = "Step SelectDesiredTicket";
+            ticketsSelectionSteps.SelectDesiredTicket();
+
+            LogStep(Status.Info, "Date confirmed");
+            currentStep = "Step ConfirmDate";
+            ticketsSelectionSteps.ConfirmDate();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClickComprarButton";
+            ticketsSelectionSteps.ClickOnComprarButton();
+
+            LogStep(Status.Info, "Completed personal information");
+            currentStep = "Step CompletePersonalInformation";
+            reservationSteps.CompletePersonalInformation();
+
+            LogStep(Status.Info, "Checked conditions checkbox");
+            currentStep = "Step CheckTheConditionsCheckbox";
+            reservationSteps.CheckTheConditionsCheckbox();
+
+            LogStep(Status.Info, "Checked privacy checkbox");
+            currentStep = "Step CheckThePrivacyCheckbox";
+            reservationSteps.CheckThePrivacyCheckbox();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClicksComprarButtonAgain";
+            reservationSteps.ClicksOnComprarButtonAgain();
+
+            LogStep(Status.Info, "Completed card information");
+            currentStep = "Step CompleteTheCardInformation";
+            cardSteps.CompleteTheCardInformation();
+
+            LogStep(Status.Info, "Clicked on Pagar button");
+            currentStep = "Step ClickPagarButton";
+            cardSteps.ClickOnPagarButton();
+
+            LogStep(Status.Info, "Clicked on Enviar button");
+            currentStep = "Step ClickOnEnviarButton";
+            cardSteps.ClickOnEnviarButton();
+
+            LogStep(Status.Info, "Clicked on Continuar button");
+            currentStep = "Step ClickOnContinuarButton";
+            cardSteps.ClickOnContinuarButton();
+
+            LogStep(Status.Info, "Purchase completed");
+            currentStep = "PurchaseOKMessage";
+            purchaseOkSteps.PurchaseOkMessage();
+
+            LogStep(Status.Info, "Ticket Purchase Successful");
         }
         catch (Exception ex)
         {
             HandleTestFailure(ex);
             throw;
         }
-    }
-    
-    [Test, Order(12)]
-    public void DeselectAllCountryFiltersTest()
-    {
-        try
-        {
-            LogStep(Status.Info, "Starting Home Page Country Filters Test");
-
-            LogStep(Status.Info, "Navigating to URL");
-            currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
-
-            LogStep(Status.Info, "Deselected All Country Filter");
-            currentStep = "Step DeselectAllCountryFilters";
-            homePage.DeselectAllCountryFilters();
-            
-            LogStep(Status.Info, "Deselect All Country Filters Tests Successful");
-        }
-        catch (Exception ex)
-        {
-            HandleTestFailure(ex);
-            throw;
-        }
-    }
+    }*/
 }

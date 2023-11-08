@@ -33,7 +33,7 @@ public class CardSteps
     
     public void CompleteTheCardWithWrongInformation()
     {
-        cardPage.CompleteCardInformation("123456789", "12", "49", "123");
+        cardPage.CompleteCardInformation("999999999", "12", "49", "123");
     }
     
     public void ThenTheTicketPurchaseShouldBeUnsuccessful()

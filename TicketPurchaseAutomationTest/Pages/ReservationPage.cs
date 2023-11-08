@@ -95,7 +95,7 @@ public class ReservationPage : BasePage
         }
     }
 
-    public CardPage ClickOnComprarButtonAgain()
+    public void ClickOnComprarButtonAgain()
     {
         try
         {
@@ -107,7 +107,7 @@ public class ReservationPage : BasePage
                 var selectedComprarButton = comprarButtons[randomIndex];
 
                 ScrollIntoView(selectedComprarButton);
-                Thread.Sleep(2000);
+                Thread.Sleep(3000);
                 selectedComprarButton.Click();
             }
             else
@@ -123,8 +123,6 @@ public class ReservationPage : BasePage
         {
             Console.WriteLine($"An error occurred while clicking 'Comprar' button again: {ex.Message}");
         }
-
-        return new CardPage(driver);
     }
     
     public void BlankFields()

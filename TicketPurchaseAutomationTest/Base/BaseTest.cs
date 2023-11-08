@@ -15,6 +15,7 @@ public class BaseTest
     private IWebDriver driver;
     protected HomePage homePage;
     protected HomePageSteps homePageSteps;
+    protected TicketsSelectionPage ticketsSelectionPage;
     protected TicketsSelectionSteps ticketsSelectionSteps;
     protected ReservationSteps reservationSteps;
     protected CardSteps cardSteps;
@@ -29,6 +30,7 @@ public class BaseTest
         driver = new ChromeDriver();
         homePage = new HomePage(driver);
         homePageSteps = new HomePageSteps(driver);
+        ticketsSelectionPage = new TicketsSelectionPage(driver);
         ticketsSelectionSteps = new TicketsSelectionSteps(driver);
         reservationSteps = new ReservationSteps(driver);
         cardSteps = new CardSteps(driver);
