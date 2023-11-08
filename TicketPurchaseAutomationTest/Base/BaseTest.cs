@@ -139,4 +139,61 @@ public class BaseTest
     {
         LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
     }
+
+    protected void CommonPurchaseSteps()
+    {
+        LogStep(Status.Info, "Clicked Me Interesa button");
+            currentStep = "Step ClickRandomMeInteresaButton";
+            homePage.ClickOnRandomMeInteresaButton();
+
+            LogStep(Status.Info, "Selected desired ticket");
+            currentStep = "Step SelectDesiredTicket";
+            ticketsSelectionSteps.SelectDesiredTicket();
+
+            LogStep(Status.Info, "Date confirmed");
+            currentStep = "Step ConfirmDate";
+            ticketsSelectionSteps.ConfirmDate();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClickComprarButton";
+            ticketsSelectionSteps.ClickOnComprarButton();
+
+            LogStep(Status.Info, "Completed personal information");
+            currentStep = "Step CompletePersonalInformation";
+            reservationSteps.CompletePersonalInformation();
+
+            LogStep(Status.Info, "Checked conditions checkbox");
+            currentStep = "Step CheckTheConditionsCheckbox";
+            reservationSteps.CheckTheConditionsCheckbox();
+
+            LogStep(Status.Info, "Checked privacy checkbox");
+            currentStep = "Step CheckThePrivacyCheckbox";
+            reservationSteps.CheckThePrivacyCheckbox();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClicksComprarButtonAgain";
+            reservationSteps.ClicksOnComprarButtonAgain();
+
+            LogStep(Status.Info, "Completed card information");
+            currentStep = "Step CompleteTheCardInformation";
+            cardSteps.CompleteTheCardInformation();
+
+            LogStep(Status.Info, "Clicked on Pagar button");
+            currentStep = "Step ClickPagarButton";
+            cardSteps.ClickOnPagarButton();
+
+            LogStep(Status.Info, "Clicked on Enviar button");
+            currentStep = "Step ClickOnEnviarButton";
+            cardSteps.ClickOnEnviarButton();
+
+            LogStep(Status.Info, "Clicked on Continuar button");
+            currentStep = "Step ClickOnContinuarButton";
+            cardSteps.ClickOnContinuarButton();
+
+            LogStep(Status.Info, "Purchase completed");
+            currentStep = "PurchaseOKMessage";
+            purchaseOkSteps.PurchaseOkMessage();
+
+            LogStep(Status.Info, "Ticket Purchase Successful");
+    }
 }
