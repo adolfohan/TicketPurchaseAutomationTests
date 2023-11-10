@@ -1,8 +1,8 @@
 namespace TicketPurchaseAutomationTest;
 
-public class Program
+public abstract class Program
 {
-    /*static void Main(string[] args)
+    private static void Main(string[] args)
     {
-    }*/
+    }
 }

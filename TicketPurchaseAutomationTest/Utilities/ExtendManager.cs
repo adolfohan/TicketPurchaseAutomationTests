@@ -30,6 +30,9 @@ public abstract class ExtentManager
 
         _extent.AddSystemInfo("Tester", "Adolfo");
         _extent.AddSystemInfo("Environment", "Pre-Producción");
+
+        CleanUpOldSReports();
+            
         return _extent;
     }
 
@@ -38,5 +41,20 @@ public abstract class ExtentManager
         var artifactStagingDirectory = Environment.GetEnvironmentVariable("REPORT_PATH");
 
         return string.IsNullOrEmpty(artifactStagingDirectory) ? BaseReportDirectory : artifactStagingDirectory;
+    }
+    
+    private static void CleanUpOldSReports()
+    {
+        const string reportsDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
+        var screenshotFiles = Directory.GetFiles(reportsDirectory, "report*.html");
+
+        const int maxReportsToKeep = 15;
+
+        if (screenshotFiles.Length <= maxReportsToKeep) return;
+        Array.Sort(screenshotFiles);
+        for (var i = 0; i < screenshotFiles.Length - maxReportsToKeep; i++)
+        {
+            File.Delete(screenshotFiles[i]);
+        }
     }
 }    

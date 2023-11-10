@@ -13,6 +13,7 @@ public class ReservationPage : BasePage
     private readonly By surNameElement = By.Id("clientSurname-id");
     private readonly By idElement = By.Id("clientDocumentIdentifier-id");
     private readonly By emailElement = By.Id("clientEmail-id");
+    private readonly By confirmEmailElement = By.Id("confirm-clientEmail-id");
     private readonly By phoneElement = By.Id("clientPhoneNumber-id");
     private readonly By conditionsCheckboxElement = By.Id("form-conditions");
     private readonly By privacyCheckboxElement = By.Id("form-privacy");
@@ -24,7 +25,7 @@ public class ReservationPage : BasePage
         random = new Random();
     }
     
-    public void CompletePersonalInformation(string fullName, string surName, string id, string email, string phone)
+    public void CompletePersonalInformation(string fullName, string surName, string id, string email, string confirmEmail,string phone)
     {
         try
         {
@@ -40,6 +41,9 @@ public class ReservationPage : BasePage
             IWebElement emailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
             ClearAndSetInputValue(emailField, email);
 
+            IWebElement confirmEmailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
+            ClearAndSetInputValue(confirmEmailField, confirmEmail);
+            
             IWebElement phoneField = fluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
             ClearAndSetInputValue(phoneField, phone);
         }
@@ -178,6 +182,21 @@ public class ReservationPage : BasePage
         try
         {
             CheckValidity(emailField);
+
+            Assert.Fail("The input text should be invalid, but it is valid.");
+        }
+        catch (Exception)
+        {
+            Assert.Pass("The input text is invalid as expected.");
+        }
+    }
+    
+    public void InvalidConfirmationEmail()
+    {
+        IWebElement confirmEmailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
+        try
+        {
+            CheckValidity(confirmEmailField);
 
             Assert.Fail("The input text should be invalid, but it is valid.");
         }

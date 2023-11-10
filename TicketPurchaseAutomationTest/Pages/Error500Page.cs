@@ -10,16 +10,15 @@ public class Error500Page : BasePage
 
     protected Error500Page(IWebDriver driver) : base(driver) {}
     
-    public bool Error500Displayed()
+    public void Error500Displayed()
     {
         IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
 
-        if (error500Message.Displayed)
+        while (error500Message.Displayed)
         {
             driver.Navigate().Back();
-            return true;
+            Thread.Sleep(TimeSpan.FromSeconds(2));
         }
-        return false;
     }
 
 }

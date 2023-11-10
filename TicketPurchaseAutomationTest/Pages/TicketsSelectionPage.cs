@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using TicketPurchaseAutomationTest.Base;
 
@@ -8,6 +9,9 @@ public class TicketsSelectionPage : BasePage
 {
     private readonly HomePage homePage;
     private readonly Random random;
+    private readonly SessionPage sessionPage;
+    private readonly AdvancedSelectorPage advancedSelectorPage;
+    private readonly Error500Page error500Page;
     
     private By inputNumberOfTicketsElement =>
         By.XPath("//input[@type='number']");
@@ -20,40 +24,47 @@ public class TicketsSelectionPage : BasePage
             "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
 
     //private readonly By priceElement = By.ClassName("sv-cart__price");
-    private readonly By error500Element = By.XPath("//div[@class='sv-page404__title' and text()='Error 500']");
-    private readonly By step2Element = By.XPath("//span[text()='Configura tus actividades']");
-    private readonly By panelWrapperElement = By.CssSelector("a.sv-panel__wrapper[aria-expanded='false']");
+    private readonly By panelWrapperElement = By.XPath("//a[@class='sv-panel__wrapper collapsed' and @aria-expanded='false']");//By.CssSelector("a.sv-panel__wrapper[aria-expanded='false']");
     private readonly By navBarElement = By.Id("funnelmenu");
     public TicketsSelectionPage(IWebDriver driver) : base(driver)
     {
         random = new Random();
         homePage = new HomePage(driver);
+        sessionPage = new SessionPage(driver);
+    }
+
+    public void ClickOnPanelWrapper()
+    {
+        IWebElement panel = fluentWait.Until(ExpectedConditions.ElementToBeClickable(panelWrapperElement));
+
+        if (panel.Displayed)
+        {
+            ScrollIntoView(panel);
+            panel.Click();
+        }
+                
+        /*IList<IWebElement> panelWrapper = fluentWait.Until(webDriver => webDriver.FindElements(panelWrapperElement));
+
+        if (panelWrapper.Count > 0)
+        {
+            foreach (IWebElement element in panelWrapper)
+            {
+                ScrollIntoView(element);
+                element.Click();
+            }
+        }*/
     }
     
     public void SelectNumberOfTickets(string numberOfTickets)
     {
-        
         try
         {
             while (true)
             {
                 IList<IWebElement> inputFields =
                     fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
-                
-                IList<IWebElement> panelWrapper = fluentWait.Until(webDriver => webDriver.FindElements(panelWrapperElement));
-
-                if (panelWrapper.Count > 0)
-                {
-                    foreach (IWebElement element in panelWrapper)
-                    {
-                        element.Click();
-                    }
-                }
-
-                /*if (inputFields.Count > 0)
-
-                    fluentWait.Until(webDriver =>
-                        ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));*/
+                /*  fluentWait.Until(webDriver =>
+                      ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));*/
 
                 if (inputFields.Count > 0)
                 {
@@ -74,7 +85,6 @@ public class TicketsSelectionPage : BasePage
                 driver.Navigate().Back();
                 homePage.ClickOnRandomMeInteresaButton();
                 SelectNumberOfTickets(numberOfTickets);
-
             }
         }
         catch (Exception ex)
@@ -97,18 +107,43 @@ public class TicketsSelectionPage : BasePage
         {
             IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
-            IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
+            
+            Thread.Sleep(TimeSpan.FromSeconds(5));
+
+            string pageSource = driver.PageSource;
+
+            switch (true)
+            {
+                case var _ when pageSource.Contains("Error 500"):
+                    error500Page.Error500Displayed();
+                    break;
+                
+                case var _ when pageSource.Contains("Selecciona la sesión"):
+                    if (sessionPage.VerifySessionMessage())
+                    {
+                        sessionPage.SelectSession();
+                        sessionPage.ClickOnComprarButton();
+                    }
+                    break;
+                
+                case var _ when pageSource.Contains("Fecha elegida") && pageSource.Contains("Selecciona la sesión"):
+                    if (advancedSelectorPage.VerifyAdvancedSelectorMessage())
+                    {
+                        advancedSelectorPage.SelectTitle();
+                        advancedSelectorPage.SelectSessionHour();
+                        advancedSelectorPage.ClickOnComprarButton();
+                    }
+                    break;
+            }
+            
+            /*IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
             while (error500Message.Displayed)
             {
                 driver.Navigate().Back();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
                 IWebElement comprarBtn1 = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
                 comprarBtn1.Click();
-            }
-            if (!HaveSession())
-            {
-                Console.WriteLine("No session. Continue with the next step...");
-            }
+            }*/
         }
         catch (NoSuchElementException ex)
         {
@@ -120,70 +155,32 @@ public class TicketsSelectionPage : BasePage
         }
     }
 
-    private bool HaveSession()
-    {
-        IWebElement step2Title = fluentWait.Until(ExpectedConditions.ElementIsVisible(step2Element));
-        IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
-        
-        if (step2Title.Displayed)
-        {
-            Thread.Sleep(2000);
-            comprarBtn.Click();
-            return true;
-        }
-        return false;
-    }
-
     public void SelectRandomNavBar()
-    {
-        IWebElement navBar = fluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
-        IWebElement input = fluentWait.Until(ExpectedConditions.ElementToBeClickable(inputNumberOfTicketsElement));
-        IList<IWebElement> navBarItems = navBar.FindElements(By.CssSelector("li.nav-item"));    
-
-        if (navBarItems.Count > 0)
-        {
-            do
-            {
-                var randomIndex = random.Next(0, navBarItems.Count);
-                var selectedNavBarItem = navBarItems[randomIndex];
-                selectedNavBarItem.Click();
-            } while (!input.Displayed);
-        }
-        
-        /*while (true)
-        {
-            //bool inputVisible = ;
-
-            if (IsElementVisible(inputNumberOfTicketsElement))
-            {
-                IWebElement navBar = fluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
-                IList<IWebElement> navBarItems = navBar.FindElements(By.CssSelector("li.nav-item"));
-
-                if (navBarItems.Count > 0)
-                {
-                    var randomIndex = random.Next(0, navBarItems.Count);
-                    var selectedNavBarItem = navBarItems[randomIndex];
-                    selectedNavBarItem.Click();
-                }
-                break;
-            }
-            {
-                driver.Navigate().Back();
-                homePage.ClickOnRandomMeInteresaButton();
-            }
-        }*/
-    }
-    
-    private bool IsElementVisible(By elementSelector)
     {
         try
         {
-            IWebElement element = fluentWait.Until(ExpectedConditions.ElementIsVisible(elementSelector));
-            return element.Displayed;
+            while (true)
+            {
+                IList<IWebElement> inputFields =
+                    fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
+                if (inputFields.Count > 0)
+                {
+                    IWebElement navBar = fluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
+                    IList<IWebElement> navBarItems = navBar.FindElements(By.CssSelector("li.nav-item"));
+                    while (navBarItems.Count > 0 && inputFields.Count > 0)
+                    {
+                        var randomIndex = random.Next(0, navBarItems.Count);
+                        var selectedNavBarItem = navBarItems[randomIndex];
+                        selectedNavBarItem.Click();
+                    }
+                }
+                driver.Navigate().Back();
+                homePage.ClickOnRandomMeInteresaButton();
+            }
         }
-        catch (NoSuchElementException)
+        catch (Exception ex)
         {
-            return false;
+            Console.WriteLine($"An error occurred: {ex.Message}");
         }
     }
 }

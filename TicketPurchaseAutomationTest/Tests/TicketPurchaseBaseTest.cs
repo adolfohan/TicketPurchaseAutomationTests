@@ -267,8 +267,68 @@ public class TicketPurchaseBaseTest : BaseTest
             throw;
         }
     }
-
+    
     [Test, Order(6)]
+    public void TicketPurchaseWithWrongConfirmationEmailTest()
+    {
+        try
+        {
+            LogStep(Status.Info, "Starting Ticket Purchase With Wrong Email");
+
+            LogStep(Status.Info, "Navigating to URL");
+            currentStep = "Step GoToURL";
+            homePageSteps.GoToURL();
+
+            LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
+            currentStep = "Step ClickRandomMeInteresaButton";
+            homePageSteps.ClickOnRandomMeInteresaButton();
+
+            LogStep(Status.Info, "Selected Desired Ticket");
+            currentStep = "Step SelectDesiredTicket";
+            ticketsSelectionSteps.SelectDesiredTicket();
+
+            LogStep(Status.Info, "Confirmed Date");
+            currentStep = "Step ConfirmDate";
+            ticketsSelectionSteps.ConfirmDate();
+
+            LogStep(Status.Info, "Clicked on 'Comprar' Button");
+            currentStep = "Step ClickComprarButton";
+            ticketsSelectionSteps.ClickOnComprarButton();
+
+            LogStep(Status.Info, "Entered Wrong Confirmation Email");
+            currentStep = "Step WrongEmail";
+            reservationSteps.WrongConfirmationEmail();
+
+            LogStep(Status.Info, "Checked Conditions Checkbox");
+            currentStep = "Step CheckTheConditionsCheckbox";
+            reservationSteps.CheckTheConditionsCheckbox();
+
+            LogStep(Status.Info, "Checked Privacy Checkbox");
+            currentStep = "Step CheckThePrivacyCheckbox";
+            reservationSteps.CheckThePrivacyCheckbox();
+
+            LogStep(Status.Info, "Clicked 'Comprar' Button Again");
+            currentStep = "Step ClicksComprarButtonAgain";
+            reservationSteps.ClicksOnComprarButtonAgain();
+
+            LogStep(Status.Info, "Checking Invalid Confirmation Email");
+            currentStep = "Step CheckInvalidEmail";
+            reservationSteps.CheckInvalidConfirmationEmail();
+
+            LogStep(Status.Info, "Checking Card Page");
+            currentStep = "Step CheckCardPage";
+            reservationSteps.CheckCardPage();
+
+            LogStep(Status.Info, "Ticket Purchase With Wrong Confirmation Email Test Completed Successfully");
+        }
+        catch (Exception ex)
+        {
+            HandleTestFailure(ex);
+            throw;
+        }
+    }
+    
+    [Test, Order(7)]
     public void TicketPurchaseWithWrongPhone()
     {
         try
@@ -328,7 +388,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    [Test, Order(7)]
+    [Test, Order(8)]
     public void TicketPurchaseWithoutCheckingTheCheckboxes()
     {
         try
@@ -380,7 +440,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    [Test, Order(8)]
+    [Test, Order(9)]
     public void TicketPurchaseWrongCardTest()
     {
         try
@@ -444,7 +504,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    [Test, Order(9)]
+    [Test, Order(10)]
     public void RandomNavBarTicketPurchaseTest()
     {
         try
@@ -520,7 +580,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(10)]
+    [Test, Order(11)]
     public void LeisureParksTicketPurchaseTest()
     {
         try
@@ -544,7 +604,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(11)]
+    [Test, Order(12)]
     public void CultureVisitsToursTicketPurchaseTest()
     {
         try
@@ -568,7 +628,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(12)]
+    [Test, Order(13)]
     public void ExcursionsAndTouristsMobilityTicketPurchaseTest()
     {
         try
@@ -592,7 +652,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(13)]
+    [Test, Order(14)]
     public void ExperiencesAndRelaxTicketPurchaseTest()
     {
         try
@@ -616,7 +676,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(14)]
+    [Test, Order(15)]
     public void GastronomyAndWineTourismTicketPurchaseTest()
     {
         try
@@ -640,7 +700,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(15)]
+    [Test, Order(16)]
     public void MusicalsAndShowsTicketHanPurchaseTest()
     {
         try
@@ -664,7 +724,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(16)]
+    [Test, Order(17)]
     public void SportsTicketPurchaseTest()
     {
         try
@@ -688,7 +748,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(17)]
+    [Test, Order(18)]
     public void ActiveTourismTicketPurchaseTest()
     {
         try
@@ -712,7 +772,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(18)]
+    [Test, Order(19)]
     public void SnowTicketPurchaseTest()
     {
         try
@@ -736,7 +796,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(19)]
+    [Test, Order(20)]
     public void CinemaAndDriveInTicketPurchaseTest()
     {
         try
@@ -760,7 +820,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(20)]
+    [Test, Order(21)]
     public void HalloweenTicketPurchaseTest()
     {
         try
@@ -784,7 +844,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(21)]
+    [Test, Order(22)]
     public void EscapeRoomExperiencesTicketPurchaseTest()
     {
         try
@@ -808,7 +868,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(22)]
+    [Test, Order(23)]
     public void SpainFilterTicketPurchaseTest()
     {
         try
@@ -832,7 +892,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(23)]
+    [Test, Order(24)]
     public void AndorraFilterTicketPurchaseTest()
     {
         try
@@ -856,7 +916,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(24)]
+    [Test, Order(25)]
     public void FranceFilterTicketPurchaseTest()
     {
         try
@@ -880,7 +940,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(25)]
+    [Test, Order(26)]
     public void GibraltarFilterTicketPurchaseTest()
     {
         try
@@ -904,7 +964,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(26)]
+    [Test, Order(27)]
     public void ItalyFilterTicketPurchaseTest()
     {
         try
@@ -928,7 +988,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(27)]
+    [Test, Order(28)]
     public void PortugalFilterTicketPurchaseTest()
     {
         try
@@ -952,7 +1012,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
     
-    [Test, Order(28)]
+    [Test, Order(29)]
     public void UnitedKingdomFilterTicketPurchaseTest()
     {
         try
@@ -974,5 +1034,43 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
+    }
+    
+    [Test]
+    public void WrapperTest()
+    {
+        homePage.NavigateToSessionUrl();
+        ticketsSelectionPage.ClickOnPanelWrapper();
+        ticketsSelectionPage.SelectNumberOfTickets("1");
+        ticketsSelectionPage.ConfirmDate();
+        ticketsSelectionPage.ClickOnComprarButton();
+        reservationSteps.CompletePersonalInformation();
+    }
+
+    [Test]
+    public void SessionTest()
+    {
+        homePage.NavigateToSessionUrl();
+        ticketsSelectionPage.SelectNumberOfTickets("2");
+        ticketsSelectionPage.ConfirmDate();
+        ticketsSelectionPage.ClickOnComprarButton();
+        /*sessionPage.SessionMessageDisplayed();
+        sessionPage.SelectSession();
+        sessionPage.ClickOnComprarButton();*/
+        reservationSteps.CompletePersonalInformation();
+    }
+
+    [Test]
+    public void AdvancedSelectorTest()
+    {
+        homePage.NavigateToAdvancedSelectorUrl();
+        ticketsSelectionPage.SelectNumberOfTickets("2");
+        ticketsSelectionPage.ConfirmDate();
+        ticketsSelectionPage.ClickOnComprarButton();
+        /*advancedSelectorPage.VerifyAdvancedSelectorMessage();
+        advancedSelectorPage.SelectTitle();
+        advancedSelectorPage.SelectSessionHour();
+        advancedSelectorPage.ClickOnComprarButton();*/
+        reservationSteps.CompletePersonalInformation();
     }
 }

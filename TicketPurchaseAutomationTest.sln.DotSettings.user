@@ -1,7 +1,21 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=478e0c4c_002Df6d9_002D4b4c_002D82a6_002D8a518b402c52/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PortugalFilterTicketPurchaseTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0c0684d6_002D3b2d_002D4e47_002Da73f_002Dca76bc2ff0b9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="SessionTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::9F340F7A-748D-4AD5-86BE-170E104F51B8::net7.0::TicketPurchaseAutomationTest.Tests.TicketPurchaseBaseTest.PortugalFilterTicketPurchaseTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::9F340F7A-748D-4AD5-86BE-170E104F51B8::net7.0::TicketPurchaseAutomationTest.Tests.TicketPurchaseBaseTest.UnitedKingdomFilterTicketPurchaseTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::9F340F7A-748D-4AD5-86BE-170E104F51B8::net7.0::TicketPurchaseAutomationTest.Tests.TicketPurchaseBaseTest.SessionTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::9F340F7A-748D-4AD5-86BE-170E104F51B8::net7.0::TicketPurchaseAutomationTest.Tests.TicketPurchaseBaseTest.AdvancedSelectorTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=228617e6_002D821f_002D45dc_002D811c_002D7ec8626fa303/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="wrapperTest #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::9F340F7A-748D-4AD5-86BE-170E104F51B8::net7.0::TicketPurchaseAutomationTest.Tests.TicketPurchaseBaseTest.wrapperTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a9762e5b_002Db113_002D4cca_002D8f33_002Dce5cff89a759/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="wrapperTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::9F340F7A-748D-4AD5-86BE-170E104F51B8::net7.0::TicketPurchaseAutomationTest.Tests.TicketPurchaseBaseTest.wrapperTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	</wpf:ResourceDictionary>

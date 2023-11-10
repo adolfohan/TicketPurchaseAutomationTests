@@ -17,6 +17,8 @@ public class BaseTest
     protected HomePageSteps homePageSteps;
     protected TicketsSelectionPage ticketsSelectionPage;
     protected TicketsSelectionSteps ticketsSelectionSteps;
+    protected SessionPage sessionPage;
+    protected AdvancedSelectorPage advancedSelectorPage;
     protected ReservationSteps reservationSteps;
     protected CardSteps cardSteps;
     protected PurchaseOkSteps purchaseOkSteps;
@@ -32,6 +34,8 @@ public class BaseTest
         homePageSteps = new HomePageSteps(driver);
         ticketsSelectionPage = new TicketsSelectionPage(driver);
         ticketsSelectionSteps = new TicketsSelectionSteps(driver);
+        sessionPage = new SessionPage(driver);
+        advancedSelectorPage = new AdvancedSelectorPage(driver);
         reservationSteps = new ReservationSteps(driver);
         cardSteps = new CardSteps(driver);
         purchaseOkSteps = new PurchaseOkSteps(driver);

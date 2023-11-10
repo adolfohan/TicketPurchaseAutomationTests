@@ -48,9 +48,31 @@ public class HomePage : BasePage
             js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
             Thread.Sleep(TimeSpan.FromSeconds(5));*/
         }
-        catch (NoSuchElementException ex)
+        catch (Exception ex)
         {
-            Console.WriteLine($"Element not found: {ex.Message}");
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void NavigateToSessionUrl()
+    {
+        try
+        {
+            driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/espectaculo-flamenco-consumicion");
+            driver.Manage().Window.Maximize();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+        }
+    }
+    
+    public void NavigateToAdvancedSelectorUrl()
+    {
+        try
+        {
+            driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/ciudadartesyciencias-hemisferic");
+            driver.Manage().Window.Maximize();
         }
         catch (Exception ex)
         {

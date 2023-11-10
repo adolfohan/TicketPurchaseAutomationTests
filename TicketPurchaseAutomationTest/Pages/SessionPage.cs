@@ -10,10 +10,10 @@ public class SessionPage : BasePage
 {
     private readonly Random random;
     
-    private readonly By sessionMessageElement = By.XPath("//span[text()='Selecciona la sesión]");
+    private readonly By sessionMessageElement = By.XPath("//span[text()=' Selecciona la sesión ']");
     private readonly By comprarButtonElement = By.CssSelector(
         "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
-    private readonly By sessionDropdownElement = By.XPath("//div[@class='sessions-item-select']");
+    private readonly By sessionDropdownElement = By.XPath("//select[@class='form-select form-select-sm']");
     private string expectedMessage = "Selecciona la sesión";
     
     public SessionPage(IWebDriver driver) : base(driver)
@@ -21,11 +21,19 @@ public class SessionPage : BasePage
         random = new Random();
     }
 
-    public void verifySessionMessage()
+    public bool VerifySessionMessage()
     {
         IWebElement sessionMessage = fluentWait.Until(ExpectedConditions.ElementIsVisible(sessionMessageElement));
         string message = sessionMessage.Text;
         Assert.That(message, Is.EqualTo(expectedMessage), "The message does not match the expected message");
+
+        return true;
+    }
+
+    public bool SessionMessageDisplayed()
+    {
+        IWebElement sessionMessage = fluentWait.Until(ExpectedConditions.ElementIsVisible(sessionMessageElement));
+        return sessionMessage.Displayed;
     }
     
     public void SelectSession()
@@ -48,11 +56,12 @@ public class SessionPage : BasePage
         }
     }
     
-    public ReservationPage ClickOnComprarButton()
+    public void ClickOnComprarButton()
     {
         try
         {
-            fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement)).Click();
+            IWebElement comprarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement));
+            comprarButton.Click();
         }
         catch (NoSuchElementException ex)
         {
@@ -62,9 +71,5 @@ public class SessionPage : BasePage
         {
             Console.WriteLine($"An error occurred while clicking 'Comprar' button: {ex.Message}");
         }
-
-        return new ReservationPage(driver);
     }
-    
-    
 }
