@@ -67,7 +67,7 @@ public class HomePage : BasePage
         }
     }
     
-    public void NavigateToAdvancedSelectorUrl()
+    public void NavigateToAdvancedDateSelectorUrl()
     {
         try
         {
@@ -339,7 +339,7 @@ public class HomePage : BasePage
         }
     }
     
-    public void ClickOnAllFilters()
+    public void ClickOnAllLeisureFamiliesFilters()
     {
         try
         {
@@ -378,7 +378,7 @@ public class HomePage : BasePage
         }
     }
     
-    public void DeselectAllFilters()
+    public void DeselectAllLeisureFamiliesFilters()
     {
         try
         {
@@ -407,7 +407,7 @@ public class HomePage : BasePage
             IWebElement escapeRoomExperiences =
                 fluentWait.Until(ExpectedConditions.ElementToBeClickable(escapeRoomExperiencesElement));
             
-            ClickOnAllFilters();
+            ClickOnAllLeisureFamiliesFilters();
 
             if (!leisureParksFilter.Selected || !cultureVisitsTour.Selected || !excursionsTouristsMobility.Selected ||
                 !experiencesRelax.Selected || !gastronomyWineTourism.Selected || !musicalsShow.Selected ||

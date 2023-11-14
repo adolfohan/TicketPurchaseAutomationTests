@@ -6,7 +6,7 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class AdvancedSelectorPage : BasePage
+public class AdvancedDateSelectorPage : BasePage
 {
     private readonly Random random;
     
@@ -16,14 +16,32 @@ public class AdvancedSelectorPage : BasePage
         "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
     private readonly By radioButtonElement = By.XPath("//input[@type='radio']");
     private readonly By sessionDropdownElement = By.XPath("//select[@class='form-select form-select-sm' and not(@disabled)]");
+    private readonly By advancedDateSelectorElement = By.ClassName("sv-tickets__actions");
     private string expectedSessionMessage = "Selecciona la sesión";
     private string expectedChosenDateMessage = "Fecha elegida";
     
-    public AdvancedSelectorPage(IWebDriver driver) : base(driver)
+    public AdvancedDateSelectorPage(IWebDriver driver) : base(driver)
     {
         random = new Random();
     }
     
+    public void HasAdvancedDateSelector()
+    {
+        IWebElement element = fluentWait.Until(ExpectedConditions.ElementExists(By.XPath("//div[@class='sv-tickets__actions']")));
+        try
+        {
+            /*string needsAdvancedDateSelectorValue = element.GetAttribute("productname");
+            Console.WriteLine($"Valor de 'needsadvanceddateselector': {needsAdvancedDateSelectorValue}");
+            Console.WriteLine($"HTML del elemento: {element.GetAttribute("productname")}");*/
+            var script = "return arguments[0].getAttribute('productname');";
+            var attribute = (string)((IJavaScriptExecutor)driver).ExecuteScript(script, element);
+            Console.WriteLine($"Valor del atributo: {attribute}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al obtener el atributo. Detalles: {ex.Message}");
+        }
+    }
     public bool VerifyAdvancedSelectorMessage()
     {
         Thread.Sleep(2000);
@@ -31,7 +49,7 @@ public class AdvancedSelectorPage : BasePage
         IWebElement choseDateMessage = fluentWait.Until(ExpectedConditions.ElementIsVisible(chosenDateElement));
         string message = sessionMessage.Text;
         string dateMessage = choseDateMessage.Text;
-        Assert.That(dateMessage == expectedChosenDateMessage && message == expectedSessionMessage, "The messages do not match the expected messages");
+        Assert.That(dateMessage.Equals(expectedChosenDateMessage) && message.Equals(expectedSessionMessage), "The messages do not match the expected messages");
         return true;
     }
 

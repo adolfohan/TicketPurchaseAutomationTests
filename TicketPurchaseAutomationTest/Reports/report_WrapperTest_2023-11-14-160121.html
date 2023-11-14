@@ -35,7 +35,7 @@
   <ul class="nav-right">
    <li class="m-r-10"><a href="#"><span class="badge badge-primary"></span></a></li>
    <li class="m-r-10">
-    <a href="#"><span class="badge badge-primary">10/11/2023 16:13:40</span></a>
+    <a href="#"><span class="badge badge-primary">14/11/2023 16:01:21</span></a>
    </li>
   </ul>
  </div>
@@ -71,7 +71,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
           <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
- <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>             <div class="dropdown-divider"></div>
+ <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>             <div class="dropdown-divider"></div>
             <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
           </ul>
         </li>
@@ -79,25 +79,25 @@
     </div>
     <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item" status="pass" test-id="1"
+        <li class="test-item" status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">AdvancedSelectorTest</p>
+            <p class="name">WrapperTest</p>
             <p class="text-sm">
-              <span>16:13:40</span> / <span>36613,7 secs</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>16:01:21</span> / <span>5036,78 secs</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
             <div class="detail-head">
               <div class="p-v-10">
                 <div class="info">
-                  <h5 class="test-status text-pass">AdvancedSelectorTest</h5>
-                  <span class='badge badge-success'>10/11/2023 16:13:40</span>
-                  <span class='badge badge-danger'>10/11/2023 16:14:16</span>
-                  <span class='badge badge-default'>36613,7 secs</span>
+                  <h5 class="test-status text-fail">WrapperTest</h5>
+                  <span class='badge badge-success'>14/11/2023 16:01:21</span>
+                  <span class='badge badge-danger'>14/11/2023 16:01:26</span>
+                  <span class='badge badge-default'>5036,78 secs</span>
                   &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
                   <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
                   <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -114,10 +114,36 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>16:14</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>16:01</td>
         <td>
-<span class='badge white-text green'>Test Case Passed</span>        </td>
+<span class='badge white-text red'>Test Case Failed</span>        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>16:01</td>
+        <td>
+Failure Message: OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.124)        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>16:01</td>
+        <td>
+Stack Trace: <pre>   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at SeleniumExtras.WaitHelpers.ExpectedConditions.<>c__DisplayClass19_0.<ElementToBeClickable>b__0(IWebDriver driver)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at TicketPurchaseAutomationTest.Pages.TicketsSelectionPage.ClickOnPanelWrapper() in C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Pages\TicketsSelectionPage.cs:line 39
+   at TicketPurchaseAutomationTest.Tests.TicketPurchaseBaseTest.WrapperTest() in C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Tests\TicketPurchaseBaseTest.cs:line 1043
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)</pre>        </td>
       </tr>
   </tbody>
 </table></div>
@@ -141,25 +167,25 @@
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0">Started</p>
-          <h3>10/11/2023 16:13:40</h3>
+          <h3>14/11/2023 16:01:21</h3>
       </div></div>
     </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0">Ended</p>
-          <h3>10/11/2023 16:14:16</h3>
+          <h3>14/11/2023 16:01:26</h3>
       </div></div>
     </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0 text-pass">Tests Passed</p>
-          <h3>1</h3>
+          <h3>0</h3>
       </div></div>
     </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0 text-fail">Tests Failed</p>
-          <h3>0</h3>
+          <h3>1</h3>
       </div></div>
     </div>
   </div>
@@ -175,12 +201,12 @@
           </div>
         </div>
         <div class="card-footer">
-          <div><small data-tooltip='1%'>
-            <b>1</b> tests passed
+          <div><small data-tooltip='0%'>
+            <b>0</b> tests passed
             </small>
           </div>
           <div>
-            <small data-tooltip='0%'><b>0</b> tests failed, 
+            <small data-tooltip='1%'><b>1</b> tests failed, 
             <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
             </small>
           </div>
@@ -198,9 +224,9 @@
           </div>
         </div>
         <div class="card-footer">
-          <div><small data-tooltip='1%'><b>1</b> events passed</small></div>
+          <div><small data-tooltip='0%'><b>0</b> events passed</small></div>
           <div>
-            <small data-tooltip='0%'><b>0</b> events failed, 
+            <small data-tooltip='1%'><b>3</b> events failed, 
             <b data-tooltip='%'>0</b> others
             </small>
           </div>
@@ -216,7 +242,7 @@
     </div>
   </div></div>
   <script>
-	var timeline = { "AdvancedSelectorTest":36613,6959 };
+	var timeline = { "WrapperTest":5036,7751 };
   </script>
   <div class="row">
       <div class="col-md-4 sysenv-container">
@@ -244,12 +270,12 @@
     parentCount: 1,
     childCount: 0,
     grandChildCount: 0,
-    eventsCount: 1,
+    eventsCount: 3,
 
-passParent:1,failParent:0,warningParent:0,skipParent:0,    
+passParent:0,failParent:1,warningParent:0,skipParent:0,    
 passChild:0,failChild:0,warningChild:0,skipChild:0,infoChild:0,    
 passGrandChild:0,failGrandChild:0,warningGrandChild:0,skipGrandChild:0,infoGrandChild:0,    
-passEvents:1,failEvents:0,warningEvents:0,skipEvents:0,infoEvents:0,  };
+passEvents:0,failEvents:3,warningEvents:0,skipEvents:0,infoEvents:0,  };
 </script>
 
     </div>

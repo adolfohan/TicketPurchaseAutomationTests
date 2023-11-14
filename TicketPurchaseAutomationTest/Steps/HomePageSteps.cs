@@ -89,11 +89,11 @@ public class HomePageSteps
     
     public void ClickOnAllFilters()
     {
-        homePage.ClickOnAllFilters();
+        homePage.ClickOnAllLeisureFamiliesFilters();
     }
     
     public void DeselectAllFilters()
     {
-        homePage.DeselectAllFilters();
+        homePage.DeselectAllLeisureFamiliesFilters();
     }
 }

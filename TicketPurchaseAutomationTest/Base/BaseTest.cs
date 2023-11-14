@@ -18,7 +18,7 @@ public class BaseTest
     protected TicketsSelectionPage ticketsSelectionPage;
     protected TicketsSelectionSteps ticketsSelectionSteps;
     protected SessionPage sessionPage;
-    protected AdvancedSelectorPage advancedSelectorPage;
+    protected AdvancedDateSelectorPage advancedDateSelectorPage;
     protected ReservationSteps reservationSteps;
     protected CardSteps cardSteps;
     protected PurchaseOkSteps purchaseOkSteps;
@@ -35,7 +35,7 @@ public class BaseTest
         ticketsSelectionPage = new TicketsSelectionPage(driver);
         ticketsSelectionSteps = new TicketsSelectionSteps(driver);
         sessionPage = new SessionPage(driver);
-        advancedSelectorPage = new AdvancedSelectorPage(driver);
+        advancedDateSelectorPage = new AdvancedDateSelectorPage(driver);
         reservationSteps = new ReservationSteps(driver);
         cardSteps = new CardSteps(driver);
         purchaseOkSteps = new PurchaseOkSteps(driver);
@@ -144,9 +144,9 @@ public class BaseTest
         LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
     }
 
-    protected void CommonPurchaseSteps()
+    protected void CommonNormalPurchaseSteps()
     {
-        LogStep(Status.Info, "Clicked Me Interesa button");
+            LogStep(Status.Info, "Clicked Me Interesa button");
             currentStep = "Step ClickRandomMeInteresaButton";
             homePage.ClickOnRandomMeInteresaButton();
 
@@ -161,6 +161,140 @@ public class BaseTest
             LogStep(Status.Info, "Clicked on Comprar button");
             currentStep = "Step ClickComprarButton";
             ticketsSelectionSteps.ClickOnComprarButton();
+
+            LogStep(Status.Info, "Completed personal information");
+            currentStep = "Step CompletePersonalInformation";
+            reservationSteps.CompletePersonalInformation();
+
+            LogStep(Status.Info, "Checked conditions checkbox");
+            currentStep = "Step CheckTheConditionsCheckbox";
+            reservationSteps.CheckTheConditionsCheckbox();
+
+            LogStep(Status.Info, "Checked privacy checkbox");
+            currentStep = "Step CheckThePrivacyCheckbox";
+            reservationSteps.CheckThePrivacyCheckbox();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClicksComprarButtonAgain";
+            reservationSteps.ClicksOnComprarButtonAgain();
+
+            LogStep(Status.Info, "Completed card information");
+            currentStep = "Step CompleteTheCardInformation";
+            cardSteps.CompleteTheCardInformation();
+
+            LogStep(Status.Info, "Clicked on Pagar button");
+            currentStep = "Step ClickPagarButton";
+            cardSteps.ClickOnPagarButton();
+
+            LogStep(Status.Info, "Clicked on Enviar button");
+            currentStep = "Step ClickOnEnviarButton";
+            cardSteps.ClickOnEnviarButton();
+
+            LogStep(Status.Info, "Clicked on Continuar button");
+            currentStep = "Step ClickOnContinuarButton";
+            cardSteps.ClickOnContinuarButton();
+
+            LogStep(Status.Info, "Purchase completed");
+            currentStep = "PurchaseOKMessage";
+            purchaseOkSteps.PurchaseOkMessage();
+
+            LogStep(Status.Info, "Ticket Purchase Successful");
+    }
+    
+    protected void CommonSessionPurchaseSteps()
+    {
+            LogStep(Status.Info, "Selected desired ticket");
+            currentStep = "Step SelectDesiredTicket";
+            ticketsSelectionSteps.SelectDesiredTicket();
+
+            LogStep(Status.Info, "Date confirmed");
+            currentStep = "Step ConfirmDate";
+            ticketsSelectionSteps.ConfirmDate();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClickComprarButton";
+            ticketsSelectionSteps.ClickOnComprarButton();
+            
+            LogStep(Status.Info, "Session Message Displayed");
+            currentStep = "Step SessionMessageDisplayed";
+            sessionPage.SessionMessageDisplayed();
+            
+            LogStep(Status.Info, "Selected Session Option");
+            currentStep = "Step SelectSession";
+            sessionPage.SelectSession();
+            
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClickComprarButton";
+            sessionPage.ClickOnComprarButton();
+
+            LogStep(Status.Info, "Completed personal information");
+            currentStep = "Step CompletePersonalInformation";
+            reservationSteps.CompletePersonalInformation();
+
+            LogStep(Status.Info, "Checked conditions checkbox");
+            currentStep = "Step CheckTheConditionsCheckbox";
+            reservationSteps.CheckTheConditionsCheckbox();
+
+            LogStep(Status.Info, "Checked privacy checkbox");
+            currentStep = "Step CheckThePrivacyCheckbox";
+            reservationSteps.CheckThePrivacyCheckbox();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClicksComprarButtonAgain";
+            reservationSteps.ClicksOnComprarButtonAgain();
+
+            LogStep(Status.Info, "Completed card information");
+            currentStep = "Step CompleteTheCardInformation";
+            cardSteps.CompleteTheCardInformation();
+
+            LogStep(Status.Info, "Clicked on Pagar button");
+            currentStep = "Step ClickPagarButton";
+            cardSteps.ClickOnPagarButton();
+
+            LogStep(Status.Info, "Clicked on Enviar button");
+            currentStep = "Step ClickOnEnviarButton";
+            cardSteps.ClickOnEnviarButton();
+
+            LogStep(Status.Info, "Clicked on Continuar button");
+            currentStep = "Step ClickOnContinuarButton";
+            cardSteps.ClickOnContinuarButton();
+
+            LogStep(Status.Info, "Purchase completed");
+            currentStep = "PurchaseOKMessage";
+            purchaseOkSteps.PurchaseOkMessage();
+
+            LogStep(Status.Info, "Ticket Purchase Successful");
+    }
+    
+    protected void CommonAdvacedDateSelectorPurchaseSteps()
+    {
+            LogStep(Status.Info, "Selected desired ticket");
+            currentStep = "Step SelectDesiredTicket";
+            ticketsSelectionSteps.SelectDesiredTicket();
+
+            LogStep(Status.Info, "Date confirmed");
+            currentStep = "Step ConfirmDate";
+            ticketsSelectionSteps.ConfirmDate();
+
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClickComprarButton";
+            ticketsSelectionSteps.ClickOnComprarButton();
+            
+            LogStep(Status.Info, "Advanced Date Selector Message Displayed");
+            currentStep = "Step VerifyAdvancedSelectorMessage";
+            advancedDateSelectorPage.VerifyAdvancedSelectorMessage();
+            
+            LogStep(Status.Info, "Selected Title Option");
+            currentStep = "Step SelectTitle";
+            advancedDateSelectorPage.SelectTitle();
+            
+            LogStep(Status.Info, "Selected Session Option");
+            currentStep = "Step SelectSessionHour";
+            advancedDateSelectorPage.SelectSessionHour();
+            
+            LogStep(Status.Info, "Clicked on Comprar button");
+            currentStep = "Step ClickComprarButton";
+            advancedDateSelectorPage.ClickOnComprarButton();
 
             LogStep(Status.Info, "Completed personal information");
             currentStep = "Step CompletePersonalInformation";

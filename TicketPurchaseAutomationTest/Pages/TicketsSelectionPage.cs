@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using TicketPurchaseAutomationTest.Base;
 
@@ -10,8 +9,9 @@ public class TicketsSelectionPage : BasePage
     private readonly HomePage homePage;
     private readonly Random random;
     private readonly SessionPage sessionPage;
-    private readonly AdvancedSelectorPage advancedSelectorPage;
+    private readonly AdvancedDateSelectorPage advancedDateSelectorPage;
     private readonly Error500Page error500Page;
+    
     
     private By inputNumberOfTicketsElement =>
         By.XPath("//input[@type='number']");
@@ -22,7 +22,7 @@ public class TicketsSelectionPage : BasePage
     private readonly By comprarButton =
         By.CssSelector(
             "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
-
+    private readonly By error500Element = By.XPath("//div[@class='sv-page404__title' and text()='Error 500']");
     //private readonly By priceElement = By.ClassName("sv-cart__price");
     private readonly By panelWrapperElement = By.XPath("//a[@class='sv-panel__wrapper collapsed' and @aria-expanded='false']");//By.CssSelector("a.sv-panel__wrapper[aria-expanded='false']");
     private readonly By navBarElement = By.Id("funnelmenu");
@@ -31,6 +31,7 @@ public class TicketsSelectionPage : BasePage
         random = new Random();
         homePage = new HomePage(driver);
         sessionPage = new SessionPage(driver);
+        advancedDateSelectorPage = new AdvancedDateSelectorPage(driver);
     }
 
     public void ClickOnPanelWrapper()
@@ -107,8 +108,16 @@ public class TicketsSelectionPage : BasePage
         {
             IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
+            IWebElement error500 = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
+            while (error500.Displayed)
+            {
+                driver.Navigate().Back();
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+                comprarBtn.Click();
+            }
+            //error500Page.Error500Displayed();
             
-            Thread.Sleep(TimeSpan.FromSeconds(5));
+            /*Thread.Sleep(TimeSpan.FromSeconds(5));
 
             string pageSource = driver.PageSource;
 
@@ -134,9 +143,9 @@ public class TicketsSelectionPage : BasePage
                         advancedSelectorPage.ClickOnComprarButton();
                     }
                     break;
-            }
-            
-            /*IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
+            }*/
+            /*
+            IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
             while (error500Message.Displayed)
             {
                 driver.Navigate().Back();

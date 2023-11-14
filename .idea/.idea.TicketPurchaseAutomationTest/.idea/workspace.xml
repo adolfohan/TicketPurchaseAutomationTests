@@ -7,182 +7,13 @@
     <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/ReservationPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/ReservationPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/SessionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/SessionPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_ActiveTourismTicketPurchaseTest_2023-11-08-111540.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_ActiveTourismTicketPurchaseTest_2023-11-08-111631.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_AndorraFilterTicketPurchaseTest_2023-11-08-112240.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_AndorraFilterTicketPurchaseTest_2023-11-08-112323.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_CinemaAndDriveInTicketPurchaseTest_2023-11-08-111919.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_ClickOnAllCountryFiltersTest_2023-11-06-163901.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_CultureVisitsToursTicketPurchaseTest_2023-11-07-104608.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_DeselectAllCountryFiltersTest_2023-11-06-163914.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_DeselectFiltersTest_2023-11-06-124739.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_DeselectFiltersTest_2023-11-06-124748.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_DeselectFiltersTest_2023-11-06-125547.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_DeselectFiltersTest_2023-11-06-125644.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_EscapeRoomExperiencesTicketPurchaseTest_2023-11-08-112104.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_ExcursionsAndTouristsMobilityTicketPurchaseTest_2023-11-08-111216.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_ExperiencesAndRelaxTicketPurchaseTest_2023-11-08-105417.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_ExperiencesAndRelaxTicketPurchaseTest_2023-11-08-105545.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_FranceFilterTicketPurchaseTest_2023-11-08-112412.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_GastronomyAndWineTourismTicketPurchaseTest_2023-11-08-111315.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_GibraltarFilterTicketPurchaseTest_2023-11-08-112513.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_GibraltarFilterTicketPurchaseTest_2023-11-08-112657.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_HalloweenTicketPurchaseTest_2023-11-08-112005.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_ItalyFilterTicketPurchaseTest_2023-11-08-112756.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_LeisureParksTicketPurchaseTest_2023-11-07-091845.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_LeisureParksTicketPurchaseTest_2023-11-07-092058.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_LeisureParksTicketPurchaseTest_2023-11-07-092156.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_LeisureParksTicketPurchaseTest_2023-11-07-093240.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_LeisureParksTicketPurchaseTest_2023-11-07-093451.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_LeisureParksTicketPurchaseTest_2023-11-07-093603.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_LeisureParksTicketPurchaseTest_2023-11-07-093709.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_LeisureParksTicketPurchaseTest_2023-11-07-093952.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_LeisureParksTicketPurchaseTest_2023-11-07-094802.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_MusicalsAndShowsTicketPurchaseTest_2023-11-08-111356.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_PortugalFilterTicketPurchaseTest_2023-11-08-112916.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-07-110528.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-07-110816.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-07-110938.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-07-114238.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-07-114430.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-07-120552.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-100307.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-100349.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-100457.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-101826.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-101852.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-102011.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-102557.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-102855.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-103107.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-103139.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_RandomNavBarTicketPurchaseTest_2023-11-08-103209.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SelectAllFiltersTest_2023-11-06-124726.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SelectAllFiltersTest_2023-11-06-124757.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SelectAllFiltersTest_2023-11-07-090758.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SelectAllFiltersTest_2023-11-08-094225.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SelectFiltersTest_2023-11-06-124355.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SelectFiltersTest_2023-11-06-124425.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SelectFiltersTest_2023-11-06-124601.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SnowTicketPurchaseTest_2023-11-08-111704.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SnowTicketPurchaseTest_2023-11-08-111840.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SpainFilterTicketPurchaseTest_2023-11-08-112139.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_SportsTicketPurchaseTest_2023-11-08-111440.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-124247.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-154918.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-160300.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-160333.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-162307.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-162628.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-162824.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-163210.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-163239.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-163322.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-163507.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-163535.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-163647.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-163842.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-164115.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-164137.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-164225.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-164358.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-164430.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-164750.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-03-164944.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchasePersonaInformationInBlankTest_2023-11-06-103637.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-10-31-163945.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-10-31-164612.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-10-31-164720.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-10-31-165008.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-02-083136.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-085514.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-090039.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-090124.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-090406.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-104557.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-115239.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-120704.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-122318.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-123136.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-123514.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-123704.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-130144.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-131254.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-132210.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-132427.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-132522.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-132855.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-133050.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-133517.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-133831.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-134004.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-134419.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-134458.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-134615.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-135534.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-135642.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-140210.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-140452.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-140809.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-140940.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-141104.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-141310.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-141712.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-144008.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-144118.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-144159.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-144313.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-144410.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-03-144834.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-06-102425.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-07-085346.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-08-094505.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-08-094748.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-08-095441.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseWrongCardTest_2023-10-31-163559.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseWrongCardTest_2023-10-31-164425.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseWrongCardTest_2023-11-08-095545.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseWrongCardTest_2023-11-08-095638.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseWrongCardTest_2023-11-08-095823.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseWrongCardTest_2023-11-08-095924.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseWrongCardTest_2023-11-08-100129.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_UnitedKingdomFilterTicketPurchaseTest_2023-11-08-113045.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-095816.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-095909.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-100009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-100421.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-100536.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-103215.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-105533.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-111622.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-111742.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-08-112829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Steps/ReservationSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Steps/ReservationSteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_AdvancedSelectorTest_2023-11-10-161340.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Utilities/ExtendManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Utilities/ExtendManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,9 +59,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/2b/42d8ce48/SystemClock.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/4f/6eb819d9/DefaultWait`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/81/27fe80bf/WebElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/9c/8cc6c77e/IWebDriver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/a2/e0e34f6e/Actions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/a9/aeb2ff6a/IWebElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/c9/dbeeb610/By.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/17bd18fbb084d397ab6517a6f6cf9fa8aa8f5d5c672f768b70fcad6c224d2/String.Searching.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/17e38fc279b3572621a1a0737741283fe2bdc3149cd2f3b3fd79191674166ecd/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/235b8d206b56acfe04faeb04511585b156981556882336a9a49a871c0722e90/Type.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/436ac6362f325ef11dc7d554acc2ca9296782513c7748bc6ee7fa54273f9ff/DateTime.Windows.cs" root0="SKIP_HIGHLIGHTING" />
@@ -293,7 +126,7 @@
       <updated>1697621830097</updated>
       <workItem from="1697621831186" duration="25638000" />
       <workItem from="1698050944242" duration="75860000" />
-      <workItem from="1699257220093" duration="60316000" />
+      <workItem from="1699257220093" duration="69346000" />
     </task>
     <servers />
   </component>
@@ -326,19 +159,6 @@
           </properties>
           <option name="timeStamp" value="5" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs</url>
-          <line>110</line>
-          <properties documentPath="C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Pages\TicketsSelectionPage.cs" initialLine="110" containingFunctionPresentation="Method 'ClickOnComprarButton'">
-            <startOffsets>
-              <option value="4146" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4174" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
