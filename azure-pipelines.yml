@@ -49,8 +49,8 @@ jobs:
           ArtifactName: 'drop'
           publishLocation: 'Container'
       - script: |
-          echo "Listing XML files in $(System.DefaultWorkingDirectory):"
-          dir $(System.DefaultWorkingDirectory)\**\*.xml
+          echo "Listing XML files in current directory:"
+          dir *.xml /s /b
         displayName: 'List XML files'
       - task: PublishTestResults@2
         displayName: 'Publish Test Results'
