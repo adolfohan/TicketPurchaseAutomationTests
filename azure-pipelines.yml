@@ -46,8 +46,8 @@ jobs:
           publishLocation: 'Container'
       - task: PublishTestResults@2
         inputs:
-        testResultsFormat: 'VSTest'
-        testResultsFiles: '**/*.trx'
-        searchFolder: '$(System.DefaultWorkingDirectory)'
-        mergeTestResults: true
-        failTaskOnFailedTests: true
+          testResultsFormat: 'VSTest'
+          testResultsFiles: '**/*.trx'
+          searchFolder: '$(System.DefaultWorkingDirectory)'
+          mergeTestResults: true
+          failTaskOnFailedTests: true
