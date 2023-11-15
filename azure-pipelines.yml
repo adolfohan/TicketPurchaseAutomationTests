@@ -51,7 +51,7 @@ jobs:
       - script: |
           echo "Listing XML files in $(System.DefaultWorkingDirectory):"
           dir $(System.DefaultWorkingDirectory)\**\*.xml
-          displayName: 'List XML files'
+        displayName: 'List XML files'
       - task: PublishTestResults@2
         displayName: 'Publish Test Results'
         inputs:
