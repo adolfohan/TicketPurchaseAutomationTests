@@ -28,7 +28,7 @@ jobs:
         displayName: 'Run Tests'
         inputs:
           command: 'test'
-          projects: '**/*Tests.csproj'
+          projects: '**/**test*.csproj'
           arguments: '--configuration $(BuildConfiguration)'
 
   - job: Deploy
