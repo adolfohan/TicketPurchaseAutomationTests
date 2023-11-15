@@ -8,8 +8,8 @@
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TestResults.trx" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TestResults.trx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithAdvancedDateSelectorTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithAdvancedDateSelectorTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithSessionTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithSessionTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,7 @@
       <workItem from="1700035295622" duration="74000" />
       <workItem from="1700035395238" duration="7861000" />
       <workItem from="1700052620324" duration="140000" />
-      <workItem from="1700052798831" duration="3123000" />
+      <workItem from="1700052798831" duration="3976000" />
     </task>
     <servers />
   </component>

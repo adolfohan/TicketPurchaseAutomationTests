@@ -58,8 +58,8 @@ jobs:
       - task: PublishTestResults@2
         displayName: 'Publish Test Results'
         inputs:
-          testResultsFormat: 'VSTest'
-          testResultsFiles: '**/*.trx'
+          testResultsFormat: 'NUnit'
+          testResultsFiles: '**/*.xml'
           searchFolder: '$(System.DefaultWorkingDirectory)'
           mergeTestResults: true
           failTaskOnFailedTests: true

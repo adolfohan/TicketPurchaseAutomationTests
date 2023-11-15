@@ -4,6 +4,7 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Tests;
 
+[TestFixture]
 public class TicketPurchaseWithAdvancedDateSelectorTest : BaseTest
 {
     [Test]
