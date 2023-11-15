@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-results>
+<test-run>
     <test-suite>
         <results>
-            <test-suite>
-                <results>
-                    <test-case name="" result="" />
-                    <test-case name="" result="" />
-                </results>
-            </test-suite>
+            <test-case name="test_case_name" result="Passed|Failed|Inconclusive|Skipped">
+            </test-case>
+            <!-- More test cases can be added here -->
         </results>
     </test-suite>
-</test-results>
+</test-run>
