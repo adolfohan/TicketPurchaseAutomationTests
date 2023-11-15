@@ -23,7 +23,7 @@ jobs:
       - task: DotNetCoreCLI@2
         inputs:
           command: 'test'
-          projects: '**/*Tests.csproj'
+          projects: '**/**test*.csproj'
           arguments: '--configuration $(BuildConfiguration)'
 
   - job: Deploy
@@ -44,6 +44,7 @@ jobs:
           targetPath: '$(Build.ArtifactStagingDirectory)'
           ArtifactName: 'drop'
           publishLocation: 'Container'
+          publishWebProjects: false
       - task: PublishTestResults@2
         inputs:
           testResultsFormat: 'VSTest'
