@@ -47,6 +47,7 @@ jobs:
           command: 'publish'
           projects: '**/*.csproj'
           arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+          publishWebProjects: false
       - task: PublishBuildArtifacts@1
         displayName: 'Publish Artifacts'
         inputs:
