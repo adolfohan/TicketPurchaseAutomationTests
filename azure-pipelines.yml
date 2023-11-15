@@ -35,12 +35,6 @@ jobs:
     displayName: 'Deploy Artifact'
     dependsOn: Build
     steps:
-      - task: UseDotNet@2
-        displayName: 'Install .NET SDK'
-        inputs:
-          packageType: 'sdk'
-          version: '7.x'
-          installationPath: $(Agent.ToolsDirectory)/dotnet
       - task: DotNetCoreCLI@2
         displayName: 'Publish Project'
         inputs:
@@ -54,12 +48,15 @@ jobs:
           targetPath: '$(Build.ArtifactStagingDirectory)'
           ArtifactName: 'drop'
           publishLocation: 'Container'
-          publishWebProjects: false
+      - script: |
+          echo "Listing XML files in $(System.DefaultWorkingDirectory):"
+          dir $(System.DefaultWorkingDirectory)\**\*.xml
+          displayName: 'List XML files'
       - task: PublishTestResults@2
         displayName: 'Publish Test Results'
         inputs:
           testResultsFormat: 'NUnit'
           testResultsFiles: '**/*.xml'
           searchFolder: '$(System.DefaultWorkingDirectory)'
-          mergeTestResults: true
+          mergeTestResults: false
           failTaskOnFailedTests: true
