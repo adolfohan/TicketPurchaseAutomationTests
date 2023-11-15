@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TestRun id="2fefa83b-94b5-4acc-b31b-06e3e9b336c7" name="MyTestRun" runUser="username" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-    <Results>
-        <UnitTestResult testName="TestMethod1" outcome="Passed" duration="0:0:1.236" />
-        <UnitTestResult testName="TestMethod2" outcome="Failed" duration="0:0:2.345">
-            <Output>
-                <ErrorInfo>
-                    <Message>Assert.AreEqual failed. Expected:<2>. Actual:<1>.</Message>
-                    <StackTrace>at MyNamespace.MyTestClass.TestMethod2() in C:\path\to\YourTests.cs:line 42</StackTrace>
-                </ErrorInfo>
-            </Output>
-        </UnitTestResult>
-    </Results>
-</TestRun>
+<test-run id="2" testcasecount="3" result="Failed" total="3" passed="1" failed="1" inconclusive="1" skipped="0" asserts="4" engine-version="3.12.0.0" clr-version="4.0.30319.42000" start-time="2020-01-24 12:15:53Z" end-time="2020-01-24 12:15:53Z" duration="0.514">
+    <test-suite type="TestSuite" id="1000" name="NUnitProject" fullname="/path/to/test.dll" runstate="Runnable" testcasecount="3" result="Failed" total="3" passed="1" failed="1" inconclusive="1" skipped="0" asserts="4">
+        <test-case id="1001" name="Test1" fullname="Namespace.Class1.Test1" methodname="Test1" classname="Namespace.Class1" runstate="Runnable" seed="1622650075" result="Passed" start-time="2020-01-24 12:15:53Z" end-time="2020-01-24 12:15:53Z" duration="0.001" asserts="1" />
+        <test-case id="1002" name="Test2" fullname="Namespace.Class1.Test2" methodname="Test2" classname="Namespace.Class1" runstate="Runnable" seed="1460508750" result="Failed" start-time="2020-01-24 12:15:53Z" end-time="2020-01-24 12:15:53Z" duration="0.001" asserts="1">
+            <failure>
+                <message><![CDATA[Expected: True  But was:  False]]></message>
+                <stack-trace><![CDATA[at Namespace.Class1.Test2() in /path/to/test.cs:line 10]]></stack-trace>
+            </failure>
+        </test-case>
+        <test-case id="1003" name="Test3" fullname="Namespace.Class1.Test3" methodname="Test3" classname="Namespace.Class1" runstate="Runnable" seed="1926696641" result="Inconclusive" start-time="2020-01-24 12:15:53Z" end-time="2020-01-24 12:15:53Z" duration="0.001" asserts="0">
+            <reason><![CDATA[Inconclusive test ignored]]></reason>
+        </test-case>
+    </test-suite>
+</test-run>

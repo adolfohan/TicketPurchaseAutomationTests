@@ -45,5 +45,5 @@ jobs:
           testResultsFormat: 'NUnit'
           testResultsFiles: '**/*.xml'
           searchFolder: '$(System.DefaultWorkingDirectory)'
-          mergeTestResults: false
+          mergeTestResults: true
           failTaskOnFailedTests: true
