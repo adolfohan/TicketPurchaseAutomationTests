@@ -38,7 +38,7 @@ jobs:
       - script: |
             echo "Listing XML files in current directory:"
             dir *.xml /s /b
-            displayName: 'List XML files'
+        displayName: 'List XML files'
       - task: PublishTestResults@2
         displayName: 'Publish Test Results'
         inputs:
