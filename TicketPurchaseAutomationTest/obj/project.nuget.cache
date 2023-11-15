@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M6NBWVNzoeqlnP2MDqPFgZ/Z9U84vAm1roIJ4saMy/yVblYe84Cq+G1PJqn2ZJy2qSZS0zsEtp2LIli2IMX6nQ==",
+  "dgSpecHash": "66FG8QPxc38T4pNAMUZfl0jrr5hlw9OCZxGNZDRDG/ebvY02N7dP/hLSVoK9sLr+PUOB/NpgsdynCBocK3jn6A==",
   "success": true,
   "projectFilePath": "C:\\Projects\\Repositories\\Git\\TicketPurchaseAutomationTest\\TicketPurchaseAutomationTest\\TicketPurchaseAutomationTest.csproj",
   "expectedPackageFiles": [
@@ -55,7 +55,7 @@
     "C:\\Users\\Adolfo\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.support\\4.12.4\\selenium.support.4.12.4.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.webdriver\\4.12.4\\selenium.webdriver.4.12.4.nupkg.sha512",
-    "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.webdriver.chromedriver\\119.0.6045.10500\\selenium.webdriver.chromedriver.119.0.6045.10500.nupkg.sha512",
+    "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.webdriver.chromedriver\\118.0.5993.7000\\selenium.webdriver.chromedriver.118.0.5993.7000.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

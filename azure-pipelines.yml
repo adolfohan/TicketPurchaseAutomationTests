@@ -6,46 +6,56 @@ pool:
 
 jobs:
   - job: Build
+    displayName: 'Build and Test'
     steps:
       - task: UseDotNet@2
+        displayName: 'Install .NET SDK'
         inputs:
           packageType: 'sdk'
           version: '7.x'
           installationPath: $(Agent.ToolsDirectory)/dotnet
       - task: DotNetCoreCLI@2
+        displayName: 'Restore Dependencies'
         inputs:
           command: 'restore'
           projects: '**/*.csproj'
       - task: DotNetCoreCLI@2
+        displayName: 'Build Project'
         inputs:
           command: 'build'
           projects: '**/*.csproj'
       - task: DotNetCoreCLI@2
+        displayName: 'Run Tests'
         inputs:
           command: 'test'
-          projects: '**/**test*.csproj'
+          projects: '**/*Tests.csproj'
           arguments: '--configuration $(BuildConfiguration)'
 
   - job: Deploy
+    displayName: 'Deploy Artifact'
     dependsOn: Build
     steps:
       - task: UseDotNet@2
+        displayName: 'Install .NET SDK'
         inputs:
           packageType: 'sdk'
           version: '7.x'
           installationPath: $(Agent.ToolsDirectory)/dotnet
       - task: DotNetCoreCLI@2
+        displayName: 'Publish Project'
         inputs:
           command: 'publish'
           projects: '**/*.csproj'
           arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
       - task: PublishBuildArtifacts@1
+        displayName: 'Publish Artifacts'
         inputs:
           targetPath: '$(Build.ArtifactStagingDirectory)'
           ArtifactName: 'drop'
           publishLocation: 'Container'
           publishWebProjects: false
       - task: PublishTestResults@2
+        displayName: 'Publish Test Results'
         inputs:
           testResultsFormat: 'VSTest'
           testResultsFiles: '**/*.trx'
