@@ -43,7 +43,7 @@ jobs:
         displayName: 'Publish Test Results'
         inputs:
           testResultsFormat: 'NUnit'
-          testResultsFiles: '**/*.xml'
+          testResultsFiles: '**/TestsResult.xml'
           searchFolder: '$(System.DefaultWorkingDirectory)'
           mergeTestResults: true
           failTaskOnFailedTests: true
