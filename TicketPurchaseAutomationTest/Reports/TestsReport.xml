@@ -1,21 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-results xmlns="http://nunit.org/schemas/2021" testcasecount="2" total="2" passed="1" failed="1" inconclusive="0" 
-              skipped="0" asserts="3" engine-version="3.12.0.0" clr-version="4.0.30319.42000" start-time="2023-11-15T10:00:00Z" 
-              end-time="2023-11-15T10:05:00Z" duration="300.1234">
-    <test-suite type="Assembly" name="MyTests" executed="True">
-        <results>
-            <test-case name="Test1" executed="True" result="Success" success="True" time="100.0123" asserts="1">
-                
-                <output><![CDATA[This is the output of Test1]]></output>
-            </test-case>
-            <test-case name="Test2" executed="True" result="Failure" success="False" time="200.1111" asserts="2">
-                <failure>
-                    <message><![CDATA[Assert.AreEqual failed. Expected:<2>. Actual:<1>.]]></message>
-                    <stack-trace><![CDATA[   at MyTests.Test2() in C:\path\to\YourTests.cs:line 42]]></stack-trace>
-                </failure>
-                
-                <output><![CDATA[This is the output of Test2]]></output>
-            </test-case>
-        </results>
-    </test-suite>
-</test-results>
+<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="2fefa83b-94b5-4acc-b31b-06e3e9b336c7" name="MyTestRun" runUser="username" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+    <Results>
+        <UnitTestResult testName="TestMethod1" outcome="Passed" duration="0:0:1.236" />
+        <UnitTestResult testName="TestMethod2" outcome="Failed" duration="0:0:2.345">
+            <Output>
+                <ErrorInfo>
+                    <Message>Assert.AreEqual failed. Expected:<2>. Actual:<1>.</Message>
+                    <StackTrace>at MyNamespace.MyTestClass.TestMethod2() in C:\path\to\YourTests.cs:line 42</StackTrace>
+                </ErrorInfo>
+            </Output>
+        </UnitTestResult>
+    </Results>
+</TestRun>

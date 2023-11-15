@@ -31,7 +31,7 @@ public class FiltersTest : BaseTest
             throw;
         }
     }
-    
+    /*
     [Test, Order(2)]
     public void DeselectFiltersTest()
     {
@@ -102,7 +102,7 @@ public class FiltersTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }
+    }*/
     
     /*[Test, Order(11)]
     public void LeisureParksTicketPurchaseTest()

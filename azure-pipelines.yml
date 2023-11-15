@@ -35,23 +35,10 @@ jobs:
     displayName: 'Deploy Artifact'
     dependsOn: Build
     steps:
-      - task: DotNetCoreCLI@2
-        displayName: 'Publish Project'
-        inputs:
-          command: 'publish'
-          projects: '**/*.csproj'
-          arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-          publishWebProjects: false
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish Artifacts'
-        inputs:
-          targetPath: '$(Build.ArtifactStagingDirectory)'
-          ArtifactName: 'drop'
-          publishLocation: 'Container'
       - script: |
-          echo "Listing XML files in current directory:"
-          dir *.xml /s /b
-        displayName: 'List XML files'
+            echo "Listing XML files in current directory:"
+            dir *.xml /s /b
+            displayName: 'List XML files'
       - task: PublishTestResults@2
         displayName: 'Publish Test Results'
         inputs:

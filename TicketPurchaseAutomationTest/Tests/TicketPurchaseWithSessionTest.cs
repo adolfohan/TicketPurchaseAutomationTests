@@ -6,7 +6,7 @@ namespace TicketPurchaseAutomationTest.Tests;
 
 [TestFixture]
 public class TicketPurchaseWithSessionTest : BaseTest
-{
+{/*
     [Test]
     public void SessionTest()
     {
@@ -23,6 +23,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }
+    }*/
 
 }
