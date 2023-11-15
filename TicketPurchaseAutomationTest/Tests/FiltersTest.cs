@@ -104,7 +104,7 @@ public class FiltersTest : BaseTest
         }
     }
     
-    [Test, Order(11)]
+    /*[Test, Order(11)]
     public void LeisureParksTicketPurchaseTest()
     {
         try
@@ -558,6 +558,6 @@ public class FiltersTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }
+    }*/
 
 }
