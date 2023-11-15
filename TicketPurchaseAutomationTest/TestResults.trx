@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="2f6f2b2e-07c5-4b2d-85b5-0576cb7c1443">
+  <TestSettings name="Default Test Settings" id="51947c7e-f42b-45e5-98a2-0c8d0497b570">
+    
+  </TestSettings>
+  
+  <Results>
+    <UnitTestResult executionId="3b42a9f4-6e6d-4800-bb01-ea65721c3f6f" testId="40ee26aa-99b1-4be0-90ee-cc3c9418c7b0">
+      <Outcome>Passed</Outcome>
+      <Output>
+        
+      </Output>
+    </UnitTestResult>
+    
+    <UnitTestResult executionId="d46ae2c5-5d63-4b2f-b8c8-5e42592b07e9" testId="a0e40d5b-559e-4e22-927e-d2ce36395e37">
+      <Outcome>Failed</Outcome>
+      <Output>
+        
+      </Output>
+    </UnitTestResult>
+  </Results>
+
+  <ResultSummary outcome="Completed">
+    
+  </ResultSummary>
+</TestRun>

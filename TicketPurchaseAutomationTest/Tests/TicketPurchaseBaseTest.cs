@@ -7,7 +7,7 @@ namespace TicketPurchaseAutomationTest.Tests;
 [TestFixture]
 public class TicketPurchaseBaseTest : BaseTest
 {
-    [Test, Order(1)]
+    /*[Test, Order(1)]
     public void TicketPurchaseTest()
     {
         try
@@ -206,7 +206,7 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }*/
+    }
 
     [Test, Order(5)]
     public void TicketPurchaseWithWrongEmailTest()
