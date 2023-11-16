@@ -34,43 +34,83 @@ public class HomePage : BasePage
     private By italyElement => By.Id("c319");
     private By portugalElement => By.Id("c203");
     private By unitedKingdomElement => By.Id("c323");
-    
+    private string baseUrl = "https://pre-tixalia.publicticketshop.experticket.com/";
+
+    private string RandomNormalUrl()
+    {
+        
+        List<string> normalTickets = new List<string>
+        {
+            "Entradas-PortAventura-Park",
+            "Puy-du-Fou-Combinada-Parque-Sueno-Toledo",
+            "Entradas-Isla-Magica",
+            "Entradas-Cabarceno",
+            "parqueatraccionesmadrid",
+            "acuariozaragoza"
+        };
+        
+        Random random = new Random();
+
+        string normalTicket = normalTickets[random.Next(normalTickets.Count)];
+        string completeUrl = baseUrl + normalTicket;
+
+        return completeUrl;
+    }
     
     public void NavigateToUrl()
     {
-        driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.co/");
+        driver.Navigate().GoToUrl(RandomNormalUrl());
         driver.Manage().Window.Maximize();
-        /*fluentWait.Until(webDriver =>
-            ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));
-        IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-        js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
-        Thread.Sleep(TimeSpan.FromSeconds(5));*/
+    }
+    
+    private string RandomSessionUrl()
+    {
+        
+        List<string> sessionTickets = new List<string>
+        {
+            "bioparcvalencia",
+            "atletico-de-madrid-tour-metropolitano",
+            "campnou",
+            "tourbernabeu",
+            "mestallaforevertour",
+            "tour-interactivo-nuevo-estadio-los-carmenes-granada"
+        };
+        
+        Random random = new Random();
+
+        string sessionTicket = sessionTickets[random.Next(sessionTickets.Count)];
+        string completeUrl = baseUrl + sessionTicket;
+
+        return completeUrl;
     }
     
     public void NavigateToSessionUrl()
     {
-        try
-        {
-            driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/espectaculo-flamenco-consumicion");
-            driver.Manage().Window.Maximize();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        driver.Navigate().GoToUrl(RandomSessionUrl());
+        driver.Manage().Window.Maximize();
+
     }
     
+    private string RandomAdvancedDateSelectorUrl()
+    {
+        
+        List<string> advancedDateSelectorTickets = new List<string>
+        {
+            "ciudadartesyciencias-hemisferic",
+            "ciudadartesyciencias-oceanografic"
+        };
+        
+        Random random = new Random();
+
+        string advancedDateSelectorTicket = advancedDateSelectorTickets[random.Next(advancedDateSelectorTickets.Count)];
+        string completeUrl = baseUrl + advancedDateSelectorTicket;
+
+        return completeUrl;
+    }
     public void NavigateToAdvancedDateSelectorUrl()
     {
-        try
-        {
-            driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/ciudadartesyciencias-hemisferic");
-            driver.Manage().Window.Maximize();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        driver.Navigate().GoToUrl(RandomAdvancedDateSelectorUrl());
+        driver.Manage().Window.Maximize();
     }
 
     public void PressPageSize20()

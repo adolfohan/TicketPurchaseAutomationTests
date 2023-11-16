@@ -18,7 +18,7 @@
           "RazorEngine.NetCore": "3.1.0",
           "Selenium.Support": "4.12.4",
           "Selenium.WebDriver": "4.12.4",
-          "Selenium.WebDriver.ChromeDriver": "119.0.6045.10500",
+          "Selenium.WebDriver.ChromeDriver": "118.0.5993.7000",
           "coverlet.collector": "3.2.0"
         },
         "runtime": {
@@ -700,7 +700,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/119.0.6045.10500": {},
+      "Selenium.WebDriver.ChromeDriver/118.0.5993.7000": {},
       "System.Buffers/4.4.0": {},
       "System.Collections/4.3.0": {
         "dependencies": {
@@ -1754,12 +1754,12 @@
       "path": "selenium.webdriver/4.12.4",
       "hashPath": "selenium.webdriver.4.12.4.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/119.0.6045.10500": {
+    "Selenium.WebDriver.ChromeDriver/118.0.5993.7000": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HwYe60H6KFQJLUx9A8QLJiLoRkXbHnHrw46uKilue3BRxDPX6DAa5W8jWUEy9rAFOn7alKBcyWBWUJDDGeB70Q==",
-      "path": "selenium.webdriver.chromedriver/119.0.6045.10500",
-      "hashPath": "selenium.webdriver.chromedriver.119.0.6045.10500.nupkg.sha512"
+      "sha512": "sha512-P+oMf57Rbt2mKr3k2OFijtg+Vm3xHYe147LWQLqB0aumjKuWxoZVZw1+K7rr9KqdGe646kvIVjtQH0+eheCawA==",
+      "path": "selenium.webdriver.chromedriver/118.0.5993.7000",
+      "hashPath": "selenium.webdriver.chromedriver.118.0.5993.7000.nupkg.sha512"
     },
     "System.Buffers/4.4.0": {
       "type": "package",

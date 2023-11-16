@@ -96,12 +96,12 @@ public class BaseTest
         {
             var timestamp = DateTime.Now.ToString("yyyy-MM-dd-HHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            //const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
+            
             var screenshotDirectory = Path.Combine(
                 Environment.GetEnvironmentVariable("System.DefaultWorkingDirectory") ?? string.Empty,
                 "Screenshots"
             );
-            //var screenshotDirectory = GetScreenshotDirectory();
+            
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
 
             ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
@@ -114,13 +114,6 @@ public class BaseTest
             Console.WriteLine("Error capturing screenshot: " + ex.Message);
             return null;
         }
-    }
-    
-    private static string GetScreenshotDirectory()
-    {
-        var artifactStagingDirectory = Environment.GetEnvironmentVariable("Build.ArtifactStagingDirectory");
-
-        return string.IsNullOrEmpty(artifactStagingDirectory) ? @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots" : Path.Combine(artifactStagingDirectory, "TicketPurchaseAutomationTest", "Screenshots");
     }
     
     private static void CleanUpOldScreenshots()
@@ -150,9 +143,9 @@ public class BaseTest
 
     protected void CommonNormalPurchaseSteps()
     {
-            LogStep(Status.Info, "Clicked Me Interesa button");
+            /*LogStep(Status.Info, "Clicked Me Interesa button");
             currentStep = "Step ClickRandomMeInteresaButton";
-            homePage.ClickOnRandomMeInteresaButton();
+            homePage.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected desired ticket");
             currentStep = "Step SelectDesiredTicket";
@@ -339,3 +332,4 @@ public class BaseTest
             LogStep(Status.Info, "Ticket Purchase Successful");
     }
 }
+

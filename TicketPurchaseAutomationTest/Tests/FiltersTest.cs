@@ -17,7 +17,7 @@ public class FiltersTest : BaseTest
 
             LogStep(Status.Info, "Navigating to URL");
             currentStep = "Step GoToURL";
-            homePageSteps.GoToURL();
+            homePage.NavigateToUrl();
 
             LogStep(Status.Info, "Clicked on All Filters");
             currentStep = "Step ClickOnAllFilters";
@@ -31,7 +31,7 @@ public class FiltersTest : BaseTest
             throw;
         }
     }
-    /*
+    
     [Test, Order(2)]
     public void DeselectFiltersTest()
     {
@@ -41,7 +41,7 @@ public class FiltersTest : BaseTest
 
             LogStep(Status.Info, "Navigating to URL");
             currentStep = "Step GoToURL";
-            homePageSteps.GoToURL();
+            homePage.NavigateToUrl();
             
             LogStep(Status.Info, "Deselected All Filter");
             currentStep = "Step DeselectAllFilters";
@@ -102,7 +102,7 @@ public class FiltersTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }*/
+    }
     
     /*[Test, Order(11)]
     public void LeisureParksTicketPurchaseTest()

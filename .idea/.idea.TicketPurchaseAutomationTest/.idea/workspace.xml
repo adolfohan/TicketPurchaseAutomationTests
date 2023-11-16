@@ -7,7 +7,29 @@
     <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/Error500Page.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/Error500Page.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_TicketPurchaseTest_2023-11-15-112459.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_WrapperTest_2023-11-14-160121.html" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_WrapperTest_2023-11-14-160121.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-104604.html" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-104604.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-105126.html" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-105126.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-105356.html" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-105356.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-105742.html" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-105742.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-110929.html" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-110929.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-112335.html" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-112335.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-112549.html" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Reports/report_wrapperTest_2023-11-10-112549.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-14-113624.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Screenshots/screenshot_2023-11-14-113828.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/FiltersTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/FiltersTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithAdvancedDateSelectorTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithAdvancedDateSelectorTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithSessionTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithSessionTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.FileListAbsolute.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +153,7 @@
       <workItem from="1700035295622" duration="74000" />
       <workItem from="1700035395238" duration="7861000" />
       <workItem from="1700052620324" duration="140000" />
-      <workItem from="1700052798831" duration="20494000" />
+      <workItem from="1700052798831" duration="23500000" />
     </task>
     <servers />
   </component>

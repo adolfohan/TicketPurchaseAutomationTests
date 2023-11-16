@@ -7,7 +7,7 @@ namespace TicketPurchaseAutomationTest.Tests;
 [TestFixture]
 public class TicketPurchaseBaseTest : BaseTest
 {
-    /*[Test, Order(1)]
+    [Test, Order(1)]
     public void TicketPurchaseTest()
     {
         try
@@ -16,7 +16,7 @@ public class TicketPurchaseBaseTest : BaseTest
 
             LogStep(Status.Info, "Navigating to URL");
             currentStep = "Step GoToURL";
-            homePageSteps.GoToURL();
+            homePage.NavigateToUrl();
 
             CommonNormalPurchaseSteps();
         }
@@ -87,7 +87,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    /*
+    
     [Test, Order(3)]
     public void TicketPurchaseWithWrongNameAndSurnameTest()
     {
@@ -504,7 +504,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    /*[Test, Order(10)]
+    [Test, Order(10)]
     public void RandomNavBarTicketPurchaseTest()
     {
         try
@@ -578,16 +578,6 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }*/
-    
-    
-    /*
-    [Test]
-    public void Test()
-    {
-        homePage.NavigateToAdvancedDateSelectorUrl();
-        ticketsSelectionPage.SelectNumberOfTickets("2");
-        ticketsSelectionPage.ConfirmDate();
-        advancedDateSelectorPage.HasAdvancedDateSelector();
-    }*/
+    }
+   
 }

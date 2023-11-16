@@ -4,13 +4,13 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class TicketsSelectionPage : BasePage
+public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
 {
-    private readonly HomePage homePage;
-    private readonly Random random;
-    private readonly SessionPage sessionPage;
-    private readonly AdvancedDateSelectorPage advancedDateSelectorPage;
-    private readonly Error500Page error500Page;
+    private readonly HomePage homePage = new(driver);
+    private readonly Random random = new();
+    private readonly SessionPage sessionPage = new(driver);
+    private readonly AdvancedDateSelectorPage advancedDateSelectorPage = new(driver);
+    private readonly Error500Page error500Page = new(driver);
     
     
     private By inputNumberOfTicketsElement =>
@@ -24,26 +24,18 @@ public class TicketsSelectionPage : BasePage
             "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
     private readonly By error500Element = By.XPath("//div[@class='sv-page404__title' and text()='Error 500']");
     //private readonly By priceElement = By.ClassName("sv-cart__price");
-    private readonly By panelWrapperElement = By.XPath("//a[@class='sv-panel__wrapper collapsed' and @aria-expanded='false']");//By.CssSelector("a.sv-panel__wrapper[aria-expanded='false']");
+    private readonly By panelWrapperElement = By.XPath("//a[@class='collapsed sv-panel__wrapper' and @aria-expanded='false']");//By.CssSelector("a.sv-panel__wrapper[aria-expanded='false']");
     private readonly By navBarElement = By.Id("funnelmenu");
-    public TicketsSelectionPage(IWebDriver driver) : base(driver)
-    {
-        random = new Random();
-        homePage = new HomePage(driver);
-        sessionPage = new SessionPage(driver);
-        advancedDateSelectorPage = new AdvancedDateSelectorPage(driver);
-    }
+    private readonly By sessionMessageElement = By.XPath("//div[@class='s-panel-sessions__heading']");
 
-    public void ClickOnPanelWrapper()
+    private void ClickOnPanelWrapper()
     {
-        IWebElement panel = fluentWait.Until(ExpectedConditions.ElementToBeClickable(panelWrapperElement));
+        IWebElement panel = fluentWait.Until(ExpectedConditions.ElementIsVisible(panelWrapperElement));
 
-        if (panel.Displayed)
-        {
-            ScrollIntoView(panel);
-            panel.Click();
-        }
-                
+        if (!panel.Displayed) return;
+        ScrollIntoView(panel);
+        panel.SendKeys(Keys.Enter);
+
         /*IList<IWebElement> panelWrapper = fluentWait.Until(webDriver => webDriver.FindElements(panelWrapperElement));
 
         if (panelWrapper.Count > 0)
@@ -64,10 +56,7 @@ public class TicketsSelectionPage : BasePage
             {
                 IList<IWebElement> inputFields =
                     fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
-                /*  fluentWait.Until(webDriver =>
-                      ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));*/
-                ClickOnPanelWrapper();
-                
+               
                 if (inputFields.Count > 0)
                 {
                     var randomIndex = random.Next(0, inputFields.Count);
@@ -109,13 +98,15 @@ public class TicketsSelectionPage : BasePage
         {
             IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
-            IWebElement error500 = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
-            while (error500.Displayed)
+            
+            while (error500Page.Error500Displayed())
             {
                 driver.Navigate().Back();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                comprarBtn.Click();
+                IWebElement comprarBtn1 = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
+                comprarBtn1.Click();
             }
+
             //error500Page.Error500Displayed();
             
             /*Thread.Sleep(TimeSpan.FromSeconds(5));
