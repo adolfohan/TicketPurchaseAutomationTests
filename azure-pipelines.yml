@@ -29,16 +29,20 @@ steps:
       platform: 'Any CPU'
       configuration: 'Release'
 
+  - script: |
+      echo "Build Configuration: $(BuildConfiguration)"
+      echo "Working Directory: $(System.DefaultWorkingDirectory)"
+
   - task: DotNetCoreCLI@2
     displayName: 'Run Tests'
     inputs:
       command: 'test'
       projects: '**/**test*.csproj'
-      arguments: '--configuration $(BuildConfiguration)'
+      arguments: '--configuration "$(BuildConfiguration)"'
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
-    condition: always()
+    condition: succeededOrFailed()
     inputs:
       testResultsFormat: 'NUnit'
       testResultsFiles: '**/TestsResults.xml'
