@@ -16,7 +16,7 @@ public class TicketPurchaseWithAdvancedDateSelectorTest : BaseTest
             currentStep = "Step GoToURL";
             homePage.NavigateToAdvancedDateSelectorUrl();
         
-            CommonAdvacedDateSelectorPurchaseSteps();
+            CommonAdvancedDateSelectorPurchaseSteps();
         }
         catch (Exception ex)
         {

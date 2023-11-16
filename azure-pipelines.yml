@@ -4,49 +4,64 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
-jobs:
-  - job: Build
-    displayName: 'Build and Test'
-    steps:
-      - task: UseDotNet@2
-        displayName: 'Install .NET SDK'
-        inputs:
-          packageType: 'sdk'
-          version: '7.x'
-          installationPath: $(Agent.ToolsDirectory)/dotnet
-      - task: DotNetCoreCLI@2
-        displayName: 'Restore Dependencies'
-        inputs:
-          command: 'restore'
-          projects: '**/*.csproj'
-      - task: DotNetCoreCLI@2
-        displayName: 'Build Project'
-        inputs:
-          command: 'build'
-          projects: '**/*.csproj'
-      - task: DotNetCoreCLI@2
-        displayName: 'Run Tests'
-        inputs:
-          command: 'test'
-          projects: '**/**test*.csproj'
-          arguments: '--configuration $(BuildConfiguration)'
+steps:
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      installationPath: $(Agent.ToolsDirectory)/dotnet
 
-  - job: Deploy
-    displayName: 'Deploy Artifact'
-    dependsOn: Build
-    steps:
-      - script: |
-            echo "Listing XML files in current directory:"
-            dir *.xml /s /b
-        displayName: 'List XML files'
-      - task: PublishTestResults@2
-        displayName: 'Publish Test Results'
-        condition: succeededOrFailed()
-        inputs:
-          testResultsFormat: 'NUnit'
-          testResultsFiles: '**/TestsResults.xml'
-          searchFolder: '$(System.DefaultWorkingDirectory)'
-          mergeTestResults: true
-          failTaskOnFailedTests: true
-          testRunTitle: 'Test Results'
-          publishRunAttachments: true 
+  - task: NuGetToolInstaller@1
+
+  - script: dotnet restore
+    displayName: 'Restore Dependencies'
+
+  - task: NuGetCommand@2
+    inputs:
+      restoreSolution: '$(solution)'
+
+  - task: VSBuild@1
+    inputs:
+      solution: '**/*.sln'
+      platform: 'Any CPU'
+      configuration: 'Release'
+
+  - task: VSTest@3
+    inputs:
+      platform: '$(BuildPlatform)'
+      configuration: '$(BuildConfiguration)'
+      testSelector: 'testAssemblies'
+      testAssemblyVer2: |
+        **\*test*.dll
+        !**\*TestAdapter.dll
+        !**\obj\**
+      searchFolder: '$(System.DefaultWorkingDirectory)'
+      codeCoverageEnabled: true
+      runInParallel: false
+      diagnosticsEnabled: true
+
+  - task: PublishTestResults@2
+    displayName: 'Publish Test Results'
+    condition: succeededOrFailed()
+    inputs:
+      testResultsFormat: 'NUnit'
+      testResultsFiles: '**/TestsResults.xml'
+      searchFolder: '$(System.DefaultWorkingDirectory)'
+      mergeTestResults: true
+      failTaskOnFailedTests: true
+      testRunTitle: 'Test Results'
+      publishRunAttachments: true
+  
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(System.DefaultWorkingDirectory)'
+      artifact: 'TestResults'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Reports'
+      artifact: 'ExtentReport'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Screenshots'
+      artifact: 'Screenshots'

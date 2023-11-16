@@ -96,7 +96,8 @@ public class BaseTest
         {
             var timestamp = DateTime.Now.ToString("yyyy-MM-dd-HHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
+            //const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
+            const string screenshotDirectory = "$(System.DefaultWorkingDirectory)/TicketPurchaseAutomationTest/Screenshots";
             //var screenshotDirectory = GetScreenshotDirectory();
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
 
@@ -266,7 +267,7 @@ public class BaseTest
             LogStep(Status.Info, "Ticket Purchase Successful");
     }
     
-    protected void CommonAdvacedDateSelectorPurchaseSteps()
+    protected void CommonAdvancedDateSelectorPurchaseSteps()
     {
             LogStep(Status.Info, "Selected desired ticket");
             currentStep = "Step SelectDesiredTicket";
