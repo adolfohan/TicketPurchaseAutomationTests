@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-run>
-    <test-suite>
-        <results>
-            <test-case name="test_case_name" result="Passed|Failed|Inconclusive|Skipped">
-            </test-case>
-            <!-- More test cases can be added here -->
-        </results>
+<test-run id="" testcasecount="" result="" total="" passed="" failed="" inconclusive="" skipped="" start-time="" end-time="" duration="">
+    <test-suite type="" id="" name="" fullname="" classname="" testcasecount="" runstate="" result="" start-time="" end-timeduration="" total="" passed="" failed="" inconclusive="" skipped="" asserts="">
+        <test-case id="mmm-nnn" name="" classname="" result="Passed|Failed|Inconclusive|Skipped" start-time="" end-time="" duration="">
+            <failure>
+                <message><![CDATA[Assert.AreEqual failed. Expected:<2>. Actual:<1>.]]></message>
+                <stack-trace><![CDATA[   at MyTests.Test2() in C:\path\to\YourTests.cs:line 42]]></stack-trace>
+            </failure>
+            <output><![CDATA[This is the output of Test2]]></output>
+        </test-case>
     </test-suite>
 </test-run>

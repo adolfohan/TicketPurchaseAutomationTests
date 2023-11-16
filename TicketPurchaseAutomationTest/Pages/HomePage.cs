@@ -15,7 +15,7 @@ public class HomePage : BasePage
     private By meInteresaButton =>
         By.XPath(
             "//a[contains(@class, 'sv-button sv-button--type-contained sv-button--size-sm sv-button--color-primary') and contains(text(), 'Me interesa')]");
-    private By leisureParksFilterElement => By.Id("c124");
+    private By leisureParksFilterElement => By.Id("c12");
     private By cultureVisitsToursElement => By.Id("c132");
     private By excursionsTouristsMobilityElement => By.Id("c142");
     private By experiencesRelaxElement => By.Id("c181");
