@@ -4,6 +4,9 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+variables:
+  BuildConfiguration: 'Release'
+
 steps:
   - task: UseDotNet@2
     displayName: 'Install .NET SDK'
@@ -38,7 +41,7 @@ steps:
     inputs:
       command: 'test'
       projects: '**/**test*.csproj'
-      arguments: '--configuration "$(BuildConfiguration)"'
+      arguments: '--configuration $(BuildConfiguration)'
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
