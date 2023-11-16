@@ -152,3 +152,4 @@ C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomati
 C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\obj\Debug\net7.0\TicketPurchaseAutomationTest.genruntimeconfig.cache
 C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\obj\Debug\net7.0\ref\TicketPurchaseAutomationTest.dll
 C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\obj\Debug\net7.0\TicketPurchaseAutomationTest.sourcelink.json
+C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\bin\Debug\net7.0\NuGet.Frameworks.dll

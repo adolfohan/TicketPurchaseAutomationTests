@@ -7,7 +7,6 @@
     <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +87,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f536671e825030c7f17fbf3f75511651c281f2429edc8fd6ea660418f825949/BeforeAndAfterTestCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f848e5e164b5dffc3fa1c7ed256f13e49191de1aa243dd9e34defeb23fa879/GC.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -133,7 +135,7 @@
       <workItem from="1700035395238" duration="7861000" />
       <workItem from="1700052620324" duration="140000" />
       <workItem from="1700052798831" duration="29370000" />
-      <workItem from="1700147597206" duration="1654000" />
+      <workItem from="1700147597206" duration="1964000" />
     </task>
     <servers />
   </component>
