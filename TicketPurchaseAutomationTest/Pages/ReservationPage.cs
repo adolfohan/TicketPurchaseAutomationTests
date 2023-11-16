@@ -125,7 +125,7 @@ public class ReservationPage : BasePage
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"An error occurred while clicking 'Comprar' button again: {ex.Message}");
+            Console.WriteLine($"An error occurred while clicking on 'Comprar' button again in Reservation Page: {ex.Message}");
         }
     }
     

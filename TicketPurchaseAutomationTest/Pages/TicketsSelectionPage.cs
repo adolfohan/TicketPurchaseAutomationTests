@@ -114,7 +114,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"An error occurred while clicking 'Comprar' button: {ex.Message}");
+            Console.WriteLine($"An error occurred while clicking on 'Comprar' button in Ticket Selection Page: {ex.Message}");
         }
     }
 

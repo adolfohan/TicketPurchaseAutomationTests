@@ -35,7 +35,6 @@ C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomati
 C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\bin\Debug\net7.0\MongoDB.Driver.dll
 C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\bin\Debug\net7.0\MongoDB.Driver.Core.dll
 C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\bin\Debug\net7.0\Newtonsoft.Json.dll
-C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\bin\Debug\net7.0\NuGet.Frameworks.dll
 C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\bin\Debug\net7.0\nunit.framework.dll
 C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\bin\Debug\net7.0\RazorEngine.NetCore.dll
 C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\bin\Debug\net7.0\WebDriver.Support.dll

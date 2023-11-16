@@ -69,7 +69,7 @@ public class SessionPage : BasePage
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"An error occurred while clicking 'Comprar' button: {ex.Message}");
+            Console.WriteLine($"An error occurred while clicking on 'Comprar' button in Session Page: {ex.Message}");
         }
     }
 }

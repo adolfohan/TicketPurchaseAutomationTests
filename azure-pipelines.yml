@@ -32,10 +32,6 @@ steps:
       platform: 'Any CPU'
       configuration: 'Release'
 
-  - script: |
-      echo "Build Configuration: $(BuildConfiguration)"
-      echo "Working Directory: $(System.DefaultWorkingDirectory)"
-
   - task: DotNetCoreCLI@2
     displayName: 'Run Tests'
     inputs:
