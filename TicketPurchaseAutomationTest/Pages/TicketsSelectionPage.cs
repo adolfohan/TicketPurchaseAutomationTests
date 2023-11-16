@@ -66,7 +66,8 @@ public class TicketsSelectionPage : BasePage
                     fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
                 /*  fluentWait.Until(webDriver =>
                       ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));*/
-
+                ClickOnPanelWrapper();
+                
                 if (inputFields.Count > 0)
                 {
                     var randomIndex = random.Next(0, inputFields.Count);
