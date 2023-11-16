@@ -106,45 +106,6 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
                 IWebElement comprarBtn1 = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
                 comprarBtn1.Click();
             }
-
-            //error500Page.Error500Displayed();
-            
-            /*Thread.Sleep(TimeSpan.FromSeconds(5));
-
-            string pageSource = driver.PageSource;
-
-            switch (true)
-            {
-                case var _ when pageSource.Contains("Error 500"):
-                    error500Page.Error500Displayed();
-                    break;
-                
-                case var _ when pageSource.Contains("Selecciona la sesión"):
-                    if (sessionPage.VerifySessionMessage())
-                    {
-                        sessionPage.SelectSession();
-                        sessionPage.ClickOnComprarButton();
-                    }
-                    break;
-                
-                case var _ when pageSource.Contains("Fecha elegida") && pageSource.Contains("Selecciona la sesión"):
-                    if (advancedSelectorPage.VerifyAdvancedSelectorMessage())
-                    {
-                        advancedSelectorPage.SelectTitle();
-                        advancedSelectorPage.SelectSessionHour();
-                        advancedSelectorPage.ClickOnComprarButton();
-                    }
-                    break;
-            }*/
-            /*
-            IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
-            while (error500Message.Displayed)
-            {
-                driver.Navigate().Back();
-                Thread.Sleep(TimeSpan.FromSeconds(2));
-                IWebElement comprarBtn1 = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
-                comprarBtn1.Click();
-            }*/
         }
         catch (NoSuchElementException ex)
         {
