@@ -96,11 +96,12 @@ public class BaseTest
         {
             var timestamp = DateTime.Now.ToString("yyyy-MM-dd-HHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
+            //const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
+            const string screenshotDirectory = @"$(System.DefaultWorkingDirectory)\TicketPurchaseAutomationTest\Screenshots";
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
 
             ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
-            CleanUpOldScreenshots();
+            //CleanUpOldScreenshots();
 
             return screenshotPath;
         }
