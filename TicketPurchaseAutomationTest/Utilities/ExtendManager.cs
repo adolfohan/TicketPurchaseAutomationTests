@@ -32,7 +32,7 @@ public abstract class ExtentManager
         _extent.AddSystemInfo("Tester", "Adolfo");
         _extent.AddSystemInfo("Environment", "Pre-Producción");
 
-        CleanUpOldSReports();
+        //CleanUpOldSReports();
             
         return _extent;
     }
