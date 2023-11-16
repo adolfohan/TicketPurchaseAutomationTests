@@ -60,11 +60,11 @@ steps:
   - task: PublishPipelineArtifact@1
     displayName: 'Publish Extent Report Artifact'
     inputs:
-      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Reports'
+      targetPath: '$(System.DefaultWorkingDirectory)/TicketPurchaseAutomationTest/Reports'
       artifact: 'ExtentReport'
 
   - task: PublishPipelineArtifact@1
     displayName: 'Publish Screenshots Artifact'
     inputs:
-      targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Screenshots'
+      targetPath: '$(System.DefaultWorkingDirectory)/TicketPurchaseAutomationTest/Screenshots'
       artifact: 'Screenshots'
