@@ -38,20 +38,13 @@ public class HomePage : BasePage
     
     public void NavigateToUrl()
     {
-        try
-        {
-            driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.co/");
-            driver.Manage().Window.Maximize();
-            /*fluentWait.Until(webDriver =>
-                ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));
-            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
-            Thread.Sleep(TimeSpan.FromSeconds(5));*/
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.co/");
+        driver.Manage().Window.Maximize();
+        /*fluentWait.Until(webDriver =>
+            ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));
+        IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+        js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
+        Thread.Sleep(TimeSpan.FromSeconds(5));*/
     }
     
     public void NavigateToSessionUrl()
