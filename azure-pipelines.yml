@@ -6,42 +6,39 @@ pool:
 
 steps:
   - task: UseDotNet@2
+    displayName: 'Install .NET SDK'
     inputs:
       packageType: 'sdk'
       installationPath: $(Agent.ToolsDirectory)/dotnet
 
   - task: NuGetToolInstaller@1
+    displayName: 'Install NuGet'
 
   - script: dotnet restore
     displayName: 'Restore Dependencies'
 
   - task: NuGetCommand@2
+    displayName: 'NuGet Restore'
     inputs:
       restoreSolution: '$(solution)'
 
   - task: VSBuild@1
+    displayName: 'Build Solution'
     inputs:
       solution: '**/*.sln'
       platform: 'Any CPU'
       configuration: 'Release'
 
-  - task: VSTest@3
+  - task: DotNetCoreCLI@2
+    displayName: 'Run Tests'
     inputs:
-      platform: '$(BuildPlatform)'
-      configuration: '$(BuildConfiguration)'
-      testSelector: 'testAssemblies'
-      testAssemblyVer2: |
-        **\*test*.dll
-        !**\*TestAdapter.dll
-        !**\obj\**
-      searchFolder: '$(System.DefaultWorkingDirectory)'
-      codeCoverageEnabled: true
-      runInParallel: false
-      diagnosticsEnabled: true
+      command: 'test'
+      projects: '**/**test*.csproj'
+      arguments: '--configuration $(BuildConfiguration)'
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
-    condition: succeededOrFailed()
+    condition: always()
     inputs:
       testResultsFormat: 'NUnit'
       testResultsFiles: '**/TestsResults.xml'
@@ -50,18 +47,21 @@ steps:
       failTaskOnFailedTests: true
       testRunTitle: 'Test Results'
       publishRunAttachments: true
-  
+
   - task: PublishPipelineArtifact@1
+    displayName: 'Publish Test Results Artifact'
     inputs:
       targetPath: '$(System.DefaultWorkingDirectory)'
       artifact: 'TestResults'
 
   - task: PublishPipelineArtifact@1
+    displayName: 'Publish Extent Report Artifact'
     inputs:
       targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Reports'
       artifact: 'ExtentReport'
 
   - task: PublishPipelineArtifact@1
+    displayName: 'Publish Screenshots Artifact'
     inputs:
       targetPath: '$(Build.SourcesDirectory)/TicketPurchaseAutomationTest/Screenshots'
       artifact: 'Screenshots'
