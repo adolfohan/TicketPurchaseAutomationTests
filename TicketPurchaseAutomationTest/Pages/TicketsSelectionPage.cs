@@ -73,8 +73,9 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
                     break;
                 }
 
-                driver.Navigate().Back();
-                homePage.ClickOnRandomMeInteresaButton();
+                //driver.Navigate().Back();
+                //homePage.ClickOnRandomMeInteresaButton();
+                homePage.NavigateToNormalUrl();
                 SelectNumberOfTickets(numberOfTickets);
             }
         }
