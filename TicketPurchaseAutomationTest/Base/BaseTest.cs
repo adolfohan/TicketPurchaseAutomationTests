@@ -99,7 +99,7 @@ public class BaseTest
             //const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
             var screenshotDirectory = Path.Combine(
                 Environment.GetEnvironmentVariable("System.DefaultWorkingDirectory") ?? string.Empty,
-                "**"
+                "Screenshots"
             );
             //var screenshotDirectory = GetScreenshotDirectory();
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
