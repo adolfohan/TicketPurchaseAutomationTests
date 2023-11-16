@@ -13,7 +13,7 @@ public class Error500Page : BasePage
     public bool Error500Displayed()
     {
         IWebElement error500Message = fluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
-        Console.WriteLine($"Valor de error500Message.Displayed: {error500Message.Displayed}");
+        Console.WriteLine($"Error 500 was displayed: {error500Message.Displayed}");
         return error500Message.Displayed;
     }
 }
