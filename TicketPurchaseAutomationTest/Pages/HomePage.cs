@@ -59,6 +59,12 @@ public class HomePage : BasePage
     
     public void NavigateToUrl()
     {
+        driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/");
+        driver.Manage().Window.Maximize();
+    }
+    
+    public void NavigateToNormalUrl()
+    {
         driver.Navigate().GoToUrl(RandomNormalUrl());
         driver.Manage().Window.Maximize();
     }
