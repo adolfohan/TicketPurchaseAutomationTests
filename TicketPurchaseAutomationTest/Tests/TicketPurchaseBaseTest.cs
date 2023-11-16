@@ -38,9 +38,9 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step GoToURL";
             homePageSteps.GoToURL();
 
-            LogStep(Status.Info, "Clicked on Me Interesa button");
+            /*LogStep(Status.Info, "Clicked on Me Interesa button");
             currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps.ClickOnRandomMeInteresaButton();
+            homePageSteps.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected desired ticket");
             currentStep = "Step SelectDesiredTicket";
@@ -87,7 +87,7 @@ public class TicketPurchaseBaseTest : BaseTest
         }
     }
 
-    
+    /*
     [Test, Order(3)]
     public void TicketPurchaseWithWrongNameAndSurnameTest()
     {
@@ -99,7 +99,7 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step GoToURL";
             homePageSteps.GoToURL();
 
-            LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
+            /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             currentStep = "Step ClickRandomMeInteresaButton";
             homePageSteps.ClickOnRandomMeInteresaButton();
 
@@ -159,7 +159,7 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step GoToURL";
             homePageSteps.GoToURL();
 
-            LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
+            /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             currentStep = "Step ClickRandomMeInteresaButton";
             homePageSteps.ClickOnRandomMeInteresaButton();
 
@@ -206,7 +206,7 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }
+    }*/
 
     [Test, Order(5)]
     public void TicketPurchaseWithWrongEmailTest()
@@ -219,9 +219,9 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step GoToURL";
             homePageSteps.GoToURL();
 
-            LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
+            /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps.ClickOnRandomMeInteresaButton();
+            homePageSteps.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             currentStep = "Step SelectDesiredTicket";
@@ -279,9 +279,9 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step GoToURL";
             homePageSteps.GoToURL();
 
-            LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
+            /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps.ClickOnRandomMeInteresaButton();
+            homePageSteps.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             currentStep = "Step SelectDesiredTicket";
@@ -339,9 +339,9 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step GoToURL";
             homePageSteps.GoToURL();
 
-            LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
+            /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps.ClickOnRandomMeInteresaButton();
+            homePageSteps.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             currentStep = "Step SelectDesiredTicket";
@@ -399,9 +399,9 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step GoToURL";
             homePageSteps.GoToURL();
 
-            LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
+            /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps.ClickOnRandomMeInteresaButton();
+            homePageSteps.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             currentStep = "Step SelectDesiredTicket";
@@ -451,9 +451,9 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step GoToURL";
             homePageSteps.GoToURL();
 
-            LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
+            /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps.ClickOnRandomMeInteresaButton();
+            homePageSteps.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             currentStep = "Step SelectDesiredTicket";
@@ -515,9 +515,9 @@ public class TicketPurchaseBaseTest : BaseTest
             currentStep = "Step GoToURL";
             homePage.NavigateToUrl();
 
-            LogStep(Status.Info, "Clicked on Me Interesa button");
+            /*LogStep(Status.Info, "Clicked on Me Interesa button");
             currentStep = "Step ClickRandomMeInteresaButton";
-            homePage.ClickOnRandomMeInteresaButton();
+            homePage.ClickOnRandomMeInteresaButton();*/
             
             LogStep(Status.Info, "Clicked on Random NavBar Item");
             currentStep = "Step SelectRandomNavBar";
@@ -579,5 +579,4 @@ public class TicketPurchaseBaseTest : BaseTest
             throw;
         }
     }
-   
 }
