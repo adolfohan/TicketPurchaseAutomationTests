@@ -97,8 +97,10 @@ public class BaseTest
             var timestamp = DateTime.Now.ToString("yyyy-MM-dd-HHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
             //const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
-            var screenshotDirectory =
-                Environment.GetEnvironmentVariable("System.DefaultWorkingDirectory") ?? string.Empty;
+            var screenshotDirectory = Path.Combine(
+                Environment.GetEnvironmentVariable("System.DefaultWorkingDirectory") ?? string.Empty,
+                "**"
+            );
             //var screenshotDirectory = GetScreenshotDirectory();
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
 
