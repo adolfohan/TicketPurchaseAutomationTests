@@ -8,8 +8,8 @@ public abstract class ExtentManager
     private static ExtentReports? _extent;
     //private static readonly string baseReportDirectory = @"$(Build.ArtifactStagingDirectory)\TicketPurchaseAutomationTest\Reports";
 
-    //private const string BaseReportDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
-    private const string BaseReportDirectory = "$(System.DefaultWorkingDirectory)/TicketPurchaseAutomationTest/Reports";
+    private const string BaseReportDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
+    //private const string BaseReportDirectory = "$(System.DefaultWorkingDirectory)/TicketPurchaseAutomationTest/Reports";
 
 
     public static ExtentReports GetExtent(string testName)
