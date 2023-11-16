@@ -15,7 +15,7 @@ public class HomePage : BasePage
     private By meInteresaButton =>
         By.XPath(
             "//a[contains(@class, 'sv-button sv-button--type-contained sv-button--size-sm sv-button--color-primary') and contains(text(), 'Me interesa')]");
-    private By leisureParksFilterElement => By.Id("c12");
+    private By leisureParksFilterElement => By.Id("c124");
     private By cultureVisitsToursElement => By.Id("c132");
     private By excursionsTouristsMobilityElement => By.Id("c142");
     private By experiencesRelaxElement => By.Id("c181");
@@ -40,7 +40,7 @@ public class HomePage : BasePage
     {
         try
         {
-            driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/");
+            driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.co/");
             driver.Manage().Window.Maximize();
             /*fluentWait.Until(webDriver =>
                 ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));
