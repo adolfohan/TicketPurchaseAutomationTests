@@ -41,10 +41,10 @@ jobs:
         displayName: 'List XML files'
       - task: PublishTestResults@2
         displayName: 'Publish Test Results'
+        condition: succeededOrFailed()
         inputs:
           testResultsFormat: 'NUnit'
           testResultsFiles: '**/TestsReport.xml'
           searchFolder: '$(System.DefaultWorkingDirectory)'
-          condition: succeededOrFailed()
           mergeTestResults: true
           failTaskOnFailedTests: true
