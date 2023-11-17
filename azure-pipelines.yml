@@ -1,6 +1,14 @@
 trigger:
   - pipelineTest
 
+schedules:
+  - cron: "0 5 * * *"
+    displayName: Daily build at 6 AM CET
+    branches:
+      include:
+        - 'pipelineTest'
+    always: true
+
 pool:
   vmImage: 'windows-latest'
 
