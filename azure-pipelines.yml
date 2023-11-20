@@ -41,8 +41,7 @@ steps:
       configuration: 'Release'
       
   - script: |
-      $chromeVersion = (Get-Item (Get-Command chromedriver).Source).VersionInfo.FileVersion
-      Write-Host "Chrome Version: $chromeVersion"
+      $chromeVersion = ((Get-Item "C:\Program Files\Google\Chrome\Application\chrome.exe").VersionInfo).ProductVersion
     displayName: 'Print Chrome Version'  
   
   - task: DotNetCoreCLI@2
