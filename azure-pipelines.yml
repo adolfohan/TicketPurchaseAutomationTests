@@ -38,11 +38,7 @@ steps:
     inputs:
       solution: '**/*.sln'
       platform: 'Any CPU'
-      configuration: 'Release'
-      
-  - script: |
-      $chromeVersion = ((Get-Item "C:\Program Files\Google\Chrome\Application\chrome.exe").VersionInfo).ProductVersion
-    displayName: 'Print Chrome Version'  
+      configuration: 'Release' 
   
   - task: DotNetCoreCLI@2
     displayName: 'Run Tests'
