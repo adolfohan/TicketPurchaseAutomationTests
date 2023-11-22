@@ -19,7 +19,10 @@ public class BaseTest
     protected TicketsSelectionSteps ticketsSelectionSteps;
     protected SessionPage sessionPage;
     protected AdvancedDateSelectorPage advancedDateSelectorPage;
+    protected SeatingPage seatingPage;
+    protected ReservationPage reservationPage;
     protected ReservationSteps reservationSteps;
+    protected CardPage cardPage;
     protected CardSteps cardSteps;
     protected PurchaseOkSteps purchaseOkSteps;
     protected string? currentStep;
@@ -36,7 +39,10 @@ public class BaseTest
         ticketsSelectionSteps = new TicketsSelectionSteps(driver);
         sessionPage = new SessionPage(driver);
         advancedDateSelectorPage = new AdvancedDateSelectorPage(driver);
+        seatingPage = new SeatingPage(driver);
+        reservationPage = new ReservationPage(driver);
         reservationSteps = new ReservationSteps(driver);
+        cardPage = new CardPage(driver);
         cardSteps = new CardSteps(driver);
         purchaseOkSteps = new PurchaseOkSteps(driver);
         var testName = TestContext.CurrentContext.Test.Name;
