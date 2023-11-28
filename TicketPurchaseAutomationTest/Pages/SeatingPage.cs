@@ -7,10 +7,10 @@ namespace TicketPurchaseAutomationTest.Pages;
 public class SeatingPage : BasePage
 {
     private readonly By calendarDay = By.XPath("//div[@class='calendar-day' and text()='23']");
-    private readonly By comprarBtnElement = By.XPath(".calendar-day-sessions > .session-list-item:nth-child(3) .btn");
+    private readonly By comprarBtnElement = By.CssSelector("a[href='/test-seating?s=bx9xm3jcqmtkg&c=14u4bx8o76goc']");
     private readonly By seatMapFrameElement = By.Id("seatmap");
     private readonly By availableSectorElement = By.CssSelector("[fill='#ffe100']");
-    private readonly By availableSeatElement = By.CssSelector("circle.s:not(.no-hover-unavailable)");
+    private readonly By availableSeatElement = By.XPath("//*[name()='svg']//*[local-name()='g' and @id='seats']//*[local-name()='circle' and not(contains(@class, 'no-hover-unavailable'))]");//By.CssSelector("circle.s:not(.no-hover-unavailable)"); 
     private readonly By comprarButtonElement = By.CssSelector(
         "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
     
@@ -25,8 +25,11 @@ public class SeatingPage : BasePage
 
     public void ClickOnComprarBtn()
     {
-        //Thread.Sleep(TimeSpan.FromSeconds(2));
-        //fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement)).Click();
+        /*Thread.Sleep(TimeSpan.FromSeconds(2));
+        var comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarBtnElement));
+        Thread.Sleep(TimeSpan.FromSeconds(2));
+        ScrollIntoView(comprarBtn);
+        comprarBtn.Click();*/
         driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/test-seating/test-seating?s=bx9xm3jcqmtkg&c=14u4bx8o76goc");
     }
 

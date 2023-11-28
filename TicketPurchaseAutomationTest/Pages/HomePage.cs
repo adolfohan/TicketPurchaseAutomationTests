@@ -113,6 +113,12 @@ public class HomePage : BasePage
 
         return completeUrl;
     }
+    
+    public void NavigateToSeatingUrl()
+    {
+        driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/test-seating");
+        driver.Manage().Window.Maximize();
+    }
     public void NavigateToAdvancedDateSelectorUrl()
     {
         driver.Navigate().GoToUrl(RandomAdvancedDateSelectorUrl());

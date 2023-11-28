@@ -15,16 +15,16 @@ public class SeatingTest : BaseTest
             LogStep(Status.Info, "Starting Seating Purchase Ticket Test");
 
             LogStep(Status.Info, "Navigating to Seating URL");
-            currentStep = "Step NavigateToAdvancedDateSelectorUrl";
-            homePage.NavigateToAdvancedDateSelectorUrl();
+            currentStep = "Step NavigateToSeatingUrl";
+            homePage.NavigateToSeatingUrl();
 
-            seatingPage.ClickOnCalendarDay();
+            //seatingPage.ClickOnCalendarDay();
             seatingPage.ClickOnComprarBtn();
             seatingPage.SelectRandomAvailableSector();
             seatingPage.SelectRandomAvailableSeat();
             seatingPage.SwitchToDefaultContent();
             seatingPage.ClickOnComprarButton();
-            reservationPage.CompletePersonalInformation("Adolfo", "Test", "33511838a", "laparra@experticket.com", "laparra@experticket.com", "123456789");
+            reservationPage.CompletePersonalInformation("Adolfo", "Test", "33511838a", "ahan@experticket.com", "ahan@experticket.com", "123456789");
             reservationPage.CheckConditions();
             reservationPage.CheckPrivacy();
             reservationPage.ClickOnComprarButtonAgain();
