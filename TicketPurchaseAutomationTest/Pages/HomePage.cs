@@ -74,7 +74,7 @@ public class HomePage : BasePage
         
         List<string> sessionTickets =
         [
-            "bioparcvalencia",
+            //"bioparcvalencia",
             "atletico-de-madrid-tour-metropolitano",
             "campnou",
             "tourbernabeu",
