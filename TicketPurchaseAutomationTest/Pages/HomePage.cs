@@ -39,15 +39,15 @@ public class HomePage : BasePage
     private string RandomNormalUrl()
     {
         
-        List<string> normalTickets = new List<string>
-        {
+        List<string> normalTickets =
+        [
             "Entradas-PortAventura-Park",
             "Puy-du-Fou-Combinada-Parque-Sueno-Toledo",
             "Entradas-Isla-Magica",
             "Entradas-Cabarceno",
             "parqueatraccionesmadrid",
             "acuariozaragoza"
-        };
+        ];
         
         Random random = new Random();
 
@@ -77,8 +77,8 @@ public class HomePage : BasePage
             //"bioparcvalencia",
             "atletico-de-madrid-tour-metropolitano",
             "campnou",
-            "tourbernabeu",
-            "mestallaforevertour"
+            "tourbernabeu"
+            //"mestallaforevertour"
         ];
         
         Random random = new Random();
