@@ -17,8 +17,8 @@ public class ReservationPage : BasePage
     private readonly By phoneElement = By.Id("clientPhoneNumber-id");
     private readonly By conditionsCheckboxElement = By.Id("form-conditions");
     private readonly By privacyCheckboxElement = By.Id("form-privacy");
-    private readonly By comprarButtonElement = By.CssSelector(
-            "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
+    private readonly By comprarButtonElement = By.XPath(
+            "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']//span[@class='sv-button__label j-button-buy-label'][normalize-space()='Comprar']");
     private readonly By datosDeLaOperacionElement = By.XPath("//h1[@class='datosDeLaOperacion']");
     public ReservationPage(IWebDriver driver) : base(driver)
     {

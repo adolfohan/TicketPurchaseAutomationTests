@@ -14,8 +14,8 @@ public class AdvancedDateSelectorPage : BasePage
     private readonly By chosenDateElement = By.XPath("//label[text()='Fecha elegida']");
     private readonly By comprarButtonElement = By.XPath(
         "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']");
-    private readonly By radioButtonElement = By.XPath("//input[@type='radio']");
-    private readonly By sessionDropdownElement = By.XPath("//select[@class='form-select form-select-sm' and not(@disabled)]");
+    private readonly By radioButtonElement = By.XPath("//span[contains(text(),'Hemisfèric')]/following::input[@type='radio'][1]");
+    private readonly By sessionDropdownElement = By.XPath("//span[contains(text(),'Hemisfèric')]/following::select[@class='form-select form-select-sm' and not(@disabled)]");
     private readonly By advancedDateSelectorElement = By.ClassName("sv-tickets__actions");
     private string expectedSessionMessage = "Selecciona la sesión";
     private string expectedChosenDateMessage = "Fecha elegida";
@@ -57,7 +57,7 @@ public class AdvancedDateSelectorPage : BasePage
     {
         try
         {
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             IList<IWebElement> radioButtons = fluentWait.Until(webDriver => webDriver.FindElements(radioButtonElement));
 
             if (radioButtons.Count > 0)
@@ -81,7 +81,7 @@ public class AdvancedDateSelectorPage : BasePage
     {
         try
         {
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             IWebElement dropdown = fluentWait.Until(ExpectedConditions.ElementToBeClickable(sessionDropdownElement));
 
             var select = new SelectElement(dropdown);

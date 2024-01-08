@@ -101,8 +101,9 @@ public class HomePage : BasePage
         
         List<string> advancedDateSelectorTickets =
         [
-            "ciudadartesyciencias-hemisferic",
-            "ciudadartesyciencias-oceanografic"
+            //"ciudadartesyciencias-hemisferic",
+            //"ciudadartesyciencias-oceanografic",
+            "ciudadartesyciencias-combinadas"
         ];
         
         Random random = new Random();
