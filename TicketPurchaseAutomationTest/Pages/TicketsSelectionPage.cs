@@ -12,19 +12,17 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
     private readonly AdvancedDateSelectorPage advancedDateSelectorPage = new(driver);
     private readonly Error500Page error500Page = new(driver);
     
-    
-    private By inputNumberOfTicketsElement =>
-        By.XPath("//input[@type='number']");
+    private By inputNumberOfTicketsElement => By.XPath("//input[@type='number']");
     
     private readonly By confirmationButtonElement =
         By.XPath("//button[@class='btn sv-button--type-contained sv-button--color-secondary']");
     
     private readonly By comprarButton =
-        By.CssSelector(
-            "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
+        By.XPath(
+            "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy']");
     private readonly By error500Element = By.XPath("//div[@class='sv-page404__title' and text()='Error 500']");
     //private readonly By priceElement = By.ClassName("sv-cart__price");
-    private readonly By panelWrapperElement = By.XPath("//a[@class='collapsed sv-panel__wrapper' and @aria-expanded='false']");//By.CssSelector("a.sv-panel__wrapper[aria-expanded='false']");
+    private readonly By panelWrapperElement = By.XPath("//a[@class='collapsed sv-panel__wrapper' and @aria-expanded='false']");
     private readonly By navBarElement = By.Id("funnelmenu");
     private readonly By sessionMessageElement = By.XPath("//div[@class='s-panel-sessions__heading']");
 

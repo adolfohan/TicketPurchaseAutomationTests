@@ -9,16 +9,28 @@
       <change beforePath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/TicketPurchaseAutomationTest.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +49,7 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -128,8 +141,8 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Adolfo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Adolfo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Adolfo\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Adolfo\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
       &quot;C:\\Users\\Adolfo\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
@@ -152,6 +165,9 @@
       <workItem from="1700147597206" duration="38067000" />
       <workItem from="1702627037630" duration="1245000" />
       <workItem from="1702645333967" duration="1766000" />
+      <workItem from="1702908850912" duration="4931000" />
+      <workItem from="1703677614015" duration="638000" />
+      <workItem from="1703679147557" duration="7664000" />
     </task>
     <servers />
   </component>

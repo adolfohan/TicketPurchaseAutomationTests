@@ -12,8 +12,8 @@ public class AdvancedDateSelectorPage : BasePage
     
     private readonly By sessionMessageElement = By.XPath("//span[text()=' Selecciona la sesión ']");
     private readonly By chosenDateElement = By.XPath("//label[text()='Fecha elegida']");
-    private readonly By comprarButtonElement = By.CssSelector(
-        "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
+    private readonly By comprarButtonElement = By.XPath(
+        "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']");
     private readonly By radioButtonElement = By.XPath("//input[@type='radio']");
     private readonly By sessionDropdownElement = By.XPath("//select[@class='form-select form-select-sm' and not(@disabled)]");
     private readonly By advancedDateSelectorElement = By.ClassName("sv-tickets__actions");

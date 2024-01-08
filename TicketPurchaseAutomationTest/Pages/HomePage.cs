@@ -72,15 +72,14 @@ public class HomePage : BasePage
     private string RandomSessionUrl()
     {
         
-        List<string> sessionTickets = new List<string>
-        {
+        List<string> sessionTickets =
+        [
             "bioparcvalencia",
             "atletico-de-madrid-tour-metropolitano",
             "campnou",
             "tourbernabeu",
-            "mestallaforevertour",
-            "tour-interactivo-nuevo-estadio-los-carmenes-granada"
-        };
+            "mestallaforevertour"
+        ];
         
         Random random = new Random();
 
@@ -100,11 +99,11 @@ public class HomePage : BasePage
     private string RandomAdvancedDateSelectorUrl()
     {
         
-        List<string> advancedDateSelectorTickets = new List<string>
-        {
+        List<string> advancedDateSelectorTickets =
+        [
             "ciudadartesyciencias-hemisferic",
             "ciudadartesyciencias-oceanografic"
-        };
+        ];
         
         Random random = new Random();
 

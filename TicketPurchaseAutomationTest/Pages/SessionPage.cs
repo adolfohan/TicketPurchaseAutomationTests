@@ -11,8 +11,8 @@ public class SessionPage : BasePage
     private readonly Random random;
     
     private readonly By sessionMessageElement = By.XPath("//span[text()=' Selecciona la sesión ']");
-    private readonly By comprarButtonElement = By.CssSelector(
-        "a.sv-button.sv-button--type-contained.sv-button--color-primary.sv-button--size-lg.sv-button--buy");
+    private readonly By comprarButtonElement = By.XPath(
+        "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']");
     private readonly By sessionDropdownElement = By.XPath("//select[@class='form-select form-select-sm']");
     private string expectedMessage = "Selecciona la sesión";
     
