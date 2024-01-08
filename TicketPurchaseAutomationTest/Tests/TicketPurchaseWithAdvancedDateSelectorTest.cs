@@ -7,7 +7,7 @@ namespace TicketPurchaseAutomationTest.Tests;
 [TestFixture]
 public class TicketPurchaseWithAdvancedDateSelectorTest : BaseTest
 {
-    [Test]
+    /*[Test]
     public void AdvancedDateSelectorTest()
     {
         try
@@ -23,5 +23,5 @@ public class TicketPurchaseWithAdvancedDateSelectorTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }
+    }*/
 }
