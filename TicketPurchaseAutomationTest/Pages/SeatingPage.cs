@@ -20,7 +20,7 @@ public class SeatingPage : BasePage
 
     public void ClickOnCalendarDay()
     {
-        fluentWait.Until(ExpectedConditions.ElementToBeClickable(calendarDay)).Click();
+        FluentWait.Until(ExpectedConditions.ElementToBeClickable(calendarDay)).Click();
     }
 
     public void ClickOnComprarBtn()
@@ -30,16 +30,16 @@ public class SeatingPage : BasePage
         Thread.Sleep(TimeSpan.FromSeconds(2));
         ScrollIntoView(comprarBtn);
         comprarBtn.Click();*/
-        driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/test-seating/test-seating?s=bx9xm3jcqmtkg&c=14u4bx8o76goc");
+        Driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/test-seating/test-seating?s=bx9xm3jcqmtkg&c=14u4bx8o76goc");
     }
 
     public void SelectRandomAvailableSector()
     {
-        var seatMapFrame = fluentWait.Until(ExpectedConditions.ElementIsVisible(seatMapFrameElement));
-        driver.SwitchTo().Frame(seatMapFrame);
+        var seatMapFrame = FluentWait.Until(ExpectedConditions.ElementIsVisible(seatMapFrameElement));
+        Driver.SwitchTo().Frame(seatMapFrame);
         Thread.Sleep(TimeSpan.FromSeconds(2));
         
-        IList<IWebElement> sectors = fluentWait.Until(webDriver => webDriver.FindElements(availableSectorElement));
+        IList<IWebElement> sectors = FluentWait.Until(webDriver => webDriver.FindElements(availableSectorElement));
 
         if (sectors.Count > 0)
         {
@@ -63,21 +63,21 @@ public class SeatingPage : BasePage
             randomSeat.Click();
         }*/
         Thread.Sleep(TimeSpan.FromSeconds(2));
-        var availableSeat = fluentWait.Until(ExpectedConditions.ElementToBeClickable(availableSeatElement));
+        var availableSeat = FluentWait.Until(ExpectedConditions.ElementToBeClickable(availableSeatElement));
         ScrollIntoView(availableSeat);
         availableSeat.Click();
     }
 
     public void SwitchToDefaultContent()
     {
-        driver.SwitchTo().DefaultContent();
+        Driver.SwitchTo().DefaultContent();
     }
     
     public void ClickOnComprarButton()
     {
         try
         {
-            IWebElement comprarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement));
+            IWebElement comprarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement));
             Thread.Sleep(TimeSpan.FromSeconds(2));
             comprarButton.Click();
         }

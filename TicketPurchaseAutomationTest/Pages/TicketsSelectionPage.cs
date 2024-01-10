@@ -28,7 +28,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
 
     private void ClickOnPanelWrapper()
     {
-        IWebElement panel = fluentWait.Until(ExpectedConditions.ElementIsVisible(panelWrapperElement));
+        IWebElement panel = FluentWait.Until(ExpectedConditions.ElementIsVisible(panelWrapperElement));
 
         if (!panel.Displayed) return;
         ScrollIntoView(panel);
@@ -53,7 +53,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
             while (true)
             {
                 IList<IWebElement> inputFields =
-                    fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
+                    FluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
                
                 if (inputFields.Count > 0)
                 {
@@ -85,7 +85,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
     
     public void ConfirmDate()
     {
-        IWebElement confirmationBox = fluentWait.Until(ExpectedConditions.ElementIsVisible(confirmationButtonElement));
+        IWebElement confirmationBox = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmationButtonElement));
 
         IWebElement confirmButton = confirmationBox.FindElement(confirmationButtonElement);
         confirmButton.Click();
@@ -95,14 +95,14 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement comprarBtn = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
+            IWebElement comprarBtn = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
             
             while (error500Page.Error500Displayed())
             {
-                driver.Navigate().Back();
+                Driver.Navigate().Back();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                IWebElement comprarBtn1 = fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
+                IWebElement comprarBtn1 = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
                 comprarBtn1.Click();
             }
         }
@@ -123,10 +123,10 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
             while (true)
             {
                 IList<IWebElement> inputFields =
-                    fluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
+                    FluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
                 if (inputFields.Count > 0)
                 {
-                    IWebElement navBar = fluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
+                    IWebElement navBar = FluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
                     IList<IWebElement> navBarItems = navBar.FindElements(By.CssSelector("li.nav-item"));
                     while (navBarItems.Count > 0 && inputFields.Count > 0)
                     {
@@ -135,7 +135,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
                         selectedNavBarItem.Click();
                     }
                 }
-                driver.Navigate().Back();
+                Driver.Navigate().Back();
                 homePage.ClickOnRandomMeInteresaButton();
             }
         }

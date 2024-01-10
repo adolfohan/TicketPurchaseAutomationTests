@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.ExperticketIntegrationTest/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/../ExperticketIntegrationTest.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BasePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BasePage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/CardPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/CardPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/Error500Page.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/Error500Page.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/PurchaseOkPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/PurchaseOkPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/ReservationPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/ReservationPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/SeatingPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/SeatingPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/SessionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/SessionPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Steps/HomePageSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Steps/HomePageSteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/FiltersTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/FiltersTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseBaseTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithAdvancedDateSelectorTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithAdvancedDateSelectorTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithSessionTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Tests/TicketPurchaseWithSessionTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" afterDir="false" />
@@ -65,9 +76,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/808851b07acfa1c5c94b0d4f9fb50debedb2df70/src/libraries/System.Private.CoreLib/src/System/Threading/ThreadLocal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/98/d57b0b7d/RemoteWebDriver.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -126,13 +139,14 @@
       <workItem from="1702908850912" duration="4931000" />
       <workItem from="1703677614015" duration="638000" />
       <workItem from="1703679147557" duration="24123000" />
-      <workItem from="1704713309484" duration="2124000" />
+      <workItem from="1704713309484" duration="21798000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.ps1" />
   </component>

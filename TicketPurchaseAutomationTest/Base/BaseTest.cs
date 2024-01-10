@@ -13,19 +13,19 @@ namespace TicketPurchaseAutomationTest.Base;
 public class BaseTest
 {  
     private IWebDriver driver;
-    protected HomePage homePage;
-    protected HomePageSteps homePageSteps;
-    protected TicketsSelectionPage ticketsSelectionPage;
-    protected TicketsSelectionSteps ticketsSelectionSteps;
-    protected SessionPage sessionPage;
-    protected AdvancedDateSelectorPage advancedDateSelectorPage;
-    protected SeatingPage seatingPage;
-    protected ReservationPage reservationPage;
-    protected ReservationSteps reservationSteps;
-    protected CardPage cardPage;
-    protected CardSteps cardSteps;
-    protected PurchaseOkSteps purchaseOkSteps;
-    protected string? currentStep;
+    protected HomePage HomePage;
+    protected HomePageSteps HomePageSteps;
+    protected TicketsSelectionPage TicketsSelectionPage;
+    protected TicketsSelectionSteps TicketsSelectionSteps;
+    private SessionPage sessionPage;
+    private AdvancedDateSelectorPage advancedDateSelectorPage;
+    protected SeatingPage SeatingPage;
+    protected ReservationPage ReservationPage;
+    protected ReservationSteps ReservationSteps;
+    protected CardPage CardPage;
+    protected CardSteps CardSteps;
+    private PurchaseOkSteps purchaseOkSteps;
+    protected string? CurrentStep;
     private ExtentReports? extent;
     private ExtentTest? test;
 
@@ -33,17 +33,17 @@ public class BaseTest
     public void SetUp()
     {
         driver = new ChromeDriver();
-        homePage = new HomePage(driver);
-        homePageSteps = new HomePageSteps(driver);
-        ticketsSelectionPage = new TicketsSelectionPage(driver);
-        ticketsSelectionSteps = new TicketsSelectionSteps(driver);
+        HomePage = new HomePage(driver);
+        HomePageSteps = new HomePageSteps(driver);
+        TicketsSelectionPage = new TicketsSelectionPage(driver);
+        TicketsSelectionSteps = new TicketsSelectionSteps(driver);
         sessionPage = new SessionPage(driver);
         advancedDateSelectorPage = new AdvancedDateSelectorPage(driver);
-        seatingPage = new SeatingPage(driver);
-        reservationPage = new ReservationPage(driver);
-        reservationSteps = new ReservationSteps(driver);
-        cardPage = new CardPage(driver);
-        cardSteps = new CardSteps(driver);
+        SeatingPage = new SeatingPage(driver);
+        ReservationPage = new ReservationPage(driver);
+        ReservationSteps = new ReservationSteps(driver);
+        CardPage = new CardPage(driver);
+        CardSteps = new CardSteps(driver);
         purchaseOkSteps = new PurchaseOkSteps(driver);
         var testName = TestContext.CurrentContext.Test.Name;
         
@@ -140,7 +140,7 @@ public class BaseTest
     
     protected void HandleTestFailure(Exception ex)
     {
-        LogStep(Status.Fail, $"Test failed at step: '{currentStep}' due to an error: {ex.Message}");
+        LogStep(Status.Fail, $"Test failed at step: '{CurrentStep}' due to an error: {ex.Message}");
     }
 
     protected void CommonNormalPurchaseSteps()
@@ -150,51 +150,51 @@ public class BaseTest
             homePage.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected desired ticket");
-            currentStep = "Step SelectDesiredTicket";
-            ticketsSelectionSteps.SelectDesiredTicket();
+            CurrentStep = "Step SelectDesiredTicket";
+            TicketsSelectionSteps.SelectDesiredTicket();
 
             LogStep(Status.Info, "Date confirmed");
-            currentStep = "Step ConfirmDate";
-            ticketsSelectionSteps.ConfirmDate();
+            CurrentStep = "Step ConfirmDate";
+            TicketsSelectionSteps.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClickComprarButton";
-            ticketsSelectionSteps.ClickOnComprarButton();
+            CurrentStep = "Step ClickComprarButton";
+            TicketsSelectionSteps.ClickOnComprarButton();
 
             LogStep(Status.Info, "Completed personal information");
-            currentStep = "Step CompletePersonalInformation";
-            reservationSteps.CompletePersonalInformation();
+            CurrentStep = "Step CompletePersonalInformation";
+            ReservationSteps.CompletePersonalInformation();
 
             LogStep(Status.Info, "Checked conditions checkbox");
-            currentStep = "Step CheckTheConditionsCheckbox";
-            reservationSteps.CheckTheConditionsCheckbox();
+            CurrentStep = "Step CheckTheConditionsCheckbox";
+            ReservationSteps.CheckTheConditionsCheckbox();
 
             LogStep(Status.Info, "Checked privacy checkbox");
-            currentStep = "Step CheckThePrivacyCheckbox";
-            reservationSteps.CheckThePrivacyCheckbox();
+            CurrentStep = "Step CheckThePrivacyCheckbox";
+            ReservationSteps.CheckThePrivacyCheckbox();
 
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClicksComprarButtonAgain";
-            reservationSteps.ClicksOnComprarButtonAgain();
+            CurrentStep = "Step ClicksComprarButtonAgain";
+            ReservationSteps.ClicksOnComprarButtonAgain();
 
             LogStep(Status.Info, "Completed card information");
-            currentStep = "Step CompleteTheCardInformation";
-            cardSteps.CompleteTheCardInformation();
+            CurrentStep = "Step CompleteTheCardInformation";
+            CardSteps.CompleteTheCardInformation();
 
             LogStep(Status.Info, "Clicked on Pagar button");
-            currentStep = "Step ClickPagarButton";
-            cardSteps.ClickOnPagarButton();
+            CurrentStep = "Step ClickPagarButton";
+            CardSteps.ClickOnPagarButton();
 
             LogStep(Status.Info, "Clicked on Enviar button");
-            currentStep = "Step ClickOnEnviarButton";
-            cardSteps.ClickOnEnviarButton();
+            CurrentStep = "Step ClickOnEnviarButton";
+            CardSteps.ClickOnEnviarButton();
 
             LogStep(Status.Info, "Clicked on Continuar button");
-            currentStep = "Step ClickOnContinuarButton";
-            cardSteps.ClickOnContinuarButton();
+            CurrentStep = "Step ClickOnContinuarButton";
+            CardSteps.ClickOnContinuarButton();
 
             LogStep(Status.Info, "Purchase completed");
-            currentStep = "PurchaseOKMessage";
+            CurrentStep = "PurchaseOKMessage";
             purchaseOkSteps.PurchaseOkMessage();
 
             LogStep(Status.Info, "Ticket Purchase Successful");
@@ -203,63 +203,63 @@ public class BaseTest
     protected void CommonSessionPurchaseSteps()
     {
             LogStep(Status.Info, "Selected desired ticket");
-            currentStep = "Step SelectDesiredTicket";
-            ticketsSelectionSteps.SelectDesiredTicket();
+            CurrentStep = "Step SelectDesiredTicket";
+            TicketsSelectionSteps.SelectDesiredTicket();
 
             LogStep(Status.Info, "Date confirmed");
-            currentStep = "Step ConfirmDate";
-            ticketsSelectionSteps.ConfirmDate();
+            CurrentStep = "Step ConfirmDate";
+            TicketsSelectionSteps.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClickComprarButton";
-            ticketsSelectionSteps.ClickOnComprarButton();
+            CurrentStep = "Step ClickComprarButton";
+            TicketsSelectionSteps.ClickOnComprarButton();
             
             LogStep(Status.Info, "Session Message Displayed");
-            currentStep = "Step SessionMessageDisplayed";
+            CurrentStep = "Step SessionMessageDisplayed";
             sessionPage.SessionMessageDisplayed();
             
             LogStep(Status.Info, "Selected Session Option");
-            currentStep = "Step SelectSession";
+            CurrentStep = "Step SelectSession";
             sessionPage.SelectSession();
             
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClickComprarButton";
+            CurrentStep = "Step ClickComprarButton";
             sessionPage.ClickOnComprarButton();
 
             LogStep(Status.Info, "Completed personal information");
-            currentStep = "Step CompletePersonalInformation";
-            reservationSteps.CompletePersonalInformation();
+            CurrentStep = "Step CompletePersonalInformation";
+            ReservationSteps.CompletePersonalInformation();
 
             LogStep(Status.Info, "Checked conditions checkbox");
-            currentStep = "Step CheckTheConditionsCheckbox";
-            reservationSteps.CheckTheConditionsCheckbox();
+            CurrentStep = "Step CheckTheConditionsCheckbox";
+            ReservationSteps.CheckTheConditionsCheckbox();
 
             LogStep(Status.Info, "Checked privacy checkbox");
-            currentStep = "Step CheckThePrivacyCheckbox";
-            reservationSteps.CheckThePrivacyCheckbox();
+            CurrentStep = "Step CheckThePrivacyCheckbox";
+            ReservationSteps.CheckThePrivacyCheckbox();
 
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClicksComprarButtonAgain";
-            reservationSteps.ClicksOnComprarButtonAgain();
+            CurrentStep = "Step ClicksComprarButtonAgain";
+            ReservationSteps.ClicksOnComprarButtonAgain();
 
             LogStep(Status.Info, "Completed card information");
-            currentStep = "Step CompleteTheCardInformation";
-            cardSteps.CompleteTheCardInformation();
+            CurrentStep = "Step CompleteTheCardInformation";
+            CardSteps.CompleteTheCardInformation();
 
             LogStep(Status.Info, "Clicked on Pagar button");
-            currentStep = "Step ClickPagarButton";
-            cardSteps.ClickOnPagarButton();
+            CurrentStep = "Step ClickPagarButton";
+            CardSteps.ClickOnPagarButton();
 
             LogStep(Status.Info, "Clicked on Enviar button");
-            currentStep = "Step ClickOnEnviarButton";
-            cardSteps.ClickOnEnviarButton();
+            CurrentStep = "Step ClickOnEnviarButton";
+            CardSteps.ClickOnEnviarButton();
 
             LogStep(Status.Info, "Clicked on Continuar button");
-            currentStep = "Step ClickOnContinuarButton";
-            cardSteps.ClickOnContinuarButton();
+            CurrentStep = "Step ClickOnContinuarButton";
+            CardSteps.ClickOnContinuarButton();
 
             LogStep(Status.Info, "Purchase completed");
-            currentStep = "PurchaseOKMessage";
+            CurrentStep = "PurchaseOKMessage";
             purchaseOkSteps.PurchaseOkMessage();
 
             LogStep(Status.Info, "Ticket Purchase Successful");
@@ -268,67 +268,67 @@ public class BaseTest
     protected void CommonAdvancedDateSelectorPurchaseSteps()
     {
             LogStep(Status.Info, "Selected desired ticket");
-            currentStep = "Step SelectDesiredTicket";
-            ticketsSelectionSteps.SelectDesiredTicket();
+            CurrentStep = "Step SelectDesiredTicket";
+            TicketsSelectionSteps.SelectDesiredTicket();
 
             LogStep(Status.Info, "Date confirmed");
-            currentStep = "Step ConfirmDate";
-            ticketsSelectionSteps.ConfirmDate();
+            CurrentStep = "Step ConfirmDate";
+            TicketsSelectionSteps.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClickComprarButton";
-            ticketsSelectionSteps.ClickOnComprarButton();
+            CurrentStep = "Step ClickComprarButton";
+            TicketsSelectionSteps.ClickOnComprarButton();
             
             LogStep(Status.Info, "Advanced Date Selector Message Displayed");
-            currentStep = "Step VerifyAdvancedSelectorMessage";
+            CurrentStep = "Step VerifyAdvancedSelectorMessage";
             advancedDateSelectorPage.VerifyAdvancedSelectorMessage();
             
             LogStep(Status.Info, "Selected Title Option");
-            currentStep = "Step SelectTitle";
+            CurrentStep = "Step SelectTitle";
             advancedDateSelectorPage.SelectTitle();
             
             LogStep(Status.Info, "Selected Session Option");
-            currentStep = "Step SelectSessionHour";
+            CurrentStep = "Step SelectSessionHour";
             advancedDateSelectorPage.SelectSessionHour();
             
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClickComprarButton";
+            CurrentStep = "Step ClickComprarButton";
             advancedDateSelectorPage.ClickOnComprarButton();
 
             LogStep(Status.Info, "Completed personal information");
-            currentStep = "Step CompletePersonalInformation";
-            reservationSteps.CompletePersonalInformation();
+            CurrentStep = "Step CompletePersonalInformation";
+            ReservationSteps.CompletePersonalInformation();
 
             LogStep(Status.Info, "Checked conditions checkbox");
-            currentStep = "Step CheckTheConditionsCheckbox";
-            reservationSteps.CheckTheConditionsCheckbox();
+            CurrentStep = "Step CheckTheConditionsCheckbox";
+            ReservationSteps.CheckTheConditionsCheckbox();
 
             LogStep(Status.Info, "Checked privacy checkbox");
-            currentStep = "Step CheckThePrivacyCheckbox";
-            reservationSteps.CheckThePrivacyCheckbox();
+            CurrentStep = "Step CheckThePrivacyCheckbox";
+            ReservationSteps.CheckThePrivacyCheckbox();
 
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClicksComprarButtonAgain";
-            reservationSteps.ClicksOnComprarButtonAgain();
+            CurrentStep = "Step ClicksComprarButtonAgain";
+            ReservationSteps.ClicksOnComprarButtonAgain();
 
             LogStep(Status.Info, "Completed card information");
-            currentStep = "Step CompleteTheCardInformation";
-            cardSteps.CompleteTheCardInformation();
+            CurrentStep = "Step CompleteTheCardInformation";
+            CardSteps.CompleteTheCardInformation();
 
             LogStep(Status.Info, "Clicked on Pagar button");
-            currentStep = "Step ClickPagarButton";
-            cardSteps.ClickOnPagarButton();
+            CurrentStep = "Step ClickPagarButton";
+            CardSteps.ClickOnPagarButton();
 
             LogStep(Status.Info, "Clicked on Enviar button");
-            currentStep = "Step ClickOnEnviarButton";
-            cardSteps.ClickOnEnviarButton();
+            CurrentStep = "Step ClickOnEnviarButton";
+            CardSteps.ClickOnEnviarButton();
 
             LogStep(Status.Info, "Clicked on Continuar button");
-            currentStep = "Step ClickOnContinuarButton";
-            cardSteps.ClickOnContinuarButton();
+            CurrentStep = "Step ClickOnContinuarButton";
+            CardSteps.ClickOnContinuarButton();
 
             LogStep(Status.Info, "Purchase completed");
-            currentStep = "PurchaseOKMessage";
+            CurrentStep = "PurchaseOKMessage";
             purchaseOkSteps.PurchaseOkMessage();
 
             LogStep(Status.Info, "Ticket Purchase Successful");

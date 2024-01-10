@@ -17,9 +17,9 @@ public class AdvancedDateSelectorPage : BasePage
     private readonly By radioButtonElement = By.XPath("//span[contains(text(),'Hemisfèric')]/following::input[@type='radio'][1]");
     private readonly By sessionDropdownElement = By.XPath("//span[contains(text(),'Hemisfèric')]/following::select[@class='form-select form-select-sm' and not(@disabled)]");
     private readonly By advancedDateSelectorElement = By.ClassName("sv-tickets__actions");
-    private string expectedSessionMessage = "Selecciona la sesión";
-    private string expectedChosenDateMessage = "Fecha elegida";
-    
+    private const string ExpectedSessionMessage = "Selecciona la sesión";
+    private const string ExpectedChosenDateMessage = "Fecha elegida";
+
     public AdvancedDateSelectorPage(IWebDriver driver) : base(driver)
     {
         random = new Random();
@@ -27,14 +27,14 @@ public class AdvancedDateSelectorPage : BasePage
     
     public void HasAdvancedDateSelector()
     {
-        IWebElement element = fluentWait.Until(ExpectedConditions.ElementExists(By.XPath("//div[@class='sv-tickets__actions']")));
+        IWebElement element = FluentWait.Until(ExpectedConditions.ElementExists(By.XPath("//div[@class='sv-tickets__actions']")));
         try
         {
             /*string needsAdvancedDateSelectorValue = element.GetAttribute("productname");
             Console.WriteLine($"Valor de 'needsadvanceddateselector': {needsAdvancedDateSelectorValue}");
             Console.WriteLine($"HTML del elemento: {element.GetAttribute("productname")}");*/
             var script = "return arguments[0].getAttribute('productname');";
-            var attribute = (string)((IJavaScriptExecutor)driver).ExecuteScript(script, element);
+            var attribute = (string)((IJavaScriptExecutor)Driver).ExecuteScript(script, element);
             Console.WriteLine($"Valor del atributo: {attribute}");
         }
         catch (Exception ex)
@@ -45,11 +45,11 @@ public class AdvancedDateSelectorPage : BasePage
     public bool VerifyAdvancedSelectorMessage()
     {
         Thread.Sleep(2000);
-        IWebElement sessionMessage = fluentWait.Until(ExpectedConditions.ElementIsVisible(sessionMessageElement));
-        IWebElement choseDateMessage = fluentWait.Until(ExpectedConditions.ElementIsVisible(chosenDateElement));
+        IWebElement sessionMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(sessionMessageElement));
+        IWebElement choseDateMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(chosenDateElement));
         string message = sessionMessage.Text;
         string dateMessage = choseDateMessage.Text;
-        Assert.That(dateMessage.Equals(expectedChosenDateMessage) && message.Equals(expectedSessionMessage), "The messages do not match the expected messages");
+        Assert.That(dateMessage.Equals(ExpectedChosenDateMessage) && message.Equals(ExpectedSessionMessage), "The messages do not match the expected messages");
         return true;
     }
 
@@ -58,7 +58,7 @@ public class AdvancedDateSelectorPage : BasePage
         try
         {
             //Thread.Sleep(2000);
-            IList<IWebElement> radioButtons = fluentWait.Until(webDriver => webDriver.FindElements(radioButtonElement));
+            IList<IWebElement> radioButtons = FluentWait.Until(webDriver => webDriver.FindElements(radioButtonElement));
 
             if (radioButtons.Count > 0)
             {
@@ -82,7 +82,7 @@ public class AdvancedDateSelectorPage : BasePage
         try
         {
             //Thread.Sleep(2000);
-            IWebElement dropdown = fluentWait.Until(ExpectedConditions.ElementToBeClickable(sessionDropdownElement));
+            IWebElement dropdown = FluentWait.Until(ExpectedConditions.ElementToBeClickable(sessionDropdownElement));
 
             var select = new SelectElement(dropdown);
             IList<IWebElement> options = select.Options;
@@ -103,7 +103,7 @@ public class AdvancedDateSelectorPage : BasePage
     {
         try
         {
-            fluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement)).Click();
+            FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement)).Click();
         }
         catch (NoSuchElementException ex)
         {

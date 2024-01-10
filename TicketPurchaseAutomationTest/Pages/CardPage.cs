@@ -30,7 +30,7 @@ public class CardPage : BasePage
 
             foreach (var field in cardInfo)
             {
-                var element = fluentWait.Until(ExpectedConditions.ElementIsVisible(By.XPath(field.Key)));
+                var element = FluentWait.Until(ExpectedConditions.ElementIsVisible(By.XPath(field.Key)));
                 ClearAndSetInputValue(element, field.Value);
             }
         }
@@ -48,7 +48,7 @@ public class CardPage : BasePage
     {
         try
         {
-            IWebElement pagarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(pagarBtnElement));
+            IWebElement pagarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(pagarBtnElement));
             pagarButton.Click();
         }
         catch (NoSuchElementException ex)
@@ -65,7 +65,7 @@ public class CardPage : BasePage
     {
         try
         {
-            IWebElement enviarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(enviarBtnElement));
+            IWebElement enviarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(enviarBtnElement));
             enviarButton.Click(); 
         }
         catch (NoSuchElementException ex)
@@ -82,7 +82,7 @@ public class CardPage : BasePage
     {
         try
         {
-            IWebElement continuarButton = fluentWait.Until(ExpectedConditions.ElementToBeClickable(continuarBtnElement));
+            IWebElement continuarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(continuarBtnElement));
             continuarButton.Click(); 
         }
         catch (NoSuchElementException ex)
@@ -99,9 +99,9 @@ public class CardPage : BasePage
     {
         try
         {
-            fluentWait.Until(ExpectedConditions.AlertIsPresent());
+            FluentWait.Until(ExpectedConditions.AlertIsPresent());
 
-            IAlert alert = driver.SwitchTo().Alert();
+            IAlert alert = Driver.SwitchTo().Alert();
 
             string text = alert.Text;
 

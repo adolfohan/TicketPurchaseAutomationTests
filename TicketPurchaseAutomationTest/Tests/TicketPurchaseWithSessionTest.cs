@@ -13,8 +13,8 @@ public class TicketPurchaseWithSessionTest : BaseTest
         try
         {
             LogStep(Status.Info, "Navigating to URL");
-            currentStep = "Step GoToURL";
-            homePage.NavigateToSessionUrl();
+            CurrentStep = "Step GoToURL";
+            HomePage.NavigateToSessionUrl();
             
             CommonSessionPurchaseSteps();
         }

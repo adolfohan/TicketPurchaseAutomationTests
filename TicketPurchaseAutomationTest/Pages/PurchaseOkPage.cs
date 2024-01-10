@@ -18,7 +18,7 @@ public class PurchaseOkPage : BasePage
     {
         try
         {
-            IWebElement purchaseOkMessage = fluentWait.Until(ExpectedConditions.ElementIsVisible(purchaseOkMessageElement));
+            IWebElement purchaseOkMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(purchaseOkMessageElement));
             string message = purchaseOkMessage.Text;
             Assert.That(message, Is.EqualTo(expectedMessage), "The message does not match the expected message");
         }

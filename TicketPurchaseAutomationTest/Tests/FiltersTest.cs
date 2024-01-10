@@ -16,12 +16,12 @@ public class FiltersTest : BaseTest
             LogStep(Status.Info, "Starting Home Page Filters Test");
 
             LogStep(Status.Info, "Navigating to URL");
-            currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            CurrentStep = "Step GoToURL";
+            HomePage.NavigateToUrl();
 
             LogStep(Status.Info, "Clicked on All Filters");
-            currentStep = "Step ClickOnAllFilters";
-            homePage.ClickOnAllLeisureFamiliesFilters();
+            CurrentStep = "Step ClickOnAllFilters";
+            HomePage.ClickOnAllLeisureFamiliesFilters();
             
             LogStep(Status.Info, "Filters Tests Successful");
         }
@@ -40,12 +40,12 @@ public class FiltersTest : BaseTest
             LogStep(Status.Info, "Starting Home Page Filters Test");
 
             LogStep(Status.Info, "Navigating to URL");
-            currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            CurrentStep = "Step GoToURL";
+            HomePage.NavigateToUrl();
             
             LogStep(Status.Info, "Deselected All Filter");
-            currentStep = "Step DeselectAllFilters";
-            homePage.DeselectAllLeisureFamiliesFilters();
+            CurrentStep = "Step DeselectAllFilters";
+            HomePage.DeselectAllLeisureFamiliesFilters();
             
             LogStep(Status.Info, "Deselect Filters Tests Successful");
         }
@@ -64,12 +64,12 @@ public class FiltersTest : BaseTest
             LogStep(Status.Info, "Starting Home Page Countries Filters Test");
 
             LogStep(Status.Info, "Navigating to URL");
-            currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            CurrentStep = "Step GoToURL";
+            HomePage.NavigateToUrl();
 
             LogStep(Status.Info, "Clicked on All Countries Filters");
-            currentStep = "Step ClickOnAllFilters";
-            homePage.ClickOnAllCountryFilters();
+            CurrentStep = "Step ClickOnAllFilters";
+            HomePage.ClickOnAllCountryFilters();
             
             LogStep(Status.Info, "Select All Countries Filters Tests Successful");
         }
@@ -88,12 +88,12 @@ public class FiltersTest : BaseTest
             LogStep(Status.Info, "Starting Home Page Countries Filters Test");
 
             LogStep(Status.Info, "Navigating to URL");
-            currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            CurrentStep = "Step GoToURL";
+            HomePage.NavigateToUrl();
 
             LogStep(Status.Info, "Deselected All Countries Filter");
-            currentStep = "Step DeselectAllCountryFilters";
-            homePage.DeselectAllCountryFilters();
+            CurrentStep = "Step DeselectAllCountryFilters";
+            HomePage.DeselectAllCountryFilters();
             
             LogStep(Status.Info, "Deselect All Countries Filters Tests Successful");
         }

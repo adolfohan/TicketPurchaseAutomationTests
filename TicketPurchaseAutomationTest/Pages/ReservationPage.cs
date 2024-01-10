@@ -6,9 +6,9 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class ReservationPage : BasePage
+public class ReservationPage(IWebDriver driver) : BasePage(driver)
 {
-    private readonly Random random;
+    private readonly Random random = new();
     private readonly By nameElement = By.Id("clientFullName-id");
     private readonly By surNameElement = By.Id("clientSurname-id");
     private readonly By idElement = By.Id("clientDocumentIdentifier-id");
@@ -20,31 +20,27 @@ public class ReservationPage : BasePage
     private readonly By comprarButtonElement = By.XPath(
             "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']//span[@class='sv-button__label j-button-buy-label'][normalize-space()='Comprar']");
     private readonly By datosDeLaOperacionElement = By.XPath("//h1[@class='datosDeLaOperacion']");
-    public ReservationPage(IWebDriver driver) : base(driver)
-    {
-        random = new Random();
-    }
-    
+
     public void CompletePersonalInformation(string fullName, string surName, string id, string email, string confirmEmail,string phone)
     {
         try
         {
-            IWebElement fullNameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
+            IWebElement fullNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
             ClearAndSetInputValue(fullNameField, fullName);
 
-            IWebElement surNameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
+            IWebElement surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
             ClearAndSetInputValue(surNameField, surName);
 
-            IWebElement idField = fluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
+            IWebElement idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
             ClearAndSetInputValue(idField, id);
 
-            IWebElement emailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
+            IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
             ClearAndSetInputValue(emailField, email);
 
-            IWebElement confirmEmailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
+            IWebElement confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
             ClearAndSetInputValue(confirmEmailField, confirmEmail);
             
-            IWebElement phoneField = fluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
+            IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
             ClearAndSetInputValue(phoneField, phone);
         }
         catch (NoSuchElementException ex)
@@ -62,7 +58,7 @@ public class ReservationPage : BasePage
         try
         {
             IWebElement conditionsCheckbox =
-                fluentWait.Until(ExpectedConditions.ElementToBeClickable(conditionsCheckboxElement));
+                FluentWait.Until(ExpectedConditions.ElementToBeClickable(conditionsCheckboxElement));
 
             ScrollIntoView(conditionsCheckbox);
             
@@ -83,7 +79,7 @@ public class ReservationPage : BasePage
         try
         {
             IWebElement privacyCheckbox =
-                fluentWait.Until(ExpectedConditions.ElementToBeClickable(privacyCheckboxElement));
+                FluentWait.Until(ExpectedConditions.ElementToBeClickable(privacyCheckboxElement));
 
             ScrollIntoView(privacyCheckbox);
             //privacyCheckbox.Click();
@@ -103,7 +99,7 @@ public class ReservationPage : BasePage
     {
         try
         {
-            IList<IWebElement> comprarButtons = fluentWait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(comprarButtonElement));
+            IList<IWebElement> comprarButtons = FluentWait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(comprarButtonElement));
             
             if (comprarButtons.Count > 0)
             {
@@ -131,11 +127,11 @@ public class ReservationPage : BasePage
     
     public void BlankFields()
     {
-        IWebElement nameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
-        IWebElement surNameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
-        IWebElement idField = fluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
-        IWebElement emailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
-        IWebElement phoneField = fluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
+        IWebElement nameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
+        IWebElement surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
+        IWebElement idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
+        IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
+        IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
         CheckValidity(nameField); 
         CheckValidity(surNameField); 
         CheckValidity(idField); 
@@ -145,8 +141,8 @@ public class ReservationPage : BasePage
 
     public void InvalidNameAndSurname()
     {
-        IWebElement nameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
-        IWebElement surNameField = fluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
+        IWebElement nameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
+        IWebElement surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
         
         try
         {
@@ -163,7 +159,7 @@ public class ReservationPage : BasePage
 
     public void InvalidId()
     {
-        IWebElement phoneField = fluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
+        IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
         try
         {
             CheckValidity(phoneField);
@@ -178,7 +174,7 @@ public class ReservationPage : BasePage
     
     public void InvalidEmail()
     {
-        IWebElement emailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
+        IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
         try
         {
             CheckValidity(emailField);
@@ -193,7 +189,7 @@ public class ReservationPage : BasePage
     
     public void InvalidConfirmationEmail()
     {
-        IWebElement confirmEmailField = fluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
+        IWebElement confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
         try
         {
             CheckValidity(confirmEmailField);
@@ -208,7 +204,7 @@ public class ReservationPage : BasePage
     
     public void InvalidPhone()
     {
-        IWebElement phoneField = fluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
+        IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
         try
         {
             CheckValidity(phoneField);
@@ -224,9 +220,9 @@ public class ReservationPage : BasePage
     public void AreCheckboxesSelected()
     {
         IWebElement conditionsCheckbox =
-            fluentWait.Until(ExpectedConditions.ElementToBeClickable(conditionsCheckboxElement));
+            FluentWait.Until(ExpectedConditions.ElementToBeClickable(conditionsCheckboxElement));
         IWebElement privacyCheckbox =
-            fluentWait.Until(ExpectedConditions.ElementToBeClickable(privacyCheckboxElement));
+            FluentWait.Until(ExpectedConditions.ElementToBeClickable(privacyCheckboxElement));
         
         bool isConditionsCheckboxSelected = conditionsCheckbox.Selected;
         bool isPrivacyCheckboxSelected = privacyCheckbox.Selected;
@@ -239,7 +235,7 @@ public class ReservationPage : BasePage
     {
         try
         {
-            IWebElement datosElement = driver.FindElement(datosDeLaOperacionElement);
+            IWebElement datosElement = Driver.FindElement(datosDeLaOperacionElement);
             DrawBorder(datosElement);
 
             if (datosElement.Displayed)

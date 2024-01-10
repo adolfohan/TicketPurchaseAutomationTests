@@ -12,7 +12,7 @@ public class HomePageSteps
         homePage = new HomePage(driver);
     }
     
-    public void GoToURL()
+    public void GoToUrl()
     {
         homePage.NavigateToUrl();
     }

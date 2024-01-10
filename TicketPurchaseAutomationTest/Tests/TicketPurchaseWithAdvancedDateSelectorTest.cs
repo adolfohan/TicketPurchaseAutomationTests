@@ -13,8 +13,8 @@ public class TicketPurchaseWithAdvancedDateSelectorTest : BaseTest
         try
         {
             LogStep(Status.Info, "Navigating to URL");
-            currentStep = "Step GoToURL";
-            homePage.NavigateToAdvancedDateSelectorUrl();
+            CurrentStep = "Step GoToURL";
+            HomePage.NavigateToAdvancedDateSelectorUrl();
         
             CommonAdvancedDateSelectorPurchaseSteps();
         }

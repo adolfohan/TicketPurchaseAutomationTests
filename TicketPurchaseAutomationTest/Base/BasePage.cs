@@ -6,19 +6,19 @@ namespace TicketPurchaseAutomationTest.Base;
 
 public class BasePage
 {
-    protected IWebDriver driver;
-    protected readonly DefaultWait<IWebDriver> fluentWait;
+    protected IWebDriver Driver;
+    protected readonly DefaultWait<IWebDriver> FluentWait;
 
     protected BasePage(IWebDriver driver)
     {
-        this.driver = driver;
-        fluentWait = new DefaultWait<IWebDriver>(driver)
+        this.Driver = driver;
+        FluentWait = new DefaultWait<IWebDriver>(driver)
         {
             Timeout = TimeSpan.FromSeconds(30),
             PollingInterval = TimeSpan.FromSeconds(2)
         };
-        fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
-        fluentWait.IgnoreExceptionTypes(typeof(WebDriverTimeoutException));
+        FluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+        FluentWait.IgnoreExceptionTypes(typeof(WebDriverTimeoutException));
     }
     
     protected void ClearAndSetInputValue(IWebElement inputField, string value)
@@ -29,13 +29,13 @@ public class BasePage
 
     protected void ScrollIntoView(IWebElement element)
     {
-        IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
+        IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)Driver;
         jsExecutor.ExecuteScript("arguments[0].scrollIntoView(true);", element); //{behavior: 'auto', block: 'center'}
     }
 
     protected void CheckValidity(IWebElement element)
     {
-        IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+        IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
         bool isInvalid = (bool)js.ExecuteScript("return arguments[0].checkValidity();", element);
         
         Assert.That(isInvalid, Is.False, "The input text is invalid");
@@ -43,13 +43,13 @@ public class BasePage
     
     protected void DrawBorder(IWebElement element)
     {
-        IJavaScriptExecutor js = (IJavaScriptExecutor) driver;
+        IJavaScriptExecutor js = (IJavaScriptExecutor) Driver;
         js.ExecuteScript("arguments[0].style.border='2px solid red'", element);
     }
 
-    protected void ClickByJS(IWebElement element)
+    protected void ClickByJs(IWebElement element)
     {
-        IJavaScriptExecutor js = (IJavaScriptExecutor) driver;
+        IJavaScriptExecutor js = (IJavaScriptExecutor) Driver;
         js.ExecuteScript("arguments[0].click();", element);
     }
 }
