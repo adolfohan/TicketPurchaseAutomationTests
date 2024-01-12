@@ -70,9 +70,3 @@ steps:
     inputs:
       targetPath: '$(System.DefaultWorkingDirectory)/TicketPurchaseAutomationTest/Reports'
       artifact: 'ExtentReport'
-
-  - task: PublishPipelineArtifact@1
-    displayName: 'Publish Screenshots Artifact'
-    inputs:
-      targetPath: '$(System.DefaultWorkingDirectory)/TicketPurchaseAutomationTest/Screenshots'
-      artifact: 'Screenshots'

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="">
+    <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="Reports and screenshot deleted">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BasePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BasePage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" afterDir="false" />
@@ -158,7 +158,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Base/BasePage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Base/BaseTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Pages/PurchaseOkPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/17.5.0/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/808851b07acfa1c5c94b0d4f9fb50debedb2df70/src/libraries/System.Private.CoreLib/src/System/Threading/ThreadLocal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/98/d57b0b7d/RemoteWebDriver.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -223,6 +227,15 @@
       <workItem from="1703679147557" duration="24123000" />
       <workItem from="1704713309484" duration="21798000" />
     </task>
+    <task id="LOCAL-00001" summary="Reports and screenshot deleted">
+      <option name="closed" value="true" />
+      <created>1705064859783</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705064859783</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +258,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Reports and screenshot deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reports and screenshot deleted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
