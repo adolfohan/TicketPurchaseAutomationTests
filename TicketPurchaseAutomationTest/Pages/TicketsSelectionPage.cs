@@ -54,7 +54,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
             {
                 IList<IWebElement> inputFields =
                     FluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
-               
+
                 if (inputFields.Count > 0)
                 {
                     var randomIndex = random.Next(0, inputFields.Count);
@@ -76,6 +76,16 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
                 homePage.NavigateToNormalUrl();
                 SelectNumberOfTickets(numberOfTickets);
             }
+        }
+        catch (WebDriverTimeoutException ex)
+        {
+            Console.WriteLine($"Timeout error: {ex.Message}");
+            Console.WriteLine($"Error de Timeout: {ex.Message}");
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+            Console.WriteLine($"Elemento no encontrado: {ex.Message}");
         }
         catch (Exception ex)
         {

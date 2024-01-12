@@ -6,7 +6,7 @@ namespace TicketPurchaseAutomationTest.Base;
 
 public class BasePage
 {
-    protected IWebDriver Driver;
+    protected readonly IWebDriver Driver;
     protected readonly DefaultWait<IWebDriver> FluentWait;
 
     protected BasePage(IWebDriver driver)

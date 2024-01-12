@@ -107,7 +107,7 @@ public class BaseTest
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
 
             ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
-            //CleanUpOldScreenshots();
+            CleanUpOldScreenshots();
 
             return screenshotPath;
         }

@@ -5,14 +5,10 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class PurchaseOkPage : BasePage
+public class PurchaseOkPage(IWebDriver driver) : BasePage(driver)
 {
     private readonly By purchaseOkMessageElement = By.CssSelector("h1.mt-2");
-    private string expectedMessage = "Gracias por tu compra";
-    
-    public PurchaseOkPage(IWebDriver driver) : base(driver)
-    {
-    }
+    private const string ExpectedMessage = "Gracias por tu compra";
 
     public void PurchaseOkVerificationMessage()
     {
@@ -20,7 +16,7 @@ public class PurchaseOkPage : BasePage
         {
             IWebElement purchaseOkMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(purchaseOkMessageElement));
             string message = purchaseOkMessage.Text;
-            Assert.That(message, Is.EqualTo(expectedMessage), "The message does not match the expected message");
+            Assert.That(message, Is.EqualTo(ExpectedMessage), "The message does not match the expected message");
         }
         catch (NoSuchElementException ex)
         {
