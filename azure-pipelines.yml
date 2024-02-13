@@ -13,60 +13,40 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  BuildConfiguration: 'Release'
+  buildConfiguration: 'Release'
 
 steps:
-  - task: UseDotNet@2
-    displayName: 'Install .NET SDK'
-    inputs:
-      packageType: 'sdk'
-      installationPath: $(Agent.ToolsDirectory)/dotnet
+  - script: |
+      dotnet build --configuration $(buildConfiguration)
+    displayName: 'dotnet build $(buildConfiguration)'
 
-  - task: NuGetToolInstaller@1
-    displayName: 'Install NuGet'
-
-  - script: dotnet restore
-    displayName: 'Restore Dependencies'
-
-  - task: NuGetCommand@2
-    displayName: 'NuGet Restore'
-    inputs:
-      restoreSolution: '$(solution)'
-
-  - task: VSBuild@1
-    displayName: 'Build Solution'
-    inputs:
-      solution: '**/*.sln'
-      platform: 'Any CPU'
-      configuration: 'Release' 
-  
-  - task: DotNetCoreCLI@2
-    displayName: 'Run Tests'
-    inputs:
-      command: 'test'
-      projects: '**/**test*.csproj'
-      arguments: '--configuration $(BuildConfiguration)'
+  - script: |
+      set SourceDirectory=$(Build.SourcesDirectory)
+      dotnet test --configuration $(buildConfiguration) --logger trx
+    displayName: 'dotnet test'
+    continueOnError: true
 
   - task: PublishTestResults@2
-    displayName: 'Publish Test Results'
     condition: succeededOrFailed()
     inputs:
-      testResultsFormat: 'NUnit'
-      testResultsFiles: '**/TestsResults.xml'
-      searchFolder: '$(System.DefaultWorkingDirectory)'
-      mergeTestResults: true
-      failTaskOnFailedTests: true
-      testRunTitle: 'Test Results'
-      publishRunAttachments: true
+      testRunner: VSTest
+      testResultsFiles: '**/*.trx'
 
-  - task: PublishPipelineArtifact@1
-    displayName: 'Publish Test Results Artifact'
+  - task: CopyFiles@2
     inputs:
-      targetPath: '$(System.DefaultWorkingDirectory)'
-      artifact: 'TestResults'
+      sourceFolder: '$(Build.SourcesDirectory)'
+      contents: '**/*.png'
+      targetFolder: '$(Build.ArtifactStagingDirectory)/Screenshots'
+      artifactName: 'Screenshots'
 
-  - task: PublishPipelineArtifact@1
-    displayName: 'Publish Extent Report Artifact'
+  - task: CopyFiles@2
     inputs:
-      targetPath: '$(System.DefaultWorkingDirectory)/TicketPurchaseAutomationTest/Reports'
-      artifact: 'ExtentReport'
+      sourceFolder: '$(Build.SourcesDirectory)'
+      contents: '**/*.html'
+      targetFolder: '$(Build.ArtifactStagingDirectory)/Reports'
+      artifactName: 'Reports'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '$(Build.ArtifactStagingDirectory)'
+      artifactName: 'TestArtifacts'

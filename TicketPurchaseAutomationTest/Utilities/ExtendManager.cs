@@ -6,17 +6,13 @@ namespace TicketPurchaseAutomationTest.Utilities;
 public abstract class ExtentManager
 {
     private static ExtentReports? _extent;
-    //private static readonly string baseReportDirectory = @"$(Build.ArtifactStagingDirectory)\TicketPurchaseAutomationTest\Reports";
-
-    private const string BaseReportDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
-    //private const string BaseReportDirectory = @"$(System.DefaultWorkingDirectory)\TicketPurchaseAutomationTest\Reports";
-
-
+    
+    //private const string BaseReportDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
+    private static readonly string BaseReportDirectory = Path.Combine(Environment.GetEnvironmentVariable("SourceDirectory") ?? @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\", "Reports");
     public static ExtentReports GetExtent(string testName)
     {
         if (_extent != null) return _extent;
-
-        //var reportDirectory = GetReportDirectory(); //Path.Combine(baseReportDirectory, DateTime.Now.ToString("yyyyMMdd"));
+        
         if (!Directory.Exists(BaseReportDirectory))
         {
             Directory.CreateDirectory(BaseReportDirectory);

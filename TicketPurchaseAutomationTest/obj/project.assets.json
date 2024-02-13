@@ -991,7 +991,7 @@
           "buildTransitive/Selenium.WebDriver.targets": {}
         }
       },
-      "Selenium.WebDriver.ChromeDriver/120.0.6099.7100": {
+      "Selenium.WebDriver.ChromeDriver/121.0.6167.8500": {
         "type": "package",
         "build": {
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
@@ -3751,13 +3751,14 @@
         "selenium.webdriver.nuspec"
       ]
     },
-    "Selenium.WebDriver.ChromeDriver/120.0.6099.7100": {
-      "sha512": "H4tccr0Asuv4Xe5i2LC8XGiv6UHBfgVP9Liy7uUvDadfHitq3DeXL4CG5/mQy3Vhd8EnmM6cdrI8QQEHEP/6Dg==",
+    "Selenium.WebDriver.ChromeDriver/121.0.6167.8500": {
+      "sha512": "vGSkTin9LkYpkG5DbTVF78tI2p4Tchw+gnzTxA6JpwLKvaf5mJrNd5TgpfpsMNg5DuI5jsc2oW0ZhrA86wY6fw==",
       "type": "package",
-      "path": "selenium.webdriver.chromedriver/120.0.6099.7100",
+      "path": "selenium.webdriver.chromedriver/121.0.6167.8500",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "LICENSE",
         "README.md",
         "build/DefinePropertiesChromeDriver.targets",
         "build/Selenium.WebDriver.ChromeDriver.targets",
@@ -3770,7 +3771,7 @@
         "driver/win32/LICENSE.chromedriver",
         "driver/win32/chromedriver.exe",
         "nupkg-icon.png",
-        "selenium.webdriver.chromedriver.120.0.6099.7100.nupkg.sha512",
+        "selenium.webdriver.chromedriver.121.0.6167.8500.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
       ]
     },
@@ -7329,7 +7330,7 @@
       "RazorEngine.NetCore >= 3.1.0",
       "Selenium.Support >= 4.12.4",
       "Selenium.WebDriver >= 4.12.4",
-      "Selenium.WebDriver.ChromeDriver >= 120.0.6099.7100",
+      "Selenium.WebDriver.ChromeDriver >= 121.0.6167.8500",
       "coverlet.collector >= 3.2.0"
     ]
   },
@@ -7412,7 +7413,7 @@
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
-            "version": "[120.0.6099.7100, )"
+            "version": "[121.0.6167.8500, )"
           },
           "coverlet.collector": {
             "target": "Package",

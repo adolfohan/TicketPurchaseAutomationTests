@@ -1,12 +1,6 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=9F340F7A_002D748D_002D4AD5_002D86BE_002D170E104F51B8_002Fd_003APages_002Ff_003AAdvancedDateSelectorPage_002Ecs/@EntryIndexedValue">ExplicitlyExcluded</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1e14e18b_002Db936_002D477d_002D8708_002Da751475811a9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TicketPurchaseWrongCardTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Or&gt;&#xD;
-    &lt;ProjectFile&gt;9F340F7A-748D-4AD5-86BE-170E104F51B8/d:Tests/f:TicketPurchaseBaseTest.cs&lt;/ProjectFile&gt;&#xD;
-    &lt;ProjectFile&gt;9F340F7A-748D-4AD5-86BE-170E104F51B8/d:Tests/f:FiltersTest.cs&lt;/ProjectFile&gt;&#xD;
-    &lt;ProjectFile&gt;9F340F7A-748D-4AD5-86BE-170E104F51B8/d:Tests/f:TicketPurchaseWithAdvancedDateSelectorTest.cs&lt;/ProjectFile&gt;&#xD;
-  &lt;/Or&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3d1992cb_002Dd33d_002D48b5_002Db89b_002D58315d43d130/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from TicketPurchaseWithSessionTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;ProjectFile&gt;9F340F7A-748D-4AD5-86BE-170E104F51B8/d:Tests/f:TicketPurchaseWithSessionTest.cs&lt;/ProjectFile&gt;&#xD;
@@ -14,6 +8,7 @@
       &lt;TestId&gt;NUnit3x::9F340F7A-748D-4AD5-86BE-170E104F51B8::net7.0::TicketPurchaseAutomationTest.Tests.TicketPurchaseWithAdvancedDateSelectorTest.AdvancedDateSelectorTest&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
     &lt;ProjectFile&gt;9F340F7A-748D-4AD5-86BE-170E104F51B8/d:Tests/f:TicketPurchaseWithAdvancedDateSelectorTest.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;9F340F7A-748D-4AD5-86BE-170E104F51B8/d:Tests/f:TicketPurchaseBaseTest.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	
