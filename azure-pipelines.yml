@@ -23,7 +23,7 @@ steps:
   - script: |
       set SourceDirectory=$(Build.SourcesDirectory)
       dotnet test --configuration $(buildConfiguration) --logger trx
-    displayName: 'Running tests'
+    displayName: 'Running Selenium tests'
     continueOnError: true
 
   - task: PublishTestResults@2
