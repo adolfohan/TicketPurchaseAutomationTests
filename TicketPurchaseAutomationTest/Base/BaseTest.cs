@@ -33,6 +33,12 @@ public class BaseTest
     public void SetUp()
     {
         driver = new ChromeDriver();
+        
+        if (Environment.GetEnvironmentVariable("TF_BUILD") != null)
+        {
+            driver.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
+        }
+        
         HomePage = new HomePage(driver);
         HomePageSteps = new HomePageSteps(driver);
         TicketsSelectionPage = new TicketsSelectionPage(driver);
