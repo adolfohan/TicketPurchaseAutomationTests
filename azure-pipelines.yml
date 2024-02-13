@@ -18,21 +18,23 @@ variables:
 steps:
   - script: |
       dotnet build --configuration $(buildConfiguration)
-    displayName: 'dotnet build $(buildConfiguration)'
+    displayName: 'Build Configuration'
 
   - script: |
       set SourceDirectory=$(Build.SourcesDirectory)
       dotnet test --configuration $(buildConfiguration) --logger trx
-    displayName: 'dotnet test'
+    displayName: 'Running tests'
     continueOnError: true
 
   - task: PublishTestResults@2
+    displayName: 'Publish Test Results'
     condition: succeededOrFailed()
     inputs:
       testRunner: VSTest
       testResultsFiles: '**/*.trx'
 
   - task: CopyFiles@2
+    displayName: 'Publish Screenshots'
     inputs:
       sourceFolder: '$(Build.SourcesDirectory)'
       contents: '**/*.png'
@@ -40,6 +42,7 @@ steps:
       artifactName: 'Screenshots'
 
   - task: CopyFiles@2
+    displayName: 'Publish Reports'
     inputs:
       sourceFolder: '$(Build.SourcesDirectory)'
       contents: '**/*.html'
@@ -47,6 +50,7 @@ steps:
       artifactName: 'Reports'
 
   - task: PublishBuildArtifacts@1
+    displayName: 'Publish Tests Artifacts'
     inputs:
       pathToPublish: '$(Build.ArtifactStagingDirectory)'
       artifactName: 'TestArtifacts'
