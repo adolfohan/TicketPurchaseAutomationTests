@@ -46,11 +46,13 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
         }*/
     }
     
-    public void SelectNumberOfTickets(string numberOfTickets)
+    public void SelectNumberOfTickets(string numberOfTickets, int maxAttempts = 10)
     {
-        try
+        int attempts = 0;
+
+        while (attempts < maxAttempts)
         {
-            while (true)
+            try
             {
                 IList<IWebElement> inputFields =
                     FluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
@@ -71,25 +73,27 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
                     break;
                 }
 
-                //driver.Navigate().Back();
-                //homePage.ClickOnRandomMeInteresaButton();
                 homePage.NavigateToNormalUrl();
-                SelectNumberOfTickets(numberOfTickets);
             }
+            catch (WebDriverTimeoutException ex)
+            {
+                Console.WriteLine($"Timeout error: {ex.Message}");
+            }
+            catch (NoSuchElementException ex)
+            {
+                Console.WriteLine($"Element not found: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+
+            attempts++;
         }
-        catch (WebDriverTimeoutException ex)
+
+        if (attempts == maxAttempts)
         {
-            Console.WriteLine($"Timeout error: {ex.Message}");
-            Console.WriteLine($"Error de Timeout: {ex.Message}");
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-            Console.WriteLine($"Elemento no encontrado: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred: {ex.Message}");
+            Console.WriteLine("Max attempts reached, could not select number of tickets");
         }
     }
     
@@ -119,10 +123,6 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
         catch (NoSuchElementException ex)
         {
             Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while clicking on 'Comprar' button in Ticket Selection Page: {ex.Message}");
         }
     }
 

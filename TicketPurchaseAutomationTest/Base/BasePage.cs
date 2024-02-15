@@ -11,7 +11,7 @@ public class BasePage
 
     protected BasePage(IWebDriver driver)
     {
-        this.Driver = driver;
+        Driver = driver;
         FluentWait = new DefaultWait<IWebDriver>(driver)
         {
             Timeout = TimeSpan.FromSeconds(30),
@@ -38,7 +38,7 @@ public class BasePage
         IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
         bool isInvalid = (bool)js.ExecuteScript("return arguments[0].checkValidity();", element);
         
-        Assert.That(isInvalid, Is.False, "The input text is invalid");
+        Assert.That(isInvalid, Is.True, "The input text is invalid as expected.");
     }
     
     protected void DrawBorder(IWebElement element)

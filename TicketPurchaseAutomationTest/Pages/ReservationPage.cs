@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Text.RegularExpressions;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using TicketPurchaseAutomationTest.Base;
@@ -132,11 +133,19 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
         IWebElement idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
         IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
         IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
-        CheckValidity(nameField); 
-        CheckValidity(surNameField); 
-        CheckValidity(idField); 
-        CheckValidity(emailField);        
-        CheckValidity(phoneField);
+        
+        string name = nameField.GetAttribute("value");
+        string lastName = surNameField.GetAttribute("value");
+        string id = idField.GetAttribute("value");
+        string email = emailField.GetAttribute("value");
+        string phone = phoneField.GetAttribute("value");
+
+        
+        Assert.IsTrue(string.IsNullOrEmpty(name), "Name field is empty");
+        Assert.IsTrue(string.IsNullOrEmpty(lastName), "Last name field is empty");
+        Assert.IsTrue(string.IsNullOrEmpty(id), "ID field is empty");
+        Assert.IsTrue(string.IsNullOrEmpty(email), "Email field is empty");
+        Assert.IsTrue(string.IsNullOrEmpty(phone), "Phone field is empty");
     }
 
     public void InvalidNameAndSurname()
@@ -144,77 +153,43 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
         IWebElement nameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
         IWebElement surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
         
-        try
-        {
-            CheckValidity(nameField);        
-            CheckValidity(surNameField);
-
-            Assert.Fail("The input text should be invalid, but it is valid.");
-        }
-        catch (Exception)
-        {
-            Assert.Pass("The input text is invalid as expected.");
-        }
+        string name = nameField.GetAttribute("value");
+        string lastName = surNameField.GetAttribute("value");
+        
+        Assert.IsFalse(Regex.IsMatch(name, @"^[a-zA-Z\s]*$"), "Invalid name");
+        Assert.IsFalse(Regex.IsMatch(lastName, @"^[a-zA-Z\s]*$"), "Invalid last name");
     }
 
     public void InvalidId()
     {
-        IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
-        try
-        {
-            CheckValidity(phoneField);
-
-            Assert.Fail("The input text should be invalid, but it is valid.");
-        }
-        catch (Exception)
-        {
-            Assert.Pass("The input text is invalid as expected.");
-        }
+        IWebElement idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
+    
+        string id = idField.GetAttribute("value");
+        Assert.IsFalse(Regex.IsMatch(id, @"^[a-zA-Z0-9]*$"), "Invalid ID");
     }
     
     public void InvalidEmail()
     {
         IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
-        try
-        {
-            CheckValidity(emailField);
-
-            Assert.Fail("The input text should be invalid, but it is valid.");
-        }
-        catch (Exception)
-        {
-            Assert.Pass("The input text is invalid as expected.");
-        }
+        
+        string email = emailField.GetAttribute("value");
+        Assert.IsFalse(Regex.IsMatch(email, @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$"), "Invalid email");
     }
     
     public void InvalidConfirmationEmail()
     {
         IWebElement confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
-        try
-        {
-            CheckValidity(confirmEmailField);
-
-            Assert.Fail("The input text should be invalid, but it is valid.");
-        }
-        catch (Exception)
-        {
-            Assert.Pass("The input text is invalid as expected.");
-        }
+        
+        string email = confirmEmailField.GetAttribute("value");
+        Assert.IsFalse(Regex.IsMatch(email, @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$"), "Invalid email");
     }
     
     public void InvalidPhone()
     {
         IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
-        try
-        {
-            CheckValidity(phoneField);
-
-            Assert.Fail("The input text should be invalid, but it is valid.");
-        }
-        catch (Exception)
-        {
-            Assert.Pass("The input text is invalid as expected.");
-        }
+        
+        string phone = phoneField.GetAttribute("value");
+        Assert.IsFalse(Regex.IsMatch(phone, @"^\+?\d*$"), "Invalid phone");
     }
 
     public void AreCheckboxesSelected()
@@ -240,16 +215,16 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
 
             if (datosElement.Displayed)
             {
-                Assert.Fail("The element is displayed, which is unexpected");
+                Assert.Fail("Card Page is displayed, which is unexpected");
             }
             else
             {
-                Console.WriteLine("The element is not displayed, as expected");
+                Console.WriteLine("Card Page is not displayed, as expected");
             }
         }
         catch (NoSuchElementException)
         {
-            Console.WriteLine("The element is not present, as expected");
+            Console.WriteLine("Card Page is not present, as expected");
         }
     }
 
