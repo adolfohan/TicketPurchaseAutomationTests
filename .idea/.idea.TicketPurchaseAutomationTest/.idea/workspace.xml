@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="Changes in validations methods">
+    <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="Minor changes to handble error 500">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/Error500Page.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/Error500Page.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/ReservationPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/ReservationPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" afterDir="false" />
@@ -63,8 +63,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Pages/Error500Page.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/17.5.0/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/808851b07acfa1c5c94b0d4f9fb50debedb2df70/src/libraries/System.Private.CoreLib/src/System/Threading/ThreadLocal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04a0eb0557dd4c24a73812c8be2af0061dea00/c4/c312bd20/ExtentTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad357debeae6416ba0091ae3707bffbe458c00/98/d57b0b7d/RemoteWebDriver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b3f96aa726fca44980c0285de8f1bd49d05d011855ac8334510cee859fb717c/Assert.Conditions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -131,7 +133,7 @@
       <workItem from="1707827123122" duration="801000" />
       <workItem from="1707827973359" duration="1048000" />
       <workItem from="1707831569075" duration="56000" />
-      <workItem from="1707983795120" duration="7722000" />
+      <workItem from="1707983795120" duration="10373000" />
     </task>
     <task id="LOCAL-00001" summary="Reports and screenshot deleted">
       <option name="closed" value="true" />
@@ -181,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707990181401</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Minor changes to handble error 500">
+      <option name="closed" value="true" />
+      <created>1707991837772</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707991837772</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +218,8 @@
     <MESSAGE value="Changes in -yml file" />
     <MESSAGE value="Changes in .yml file" />
     <MESSAGE value="Changes in validations methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in validations methods" />
+    <MESSAGE value="Minor changes to handble error 500" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes to handble error 500" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

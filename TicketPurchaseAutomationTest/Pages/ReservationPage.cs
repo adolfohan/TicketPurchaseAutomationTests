@@ -178,10 +178,13 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
     
     public void InvalidConfirmationEmail()
     {
+        IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
         IWebElement confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
         
-        string email = confirmEmailField.GetAttribute("value");
-        Assert.IsFalse(Regex.IsMatch(email, @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$"), "Invalid email");
+        string email = emailField.GetAttribute("value");
+        string confirmEmail = confirmEmailField.GetAttribute("value");
+        
+        Assert.That(email, !Is.EqualTo(confirmEmail));
     }
     
     public void InvalidPhone()

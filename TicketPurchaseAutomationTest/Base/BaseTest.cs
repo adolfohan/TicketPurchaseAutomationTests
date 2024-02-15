@@ -14,7 +14,6 @@ public class BaseTest
 {  
     private IWebDriver driver;
     protected HomePage HomePage;
-    protected HomePageSteps HomePageSteps;
     protected TicketsSelectionPage TicketsSelectionPage;
     protected TicketsSelectionSteps TicketsSelectionSteps;
     private SessionPage sessionPage;
@@ -40,7 +39,6 @@ public class BaseTest
         }
         
         HomePage = new HomePage(driver);
-        HomePageSteps = new HomePageSteps(driver);
         TicketsSelectionPage = new TicketsSelectionPage(driver);
         TicketsSelectionSteps = new TicketsSelectionSteps(driver);
         sessionPage = new SessionPage(driver);
@@ -108,13 +106,22 @@ public class BaseTest
         {
             var timestamp = DateTime.Now.ToString("yyyy-MM-dd-HHmmss");
             var screenshotName = "screenshot_" + timestamp + ".png";
-            //const string screenshotDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots";
-            var screenshotDirectory = Path.Combine(Environment.GetEnvironmentVariable("SourceDirectory") ?? @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\", "Screenshots");
+            var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+            var screenshotDirectory = Path.Combine(Environment.GetEnvironmentVariable("SourceDirectory") ?? 
+                                                   """
+                                                   C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\
+                                                   TicketPurchaseAutomationTest\
+                                                   """, "Screenshots");
             Directory.CreateDirectory(screenshotDirectory);
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
-
-            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
-            //CleanUpOldScreenshots();
+            screenshot.SaveAsFile(screenshotPath, ScreenshotImageFormat.Png);
+            var screenshots = Directory.GetFiles(screenshotDirectory, "*.png");
+            if (screenshots.Length <= 10) return screenshotPath;
+            var oldestScreenshots = screenshots.OrderBy(File.GetCreationTime).Take(screenshots.Length - 10);
+            foreach (var oldScreenshot in oldestScreenshots)
+            {
+                File.Delete(oldScreenshot);
+            }
 
             return screenshotPath;
         }
