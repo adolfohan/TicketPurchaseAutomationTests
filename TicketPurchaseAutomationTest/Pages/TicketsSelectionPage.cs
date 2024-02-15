@@ -111,13 +111,24 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
         {
             IWebElement comprarBtn = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
-            
-            while (error500Page.Error500Displayed())
+        
+            while (true)
             {
+                try
+                {
+                    if (!error500Page.Error500Displayed())
+                    {
+                        break;
+                    }
+                }
+                catch (NoSuchElementException)
+                {
+                    break;
+                }
+
                 Driver.Navigate().Back();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                IWebElement comprarBtn1 = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
-                comprarBtn1.Click();
+                comprarBtn.Click();
             }
         }
         catch (NoSuchElementException ex)
