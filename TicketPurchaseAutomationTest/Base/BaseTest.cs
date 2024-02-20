@@ -94,10 +94,11 @@ public class BaseTest
     {
         if (TestContext.CurrentContext.Result.Outcome.Status != TestStatus.Failed) return;
         var screenshotPath = CaptureScreenshot();
-        if (screenshotPath != null)
-        {
-            test?.AddScreenCaptureFromPath(screenshotPath);
-        }
+        if (screenshotPath == null) return;
+        var screenshotBytes = File.ReadAllBytes(screenshotPath);
+        var screenshotBase64 = Convert.ToBase64String(screenshotBytes);
+        
+        test?.AddScreenCaptureFromBase64String(screenshotBase64, "Screenshot on Failure");
     }
 
     private string? CaptureScreenshot()
