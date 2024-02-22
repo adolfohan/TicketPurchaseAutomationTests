@@ -54,6 +54,7 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
             var randomIndex = Random.Next(0, inputFields.Count);
             var selectedInputField = inputFields[randomIndex];
             
+            ScrollIntoView(selectedInputField);
             ClearAndSetInputValue(selectedInputField, numberOfTickets);
         }
         catch (Exception e)
