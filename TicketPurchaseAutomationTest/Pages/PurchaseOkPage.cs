@@ -5,7 +5,7 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class PurchaseOkPage(IWebDriver driver) : BasePage(driver)
+public class PurchaseOkPage(IWebDriver? driver) : BasePage(driver)
 {
     private readonly By purchaseOkMessageElement = By.CssSelector("h1.mt-2");
     private const string ExpectedMessage = "Gracias por tu compra";
@@ -14,8 +14,8 @@ public class PurchaseOkPage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement purchaseOkMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(purchaseOkMessageElement));
-            string message = purchaseOkMessage.Text;
+            var purchaseOkMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(purchaseOkMessageElement));
+            var message = purchaseOkMessage.Text;
             Assert.That(message, Is.EqualTo(ExpectedMessage), "The message does not match the expected message");
         }
         catch (NoSuchElementException ex)

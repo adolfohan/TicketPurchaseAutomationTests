@@ -3,14 +3,9 @@ using TicketPurchaseAutomationTest.Pages;
 
 namespace TicketPurchaseAutomationTest.Steps;
 
-public class TicketsSelectionSteps
+public class TicketsSelectionSteps(IWebDriver? driver)
 {
-    private readonly TicketsSelectionPage ticketsSelectionPage;
-    
-    public TicketsSelectionSteps(IWebDriver driver)
-    {
-        ticketsSelectionPage = new TicketsSelectionPage(driver);
-    }
+    private readonly TicketsSelectionPage ticketsSelectionPage = new(driver);
 
     public void SelectDesiredTicket()
     {

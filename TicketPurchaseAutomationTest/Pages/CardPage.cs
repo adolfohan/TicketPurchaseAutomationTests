@@ -4,16 +4,12 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class CardPage : BasePage
+public class CardPage(IWebDriver? driver) : BasePage(driver)
 {
     private readonly By pagarBtnElement = By.XPath("/html/body/div[1]/div[2]/div[3]/form/div/div[2]/div[8]/button[2]");
     private readonly By enviarBtnElement = By.Id("boton");
     private readonly By continuarBtnElement = By.XPath("/html/body/div[1]/form/div[2]/div[3]/div[2]/div[1]/input[2]");
-    
-    public CardPage(IWebDriver driver) : base(driver)
-    {
-    }
-    
+
     public void CompleteCardInformation(string cardNumber, string expirationMonth, string expirationYear,
         string securityCode)
     {
@@ -48,7 +44,7 @@ public class CardPage : BasePage
     {
         try
         {
-            IWebElement pagarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(pagarBtnElement));
+            var pagarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(pagarBtnElement));
             pagarButton.Click();
         }
         catch (NoSuchElementException ex)
@@ -65,7 +61,7 @@ public class CardPage : BasePage
     {
         try
         {
-            IWebElement enviarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(enviarBtnElement));
+            var enviarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(enviarBtnElement));
             enviarButton.Click(); 
         }
         catch (NoSuchElementException ex)
@@ -82,7 +78,7 @@ public class CardPage : BasePage
     {
         try
         {
-            IWebElement continuarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(continuarBtnElement));
+            var continuarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(continuarBtnElement));
             continuarButton.Click(); 
         }
         catch (NoSuchElementException ex)
@@ -101,9 +97,9 @@ public class CardPage : BasePage
         {
             FluentWait.Until(ExpectedConditions.AlertIsPresent());
 
-            IAlert alert = Driver.SwitchTo().Alert();
+            var alert = Driver!.SwitchTo().Alert();
 
-            string text = alert.Text;
+            var text = alert.Text;
 
             if (!text.Contains("Debe Introducir un número de tarjeta válido (sin espacios ni guiones).")) return false;
             alert.Accept();

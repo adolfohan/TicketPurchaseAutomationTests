@@ -3,10 +3,4 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class GroupPage : BasePage
-{
-    
-    public GroupPage(IWebDriver driver) : base(driver)
-    {
-    }
-}
+public class GroupPage(IWebDriver? driver) : BasePage(driver);

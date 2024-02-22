@@ -4,32 +4,32 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class HomePage(IWebDriver driver) : BasePage(driver)
+public class HomePage(IWebDriver? driver) : BasePage(driver)
 {
     private readonly By pageSize20Element = By.XPath("//a[contains(text(), '20')]");
-    private By meInteresaButton =>
+    private static By meInteresaButton =>
         By.XPath(
             "//a[contains(@class, 'sv-button sv-button--type-contained sv-button--size-sm sv-button--color-primary') and contains(text(), 'Me interesa')]");
-    private By leisureParksFilterElement => By.Id("c124");
-    private By cultureVisitsToursElement => By.Id("c132");
-    private By excursionsTouristsMobilityElement => By.Id("c142");
-    private By experiencesRelaxElement => By.Id("c181");
-    private By gastronomyWineTourismElement => By.Id("c174");
-    private By musicalsShowElement => By.Id("c158");
-    private By sportsElement => By.Id("c185");
-    private By activeTourismElement => By.Id("c152");
-    private By snowElement => By.Id("c192");
-    private By cinemaDriveInElement => By.Id("c166");
-    private By halloweenElement => By.Id("c310");
-    private By escapeRoomExperiencesElement => By.Id("c313");
-    private By spainElement => By.Id("c201");
-    private By andorraElement => By.Id("c309");
-    private By franceElement => By.Id("c202");
-    private By gibraltarElement => By.Id("c321");
-    private By italyElement => By.Id("c319");
-    private By portugalElement => By.Id("c203");
-    private By unitedKingdomElement => By.Id("c323");
-    private string baseUrl = "https://pre-tixalia.publicticketshop.experticket.com/";
+    private static By leisureParksFilterElement => By.Id("c124");
+    private static By cultureVisitsToursElement => By.Id("c132");
+    private static By excursionsTouristsMobilityElement => By.Id("c142");
+    private static By experiencesRelaxElement => By.Id("c181");
+    private static By gastronomyWineTourismElement => By.Id("c174");
+    private static By musicalsShowElement => By.Id("c158");
+    private static By sportsElement => By.Id("c185");
+    private static By activeTourismElement => By.Id("c152");
+    private static By snowElement => By.Id("c192");
+    private static By cinemaDriveInElement => By.Id("c166");
+    private static By halloweenElement => By.Id("c310");
+    private static By escapeRoomExperiencesElement => By.Id("c313");
+    private static By spainElement => By.Id("c201");
+    private static By andorraElement => By.Id("c309");
+    private static By franceElement => By.Id("c202");
+    private static By gibraltarElement => By.Id("c321");
+    private static By italyElement => By.Id("c319");
+    private static By portugalElement => By.Id("c203");
+    private static By unitedKingdomElement => By.Id("c323");
+    private const string BaseUrl = "https://pre-tixalia.publicticketshop.experticket.com/";
 
     private string RandomNormalUrl()
     {
@@ -44,24 +44,22 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             "acuariozaragoza"
         ];
         
-        Random random = new Random();
-
-        string normalTicket = normalTickets[random.Next(normalTickets.Count)];
-        string completeUrl = baseUrl + normalTicket;
+        var normalTicket = normalTickets[Random.Next(normalTickets.Count)];
+        var completeUrl = BaseUrl + normalTicket;
 
         return completeUrl;
     }
     
     public void NavigateToUrl()
     {
-        Driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/");
-        Driver.Manage().Window.Maximize();
+        Driver!.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/");
+        Driver!.Manage().Window.Maximize();
     }
     
     public void NavigateToNormalUrl()
     {
-        Driver.Navigate().GoToUrl(RandomNormalUrl());
-        Driver.Manage().Window.Maximize();
+        Driver!.Navigate().GoToUrl(RandomNormalUrl());
+        Driver!.Manage().Window.Maximize();
     }
     
     private string RandomSessionUrl()
@@ -75,19 +73,17 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             "tourbernabeu"
             //"mestallaforevertour"
         ];
-        
-        Random random = new Random();
 
-        string sessionTicket = sessionTickets[random.Next(sessionTickets.Count)];
-        string completeUrl = baseUrl + sessionTicket;
+        var sessionTicket = sessionTickets[Random.Next(sessionTickets.Count)];
+        var completeUrl = BaseUrl + sessionTicket;
 
         return completeUrl;
     }
     
     public void NavigateToSessionUrl()
     {
-        Driver.Navigate().GoToUrl(RandomSessionUrl());
-        Driver.Manage().Window.Maximize();
+        Driver!.Navigate().GoToUrl(RandomSessionUrl());
+        Driver!.Manage().Window.Maximize();
 
     }
     
@@ -100,36 +96,34 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             //"ciudadartesyciencias-oceanografic",
             "ciudadartesyciencias-combinadas"
         ];
-        
-        Random random = new Random();
 
-        string advancedDateSelectorTicket = advancedDateSelectorTickets[random.Next(advancedDateSelectorTickets.Count)];
-        string completeUrl = baseUrl + advancedDateSelectorTicket;
+        var advancedDateSelectorTicket = advancedDateSelectorTickets[Random.Next(advancedDateSelectorTickets.Count)];
+        var completeUrl = BaseUrl + advancedDateSelectorTicket;
 
         return completeUrl;
     }
     
     public void NavigateToSeatingUrl()
     {
-        Driver.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/test-seating");
-        Driver.Manage().Window.Maximize();
+        Driver!.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/test-seating");
+        Driver!.Manage().Window.Maximize();
     }
     public void NavigateToAdvancedDateSelectorUrl()
     {
-        Driver.Navigate().GoToUrl(RandomAdvancedDateSelectorUrl());
-        Driver.Manage().Window.Maximize();
+        Driver!.Navigate().GoToUrl(RandomAdvancedDateSelectorUrl());
+        Driver!.Manage().Window.Maximize();
     }
 
     public void PressPageSize20()
     {
-        IWebElement pageSize20 = FluentWait.Until(ExpectedConditions.ElementIsVisible(pageSize20Element));
+        var pageSize20 = FluentWait.Until(ExpectedConditions.ElementIsVisible(pageSize20Element));
         ScrollIntoView(pageSize20);
         pageSize20.Click();
     }
     
     public void ClickOnRandomMeInteresaButton()
     {
-        IList<IWebElement> meInteresaButtons = FluentWait.Until(webDriver => webDriver.FindElements(meInteresaButton));
+        IList<IWebElement> meInteresaButtons = FluentWait.Until(webDriver => webDriver!.FindElements(meInteresaButton));
 
         if (meInteresaButtons.Count > 0)
         {
@@ -155,7 +149,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement leisureParksFilter =
+            var leisureParksFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(leisureParksFilterElement));
             leisureParksFilter.Click();
             Thread.Sleep(2000);
@@ -174,7 +168,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement cultureVisitsTour =
+            var cultureVisitsTour =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(cultureVisitsToursElement));
             cultureVisitsTour.Click();
             Thread.Sleep(2000);
@@ -193,7 +187,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement excursionsTouristsMobility =
+            var excursionsTouristsMobility =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(excursionsTouristsMobilityElement));
             excursionsTouristsMobility.Click();
             Thread.Sleep(2000);
@@ -212,7 +206,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement experiencesRelax =
+            var experiencesRelax =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(experiencesRelaxElement));
             experiencesRelax.Click();
             Thread.Sleep(2000);
@@ -231,7 +225,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement gastronomyWineTourism =
+            var gastronomyWineTourism =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(gastronomyWineTourismElement));
             gastronomyWineTourism.Click();
             Thread.Sleep(2000);
@@ -250,7 +244,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement musicalsShow =
+            var musicalsShow =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(musicalsShowElement));
             musicalsShow.Click();
             Thread.Sleep(2000);
@@ -269,7 +263,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement sports =
+            var sports =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(sportsElement));
             sports.Click();
             Thread.Sleep(2000);
@@ -288,7 +282,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement activeTourism =
+            var activeTourism =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(activeTourismElement));
             activeTourism.Click();
             Thread.Sleep(2000);
@@ -307,7 +301,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement snow =
+            var snow =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(snowElement));
             snow.Click();
             Thread.Sleep(2000);
@@ -326,7 +320,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement cinemaDriveIn =
+            var cinemaDriveIn =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(cinemaDriveInElement));
             cinemaDriveIn.Click();
             Thread.Sleep(2000);
@@ -345,7 +339,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement halloween =
+            var halloween =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(halloweenElement));
             halloween.Click();
             Thread.Sleep(2000);
@@ -364,7 +358,7 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement escapeRoomExperiences =
+            var escapeRoomExperiences =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(escapeRoomExperiencesElement));
             escapeRoomExperiences.Click();
             Thread.Sleep(2000);
@@ -422,29 +416,29 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement leisureParksFilter =
+            var leisureParksFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(leisureParksFilterElement));
-            IWebElement cultureVisitsTour =
+            var cultureVisitsTour =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(cultureVisitsToursElement));
-            IWebElement excursionsTouristsMobility =
+            var excursionsTouristsMobility =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(excursionsTouristsMobilityElement));
-            IWebElement experiencesRelax =
+            var experiencesRelax =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(experiencesRelaxElement));
-            IWebElement gastronomyWineTourism =
+            var gastronomyWineTourism =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(gastronomyWineTourismElement));
-            IWebElement musicalsShow =
+            var musicalsShow =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(musicalsShowElement));
-            IWebElement sports =
+            var sports =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(sportsElement));
-            IWebElement activeTourism =
+            var activeTourism =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(activeTourismElement));
-            IWebElement snow =
+            var snow =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(snowElement));
-            IWebElement cinemaDriveIn =
+            var cinemaDriveIn =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(cinemaDriveInElement));
-            IWebElement halloween =
+            var halloween =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(halloweenElement));
-            IWebElement escapeRoomExperiences =
+            var escapeRoomExperiences =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(escapeRoomExperiencesElement));
             
             ClickOnAllLeisureFamiliesFilters();
@@ -475,12 +469,12 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
         }
     }
-    
-    public void ClickOnSpainFilter()
+
+    private void ClickOnSpainFilter()
     {
         try
         {
-            IWebElement spainFilter =
+            var spainFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(spainElement));
             spainFilter.Click();
             Thread.Sleep(2000);
@@ -494,12 +488,12 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
         }
     }
-    
-    public void ClickOnAndorraFilter()
+
+    private void ClickOnAndorraFilter()
     {
         try
         {
-            IWebElement andorraFilter =
+            var andorraFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(andorraElement));
             andorraFilter.Click();
             Thread.Sleep(2000);
@@ -513,12 +507,12 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
         }
     }
-    
-    public void ClickOnFranceFilter()
+
+    private void ClickOnFranceFilter()
     {
         try
         {
-            IWebElement franceFilter =
+            var franceFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(franceElement));
             franceFilter.Click();
             Thread.Sleep(2000);
@@ -532,12 +526,12 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
         }
     }
-    
-    public void ClickOnGibraltarFilter()
+
+    private void ClickOnGibraltarFilter()
     {
         try
         {
-            IWebElement gibraltarFilter =
+            var gibraltarFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(gibraltarElement));
             gibraltarFilter.Click();
             Thread.Sleep(2000);
@@ -551,12 +545,12 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
         }
     }
-    
-    public void ClickOnItalyFilter()
+
+    private void ClickOnItalyFilter()
     {
         try
         {
-            IWebElement italyFilter =
+            var italyFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(italyElement));
             italyFilter.Click();
         }
@@ -569,12 +563,12 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
         }
     }
-    
-    public void ClickOnPortugalFilter()
+
+    private void ClickOnPortugalFilter()
     {
         try
         {
-            IWebElement portugalFilter =
+            var portugalFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(portugalElement));
             portugalFilter.Click();
             Thread.Sleep(2000);
@@ -588,12 +582,12 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
         }
     }
-    
-    public void ClickOnUnitedKingdomFilter()
+
+    private void ClickOnUnitedKingdomFilter()
     {
         try
         {
-            IWebElement unitedKingdomFilter =
+            var unitedKingdomFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(unitedKingdomElement));
             unitedKingdomFilter.Click();
             Thread.Sleep(2000);
@@ -634,19 +628,19 @@ public class HomePage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement spainFilter =
+            var spainFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(spainElement));
-            IWebElement andorraFilter =
+            var andorraFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(andorraElement));
-            IWebElement franceFilter =
+            var franceFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(franceElement));
-            IWebElement gibraltarFilter =
+            var gibraltarFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(gibraltarElement));
-            IWebElement italyFilter =
+            var italyFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(italyElement));
-            IWebElement portugalFilter =
+            var portugalFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(portugalElement));
-            IWebElement unitedKingdomFilter =
+            var unitedKingdomFilter =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(unitedKingdomElement));
             ClickOnSpainFilter();
             ClickOnAndorraFilter();

@@ -3,14 +3,10 @@ using OpenQA.Selenium;
 using TicketPurchaseAutomationTest.Pages;
 
 namespace TicketPurchaseAutomationTest.Steps;
-public class CardSteps
+public class CardSteps(IWebDriver? driver)
 {
-    private readonly CardPage cardPage;
+    private readonly CardPage cardPage = new(driver);
 
-    public CardSteps(IWebDriver driver)
-    {
-        cardPage = new CardPage(driver);
-    }
     public void CompleteTheCardInformation()
     {
         cardPage.CompleteCardInformation("4548810000000003", "12", "49", "123");

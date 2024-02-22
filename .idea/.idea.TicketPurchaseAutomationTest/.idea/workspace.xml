@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../OfflineTicketShop/OfflineTicketShop/Pages/CombinePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../OfflineTicketShop/OfflineTicketShop/Pages/CombinePage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfoInputs.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +52,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Base/BaseTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Pages/Error500Page.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/17.5.0/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/808851b07acfa1c5c94b0d4f9fb50debedb2df70/src/libraries/System.Private.CoreLib/src/System/Threading/ThreadLocal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04a0eb0557dd4c24a73812c8be2af0061dea00/c4/c312bd20/ExtentTest.cs" root0="SKIP_HIGHLIGHTING" />
@@ -127,7 +122,7 @@
       <workItem from="1707827973359" duration="1048000" />
       <workItem from="1707831569075" duration="56000" />
       <workItem from="1707983795120" duration="11693000" />
-      <workItem from="1708000942897" duration="1890000" />
+      <workItem from="1708000942897" duration="3340000" />
     </task>
     <task id="LOCAL-00001" summary="Reports and screenshot deleted">
       <option name="closed" value="true" />
@@ -193,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707995350602</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Screenshot base 64 in reports">
+      <option name="closed" value="true" />
+      <created>1708416835767</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708416835767</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +225,8 @@
     <MESSAGE value="Changes in validations methods" />
     <MESSAGE value="Minor changes to handble error 500" />
     <MESSAGE value="Fix InvalidConfirmationEmail()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix InvalidConfirmationEmail()" />
+    <MESSAGE value="Screenshot base 64 in reports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Screenshot base 64 in reports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

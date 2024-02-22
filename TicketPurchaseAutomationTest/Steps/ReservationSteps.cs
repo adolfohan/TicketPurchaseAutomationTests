@@ -3,14 +3,9 @@ using TicketPurchaseAutomationTest.Pages;
 
 namespace TicketPurchaseAutomationTest.Steps;
 
-public class ReservationSteps
+public class ReservationSteps(IWebDriver? driver)
 {
-    private readonly ReservationPage reservationPage;
-    
-    public ReservationSteps(IWebDriver driver)
-    {
-        reservationPage = new ReservationPage(driver);
-    }
+    private readonly ReservationPage reservationPage = new(driver);
 
     public void CompletePersonalInformation()
     {

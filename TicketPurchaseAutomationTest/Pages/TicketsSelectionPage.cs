@@ -4,7 +4,7 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
+public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
 {
     private readonly HomePage homePage = new(driver);
     private readonly Random random = new();
@@ -12,7 +12,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
     private readonly AdvancedDateSelectorPage advancedDateSelectorPage = new(driver);
     private readonly Error500Page error500Page = new(driver);
     
-    private By inputNumberOfTicketsElement => By.XPath("//input[@type='number']");
+    private static By inputNumberOfTicketsElement => By.XPath("//input[@type='number']");
     
     private readonly By confirmationButtonElement =
         By.XPath("//button[@class='btn sv-button--type-contained sv-button--color-secondary']");
@@ -28,7 +28,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
 
     private void ClickOnPanelWrapper()
     {
-        IWebElement panel = FluentWait.Until(ExpectedConditions.ElementIsVisible(panelWrapperElement));
+        var panel = FluentWait.Until(ExpectedConditions.ElementIsVisible(panelWrapperElement));
 
         if (!panel.Displayed) return;
         ScrollIntoView(panel);
@@ -48,7 +48,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
     
     public void SelectNumberOfTickets(string numberOfTickets, int maxAttempts = 10)
     {
-        int attempts = 0;
+        var attempts = 0;
 
         while (attempts < maxAttempts)
         {
@@ -99,9 +99,9 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
     
     public void ConfirmDate()
     {
-        IWebElement confirmationBox = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmationButtonElement));
+        var confirmationBox = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmationButtonElement));
 
-        IWebElement confirmButton = confirmationBox.FindElement(confirmationButtonElement);
+        var confirmButton = confirmationBox.FindElement(confirmationButtonElement);
         confirmButton.Click();
     }
     
@@ -109,7 +109,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement comprarBtn = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
+            var comprarBtn = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
         
             while (true)
@@ -126,7 +126,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
                     break;
                 }
 
-                Driver.Navigate().Back();
+                Driver!.Navigate().Back();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
                 comprarBtn.Click();
             }
@@ -144,7 +144,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
             while (true)
             {
                 IList<IWebElement> inputFields =
-                    FluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
+                    FluentWait.Until(webDriver => webDriver!.FindElements(inputNumberOfTicketsElement));
                 if (inputFields.Count > 0)
                 {
                     IWebElement navBar = FluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
@@ -156,7 +156,7 @@ public class TicketsSelectionPage(IWebDriver driver) : BasePage(driver)
                         selectedNavBarItem.Click();
                     }
                 }
-                Driver.Navigate().Back();
+                Driver!.Navigate().Back();
                 homePage.ClickOnRandomMeInteresaButton();
             }
         }

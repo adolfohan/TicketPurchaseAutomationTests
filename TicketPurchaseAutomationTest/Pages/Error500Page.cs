@@ -4,17 +4,15 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class Error500Page : BasePage
+public class Error500Page(IWebDriver? driver) : BasePage(driver)
 {
     private readonly By error500Element = By.XPath("//div[@class='sv-page404__title' and text()='Error 500']");
-
-    public Error500Page(IWebDriver driver) : base(driver) {}
 
     public bool Error500Displayed()
     {
         try
         {
-            IWebElement error500Message = FluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
+            var error500Message = FluentWait.Until(ExpectedConditions.ElementIsVisible(error500Element));
             Console.WriteLine($"Error 500 was displayed: {error500Message.Displayed}");
             return error500Message.Displayed;
         }

@@ -17,11 +17,11 @@ public class FiltersTest : BaseTest
 
             LogStep(Status.Info, "Navigating to URL");
             CurrentStep = "Step GoToURL";
-            HomePage.NavigateToUrl();
+            HomePage!.NavigateToUrl();
 
             LogStep(Status.Info, "Clicked on All Filters");
             CurrentStep = "Step ClickOnAllFilters";
-            HomePage.ClickOnAllLeisureFamiliesFilters();
+            HomePage!.ClickOnAllLeisureFamiliesFilters();
             
             LogStep(Status.Info, "Filters Tests Successful");
         }
@@ -41,11 +41,11 @@ public class FiltersTest : BaseTest
 
             LogStep(Status.Info, "Navigating to URL");
             CurrentStep = "Step GoToURL";
-            HomePage.NavigateToUrl();
+            HomePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Deselected All Filter");
             CurrentStep = "Step DeselectAllFilters";
-            HomePage.DeselectAllLeisureFamiliesFilters();
+            HomePage!.DeselectAllLeisureFamiliesFilters();
             
             LogStep(Status.Info, "Deselect Filters Tests Successful");
         }
@@ -65,11 +65,11 @@ public class FiltersTest : BaseTest
 
             LogStep(Status.Info, "Navigating to URL");
             CurrentStep = "Step GoToURL";
-            HomePage.NavigateToUrl();
+            HomePage!.NavigateToUrl();
 
             LogStep(Status.Info, "Clicked on All Countries Filters");
             CurrentStep = "Step ClickOnAllFilters";
-            HomePage.ClickOnAllCountryFilters();
+            HomePage!.ClickOnAllCountryFilters();
             
             LogStep(Status.Info, "Select All Countries Filters Tests Successful");
         }
@@ -89,11 +89,11 @@ public class FiltersTest : BaseTest
 
             LogStep(Status.Info, "Navigating to URL");
             CurrentStep = "Step GoToURL";
-            HomePage.NavigateToUrl();
+            HomePage!.NavigateToUrl();
 
             LogStep(Status.Info, "Deselected All Countries Filter");
             CurrentStep = "Step DeselectAllCountryFilters";
-            HomePage.DeselectAllCountryFilters();
+            HomePage!.DeselectAllCountryFilters();
             
             LogStep(Status.Info, "Deselect All Countries Filters Tests Successful");
         }
@@ -113,11 +113,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Leisure Parks Filter");
             currentStep = "Step ClickOnLeisureParksFilter";
-            homePage.ClickOnLeisureParksFilter();
+            homePage!.ClickOnLeisureParksFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -137,11 +137,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Culture Visits and Tours Filter");
             currentStep = "Step ClickOnCultureVisitsToursFilter";
-            homePage.ClickOnCultureVisitsToursFilter();
+            homePage!.ClickOnCultureVisitsToursFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -161,11 +161,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Excursions and Tourists Mobility Filter");
             currentStep = "Step ClickOnExcursionsTouristsMobilityFilter";
-            homePage.ClickOnExcursionsTouristsMobilityFilter();
+            homePage!.ClickOnExcursionsTouristsMobilityFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -185,11 +185,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Experiences and Relax Filter");
             currentStep = "Step ClickOnExperiencesRelaxFilter";
-            homePage.ClickOnExperiencesRelaxFilter();
+            homePage!.ClickOnExperiencesRelaxFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -209,11 +209,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Gastronomy and Wine Tourism Filter");
             currentStep = "Step ClickOnGastronomyWineTourismFilter";
-            homePage.ClickOnGastronomyWineTourismFilter();
+            homePage!.ClickOnGastronomyWineTourismFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -233,11 +233,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Musicals and Shows Filter");
             currentStep = "Step ClickOnMusicalsShowFilter";
-            homePage.ClickOnMusicalsShowFilter();
+            homePage!.ClickOnMusicalsShowFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -257,11 +257,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Sports Filter");
             currentStep = "Step ClickOnSportsFilter";
-            homePage.ClickOnSportsFilter();
+            homePage!.ClickOnSportsFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -281,11 +281,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Active Tourism Filter");
             currentStep = "Step ClickOnActiveTourismFilter";
-            homePage.ClickOnActiveTourismFilter();
+            homePage!.ClickOnActiveTourismFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -305,11 +305,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Snow Filter");
             currentStep = "Step ClickOnSnowFilter";
-            homePage.ClickOnSnowFilter();
+            homePage!.ClickOnSnowFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -329,11 +329,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Cinema and Drive-in Filter");
             currentStep = "Step ClickOnCinemaDriveInFilter";
-            homePage.ClickOnCinemaDriveInFilter();
+            homePage!.ClickOnCinemaDriveInFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -353,11 +353,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Halloween Filter");
             currentStep = "Step ClickOnHalloweenFilter";
-            homePage.ClickOnHalloweenFilter();
+            homePage!.ClickOnHalloweenFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -377,11 +377,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Escape Room Experiences Filter");
             currentStep = "Step ClickOnEscapeRoomExperiencesFilter";
-            homePage.ClickOnEscapeRoomExperiencesFilter();
+            homePage!.ClickOnEscapeRoomExperiencesFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -401,11 +401,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Spain Filter");
             currentStep = "Step ClickOnSpainFilter";
-            homePage.ClickOnSpainFilter();
+            homePage!.ClickOnSpainFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -425,11 +425,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Andorra Filter");
             currentStep = "Step ClickOnAndorraFilter";
-            homePage.ClickOnAndorraFilter();
+            homePage!.ClickOnAndorraFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -449,11 +449,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On France Filter");
             currentStep = "Step ClickOnFranceFilter";
-            homePage.ClickOnFranceFilter();
+            homePage!.ClickOnFranceFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -473,11 +473,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Gibraltar Filter");
             currentStep = "Step ClickOnGibraltarFilter";
-            homePage.ClickOnGibraltarFilter();
+            homePage!.ClickOnGibraltarFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -497,11 +497,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Italy Filter");
             currentStep = "Step ClickOnItalyFilter";
-            homePage.ClickOnItalyFilter();
+            homePage!.ClickOnItalyFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -521,11 +521,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On Portugal Filter");
             currentStep = "Step ClickOnPortugalFilter";
-            homePage.ClickOnPortugalFilter();
+            homePage!.ClickOnPortugalFilter();
 
             CommonNormalPurchaseSteps();
         }
@@ -545,11 +545,11 @@ public class FiltersTest : BaseTest
             
             LogStep(Status.Info, "Navigated to URL");
             currentStep = "Step GoToURL";
-            homePage.NavigateToUrl();
+            homePage!.NavigateToUrl();
             
             LogStep(Status.Info, "Clicked On United Kingdom Filter");
             currentStep = "Step ClickOnUnitedKingdomFilter";
-            homePage.ClickOnUnitedKingdomFilter();
+            homePage!.ClickOnUnitedKingdomFilter();
 
             CommonNormalPurchaseSteps();
         }

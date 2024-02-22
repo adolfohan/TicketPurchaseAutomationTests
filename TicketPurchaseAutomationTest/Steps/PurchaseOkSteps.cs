@@ -3,15 +3,10 @@ using TicketPurchaseAutomationTest.Pages;
 
 namespace TicketPurchaseAutomationTest.Steps;
 
-public class PurchaseOkSteps
+public class PurchaseOkSteps(IWebDriver? driver)
 {
-    private readonly PurchaseOkPage purchaseOkPage;
+    private readonly PurchaseOkPage purchaseOkPage = new(driver);
 
-    public PurchaseOkSteps(IWebDriver driver)
-    {
-        purchaseOkPage = new PurchaseOkPage(driver);
-    }
-    
 
     public void PurchaseOkMessage()
     {

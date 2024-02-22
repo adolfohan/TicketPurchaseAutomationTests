@@ -4,10 +4,9 @@ using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using TicketPurchaseAutomationTest.Base;
 
-
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class ReservationPage(IWebDriver driver) : BasePage(driver)
+public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
 {
     private readonly Random random = new();
     private readonly By nameElement = By.Id("clientFullName-id");
@@ -26,22 +25,22 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement fullNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
+            var fullNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
             ClearAndSetInputValue(fullNameField, fullName);
 
-            IWebElement surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
+            var surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
             ClearAndSetInputValue(surNameField, surName);
 
-            IWebElement idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
+            var idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
             ClearAndSetInputValue(idField, id);
 
-            IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
+            var emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
             ClearAndSetInputValue(emailField, email);
 
-            IWebElement confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
+            var confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
             ClearAndSetInputValue(confirmEmailField, confirmEmail);
             
-            IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
+            var phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
             ClearAndSetInputValue(phoneField, phone);
         }
         catch (NoSuchElementException ex)
@@ -58,7 +57,7 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement conditionsCheckbox =
+            var conditionsCheckbox =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(conditionsCheckboxElement));
 
             ScrollIntoView(conditionsCheckbox);
@@ -79,7 +78,7 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement privacyCheckbox =
+            var privacyCheckbox =
                 FluentWait.Until(ExpectedConditions.ElementToBeClickable(privacyCheckboxElement));
 
             ScrollIntoView(privacyCheckbox);
@@ -128,82 +127,84 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
     
     public void BlankFields()
     {
-        IWebElement nameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
-        IWebElement surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
-        IWebElement idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
-        IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
-        IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
+        var nameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
+        var surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
+        var idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
+        var emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
+        var phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
         
-        string name = nameField.GetAttribute("value");
-        string lastName = surNameField.GetAttribute("value");
-        string id = idField.GetAttribute("value");
-        string email = emailField.GetAttribute("value");
-        string phone = phoneField.GetAttribute("value");
+        var name = nameField.GetAttribute("value");
+        var lastName = surNameField.GetAttribute("value");
+        var id = idField.GetAttribute("value");
+        var email = emailField.GetAttribute("value");
+        var phone = phoneField.GetAttribute("value");
 
-        
-        Assert.IsTrue(string.IsNullOrEmpty(name), "Name field is empty");
-        Assert.IsTrue(string.IsNullOrEmpty(lastName), "Last name field is empty");
-        Assert.IsTrue(string.IsNullOrEmpty(id), "ID field is empty");
-        Assert.IsTrue(string.IsNullOrEmpty(email), "Email field is empty");
-        Assert.IsTrue(string.IsNullOrEmpty(phone), "Phone field is empty");
+        Assert.Multiple(() =>
+        {
+            Assert.That(string.IsNullOrEmpty(name), "Name field is empty");
+            Assert.That(string.IsNullOrEmpty(lastName), "Last name field is empty");
+            Assert.That(string.IsNullOrEmpty(id), "ID field is empty");
+            Assert.That(string.IsNullOrEmpty(email), "Email field is empty");
+            Assert.That(string.IsNullOrEmpty(phone), "Phone field is empty");
+        });
     }
 
     public void InvalidNameAndSurname()
     {
-        IWebElement nameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
-        IWebElement surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
-        
-        string name = nameField.GetAttribute("value");
-        string lastName = surNameField.GetAttribute("value");
-        
-        Assert.IsFalse(Regex.IsMatch(name, @"^[a-zA-Z\s]*$"), "Invalid name");
-        Assert.IsFalse(Regex.IsMatch(lastName, @"^[a-zA-Z\s]*$"), "Invalid last name");
+        var nameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
+        var surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
+    
+        var name = nameField.GetAttribute("value");
+        var lastName = surNameField.GetAttribute("value");
+    
+        Assert.That(() => MyRegex4().IsMatch(name), Is.False, "Invalid name");
+        Assert.That(() => MyRegex3().IsMatch(lastName), Is.False, "Invalid last name");
     }
 
     public void InvalidId()
     {
-        IWebElement idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
-    
-        string id = idField.GetAttribute("value");
-        Assert.IsFalse(Regex.IsMatch(id, @"^[a-zA-Z0-9]*$"), "Invalid ID");
+        var idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
+
+        var id = idField.GetAttribute("value");
+        Assert.That(() => MyRegex2().IsMatch(id), Is.False, "Invalid ID");
     }
     
     public void InvalidEmail()
     {
-        IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
+        var emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
         
-        string email = emailField.GetAttribute("value");
-        Assert.IsFalse(Regex.IsMatch(email, @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$"), "Invalid email");
+        var email = emailField.GetAttribute("value");
+        Assert.That(() => MyRegex1().IsMatch(email), "Invalid email");
     }
     
     public void InvalidConfirmationEmail()
     {
-        IWebElement emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
-        IWebElement confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
+        var emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
+        var confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
         
-        string email = emailField.GetAttribute("value");
-        string confirmEmail = confirmEmailField.GetAttribute("value");
+        var email = emailField.GetAttribute("value");
+        var confirmEmail = confirmEmailField.GetAttribute("value");
         
         Assert.That(email, !Is.EqualTo(confirmEmail));
     }
     
     public void InvalidPhone()
     {
-        IWebElement phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
+        var phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
         
-        string phone = phoneField.GetAttribute("value");
-        Assert.IsFalse(Regex.IsMatch(phone, @"^\+?\d*$"), "Invalid phone");
+        var phone = phoneField.GetAttribute("value");
+        Assert.That(() => MyRegex().IsMatch(phone), "Invalid phone");
     }
 
     public void AreCheckboxesSelected()
     {
-        IWebElement conditionsCheckbox =
+        var conditionsCheckbox =
             FluentWait.Until(ExpectedConditions.ElementToBeClickable(conditionsCheckboxElement));
-        IWebElement privacyCheckbox =
+        var privacyCheckbox =
             FluentWait.Until(ExpectedConditions.ElementToBeClickable(privacyCheckboxElement));
         
-        bool isConditionsCheckboxSelected = conditionsCheckbox.Selected;
-        bool isPrivacyCheckboxSelected = privacyCheckbox.Selected;
+        var isConditionsCheckboxSelected = conditionsCheckbox.Selected;
+        var isPrivacyCheckboxSelected = privacyCheckbox.Selected;
         
         Assert.That(isConditionsCheckboxSelected || isPrivacyCheckboxSelected, Is.False, "The Conditions and Privacy Checkbox is not selected and Card Page is not displayed");
         
@@ -213,7 +214,7 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement datosElement = Driver.FindElement(datosDeLaOperacionElement);
+            var datosElement = Driver!.FindElement(datosDeLaOperacionElement);
             DrawBorder(datosElement);
 
             if (datosElement.Displayed)
@@ -231,4 +232,14 @@ public class ReservationPage(IWebDriver driver) : BasePage(driver)
         }
     }
 
+    [GeneratedRegex("^\\+?\\d*$")]
+    private static partial Regex MyRegex();
+    [GeneratedRegex("^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,7}$")]
+    private static partial Regex MyRegex1();
+    [GeneratedRegex("^[a-zA-Z0-9]*$")]
+    private static partial Regex MyRegex2();
+    [GeneratedRegex("^[a-zA-Z\\s]*$")]
+    private static partial Regex MyRegex3();
+    [GeneratedRegex("^[a-zA-Z\\s]*$")]
+    private static partial Regex MyRegex4();
 }

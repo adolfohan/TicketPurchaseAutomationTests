@@ -1,5 +1,6 @@
 ﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
+using AventStack.ExtentReports.Reporter.Config;
 
 namespace TicketPurchaseAutomationTest.Utilities;
 
@@ -7,7 +8,6 @@ public abstract class ExtentManager
 {
     private static ExtentReports? _extent;
     
-    //private const string BaseReportDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
     private static readonly string BaseReportDirectory = Path.Combine(Environment.GetEnvironmentVariable("SourceDirectory") ?? @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\", "Reports");
     public static ExtentReports GetExtent(string testName)
     {
@@ -27,17 +27,14 @@ public abstract class ExtentManager
 
         _extent.AddSystemInfo("Tester", "Adolfo");
         _extent.AddSystemInfo("Environment", "Pre-Producción");
+        
+        htmlReporter.Config.Theme = Theme.Dark;
+        htmlReporter.Config.DocumentTitle = testName + " Report";
+        htmlReporter.Config.ReportName = testName + " Test Report";
 
-        //CleanUpOldSReports();
+        CleanUpOldSReports();
             
         return _extent;
-    }
-
-    private static string GetReportDirectory()
-    {
-        var artifactStagingDirectory = Environment.GetEnvironmentVariable("REPORT_PATH");
-
-        return string.IsNullOrEmpty(artifactStagingDirectory) ? BaseReportDirectory : artifactStagingDirectory;
     }
     
     private static void CleanUpOldSReports()
@@ -45,7 +42,7 @@ public abstract class ExtentManager
         const string reportsDirectory = @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports";
         var screenshotFiles = Directory.GetFiles(reportsDirectory, "report*.html");
 
-        const int maxReportsToKeep = 15;
+        const int maxReportsToKeep = 10;
 
         if (screenshotFiles.Length <= maxReportsToKeep) return;
         Array.Sort(screenshotFiles);

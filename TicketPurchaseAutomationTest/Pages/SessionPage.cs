@@ -6,7 +6,7 @@ using TicketPurchaseAutomationTest.Base;
 
 namespace TicketPurchaseAutomationTest.Pages;
 
-public class SessionPage(IWebDriver driver) : BasePage(driver)
+public class SessionPage(IWebDriver? driver) : BasePage(driver)
 {
     private readonly Random random = new();
     
@@ -18,8 +18,8 @@ public class SessionPage(IWebDriver driver) : BasePage(driver)
 
     public bool VerifySessionMessage()
     {
-        IWebElement sessionMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(sessionMessageElement));
-        string message = sessionMessage.Text;
+        var sessionMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(sessionMessageElement));
+        var message = sessionMessage.Text;
         Assert.That(message, Is.EqualTo(ExpectedMessage), "The message does not match the expected message");
 
         return true;
@@ -27,7 +27,7 @@ public class SessionPage(IWebDriver driver) : BasePage(driver)
 
     public bool SessionMessageDisplayed()
     {
-        IWebElement sessionMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(sessionMessageElement));
+        var sessionMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(sessionMessageElement));
         return sessionMessage.Displayed;
     }
     
@@ -35,7 +35,7 @@ public class SessionPage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement dropdown = FluentWait.Until(ExpectedConditions.ElementIsVisible(sessionDropdownElement));
+            var dropdown = FluentWait.Until(ExpectedConditions.ElementIsVisible(sessionDropdownElement));
 
             var select = new SelectElement(dropdown);
             IList<IWebElement> options = select.Options;
@@ -55,7 +55,7 @@ public class SessionPage(IWebDriver driver) : BasePage(driver)
     {
         try
         {
-            IWebElement comprarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement));
+            var comprarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement));
             comprarButton.Click();
         }
         catch (NoSuchElementException ex)
