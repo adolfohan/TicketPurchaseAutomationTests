@@ -73,6 +73,7 @@ public class BaseTest
                 break;
             case TestStatus.Passed:
                 test?.Log(Status.Pass, MarkupHelper.CreateLabel("Test Case Passed", ExtentColor.Green));
+                AttachScreenshotOnFailure();
                 break;
             case TestStatus.Skipped:
                 test?.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Skipped", ExtentColor.Orange));
@@ -112,10 +113,7 @@ public class BaseTest
             var screenshotName = "screenshot_" + timestamp + ".png";
             var screenshot = ((ITakesScreenshot)driver!).GetScreenshot();
             var screenshotDirectory = Path.Combine(Environment.GetEnvironmentVariable("SourceDirectory") ?? 
-                                                   """
-                                                   C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\
-                                                   TicketPurchaseAutomationTest\
-                                                   """, "Screenshots");
+                                                   @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Screenshots");
             Directory.CreateDirectory(screenshotDirectory);
             var screenshotPath = Path.Combine(screenshotDirectory, screenshotName);
             screenshot.SaveAsFile(screenshotPath);
@@ -207,6 +205,10 @@ public class BaseTest
     {
             LogStep(Status.Info, "Selected desired ticket");
             CurrentStep = "Step SelectDesiredTicket";
+            TicketsSelectionSteps!.SelectDesiredTicket();
+            
+            LogStep(Status.Info, "Confirm date");
+            CurrentStep = "Step ConfirmDate";
             TicketsSelectionSteps!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on Comprar button");

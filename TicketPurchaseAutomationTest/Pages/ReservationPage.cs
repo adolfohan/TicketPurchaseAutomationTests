@@ -166,7 +166,7 @@ public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
         var idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
 
         var id = idField.GetAttribute("value");
-        Assert.That(() => MyRegex2().IsMatch(id), Is.False, "Invalid ID");
+        Assert.That(() => IdRegex().IsMatch(id), Is.False, "Invalid ID");
     }
     
     public void InvalidEmail()
@@ -174,26 +174,26 @@ public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
         var emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
         
         var email = emailField.GetAttribute("value");
-        Assert.That(() => MyRegex1().IsMatch(email), "Invalid email");
+        Assert.That(() => EmailRegex().IsMatch(email), Is.False, "Invalid email");
     }
-    
+
     public void InvalidConfirmationEmail()
     {
         var emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
         var confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
-        
+
         var email = emailField.GetAttribute("value");
         var confirmEmail = confirmEmailField.GetAttribute("value");
-        
-        Assert.That(email, !Is.EqualTo(confirmEmail));
+
+        Assert.That(email, !Is.EqualTo(confirmEmail), "Emails do not match");
     }
-    
+
     public void InvalidPhone()
     {
         var phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
         
         var phone = phoneField.GetAttribute("value");
-        Assert.That(() => MyRegex().IsMatch(phone), "Invalid phone");
+        Assert.That(() => PhoneRegex().IsMatch(phone), Is.False, "Invalid phone");
     }
 
     public void AreCheckboxesSelected()
@@ -231,13 +231,13 @@ public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
             Console.WriteLine("Card Page is not present, as expected");
         }
     }
-
-    [GeneratedRegex("^\\+?\\d*$")]
-    private static partial Regex MyRegex();
-    [GeneratedRegex("^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,7}$")]
-    private static partial Regex MyRegex1();
-    [GeneratedRegex("^[a-zA-Z0-9]*$")]
-    private static partial Regex MyRegex2();
+    
+    [GeneratedRegex(@"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$")]
+    private static partial Regex EmailRegex();
+    [GeneratedRegex(@"^\+?[0-9\s-]*$")]
+    private static partial Regex PhoneRegex();
+    [GeneratedRegex(@"^[a-zA-Z]{1,3}\d{1,10}[a-zA-Z]{0,2}$")]
+    private static partial Regex IdRegex();
     [GeneratedRegex("^[a-zA-Z\\s]*$")]
     private static partial Regex MyRegex3();
     [GeneratedRegex("^[a-zA-Z\\s]*$")]

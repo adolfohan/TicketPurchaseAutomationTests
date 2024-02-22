@@ -7,7 +7,6 @@ namespace TicketPurchaseAutomationTest.Pages;
 public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
 {
     private readonly HomePage homePage = new(driver);
-    private readonly Random random = new();
     private readonly SessionPage sessionPage = new(driver);
     private readonly AdvancedDateSelectorPage advancedDateSelectorPage = new(driver);
     private readonly Error500Page error500Page = new(driver);
@@ -45,8 +44,26 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
             }
         }*/
     }
+
+    public void SelectNumberOfTickets(string numberOfTickets)
+    {
+        try
+        {
+            IList<IWebElement> inputFields =
+                FluentWait.Until(webDriver => webDriver!.FindElements(inputNumberOfTicketsElement));
+            var randomIndex = Random.Next(0, inputFields.Count);
+            var selectedInputField = inputFields[randomIndex];
+            
+            ClearAndSetInputValue(selectedInputField, numberOfTickets);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("An error occurred while selecting number of tickets: " + e.Message);
+            throw;
+        }
+    }
     
-    public void SelectNumberOfTickets(string numberOfTickets, int maxAttempts = 10)
+    /*public void SelectNumberOfTickets(string numberOfTickets, int maxAttempts = 10)
     {
         var attempts = 0;
 
@@ -55,16 +72,16 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
             try
             {
                 IList<IWebElement> inputFields =
-                    FluentWait.Until(webDriver => webDriver.FindElements(inputNumberOfTicketsElement));
+                    FluentWait.Until(webDriver => webDriver!.FindElements(inputNumberOfTicketsElement));
 
                 if (inputFields.Count > 0)
                 {
-                    var randomIndex = random.Next(0, inputFields.Count);
+                    var randomIndex = Random.Next(0, inputFields.Count);
                     var selectedInputField = inputFields[randomIndex];
 
                     while (!selectedInputField.Displayed)
                     {
-                        randomIndex = random.Next(0, inputFields.Count);
+                        randomIndex = Random.Next(0, inputFields.Count);
                         selectedInputField = inputFields[randomIndex];
                     }
 
@@ -95,7 +112,7 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
         {
             Console.WriteLine("Max attempts reached, could not select number of tickets");
         }
-    }
+    }*/
     
     public void ConfirmDate()
     {
@@ -112,7 +129,7 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
             var comprarBtn = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
         
-            while (true)
+            /*while (true)
             {
                 try
                 {
@@ -129,7 +146,7 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
                 Driver!.Navigate().Back();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
                 comprarBtn.Click();
-            }
+            }*/
         }
         catch (NoSuchElementException ex)
         {
@@ -147,11 +164,11 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
                     FluentWait.Until(webDriver => webDriver!.FindElements(inputNumberOfTicketsElement));
                 if (inputFields.Count > 0)
                 {
-                    IWebElement navBar = FluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
+                    var navBar = FluentWait.Until(ExpectedConditions.ElementToBeClickable(navBarElement));
                     IList<IWebElement> navBarItems = navBar.FindElements(By.CssSelector("li.nav-item"));
                     while (navBarItems.Count > 0 && inputFields.Count > 0)
                     {
-                        var randomIndex = random.Next(0, navBarItems.Count);
+                        var randomIndex = Random.Next(0, navBarItems.Count);
                         var selectedNavBarItem = navBarItems[randomIndex];
                         selectedNavBarItem.Click();
                     }
