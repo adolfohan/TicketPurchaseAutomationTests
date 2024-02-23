@@ -8,7 +8,8 @@ public abstract class ExtentManager
 {
     private static ExtentReports? _extent;
     
-    private static readonly string BaseReportDirectory = Path.Combine(Environment.GetEnvironmentVariable("SourceDirectory") ?? @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\", "Reports");
+    private static readonly string BaseReportDirectory = Path.Combine(Environment.GetEnvironmentVariable("SourceDirectory") ?? 
+                                                                      @"C:\Projects\Repositories\Git\TicketPurchaseAutomationTest\TicketPurchaseAutomationTest\Reports");
     public static ExtentReports GetExtent(string testName)
     {
         if (_extent != null) return _extent;
@@ -32,7 +33,7 @@ public abstract class ExtentManager
         htmlReporter.Config.DocumentTitle = testName + " Report";
         htmlReporter.Config.ReportName = testName + " Test Report";
 
-        CleanUpOldSReports();
+        //CleanUpOldSReports();
             
         return _extent;
     }

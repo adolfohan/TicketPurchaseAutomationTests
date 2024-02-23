@@ -45,7 +45,7 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
         }*/
     }
 
-    public void SelectNumberOfTickets(string numberOfTickets)
+    /*public void SelectNumberOfTickets(string numberOfTickets)
     {
         try
         {
@@ -62,9 +62,9 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
             Console.WriteLine("An error occurred while selecting number of tickets: " + e.Message);
             throw;
         }
-    }
+    }*/
     
-    /*public void SelectNumberOfTickets(string numberOfTickets, int maxAttempts = 10)
+    public void SelectNumberOfTickets(string numberOfTickets, int maxAttempts = 10)
     {
         var attempts = 0;
 
@@ -113,7 +113,7 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
         {
             Console.WriteLine("Max attempts reached, could not select number of tickets");
         }
-    }*/
+    }
     
     public void ConfirmDate()
     {
