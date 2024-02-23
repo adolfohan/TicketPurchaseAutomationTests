@@ -73,7 +73,6 @@ public class BaseTest
                 break;
             case TestStatus.Passed:
                 test?.Log(Status.Pass, MarkupHelper.CreateLabel("Test Case Passed", ExtentColor.Green));
-                AttachScreenshotOnFailure();
                 break;
             case TestStatus.Skipped:
                 test?.Log(Status.Skip, MarkupHelper.CreateLabel("Test Case Skipped", ExtentColor.Orange));
@@ -95,8 +94,7 @@ public class BaseTest
 
     private void AttachScreenshotOnFailure()
     {
-        if (TestContext.CurrentContext.Result.Outcome.Status != TestStatus.Failed && 
-            TestContext.CurrentContext.Result.Outcome.Status != TestStatus.Passed) return;
+        if (TestContext.CurrentContext.Result.Outcome.Status != TestStatus.Failed) return;
         var screenshotPath = CaptureScreenshot();
         if (screenshotPath == null) return;
         var screenshotBytes = File.ReadAllBytes(screenshotPath);

@@ -9,7 +9,7 @@ namespace TicketPurchaseAutomationTest.Pages;
 public class AdvancedDateSelectorPage(IWebDriver? driver) : BasePage(driver)
 {
     private readonly By sessionMessageElement = By.XPath("//span[text()=' Selecciona la sesión ']");
-    private readonly By chosenDateElement = By.XPath("//label[text()='Fecha elegida']");
+    //private readonly By chosenDateElement = By.XPath("//label[text()='Fecha elegida']");
     private readonly By comprarButtonElement = By.XPath(
         "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']");
     //private readonly By oceanograficRadioButtonElement = By.XPath("//span[contains(text(),'Oceanogràfic')]/following::input[@type='radio'][1]");
@@ -18,9 +18,9 @@ public class AdvancedDateSelectorPage(IWebDriver? driver) : BasePage(driver)
     private readonly By hemisfericRadioButtonElement = By.XPath("//span[contains(text(),'Hemisfèric')]/following::input[@type='radio'][1]");
     private readonly By hemisfericSessionDropdownElement = By.XPath("//span[contains(text(),'Hemisfèric')]/" +
                                                           "following::select[@class='form-select form-select-sm' and not(@disabled)]");
-    private readonly By advancedDateSelectorElement = By.ClassName("sv-tickets__actions");
+    //private readonly By advancedDateSelectorElement = By.ClassName("sv-tickets__actions");
     private const string ExpectedSessionMessage = "Selecciona la sesión";
-    private const string ExpectedChosenDateMessage = "Fecha elegida";
+    //private const string ExpectedChosenDateMessage = "Fecha elegida";
 
     public void HasAdvancedDateSelector()
     {
