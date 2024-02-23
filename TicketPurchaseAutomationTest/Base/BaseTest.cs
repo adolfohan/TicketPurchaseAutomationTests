@@ -284,13 +284,17 @@ public class BaseTest
             CurrentStep = "Step VerifyAdvancedSelectorMessage";
             advancedDateSelectorPage!.VerifyAdvancedSelectorMessage();
             
+            LogStep(Status.Info, "Selected Oceanografic Session Option");
+            CurrentStep = "Step SelectOceanograficSessionHour";
+            advancedDateSelectorPage!.SelectOceanograficSessionHour();
+            
             LogStep(Status.Info, "Selected Title Option");
-            CurrentStep = "Step SelectTitle";
-            advancedDateSelectorPage!.SelectTitle();
+            CurrentStep = "Step SelectHemisfericTitle";
+            advancedDateSelectorPage!.SelectHemisfericTitle();
             
             LogStep(Status.Info, "Selected Session Option");
-            CurrentStep = "Step SelectSessionHour";
-            advancedDateSelectorPage!.SelectSessionHour();
+            CurrentStep = "Step SelectHemisfericSessionHour";
+            advancedDateSelectorPage!.SelectHemisfericSessionHour();
             
             LogStep(Status.Info, "Clicked on Comprar button");
             CurrentStep = "Step ClickComprarButton";

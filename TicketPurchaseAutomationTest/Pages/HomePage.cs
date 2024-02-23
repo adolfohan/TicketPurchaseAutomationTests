@@ -145,7 +145,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
 
-    public void ClickOnLeisureParksFilter()
+    private void ClickOnLeisureParksFilter()
     {
         try
         {
@@ -163,8 +163,8 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
         }
     }
-    
-    public void ClickOnCultureVisitsToursFilter()
+
+    private void ClickOnCultureVisitsToursFilter()
     {
         try
         {
@@ -182,8 +182,8 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
         }
     }
-    
-    public void ClickOnExcursionsTouristsMobilityFilter()
+
+    private void ClickOnExcursionsTouristsMobilityFilter()
     {
         try
         {
@@ -202,7 +202,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void ClickOnExperiencesRelaxFilter()
+    private void ClickOnExperiencesRelaxFilter()
     {
         try
         {
@@ -221,7 +221,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void ClickOnGastronomyWineTourismFilter()
+    private void ClickOnGastronomyWineTourismFilter()
     {
         try
         {
@@ -240,7 +240,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void ClickOnMusicalsShowFilter()
+    private void ClickOnMusicalsShowFilter()
     {
         try
         {
@@ -259,7 +259,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void ClickOnSportsFilter()
+    private void ClickOnSportsFilter()
     {
         try
         {
@@ -278,7 +278,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void ClickOnActiveTourismFilter()
+    private void ClickOnActiveTourismFilter()
     {
         try
         {
@@ -297,7 +297,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void ClickOnSnowFilter()
+    private void ClickOnSnowFilter()
     {
         try
         {
@@ -316,7 +316,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void ClickOnCinemaDriveInFilter()
+    private void ClickOnCinemaDriveInFilter()
     {
         try
         {
@@ -335,7 +335,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void ClickOnHalloweenFilter()
+    private void ClickOnHalloweenFilter()
     {
         try
         {
@@ -354,7 +354,7 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void ClickOnEscapeRoomExperiencesFilter()
+    private void ClickOnEscapeRoomExperiencesFilter()
     {
         try
         {

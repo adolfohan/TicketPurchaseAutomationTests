@@ -12,8 +12,12 @@ public class AdvancedDateSelectorPage(IWebDriver? driver) : BasePage(driver)
     private readonly By chosenDateElement = By.XPath("//label[text()='Fecha elegida']");
     private readonly By comprarButtonElement = By.XPath(
         "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']");
-    private readonly By radioButtonElement = By.XPath("//span[contains(text(),'Hemisfèric')]/following::input[@type='radio'][1]");
-    private readonly By sessionDropdownElement = By.XPath("//span[contains(text(),'Hemisfèric')]/following::select[@class='form-select form-select-sm' and not(@disabled)]");
+    //private readonly By oceanograficRadioButtonElement = By.XPath("//span[contains(text(),'Oceanogràfic')]/following::input[@type='radio'][1]");
+    private readonly By oceanograficSessionDropdownElement = By.XPath("//span[normalize-space()='Hemisfèric']/preceding::select[@class='form-select " +
+                                                                      "form-select-sm' and not(@disabled)]");
+    private readonly By hemisfericRadioButtonElement = By.XPath("//span[contains(text(),'Hemisfèric')]/following::input[@type='radio'][1]");
+    private readonly By hemisfericSessionDropdownElement = By.XPath("//span[contains(text(),'Hemisfèric')]/" +
+                                                          "following::select[@class='form-select form-select-sm' and not(@disabled)]");
     private readonly By advancedDateSelectorElement = By.ClassName("sv-tickets__actions");
     private const string ExpectedSessionMessage = "Selecciona la sesión";
     private const string ExpectedChosenDateMessage = "Fecha elegida";
@@ -42,16 +46,39 @@ public class AdvancedDateSelectorPage(IWebDriver? driver) : BasePage(driver)
         //IWebElement choseDateMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(chosenDateElement));
         var message = sessionMessage.Text;
         //string dateMessage = choseDateMessage.Text;
-        Assert.That(message, Is.EqualTo(ExpectedSessionMessage), "The messages do not match the expected messages"); //dateMessage.Equals(ExpectedChosenDateMessage) && 
+        Assert.That(message, Is.EqualTo(ExpectedSessionMessage), "The messages do not match the expected messages"); 
+        //dateMessage.Equals(ExpectedChosenDateMessage) && 
         return true;
     }
-
-    public void SelectTitle()
+    
+    public void SelectOceanograficSessionHour()
     {
         try
         {
             //Thread.Sleep(2000);
-            IList<IWebElement> radioButtons = FluentWait.Until(webDriver => webDriver!.FindElements(radioButtonElement));
+            var dropdown = FluentWait.Until(ExpectedConditions.ElementToBeClickable(oceanograficSessionDropdownElement));
+
+            var select = new SelectElement(dropdown);
+            IList<IWebElement> options = select.Options;
+
+            if (options.Count <= 0) return;
+
+            var randomIndex = Random.Next(1, options.Count);
+
+            select.SelectByIndex(randomIndex);
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+    }
+
+    public void SelectHemisfericTitle()
+    {
+        try
+        {
+            //Thread.Sleep(2000);
+            IList<IWebElement> radioButtons = FluentWait.Until(webDriver => webDriver!.FindElements(hemisfericRadioButtonElement));
 
             if (radioButtons.Count <= 0) return;
             var randomRadioIndex = Random.Next(0, radioButtons.Count);
@@ -68,12 +95,12 @@ public class AdvancedDateSelectorPage(IWebDriver? driver) : BasePage(driver)
         }
     }
     
-    public void SelectSessionHour()
+    public void SelectHemisfericSessionHour()
     {
         try
         {
             //Thread.Sleep(2000);
-            var dropdown = FluentWait.Until(ExpectedConditions.ElementToBeClickable(sessionDropdownElement));
+            var dropdown = FluentWait.Until(ExpectedConditions.ElementToBeClickable(hemisfericSessionDropdownElement));
 
             var select = new SelectElement(dropdown);
             IList<IWebElement> options = select.Options;
