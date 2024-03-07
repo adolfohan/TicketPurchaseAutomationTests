@@ -44,76 +44,39 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
             }
         }*/
     }
-
-    /*public void SelectNumberOfTickets(string numberOfTickets)
+    
+    public void SelectNumberOfTickets(string numberOfTickets, int maxAttempts = 10)
+{
+    for (var attempts = 0; attempts < maxAttempts; attempts++)
     {
         try
         {
-            IList<IWebElement> inputFields =
-                FluentWait.Until(webDriver => webDriver!.FindElements(inputNumberOfTicketsElement));
-            var randomIndex = Random.Next(0, inputFields.Count);
-            var selectedInputField = inputFields[randomIndex];
-            
+            var inputFields = FluentWait.Until(webDriver => webDriver!.FindElements(inputNumberOfTicketsElement));
+            if (inputFields.Count == 0) continue;
+
+            var selectedInputField = inputFields.FirstOrDefault(field => field.Displayed);
+            if (selectedInputField == null) continue;
+
             ScrollIntoView(selectedInputField);
             ClearAndSetInputValue(selectedInputField, numberOfTickets);
+            return;
         }
-        catch (Exception e)
+        catch (WebDriverTimeoutException ex)
         {
-            Console.WriteLine("An error occurred while selecting number of tickets: " + e.Message);
-            throw;
+            Console.WriteLine($"Timeout error: {ex.Message}");
         }
-    }*/
-    
-    public void SelectNumberOfTickets(string numberOfTickets, int maxAttempts = 10)
-    {
-        var attempts = 0;
-
-        while (attempts < maxAttempts)
+        catch (NoSuchElementException ex)
         {
-            try
-            {
-                IList<IWebElement> inputFields =
-                    FluentWait.Until(webDriver => webDriver!.FindElements(inputNumberOfTicketsElement));
-
-                if (inputFields.Count > 0)
-                {
-                    var randomIndex = Random.Next(0, inputFields.Count);
-                    var selectedInputField = inputFields[randomIndex];
-
-                    while (!selectedInputField.Displayed)
-                    {
-                        randomIndex = Random.Next(0, inputFields.Count);
-                        selectedInputField = inputFields[randomIndex];
-                    }
-
-                    ScrollIntoView(selectedInputField);
-                    ClearAndSetInputValue(selectedInputField, numberOfTickets);
-                    break;
-                }
-
-                homePage.NavigateToNormalUrl();
-            }
-            catch (WebDriverTimeoutException ex)
-            {
-                Console.WriteLine($"Timeout error: {ex.Message}");
-            }
-            catch (NoSuchElementException ex)
-            {
-                Console.WriteLine($"Element not found: {ex.Message}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-            }
-
-            attempts++;
+            Console.WriteLine($"Element not found: {ex.Message}");
         }
-
-        if (attempts == maxAttempts)
+        catch (Exception ex)
         {
-            Console.WriteLine("Max attempts reached, could not select number of tickets");
+            Console.WriteLine($"An error occurred: {ex.Message}");
         }
     }
+
+    Console.WriteLine("Max attempts reached, could not select number of tickets");
+}
     
     public void ConfirmDate()
     {

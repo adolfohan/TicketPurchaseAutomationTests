@@ -18,30 +18,21 @@ public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
     private readonly By conditionsCheckboxElement = By.Id("form-conditions");
     private readonly By privacyCheckboxElement = By.Id("form-privacy");
     private readonly By comprarButtonElement = By.XPath(
-            "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']//span[@class='sv-button__label j-button-buy-label'][normalize-space()='Comprar']");
+            "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']" +
+            "//span[@class='sv-button__label j-button-buy-label'][normalize-space()='Comprar']");
     private readonly By datosDeLaOperacionElement = By.XPath("//h1[@class='datosDeLaOperacion']");
 
-    public void CompletePersonalInformation(string fullName, string surName, string id, string email, string confirmEmail,string phone)
+    public void CompletePersonalInformation(string fullName, string surName, string id, string email, string confirmEmail, string phone)
+{
+    var elements = new List<By> { nameElement, surNameElement, idElement, emailElement, confirmEmailElement, phoneElement };
+    var values = new List<string> { fullName, surName, id, email, confirmEmail, phone };
+
+    for (var i = 0; i < elements.Count; i++)
     {
         try
         {
-            var fullNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
-            ClearAndSetInputValue(fullNameField, fullName);
-
-            var surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
-            ClearAndSetInputValue(surNameField, surName);
-
-            var idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
-            ClearAndSetInputValue(idField, id);
-
-            var emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
-            ClearAndSetInputValue(emailField, email);
-
-            var confirmEmailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmEmailElement));
-            ClearAndSetInputValue(confirmEmailField, confirmEmail);
-            
-            var phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
-            ClearAndSetInputValue(phoneField, phone);
+            var field = FluentWait.Until(ExpectedConditions.ElementIsVisible(elements[i]));
+            ClearAndSetInputValue(field, values[i]);
         }
         catch (NoSuchElementException ex)
         {
@@ -52,6 +43,7 @@ public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while entering data: {ex.Message}");
         }
     }
+}
     
     public void CheckConditions()
     {
@@ -126,28 +118,20 @@ public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
     }
     
     public void BlankFields()
-    {
-        var nameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(nameElement));
-        var surNameField = FluentWait.Until(ExpectedConditions.ElementIsVisible(surNameElement));
-        var idField = FluentWait.Until(ExpectedConditions.ElementIsVisible(idElement));
-        var emailField = FluentWait.Until(ExpectedConditions.ElementIsVisible(emailElement));
-        var phoneField = FluentWait.Until(ExpectedConditions.ElementIsVisible(phoneElement));
-        
-        var name = nameField.GetAttribute("value");
-        var lastName = surNameField.GetAttribute("value");
-        var id = idField.GetAttribute("value");
-        var email = emailField.GetAttribute("value");
-        var phone = phoneField.GetAttribute("value");
+{
+    var elements = new List<By> { nameElement, surNameElement, idElement, emailElement, phoneElement };
+    var fieldNames = new List<string> { "Name", "Last name", "ID", "Email", "Phone" };
 
-        Assert.Multiple(() =>
+    Assert.Multiple(() =>
+    {
+        for (var i = 0; i < elements.Count; i++)
         {
-            Assert.That(string.IsNullOrEmpty(name), "Name field is empty");
-            Assert.That(string.IsNullOrEmpty(lastName), "Last name field is empty");
-            Assert.That(string.IsNullOrEmpty(id), "ID field is empty");
-            Assert.That(string.IsNullOrEmpty(email), "Email field is empty");
-            Assert.That(string.IsNullOrEmpty(phone), "Phone field is empty");
-        });
-    }
+            var field = FluentWait.Until(ExpectedConditions.ElementIsVisible(elements[i]));
+            var value = field.GetAttribute("value");
+            Assert.That(string.IsNullOrEmpty(value), $"{fieldNames[i]} field is empty");
+        }
+    });
+}
 
     public void InvalidNameAndSurname()
     {
@@ -206,7 +190,8 @@ public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
         var isConditionsCheckboxSelected = conditionsCheckbox.Selected;
         var isPrivacyCheckboxSelected = privacyCheckbox.Selected;
         
-        Assert.That(isConditionsCheckboxSelected || isPrivacyCheckboxSelected, Is.False, "The Conditions and Privacy Checkbox is not selected and Card Page is not displayed");
+        Assert.That(isConditionsCheckboxSelected || isPrivacyCheckboxSelected, Is.False, "The Conditions " +
+            "and Privacy Checkbox is not selected and Card Page is not displayed");
         
     }
 

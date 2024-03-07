@@ -10,25 +10,22 @@ public class CardPage(IWebDriver? driver) : BasePage(driver)
     private readonly By enviarBtnElement = By.Id("boton");
     private readonly By continuarBtnElement = By.XPath("/html/body/div[1]/form/div[2]/div[3]/div[2]/div[1]/input[2]");
 
-    public void CompleteCardInformation(string cardNumber, string expirationMonth, string expirationYear,
-        string securityCode)
+    public void CompleteCardInformation(string cardNumber, string expirationMonth, string expirationYear, string securityCode)
+{
+    var cardInfo = new Dictionary<By, string>
+    {
+        { By.XPath("//*[@id=\"inputCard\"]"), cardNumber },
+        { By.XPath("//*[@id=\"cad1\"]"), expirationMonth },
+        { By.XPath("//*[@id=\"cad2\"]"), expirationYear },
+        { By.XPath("//*[@id=\"codseg\"]"), securityCode }
+    };
+
+    foreach (var field in cardInfo)
     {
         try
         {
-            // Create a dictionary to map field names to values
-            var cardInfo = new Dictionary<string, string>
-            {
-                { "//*[@id=\"inputCard\"]", cardNumber },
-                { "//*[@id=\"cad1\"]", expirationMonth },
-                { "//*[@id=\"cad2\"]", expirationYear },
-                { "//*[@id=\"codseg\"]", securityCode }
-            };
-
-            foreach (var field in cardInfo)
-            {
-                var element = FluentWait.Until(ExpectedConditions.ElementIsVisible(By.XPath(field.Key)));
-                ClearAndSetInputValue(element, field.Value);
-            }
+            var element = FluentWait.Until(ExpectedConditions.ElementIsVisible(field.Key));
+            ClearAndSetInputValue(element, field.Value);
         }
         catch (NoSuchElementException ex)
         {
@@ -39,6 +36,7 @@ public class CardPage(IWebDriver? driver) : BasePage(driver)
             Console.WriteLine($"An error occurred while entering card information: {ex.Message}");
         }
     }
+}
     
     public void ClickOnPagarButton()
     {

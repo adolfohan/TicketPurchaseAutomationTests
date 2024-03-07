@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="Push">
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Base/BaseTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/HomePage.cs" afterDir="false" />
+    <list default="true" id="0224926f-3f15-4c3c-b05b-4f2da7651da7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfo.cs" afterDir="false" />
@@ -17,6 +16,7 @@
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/TicketPurchaseAutomationTest/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +63,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Base/BaseTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Pages/AdvancedDateSelectorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Pages/TicketsSelectionPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/Repositories/Git/TicketPurchaseAutomationTest/TicketPurchaseAutomationTest/Utilities/ExtendManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -138,7 +140,8 @@
       <workItem from="1707831569075" duration="56000" />
       <workItem from="1707983795120" duration="11693000" />
       <workItem from="1708000942897" duration="3340000" />
-      <workItem from="1708607273215" duration="11192000" />
+      <workItem from="1708607273215" duration="12779000" />
+      <workItem from="1709798779867" duration="1660000" />
     </task>
     <task id="LOCAL-00001" summary="Reports and screenshot deleted">
       <option name="closed" value="true" />
@@ -244,7 +247,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708675255950</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Push">
+      <option name="closed" value="true" />
+      <created>1708677305326</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708677305326</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Push">
+      <option name="closed" value="true" />
+      <created>1708689501243</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708689501243</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
