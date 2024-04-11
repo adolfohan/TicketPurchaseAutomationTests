@@ -7,9 +7,11 @@ namespace TicketPurchaseAutomationTest.Pages;
 public class HomePage(IWebDriver? driver) : BasePage(driver)
 {
     private readonly By pageSize20Element = By.XPath("//a[contains(text(), '20')]");
+
     private static By meInteresaButton =>
         By.XPath(
             "//a[contains(@class, 'sv-button sv-button--type-contained sv-button--size-sm sv-button--color-primary') and contains(text(), 'Me interesa')]");
+
     private static By leisureParksFilterElement => By.Id("c124");
     private static By cultureVisitsToursElement => By.Id("c132");
     private static By excursionsTouristsMobilityElement => By.Id("c142");
@@ -33,7 +35,6 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
 
     private string RandomNormalUrl()
     {
-        
         List<string> normalTickets =
         [
             "Entradas-PortAventura-Park",
@@ -43,53 +44,44 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
             "parqueatraccionesmadrid",
             "acuariozaragoza"
         ];
-        
+
         var normalTicket = normalTickets[Random.Next(normalTickets.Count)];
         var completeUrl = BaseUrl + normalTicket;
 
         return completeUrl;
     }
-    
+
     public void NavigateToUrl()
     {
         Driver!.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/");
         Driver!.Manage().Window.Maximize();
     }
-    
+
     public void NavigateToNormalUrl()
     {
         Driver!.Navigate().GoToUrl(RandomNormalUrl());
         Driver!.Manage().Window.Maximize();
     }
-    
+
     private string RandomSessionUrl()
     {
-        
-        List<string> sessionTickets =
-        [
-            //"bioparcvalencia",
-            "atletico-de-madrid-tour-metropolitano",
-            "campnou",
-            "tourbernabeu"
-            //"mestallaforevertour"
-        ];
-
+        var sessionTickets = new List<string>
+        {
+            "atletico-de-madrid-tour-metropolitano", "campnou", "tourbernabeu"
+        }; //"bioparcvalencia", "mestallaforevertour"
         var sessionTicket = sessionTickets[Random.Next(sessionTickets.Count)];
-        var completeUrl = BaseUrl + sessionTicket;
-
-        return completeUrl;
+        return BaseUrl + sessionTicket;
     }
-    
+
+
     public void NavigateToSessionUrl()
     {
         Driver!.Navigate().GoToUrl(RandomSessionUrl());
         Driver!.Manage().Window.Maximize();
-
     }
-    
+
     private string RandomAdvancedDateSelectorUrl()
     {
-        
         List<string> advancedDateSelectorTickets =
         [
             //"ciudadartesyciencias-hemisferic",
@@ -102,12 +94,13 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
 
         return completeUrl;
     }
-    
+
     public void NavigateToSeatingUrl()
     {
         Driver!.Navigate().GoToUrl("https://pre-tixalia.publicticketshop.experticket.com/test-seating");
         Driver!.Manage().Window.Maximize();
     }
+
     public void NavigateToAdvancedDateSelectorUrl()
     {
         Driver!.Navigate().GoToUrl(RandomAdvancedDateSelectorUrl());
@@ -120,24 +113,15 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         ScrollIntoView(pageSize20);
         pageSize20.Click();
     }
-    
+
     public void ClickOnRandomMeInteresaButton()
     {
-        IList<IWebElement> meInteresaButtons = FluentWait.Until(webDriver => webDriver!.FindElements(meInteresaButton));
-
-        if (meInteresaButtons.Count > 0)
+        var meInteresaButtons = FluentWait.Until(driver => driver!.FindElements(meInteresaButton));
+        if (meInteresaButtons.Any())
         {
-            var randomIndex = new Random().Next(0, meInteresaButtons.Count);
-            var buttonToClick = meInteresaButtons[randomIndex];
-
+            var buttonToClick = meInteresaButtons[Random.Next(meInteresaButtons.Count)];
             ScrollIntoView(buttonToClick);
-
-            FluentWait.Until(ExpectedConditions.ElementToBeClickable(buttonToClick));
-            
-            //TestUtil.DrawBorder(buttonToClick);
-
-            buttonToClick.SendKeys(Keys.Enter);
-            //buttonToClick.Click();
+            FluentWait.Until(ExpectedConditions.ElementToBeClickable(buttonToClick)).SendKeys(Keys.Enter);
         }
         else
         {
@@ -154,520 +138,233 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
             leisureParksFilter.Click();
             Thread.Sleep(2000);
         }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
         catch (Exception ex)
         {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+            Console.WriteLine($"An error occurred: {ex.Message}");
         }
     }
 
     private void ClickOnCultureVisitsToursFilter()
     {
-        try
-        {
-            var cultureVisitsTour =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(cultureVisitsToursElement));
-            cultureVisitsTour.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(cultureVisitsToursElement);
     }
 
     private void ClickOnExcursionsTouristsMobilityFilter()
     {
-        try
-        {
-            var excursionsTouristsMobility =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(excursionsTouristsMobilityElement));
-            excursionsTouristsMobility.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(excursionsTouristsMobilityElement);
     }
-    
+
     private void ClickOnExperiencesRelaxFilter()
     {
-        try
-        {
-            var experiencesRelax =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(experiencesRelaxElement));
-            experiencesRelax.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(experiencesRelaxElement);
     }
-    
+
     private void ClickOnGastronomyWineTourismFilter()
     {
-        try
-        {
-            var gastronomyWineTourism =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(gastronomyWineTourismElement));
-            gastronomyWineTourism.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(gastronomyWineTourismElement);
     }
-    
+
     private void ClickOnMusicalsShowFilter()
     {
-        try
-        {
-            var musicalsShow =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(musicalsShowElement));
-            musicalsShow.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(musicalsShowElement);
     }
-    
+
     private void ClickOnSportsFilter()
     {
-        try
-        {
-            var sports =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(sportsElement));
-            sports.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(sportsElement);
     }
-    
+
     private void ClickOnActiveTourismFilter()
     {
-        try
-        {
-            var activeTourism =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(activeTourismElement));
-            activeTourism.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(activeTourismElement);
     }
-    
+
     private void ClickOnSnowFilter()
     {
-        try
-        {
-            var snow =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(snowElement));
-            snow.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(snowElement);
     }
-    
+
     private void ClickOnCinemaDriveInFilter()
     {
-        try
-        {
-            var cinemaDriveIn =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(cinemaDriveInElement));
-            cinemaDriveIn.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(cinemaDriveInElement);
     }
-    
+
     private void ClickOnHalloweenFilter()
     {
-        try
-        {
-            var halloween =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(halloweenElement));
-            halloween.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(halloweenElement);
     }
-    
+
     private void ClickOnEscapeRoomExperiencesFilter()
     {
-        try
-        {
-            var escapeRoomExperiences =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(escapeRoomExperiencesElement));
-            escapeRoomExperiences.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(escapeRoomExperiencesElement);
     }
-    
+
     public void ClickOnAllLeisureFamiliesFilters()
     {
-        try
+        var filters = new List<Action>
         {
-            ClickOnLeisureParksFilter();
-            Thread.Sleep(500);
-            ClickOnCultureVisitsToursFilter();
-            Thread.Sleep(500);
-            ClickOnExcursionsTouristsMobilityFilter();
-            Thread.Sleep(500);
-            ClickOnExperiencesRelaxFilter();
-            Thread.Sleep(500);
-            ClickOnGastronomyWineTourismFilter();
-            Thread.Sleep(500);
-            ClickOnMusicalsShowFilter();
-            Thread.Sleep(500);
-            ClickOnSportsFilter();
-            Thread.Sleep(500);
-            ClickOnActiveTourismFilter();
-            Thread.Sleep(500);
-            ClickOnSnowFilter();
-            Thread.Sleep(500);
-            ClickOnCinemaDriveInFilter();
-            Thread.Sleep(500);
-            ClickOnHalloweenFilter();
-            Thread.Sleep(500);
-            ClickOnEscapeRoomExperiencesFilter();
-            Thread.Sleep(500);
-        }
-        catch (NoSuchElementException ex)
+            ClickOnLeisureParksFilter,
+            ClickOnCultureVisitsToursFilter,
+            ClickOnExcursionsTouristsMobilityFilter,
+            ClickOnExperiencesRelaxFilter,
+            ClickOnGastronomyWineTourismFilter,
+            ClickOnMusicalsShowFilter,
+            ClickOnSportsFilter,
+            ClickOnActiveTourismFilter,
+            ClickOnSnowFilter,
+            ClickOnCinemaDriveInFilter,
+            ClickOnHalloweenFilter,
+            ClickOnEscapeRoomExperiencesFilter
+        };
+
+        foreach (var filter in filters)
         {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+            try
+            {
+                filter();
+                Thread.Sleep(500);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
     }
-    
+
     public void DeselectAllLeisureFamiliesFilters()
     {
-        try
+        var filters = new List<By>
         {
-            var leisureParksFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(leisureParksFilterElement));
-            var cultureVisitsTour =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(cultureVisitsToursElement));
-            var excursionsTouristsMobility =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(excursionsTouristsMobilityElement));
-            var experiencesRelax =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(experiencesRelaxElement));
-            var gastronomyWineTourism =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(gastronomyWineTourismElement));
-            var musicalsShow =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(musicalsShowElement));
-            var sports =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(sportsElement));
-            var activeTourism =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(activeTourismElement));
-            var snow =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(snowElement));
-            var cinemaDriveIn =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(cinemaDriveInElement));
-            var halloween =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(halloweenElement));
-            var escapeRoomExperiences =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(escapeRoomExperiencesElement));
-            
-            ClickOnAllLeisureFamiliesFilters();
+            leisureParksFilterElement,
+            cultureVisitsToursElement,
+            excursionsTouristsMobilityElement,
+            experiencesRelaxElement,
+            gastronomyWineTourismElement,
+            musicalsShowElement,
+            sportsElement,
+            activeTourismElement,
+            snowElement,
+            cinemaDriveInElement,
+            halloweenElement,
+            escapeRoomExperiencesElement
+        };
 
-            if (!leisureParksFilter.Selected || !cultureVisitsTour.Selected || !excursionsTouristsMobility.Selected ||
-                !experiencesRelax.Selected || !gastronomyWineTourism.Selected || !musicalsShow.Selected ||
-                !sports.Selected || !activeTourism.Selected || !snow.Selected || !cinemaDriveIn.Selected ||
-                !halloween.Selected || !escapeRoomExperiences.Selected) return;
-            leisureParksFilter.Click();
-            cultureVisitsTour.Click();
-            excursionsTouristsMobility.Click();
-            experiencesRelax.Click();
-            gastronomyWineTourism.Click();
-            musicalsShow.Click();
-            sports.Click();
-            activeTourism.Click();
-            snow.Click();
-            cinemaDriveIn.Click();
-            halloween.Click();
-            escapeRoomExperiences.Click();
-        }
-        catch (NoSuchElementException ex)
+        ClickOnAllLeisureFamiliesFilters();
+
+        foreach (var filterElement in filters)
         {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+            try
+            {
+                var filter = FluentWait.Until(ExpectedConditions.ElementToBeClickable(filterElement));
+                if (filter.Selected)
+                {
+                    filter.Click();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
     }
 
-    private void ClickOnSpainFilter()
+    /*private void ClickOnSpainFilter()
     {
-        try
-        {
-            var spainFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(spainElement));
-            spainFilter.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(spainElement);
     }
 
     private void ClickOnAndorraFilter()
     {
-        try
-        {
-            var andorraFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(andorraElement));
-            andorraFilter.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(andorraElement);
     }
 
     private void ClickOnFranceFilter()
     {
-        try
-        {
-            var franceFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(franceElement));
-            franceFilter.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(franceElement);
     }
 
     private void ClickOnGibraltarFilter()
     {
-        try
-        {
-            var gibraltarFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(gibraltarElement));
-            gibraltarFilter.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(gibraltarElement);
     }
 
     private void ClickOnItalyFilter()
     {
-        try
-        {
-            var italyFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(italyElement));
-            italyFilter.Click();
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(italyElement);
     }
 
     private void ClickOnPortugalFilter()
     {
-        try
-        {
-            var portugalFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(portugalElement));
-            portugalFilter.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
+        ClickOnFilter(portugalElement);
     }
 
     private void ClickOnUnitedKingdomFilter()
     {
-        try
-        {
-            var unitedKingdomFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(unitedKingdomElement));
-            unitedKingdomFilter.Click();
-            Thread.Sleep(2000);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
-        }
-    }
-    
+        ClickOnFilter(unitedKingdomElement);
+    }*/
+
     public void ClickOnAllCountryFilters()
     {
-        try
+        var filters = new List<By>
         {
-            ClickOnSpainFilter();
-            ClickOnAndorraFilter();
-            ClickOnFranceFilter();
-            ClickOnGibraltarFilter();
-            ClickOnItalyFilter();
-            ClickOnPortugalFilter();
-            ClickOnUnitedKingdomFilter();
+            spainElement,
+            andorraElement,
+            franceElement,
+            gibraltarElement,
+            italyElement,
+            portugalElement,
+            unitedKingdomElement
+        };
+
+        foreach (var filter in filters)
+        {
+            ClickOnFilter(filter);
         }
-        catch (NoSuchElementException ex)
+    }
+
+    public void DeselectAllCountryFilters()
+    {
+        var filters = new List<By>
         {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
+            spainElement,
+            andorraElement,
+            franceElement,
+            gibraltarElement,
+            italyElement,
+            portugalElement,
+            unitedKingdomElement
+        };
+
+        ClickOnAllCountryFilters();
+
+        foreach (var filterElement in filters)
         {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+            try
+            {
+                var filter = FluentWait.Until(ExpectedConditions.ElementToBeClickable(filterElement));
+                if (filter.Selected)
+                {
+                    filter.Click();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
     }
     
-    public void DeselectAllCountryFilters()
+    private void ClickOnFilter(By filterElement)
     {
         try
         {
-            var spainFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(spainElement));
-            var andorraFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(andorraElement));
-            var franceFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(franceElement));
-            var gibraltarFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(gibraltarElement));
-            var italyFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(italyElement));
-            var portugalFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(portugalElement));
-            var unitedKingdomFilter =
-                FluentWait.Until(ExpectedConditions.ElementToBeClickable(unitedKingdomElement));
-            ClickOnSpainFilter();
-            ClickOnAndorraFilter();
-            ClickOnFranceFilter();
-            ClickOnGibraltarFilter();
-            ClickOnItalyFilter();
-            ClickOnPortugalFilter();
-            ClickOnUnitedKingdomFilter();
-
-            if (!spainFilter.Selected || !andorraFilter.Selected || !franceFilter.Selected ||
-                !gibraltarFilter.Selected ||
-                !italyFilter.Selected || !portugalFilter.Selected || !unitedKingdomFilter.Selected) return;
-            ClickOnSpainFilter();
-            ClickOnAndorraFilter();
-            ClickOnFranceFilter();
-            ClickOnGibraltarFilter();
-            ClickOnItalyFilter();
-            ClickOnPortugalFilter();
-            ClickOnUnitedKingdomFilter();
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
+            var filter = FluentWait.Until(ExpectedConditions.ElementToBeClickable(filterElement));
+            filter.Click();
+            Thread.Sleep(1000);
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"An error occurred while navigating to the URL: {ex.Message}");
+            Console.WriteLine($"An error occurred: {ex.Message}");
         }
     }
 }

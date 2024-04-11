@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KFe6G1WvTjQCNGhe7DlKfls0QMumF2FJQzDykepiDiCpdn5nBXDuHPUZiLi48ZbQZ6vR3nyxml4RoPrMmXVEIQ==",
+  "dgSpecHash": "yVugWaFM+SeHVpYtCrwJHM2vkU9BBdWD5BMYqQI5O/5atqYYSWDhK7OG/6XI7Y0u/9xyEBcQYPEsiW3VF1QyFA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\Repositories\\Git\\TicketPurchaseAutomationTest\\TicketPurchaseAutomationTest\\TicketPurchaseAutomationTest.csproj",
   "expectedPackageFiles": [
@@ -25,7 +25,7 @@
     "C:\\Users\\Adolfo\\.nuget\\packages\\razorengine.netcore.nixfix\\1.0.1\\razorengine.netcore.nixfix.1.0.1.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.support\\4.18.1\\selenium.support.4.18.1.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.webdriver\\4.18.1\\selenium.webdriver.4.18.1.nupkg.sha512",
-    "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.webdriver.chromedriver\\121.0.6167.8500\\selenium.webdriver.chromedriver.121.0.6167.8500.nupkg.sha512",
+    "C:\\Users\\Adolfo\\.nuget\\packages\\selenium.webdriver.chromedriver\\123.0.6312.12200\\selenium.webdriver.chromedriver.123.0.6312.12200.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
     "C:\\Users\\Adolfo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

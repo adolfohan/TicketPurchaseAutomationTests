@@ -180,20 +180,19 @@ public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
         Assert.That(() => PhoneRegex().IsMatch(phone), Is.False, "Invalid phone");
     }
 
-    public void AreCheckboxesSelected()
+public void AreCheckboxesSelected()
+{
+    var checkboxes = new List<By> { conditionsCheckboxElement, privacyCheckboxElement };
+
+    Assert.Multiple(() =>
     {
-        var conditionsCheckbox =
-            FluentWait.Until(ExpectedConditions.ElementToBeClickable(conditionsCheckboxElement));
-        var privacyCheckbox =
-            FluentWait.Until(ExpectedConditions.ElementToBeClickable(privacyCheckboxElement));
-        
-        var isConditionsCheckboxSelected = conditionsCheckbox.Selected;
-        var isPrivacyCheckboxSelected = privacyCheckbox.Selected;
-        
-        Assert.That(isConditionsCheckboxSelected || isPrivacyCheckboxSelected, Is.False, "The Conditions " +
-            "and Privacy Checkbox is not selected and Card Page is not displayed");
-        
-    }
+        foreach (var checkbox in checkboxes)
+        {
+            var element = FluentWait.Until(ExpectedConditions.ElementToBeClickable(checkbox));
+            Assert.That(element.Selected, Is.False, $"{checkbox} is not selected and Card Page is not displayed");
+        }
+    });
+}
 
     public void IsCardPageDisplayed()
     {
