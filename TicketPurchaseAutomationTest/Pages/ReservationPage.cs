@@ -89,32 +89,8 @@ public partial class ReservationPage(IWebDriver? driver) : BasePage(driver)
 
     public void ClickOnComprarButtonAgain()
     {
-        try
-        {
-            IList<IWebElement> comprarButtons = FluentWait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(comprarButtonElement));
-            
-            if (comprarButtons.Count > 0)
-            {
-                var randomIndex = random.Next(0, comprarButtons.Count);
-                var selectedComprarButton = comprarButtons[randomIndex];
-
-                ScrollIntoView(selectedComprarButton);
-                Thread.Sleep(7000);
-                selectedComprarButton.Click();
-            }
-            else
-            {
-                Console.WriteLine("No 'Comprar' buttons found.");
-            }
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while clicking on 'Comprar' button again in Reservation Page: {ex.Message}");
-        }
+        Thread.Sleep(TimeSpan.FromSeconds(10));
+        FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButtonElement)).Click();
     }
     
     public void BlankFields()
@@ -198,6 +174,7 @@ public void AreCheckboxesSelected()
     {
         try
         {
+            Thread.Sleep(TimeSpan.FromSeconds(10));
             var datosElement = Driver!.FindElement(datosDeLaOperacionElement);
             DrawBorder(datosElement);
 

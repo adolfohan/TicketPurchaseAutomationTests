@@ -39,44 +39,44 @@ public class TicketPurchaseBaseTest : BaseTest
             HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Me Interesa button");
-            currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps!.ClickOnRandomMeInteresaButton();*/
+            CurrentStep = "Step ClickRandomMeInteresaButton";
+            HomePageSteps!.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected desired ticket");
             CurrentStep = "Step SelectDesiredTicket";
-            TicketsSelectionSteps!.SelectDesiredTicket();
+            TicketsSelectionPage!.SelectNumberOfTickets();
 
             LogStep(Status.Info, "Date confirmed");
             CurrentStep = "Step ConfirmDate";
-            TicketsSelectionSteps!.ConfirmDate();
+            TicketsSelectionPage!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on Comprar button");
             CurrentStep = "Step ClickComprarButton";
-            TicketsSelectionSteps!.ClickOnComprarButton();
+            TicketsSelectionPage!.ClickOnComprarButton();
 
             LogStep(Status.Info, "Personal Information in Blank");
             CurrentStep = "Step CompletePersonalInformationInBlankPersonalInformation";
-            ReservationSteps!.PersonalInformationInBlank();
+            ReservationPage!.CompletePersonalInformation("", "", "", "", "", "");
 
             LogStep(Status.Info, "Checked conditions checkbox");
             CurrentStep = "Step CheckTheConditionsCheckbox";
-            ReservationSteps!.CheckTheConditionsCheckbox();
+            ReservationPage!.CheckConditions();
 
             LogStep(Status.Info, "Checked privacy checkbox");
             CurrentStep = "Step CheckThePrivacyCheckbox";
-            ReservationSteps!.CheckThePrivacyCheckbox();
+            ReservationPage!.CheckPrivacy();
 
             LogStep(Status.Info, "Clicked on Comprar button again");
             CurrentStep = "Step ClicksComprarButtonAgain";
-            ReservationSteps!.ClicksOnComprarButtonAgain();
+            ReservationPage!.ClickOnComprarButtonAgain();
 
             LogStep(Status.Info, "Check Blank Fields");
             CurrentStep = "Step CheckBlankFields";
-            ReservationSteps!.CheckBlankFields();
+            ReservationPage!.BlankFields();
 
             LogStep(Status.Info, "Checking Card Page");
             CurrentStep = "Step CheckCardPage";
-            ReservationSteps!.CheckCardPage();
+            ReservationPage!.IsCardPageDisplayed();
 
             LogStep(Status.Info, "Ticket Purchase unsuccessful");
         }
@@ -86,8 +86,7 @@ public class TicketPurchaseBaseTest : BaseTest
             throw;
         }
     }
-
-    /*
+    
     [Test, Order(3)]
     public void TicketPurchaseWithWrongNameAndSurnameTest()
     {
@@ -96,48 +95,49 @@ public class TicketPurchaseBaseTest : BaseTest
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Name And Surname");
 
             LogStep(Status.Info, "Navigating to URL");
-            currentStep = "Step GoToURL";
-            homePage!.NavigateToNormalUrl();
+            CurrentStep = "Step GoToURL";
+            HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
-            currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps!.ClickOnRandomMeInteresaButton();
+            CurrentStep = "Step ClickRandomMeInteresaButton";
+            HomePageSteps!.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
-            currentStep = "Step SelectDesiredTicket";
-            ticketsSelectionSteps!.SelectDesiredTicket();
+            CurrentStep = "Step SelectDesiredTicket";
+            TicketsSelectionPage!.SelectNumberOfTickets();
 
             LogStep(Status.Info, "Confirmed Date");
-            currentStep = "Step ConfirmDate";
-            ticketsSelectionSteps!.ConfirmDate();
+            CurrentStep = "Step ConfirmDate";
+            TicketsSelectionPage!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on 'Comprar' Button");
-            currentStep = "Step ClickComprarButton";
-            ticketsSelectionSteps!.ClickOnComprarButton();
+            CurrentStep = "Step ClickComprarButton";
+            TicketsSelectionPage!.ClickOnComprarButton();
 
             LogStep(Status.Info, "Entered Wrong Name And Surname");
-            currentStep = "Step WrongNameAndSurname";
-            reservationSteps!.WrongNameAndSurname();
+            CurrentStep = "Step WrongNameAndSurname";
+            ReservationPage!.CompletePersonalInformation("2165!", "15646456!", "33511838A", "ahan@test.com", "ahan@test.com",
+                "123456789");
 
             LogStep(Status.Info, "Checked Conditions Checkbox");
-            currentStep = "Step CheckTheConditionsCheckbox";
-            reservationSteps!.CheckTheConditionsCheckbox();
+            CurrentStep = "Step CheckTheConditionsCheckbox";
+            ReservationPage!.CheckConditions();
 
             LogStep(Status.Info, "Checked Privacy Checkbox");
-            currentStep = "Step CheckThePrivacyCheckbox";
-            reservationSteps!.CheckThePrivacyCheckbox();
+            CurrentStep = "Step CheckThePrivacyCheckbox";
+            ReservationPage!.CheckPrivacy();
 
+            /*LogStep(Status.Info, "Checking Invalid Name And Surname");
+            CurrentStep = "Step CheckInvalidNameAndSurname";
+            ReservationPage!.InvalidNameAndSurname();*/
+            
             LogStep(Status.Info, "Clicked on 'Comprar' Button Again");
-            currentStep = "Step ClicksComprarButtonAgain";
-            reservationSteps!.ClicksOnComprarButtonAgain();
-
-            // LogStep(Status.Info, "Checking Invalid Name And Surname");
-            // currentStep = "Step CheckInvalidNameAndSurname";
-            // reservationSteps!.CheckInvalidNameAndSurname();
+            CurrentStep = "Step ClicksComprarButtonAgain";
+            ReservationPage!.ClickOnComprarButtonAgain();
 
             LogStep(Status.Info, "Checking Card Page");
-            currentStep = "Step CheckCardPage";
-            reservationSteps!.CheckCardPage();
+            CurrentStep = "Step CheckCardPage";
+            ReservationPage!.IsCardPageDisplayed();
 
             LogStep(Status.Info, "Ticket Purchase With Wrong Name And Surname Test Completed Successfully");
         }
@@ -156,48 +156,49 @@ public class TicketPurchaseBaseTest : BaseTest
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong ID");
 
             LogStep(Status.Info, "Navigating to URL");
-            currentStep = "Step GoToURL";
-            homePage!.NavigateToNormalUrl();
+            CurrentStep = "Step GoToURL";
+            HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
-            currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps!.ClickOnRandomMeInteresaButton();
+            CurrentStep = "Step ClickRandomMeInteresaButton";
+            HomePageSteps!.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
-            currentStep = "Step SelectDesiredTicket";
-            ticketsSelectionSteps!.SelectDesiredTicket();
+            CurrentStep = "Step SelectDesiredTicket";
+            TicketsSelectionPage!.SelectNumberOfTickets();
 
             LogStep(Status.Info, "Confirmed Date");
-            currentStep = "Step ConfirmDate";
-            ticketsSelectionSteps!.ConfirmDate();
+            CurrentStep = "Step ConfirmDate";
+            TicketsSelectionPage!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on 'Comprar' Button");
-            currentStep = "Step ClickComprarButton";
-            ticketsSelectionSteps!.ClickOnComprarButton();
+            CurrentStep = "Step ClickComprarButton";
+            TicketsSelectionPage!.ClickOnComprarButton();
 
             LogStep(Status.Info, "Entered Wrong ID");
-            currentStep = "Step WrongId";
-            reservationSteps!.WrongId();
+            CurrentStep = "Step WrongId";
+            ReservationPage!.CompletePersonalInformation("2165!", "15646456!", "@@@@@@@@", "ahan@test.com", "ahan@test.com",
+                "123456789");
 
             LogStep(Status.Info, "Checked Conditions Checkbox");
-            currentStep = "Step CheckTheConditionsCheckbox";
-            reservationSteps!.CheckTheConditionsCheckbox();
+            CurrentStep = "Step CheckTheConditionsCheckbox";
+            ReservationPage!.CheckConditions();
 
             LogStep(Status.Info, "Checked Privacy Checkbox");
-            currentStep = "Step CheckThePrivacyCheckbox";
-            reservationSteps!.CheckThePrivacyCheckbox();
+            CurrentStep = "Step CheckThePrivacyCheckbox";
+            ReservationPage!.CheckPrivacy();
 
             LogStep(Status.Info, "Clicked 'Comprar' Button Again");
-            currentStep = "Step ClicksComprarButtonAgain";
-            reservationSteps!.ClicksOnComprarButtonAgain();
+            CurrentStep = "Step ClicksComprarButtonAgain";
+            ReservationPage!.ClickOnComprarButtonAgain();
 
-            // LogStep(Status.Info, "Checking Invalid ID");
-            // currentStep = "Step CheckInvalidId";
-            // reservationSteps!.CheckInvalidId();
+            LogStep(Status.Info, "Checking Invalid ID");
+            CurrentStep = "Step CheckInvalidId";
+            ReservationPage!.InvalidId();
 
             LogStep(Status.Info, "Checking Card Page");
-            currentStep = "Step CheckCardPage";
-            reservationSteps!.CheckCardPage();
+            CurrentStep = "Step CheckCardPage";
+            ReservationPage!.IsCardPageDisplayed();
 
             LogStep(Status.Info, "Ticket Purchase With Wrong ID Test Completed Successfully");
         }
@@ -206,7 +207,7 @@ public class TicketPurchaseBaseTest : BaseTest
             HandleTestFailure(ex);
             throw;
         }
-    }*/
+    }
 
     [Test, Order(5)]
     public void TicketPurchaseWithWrongEmailTest()
@@ -220,44 +221,44 @@ public class TicketPurchaseBaseTest : BaseTest
             HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
-            currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps!.ClickOnRandomMeInteresaButton();*/
+            CurrentStep = "Step ClickRandomMeInteresaButton";
+            HomePageSteps!.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";
-            TicketsSelectionSteps!.SelectDesiredTicket();
+            TicketsSelectionPage!.SelectNumberOfTickets();
 
             LogStep(Status.Info, "Confirmed Date");
             CurrentStep = "Step ConfirmDate";
-            TicketsSelectionSteps!.ConfirmDate();
+            TicketsSelectionPage!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on 'Comprar' Button");
             CurrentStep = "Step ClickComprarButton";
-            TicketsSelectionSteps!.ClickOnComprarButton();
+            TicketsSelectionPage!.ClickOnComprarButton();
 
             LogStep(Status.Info, "Entered Wrong Email");
             CurrentStep = "Step WrongEmail";
-            ReservationSteps!.WrongEmail();
+            ReservationPage!.CompletePersonalInformation("Adolfo","Test","33511838A","test.kom", "test.kom", "123456789");
 
             LogStep(Status.Info, "Checked Conditions Checkbox");
             CurrentStep = "Step CheckTheConditionsCheckbox";
-            ReservationSteps!.CheckTheConditionsCheckbox();
+            ReservationPage!.CheckConditions();
 
             LogStep(Status.Info, "Checked Privacy Checkbox");
             CurrentStep = "Step CheckThePrivacyCheckbox";
-            ReservationSteps!.CheckThePrivacyCheckbox();
+            ReservationPage!.CheckPrivacy();
 
             LogStep(Status.Info, "Clicked 'Comprar' Button Again");
             CurrentStep = "Step ClicksComprarButtonAgain";
-            ReservationSteps!.ClicksOnComprarButtonAgain();
+            ReservationPage!.ClickOnComprarButtonAgain();
 
             LogStep(Status.Info, "Checking Invalid Email");
             CurrentStep = "Step CheckInvalidEmail";
-            ReservationSteps!.CheckInvalidEmail();
+            ReservationPage!.InvalidEmail();
 
             LogStep(Status.Info, "Checking Card Page");
             CurrentStep = "Step CheckCardPage";
-            ReservationSteps!.CheckCardPage();
+            ReservationPage!.IsCardPageDisplayed();
 
             LogStep(Status.Info, "Ticket Purchase With Wrong Email Test Completed Successfully");
         }
@@ -280,44 +281,44 @@ public class TicketPurchaseBaseTest : BaseTest
             HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
-            currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps!.ClickOnRandomMeInteresaButton();*/
+            CurrentStep = "Step ClickRandomMeInteresaButton";
+            HomePageSteps!.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";
-            TicketsSelectionSteps!.SelectDesiredTicket();
+            TicketsSelectionPage!.SelectNumberOfTickets();
 
             LogStep(Status.Info, "Confirmed Date");
             CurrentStep = "Step ConfirmDate";
-            TicketsSelectionSteps!.ConfirmDate();
+            TicketsSelectionPage!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on 'Comprar' Button");
             CurrentStep = "Step ClickComprarButton";
-            TicketsSelectionSteps!.ClickOnComprarButton();
+            TicketsSelectionPage!.ClickOnComprarButton();
 
             LogStep(Status.Info, "Entered Wrong Confirmation Email");
             CurrentStep = "Step WrongEmail";
-            ReservationSteps!.WrongConfirmationEmail();
+            ReservationPage!.CompletePersonalInformation("Adolfo","Test","33511838A","test@test.com", "test1@test.com", "123456789");
 
             LogStep(Status.Info, "Checked Conditions Checkbox");
             CurrentStep = "Step CheckTheConditionsCheckbox";
-            ReservationSteps!.CheckTheConditionsCheckbox();
+            ReservationPage!.CheckConditions();
 
             LogStep(Status.Info, "Checked Privacy Checkbox");
             CurrentStep = "Step CheckThePrivacyCheckbox";
-            ReservationSteps!.CheckThePrivacyCheckbox();
+            ReservationPage!.CheckPrivacy();
 
             LogStep(Status.Info, "Clicked 'Comprar' Button Again");
             CurrentStep = "Step ClicksComprarButtonAgain";
-            ReservationSteps!.ClicksOnComprarButtonAgain();
+            ReservationPage!.ClickOnComprarButtonAgain();
 
             LogStep(Status.Info, "Checking Invalid Confirmation Email");
             CurrentStep = "Step CheckInvalidEmail";
-            ReservationSteps!.CheckInvalidConfirmationEmail();
+            ReservationPage!.InvalidConfirmationEmail();
 
             LogStep(Status.Info, "Checking Card Page");
             CurrentStep = "Step CheckCardPage";
-            ReservationSteps!.CheckCardPage();
+            ReservationPage!.IsCardPageDisplayed();
 
             LogStep(Status.Info, "Ticket Purchase With Wrong Confirmation Email Test Completed Successfully");
         }
@@ -340,44 +341,44 @@ public class TicketPurchaseBaseTest : BaseTest
             HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
-            currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps!.ClickOnRandomMeInteresaButton();*/
+            CurrentStep = "Step ClickRandomMeInteresaButton";
+            HomePageSteps!.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";
-            TicketsSelectionSteps!.SelectDesiredTicket();
+            TicketsSelectionPage!.SelectNumberOfTickets();
 
             LogStep(Status.Info, "Confirmed Date");
             CurrentStep = "Step ConfirmDate";
-            TicketsSelectionSteps!.ConfirmDate();
+            TicketsSelectionPage!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on 'Comprar' Button");
             CurrentStep = "Step ClickComprarButton";
-            TicketsSelectionSteps!.ClickOnComprarButton();
+            TicketsSelectionPage!.ClickOnComprarButton();
 
             LogStep(Status.Info, "Entered Wrong Phone Number");
             CurrentStep = "Step WrongPhoneNumber";
-            ReservationSteps!.WrongPhoneNumber();
+            ReservationPage!.CompletePersonalInformation("Adolfo","Test","33511838A","test@test.kom", "test@test.kom", "%%/&%//()(/");
 
             LogStep(Status.Info, "Checked Conditions Checkbox");
             CurrentStep = "Step CheckTheConditionsCheckbox";
-            ReservationSteps!.CheckTheConditionsCheckbox();
+            ReservationPage!.CheckConditions();
 
             LogStep(Status.Info, "Checked Privacy Checkbox");
             CurrentStep = "Step CheckThePrivacyCheckbox";
-            ReservationSteps!.CheckThePrivacyCheckbox();
+            ReservationPage!.CheckPrivacy();
 
             LogStep(Status.Info, "Clicked 'Comprar' Button Again");
             CurrentStep = "Step ClicksComprarButtonAgain";
-            ReservationSteps!.ClicksOnComprarButtonAgain();
+            ReservationPage!.ClickOnComprarButtonAgain();
 
             LogStep(Status.Info, "Checking Invalid Phone Number");
             CurrentStep = "Step CheckInvalidPhoneNumber";
-            ReservationSteps!.CheckInvalidPhoneNumber();
+            ReservationPage!.InvalidPhone();
 
             LogStep(Status.Info, "Checking Card Page");
             CurrentStep = "Step CheckCardPage";
-            ReservationSteps!.CheckCardPage();
+            ReservationPage!.IsCardPageDisplayed();
 
             LogStep(Status.Info, "Ticket Purchase With Wrong Phone Test Completed Successfully");
         }
@@ -400,36 +401,37 @@ public class TicketPurchaseBaseTest : BaseTest
             HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
-            currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps!.ClickOnRandomMeInteresaButton();*/
+            CurrentStep = "Step ClickRandomMeInteresaButton";
+            HomePageSteps!.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";
-            TicketsSelectionSteps!.SelectDesiredTicket();
+            TicketsSelectionPage!.SelectNumberOfTickets();
 
             LogStep(Status.Info, "Confirmed Date");
             CurrentStep = "Step ConfirmDate";
-            TicketsSelectionSteps!.ConfirmDate();
+            TicketsSelectionPage!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on 'Comprar' Button");
             CurrentStep = "Step ClickComprarButton";
-            TicketsSelectionSteps!.ClickOnComprarButton();
+            TicketsSelectionPage!.ClickOnComprarButton();
 
             LogStep(Status.Info, "Completed Personal Information");
             CurrentStep = "Step CompletePersonalInformation";
-            ReservationSteps!.CompletePersonalInformation();
+            ReservationPage!.CompletePersonalInformation("Adolfo", "Test", "33511838A", "ahan@test.com", "ahan@test.com",
+            "123456789");
 
             LogStep(Status.Info, "Clicked 'Comprar' Button Again");
             CurrentStep = "Step ClicksComprarButtonAgain";
-            ReservationSteps!.ClicksOnComprarButtonAgain();
+            ReservationPage!.ClickOnComprarButtonAgain();
 
             LogStep(Status.Info, "Checking Checkboxes");
             CurrentStep = "Step CheckCheckboxesSelected";
-            ReservationSteps!.CheckCheckboxesSelected();
+            ReservationPage!.AreCheckboxesSelected();
 
             LogStep(Status.Info, "Checking Card Page");
             CurrentStep = "Step CheckCardPage";
-            ReservationSteps!.CheckCardPage();
+            ReservationPage!.IsCardPageDisplayed();
 
             LogStep(Status.Info, "Ticket Purchase Without Checking the Checkboxes Test Completed Successfully");
         }
@@ -452,48 +454,49 @@ public class TicketPurchaseBaseTest : BaseTest
             HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
-            currentStep = "Step ClickRandomMeInteresaButton";
-            homePageSteps!.ClickOnRandomMeInteresaButton();*/
+            CurrentStep = "Step ClickRandomMeInteresaButton";
+            HomePageSteps!.ClickOnRandomMeInteresaButton();*/
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";
-            TicketsSelectionSteps!.SelectDesiredTicket();
+            TicketsSelectionPage!.SelectNumberOfTickets();
 
             LogStep(Status.Info, "Confirmed Date");
             CurrentStep = "Step ConfirmDate";
-            TicketsSelectionSteps!.ConfirmDate();
+            TicketsSelectionPage!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on 'Comprar' Button");
             CurrentStep = "Step ClickComprarButton";
-            TicketsSelectionSteps!.ClickOnComprarButton();
+            TicketsSelectionPage!.ClickOnComprarButton();
 
             LogStep(Status.Info, "Completed Personal Information");
             CurrentStep = "Step CompletePersonalInformation";
-            ReservationSteps!.CompletePersonalInformation();
+            ReservationPage!.CompletePersonalInformation("Adolfo", "Test", "33511838A", "ahan@test.com", "ahan@test.com",
+            "123456789");
 
             LogStep(Status.Info, "Checked Conditions Checkbox");
             CurrentStep = "Step CheckTheConditionsCheckbox";
-            ReservationSteps!.CheckTheConditionsCheckbox();
+            ReservationPage!.CheckConditions();
 
             LogStep(Status.Info, "Checked Privacy Checkbox");
             CurrentStep = "Step CheckThePrivacyCheckbox";
-            ReservationSteps!.CheckThePrivacyCheckbox();
+            ReservationPage!.CheckPrivacy();
 
             LogStep(Status.Info, "Clicked 'Comprar' Button Again");
             CurrentStep = "Step ClicksComprarButtonAgain";
-            ReservationSteps!.ClicksOnComprarButtonAgain();
+            ReservationPage!.ClickOnComprarButtonAgain();
 
             LogStep(Status.Info, "Completed Card Information With Wrong Details");
             CurrentStep = "Step CompleteTheCardWithWrongInformation";
-            CardSteps!.CompleteTheCardWithWrongInformation();
+            CardPage!.CompleteCardInformation("99", "12", "49", "123");
 
             LogStep(Status.Info, "Clicked 'Pagar' Button");
             CurrentStep = "Step ClickPagarButton";
-            CardSteps!.ClickOnPagarButton();
+            CardPage!.ClickOnPagarButton();
 
             LogStep(Status.Info, "Checking for Invalid Card Message");
             CurrentStep = "Step ThenTheTicketPurchaseShouldBeUnsuccessful";
-            CardSteps!.ThenTheTicketPurchaseShouldBeUnsuccessful();
+            CardPage!.ThenTheTicketPurchaseShouldBeUnsuccessful();
 
             LogStep(Status.Info, "Ticket Purchase With Wrong Card Test Completed Successfully");
         }
@@ -512,63 +515,64 @@ public class TicketPurchaseBaseTest : BaseTest
             LogStep(Status.Info, "Starting Random NavBar Purchase Ticket Test");
             
             LogStep(Status.Info, "Navigated to URL");
-            currentStep = "Step GoToURL";
-            homePage!.NavigateToNormalUrl();
+            CurrentStep = "Step GoToURL";
+            HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Me Interesa button");
-            currentStep = "Step ClickRandomMeInteresaButton";
-            homePage!.ClickOnRandomMeInteresaButton();
+            CurrentStep = "Step ClickRandomMeInteresaButton";
+            HomePage!.ClickOnRandomMeInteresaButton();
             
             LogStep(Status.Info, "Clicked on Random NavBar Item");
-            currentStep = "Step SelectRandomNavBar";
+            CurrentStep = "Step SelectRandomNavBar";
             ticketsSelectionPage!.SelectRandomNavBar();
 
             LogStep(Status.Info, "Selected desired ticket");
-            currentStep = "Step SelectDesiredTicket";
-            ticketsSelectionSteps!.SelectDesiredTicket();
+            CurrentStep = "Step SelectDesiredTicket";
+            TicketsSelectionPage!.SelectNumberOfTickets();
 
             LogStep(Status.Info, "Date confirmed");
-            currentStep = "Step ConfirmDate";
-            ticketsSelectionSteps!.ConfirmDate();
+            CurrentStep = "Step ConfirmDate";
+            TicketsSelectionPage!.ConfirmDate();
 
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClickComprarButton";
-            ticketsSelectionSteps!.ClickOnComprarButton();
+            CurrentStep = "Step ClickComprarButton";
+            TicketsSelectionPage!.ClickOnComprarButton();
 
             LogStep(Status.Info, "Completed personal information");
-            currentStep = "Step CompletePersonalInformation";
-            reservationSteps!.CompletePersonalInformation();
+            CurrentStep = "Step CompletePersonalInformation";
+            ReservationPage!.CompletePersonalInformation("Adolfo", "Test", "33511838A", "ahan@test.com", "ahan@test.com",
+            "123456789");
 
             LogStep(Status.Info, "Checked conditions checkbox");
-            currentStep = "Step CheckTheConditionsCheckbox";
-            reservationSteps!.CheckTheConditionsCheckbox();
+            CurrentStep = "Step CheckTheConditionsCheckbox";
+            ReservationPage!.CheckConditions();
 
             LogStep(Status.Info, "Checked privacy checkbox");
-            currentStep = "Step CheckThePrivacyCheckbox";
-            reservationSteps!.CheckThePrivacyCheckbox();
+            CurrentStep = "Step CheckThePrivacyCheckbox";
+            ReservationPage!.CheckPrivacy();
 
             LogStep(Status.Info, "Clicked on Comprar button");
-            currentStep = "Step ClicksComprarButtonAgain";
-            reservationSteps!.ClicksOnComprarButtonAgain();
+            CurrentStep = "Step ClicksComprarButtonAgain";
+            ReservationPage!.ClickOnComprarButtonAgain();
 
             LogStep(Status.Info, "Completed card information");
-            currentStep = "Step CompleteTheCardInformation";
+            CurrentStep = "Step CompleteTheCardInformation";
             cardSteps!.CompleteTheCardInformation();
 
             LogStep(Status.Info, "Clicked on Pagar button");
-            currentStep = "Step ClickPagarButton";
-            cardSteps!.ClickOnPagarButton();
+            CurrentStep = "Step ClickPagarButton";
+            CardPage!.ClickOnPagarButton();
 
             LogStep(Status.Info, "Clicked on Enviar button");
-            currentStep = "Step ClickOnEnviarButton";
+            CurrentStep = "Step ClickOnEnviarButton";
             cardSteps!.ClickOnEnviarButton();
 
             LogStep(Status.Info, "Clicked on Continuar button");
-            currentStep = "Step ClickOnContinuarButton";
+            CurrentStep = "Step ClickOnContinuarButton";
             cardSteps!.ClickOnContinuarButton();
 
             LogStep(Status.Info, "Purchase completed");
-            currentStep = "PurchaseOKMessage";
+            CurrentStep = "PurchaseOKMessage";
             purchaseOkSteps!.PurchaseOkMessage();
 
             LogStep(Status.Info, "Ticket Purchase Successful");

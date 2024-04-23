@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using TicketPurchaseAutomationTest.Base;
 
@@ -10,34 +11,35 @@ public class CardPage(IWebDriver? driver) : BasePage(driver)
     private readonly By enviarBtnElement = By.Id("boton");
     private readonly By continuarBtnElement = By.XPath("/html/body/div[1]/form/div[2]/div[3]/div[2]/div[1]/input[2]");
 
-    public void CompleteCardInformation(string cardNumber, string expirationMonth, string expirationYear, string securityCode)
-{
-    var cardInfo = new Dictionary<By, string>
+    public void CompleteCardInformation(string cardNumber, string expirationMonth, string expirationYear,
+        string securityCode)
     {
-        { By.XPath("//*[@id=\"inputCard\"]"), cardNumber },
-        { By.XPath("//*[@id=\"cad1\"]"), expirationMonth },
-        { By.XPath("//*[@id=\"cad2\"]"), expirationYear },
-        { By.XPath("//*[@id=\"codseg\"]"), securityCode }
-    };
+        var cardInfo = new Dictionary<By, string>
+        {
+            { By.XPath("//*[@id=\"inputCard\"]"), cardNumber },
+            { By.XPath("//*[@id=\"cad1\"]"), expirationMonth },
+            { By.XPath("//*[@id=\"cad2\"]"), expirationYear },
+            { By.XPath("//*[@id=\"codseg\"]"), securityCode }
+        };
 
-    foreach (var field in cardInfo)
-    {
-        try
+        foreach (var field in cardInfo)
         {
-            var element = FluentWait.Until(ExpectedConditions.ElementIsVisible(field.Key));
-            ClearAndSetInputValue(element, field.Value);
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred while entering card information: {ex.Message}");
+            try
+            {
+                var element = FluentWait.Until(ExpectedConditions.ElementIsVisible(field.Key));
+                ClearAndSetInputValue(element, field.Value);
+            }
+            catch (NoSuchElementException ex)
+            {
+                Console.WriteLine($"Element not found: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while entering card information: {ex.Message}");
+            }
         }
     }
-}
-    
+
     public void ClickOnPagarButton()
     {
         try
@@ -54,30 +56,13 @@ public class CardPage(IWebDriver? driver) : BasePage(driver)
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
     }
-    
+
     public void ClickOnEnviarButton()
     {
         try
         {
             var enviarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(enviarBtnElement));
-            enviarButton.Click(); 
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred: {ex.Message}");
-        }
-    }
-    
-    public void ClickOnContinuarButton()
-    {
-        try
-        {
-            var continuarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(continuarBtnElement));
-            continuarButton.Click(); 
+            enviarButton.Click();
         }
         catch (NoSuchElementException ex)
         {
@@ -89,26 +74,46 @@ public class CardPage(IWebDriver? driver) : BasePage(driver)
         }
     }
 
-    public bool IsPurchaseUnsuccessful()
+    public void ClickOnContinuarButton()
     {
         try
         {
+            var continuarButton = FluentWait.Until(ExpectedConditions.ElementToBeClickable(continuarBtnElement));
+            continuarButton.Click();
+        }
+        catch (NoSuchElementException ex)
+        {
+            Console.WriteLine($"Element not found: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+    }
+
+    public void ThenTheTicketPurchaseShouldBeUnsuccessful()
+    {
+        try
+        {
+            Thread.Sleep(TimeSpan.FromSeconds(2));
             FluentWait.Until(ExpectedConditions.AlertIsPresent());
 
             var alert = Driver!.SwitchTo().Alert();
 
             var text = alert.Text;
 
-            if (!text.Contains("Debe Introducir un número de tarjeta válido (sin espacios ni guiones).")) return false;
+            if (text.Contains("Debe Introducir un número de tarjeta válido (sin espacios ni guiones).")) return;
             alert.Accept();
-            return true;
-
+            Assert.Pass("The ticket purchase was unsuccessful");
+        }
+        catch (NoAlertPresentException)
+        {
+            Console.WriteLine("No alert was present, indicating that the ticket purchase was successful.");
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Console.WriteLine($"An unexpected error occurred: {e}");
             throw;
         }
     }
-
 }

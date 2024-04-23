@@ -15,6 +15,7 @@ public class SessionPage(IWebDriver? driver) : BasePage(driver)
         "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy j-button-buy']");
     private readonly By sessionDropdownElement = By.XPath("//select[@class='form-select form-select-sm']");
     private const string ExpectedMessage = "Selecciona la sesión";
+    private readonly By pendingDataElement = By.XPath("//h5[text()='Datos pendientes']");
 
     public bool VerifySessionMessage()
     {
@@ -65,6 +66,19 @@ public class SessionPage(IWebDriver? driver) : BasePage(driver)
         catch (Exception ex)
         {
             Console.WriteLine($"An error occurred while clicking on 'Comprar' button in Session Page: {ex.Message}");
+        }
+    }
+
+    public void VerifyPendingDataMessage()
+    {
+        var pendingDataMessage = FluentWait.Until(ExpectedConditions.ElementIsVisible(pendingDataElement));
+        if (pendingDataMessage.Displayed)
+        {
+            Assert.Pass("Pending data message is displayed, which is expected");
+        }
+        else
+        {
+            Console.WriteLine("Pending data message is not displayed, as unexpected");
         }
     }
 }

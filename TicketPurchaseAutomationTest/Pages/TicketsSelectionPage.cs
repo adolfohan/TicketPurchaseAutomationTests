@@ -10,18 +10,22 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
     private readonly SessionPage sessionPage = new(driver);
     private readonly AdvancedDateSelectorPage advancedDateSelectorPage = new(driver);
     private readonly Error500Page error500Page = new(driver);
-    
+
     private static By inputNumberOfTicketsElement => By.XPath("//input[@type='number']");
-    
+
     private readonly By confirmationButtonElement =
         By.XPath("//button[@class='btn sv-button--type-contained sv-button--color-secondary']");
-    
+
     private readonly By comprarButton =
         By.XPath(
             "//button[@class='sv-button sv-button--type-contained sv-button--color-primary sv-button--size-lg sv-button--buy']");
+
     private readonly By error500Element = By.XPath("//div[@class='sv-page404__title' and text()='Error 500']");
+
     //private readonly By priceElement = By.ClassName("sv-cart__price");
-    private readonly By panelWrapperElement = By.XPath("//a[@class='collapsed sv-panel__wrapper' and @aria-expanded='false']");
+    private readonly By panelWrapperElement =
+        By.XPath("//a[@class='collapsed sv-panel__wrapper' and @aria-expanded='false']");
+
     private readonly By navBarElement = By.Id("funnelmenu");
     private readonly By sessionMessageElement = By.XPath("//div[@class='s-panel-sessions__heading']");
 
@@ -44,55 +48,34 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
             }
         }*/
     }
-    
-    public void SelectNumberOfTickets(string numberOfTickets, int maxAttempts = 10)
-{
-    for (var attempts = 0; attempts < maxAttempts; attempts++)
+
+    public void SelectNumberOfTickets()
     {
-        try
-        {
-            var inputFields = FluentWait.Until(webDriver => webDriver!.FindElements(inputNumberOfTicketsElement));
-            if (inputFields.Count == 0) continue;
+        var inputFields = FluentWait.Until(webDriver => webDriver!.FindElements(inputNumberOfTicketsElement));
 
-            var selectedInputField = inputFields.FirstOrDefault(field => field.Displayed);
-            if (selectedInputField == null) continue;
+        var random = new Random();
 
-            ScrollIntoView(selectedInputField);
-            ClearAndSetInputValue(selectedInputField, numberOfTickets);
-            return;
-        }
-        catch (WebDriverTimeoutException ex)
-        {
-            Console.WriteLine($"Timeout error: {ex.Message}");
-        }
-        catch (NoSuchElementException ex)
-        {
-            Console.WriteLine($"Element not found: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"An error occurred: {ex.Message}");
-        }
+        if (inputFields.Count <= 0) return;
+        var selectedInputField = inputFields.FirstOrDefault(field => field.Displayed);
+        
+        var randomTicketNumber = random.Next(1, 6); 
+        Thread.Sleep(TimeSpan.FromSeconds(1));
+        ClearAndSetInputValue(selectedInputField!, randomTicketNumber.ToString());
     }
 
-    Console.WriteLine("Max attempts reached, could not select number of tickets");
-}
-    
     public void ConfirmDate()
     {
-        var confirmationBox = FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmationButtonElement));
-
-        var confirmButton = confirmationBox.FindElement(confirmationButtonElement);
-        confirmButton.Click();
+        FluentWait.Until(ExpectedConditions.ElementIsVisible(confirmationButtonElement)).Click();
+        Thread.Sleep(TimeSpan.FromSeconds(1));
     }
-    
+
     public void ClickOnComprarButton()
     {
         try
         {
             var comprarBtn = FluentWait.Until(ExpectedConditions.ElementToBeClickable(comprarButton));
             comprarBtn.Click();
-        
+
             /*while (true)
             {
                 try
@@ -137,6 +120,7 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
                         selectedNavBarItem.Click();
                     }
                 }
+
                 Driver!.Navigate().Back();
                 homePage.ClickOnRandomMeInteresaButton();
             }
