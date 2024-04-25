@@ -17,7 +17,6 @@ public class BaseTest
     protected TicketsSelectionPage? TicketsSelectionPage;
     protected SessionPage? SessionPage;
     protected AdvancedDateSelectorPage? AdvancedDateSelectorPage;
-    protected SeatingPage? SeatingPage;
     protected ReservationPage? ReservationPage;
     protected CardPage? CardPage;
     protected PurchaseOkPage? PurchaseOkPage;
@@ -39,7 +38,6 @@ public class BaseTest
         TicketsSelectionPage = new TicketsSelectionPage(driver);
         SessionPage = new SessionPage(driver);
         AdvancedDateSelectorPage = new AdvancedDateSelectorPage(driver);
-        SeatingPage = new SeatingPage(driver);
         ReservationPage = new ReservationPage(driver);
         CardPage = new CardPage(driver);
         PurchaseOkPage = new PurchaseOkPage(driver);
