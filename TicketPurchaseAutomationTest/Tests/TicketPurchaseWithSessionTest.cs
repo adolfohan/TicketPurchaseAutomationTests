@@ -12,10 +12,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
     {
         try
         {
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToSessionUrl();
-
             CommonSessionPurchaseSteps();
             
             LogStep(Status.Info, "Completed personal information");
@@ -71,10 +67,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
         {
             LogStep(Status.Info, "Starting Purchase with Personal Information in Blank Test");
 
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToSessionUrl();
-
             CommonSessionPurchaseSteps();
 
             LogStep(Status.Info, "Personal Information in Blank");
@@ -117,12 +109,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Name And Surname");
 
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToSessionUrl();
-
-            CommonSessionPurchaseSteps();
-
             LogStep(Status.Info, "Entered Wrong Name And Surname");
             CurrentStep = "Step WrongNameAndSurname";
             ReservationPage!.CompletePersonalInformation("2165!", "15646456!", "33511838A", "ahan@test.com",
@@ -164,10 +150,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
         try
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong ID");
-
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToSessionUrl();
 
             CommonSessionPurchaseSteps();
 
@@ -213,10 +195,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Email");
 
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToSessionUrl();
-
             CommonSessionPurchaseSteps();
 
             LogStep(Status.Info, "Entered Wrong Email");
@@ -259,10 +237,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
         try
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Email");
-
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToSessionUrl();
 
             CommonSessionPurchaseSteps();
 
@@ -307,10 +281,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Phone");
 
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToSessionUrl();
-
             CommonSessionPurchaseSteps();
 
             LogStep(Status.Info, "Entered Wrong Phone Number");
@@ -354,10 +324,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
         {
             LogStep(Status.Info, "Starting Ticket Purchase Without Checking the Checkboxes");
 
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToSessionUrl();
-
             CommonSessionPurchaseSteps();
 
             LogStep(Status.Info, "Completed Personal Information");
@@ -393,10 +359,6 @@ public class TicketPurchaseWithSessionTest : BaseTest
         try
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Card");
-
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToSessionUrl();
 
             CommonSessionPurchaseSteps();
 

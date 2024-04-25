@@ -14,10 +14,6 @@ public class TicketPurchaseBaseTest : BaseTest
         {
             LogStep(Status.Info, "Starting Purchase Normal Ticket Test");
 
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToNormalUrl();
-
             CommonNormalPurchaseSteps();
         }
         catch (Exception ex)
@@ -33,10 +29,6 @@ public class TicketPurchaseBaseTest : BaseTest
         try
         {
             LogStep(Status.Info, "Starting Purchase with Personal Information in Blank Test");
-
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Me Interesa button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
@@ -94,10 +86,6 @@ public class TicketPurchaseBaseTest : BaseTest
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Name And Surname");
 
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToNormalUrl();
-
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
@@ -154,11 +142,7 @@ public class TicketPurchaseBaseTest : BaseTest
         try
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong ID");
-
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToNormalUrl();
-
+            
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
@@ -215,10 +199,6 @@ public class TicketPurchaseBaseTest : BaseTest
         try
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Email");
-
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
@@ -336,10 +316,6 @@ public class TicketPurchaseBaseTest : BaseTest
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Phone");
 
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToNormalUrl();
-
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
@@ -396,10 +372,6 @@ public class TicketPurchaseBaseTest : BaseTest
         {
             LogStep(Status.Info, "Starting Ticket Purchase Without Checking the Checkboxes");
 
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToNormalUrl();
-
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
@@ -448,10 +420,6 @@ public class TicketPurchaseBaseTest : BaseTest
         try
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Card");
-
-            LogStep(Status.Info, "Navigating to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
@@ -513,10 +481,6 @@ public class TicketPurchaseBaseTest : BaseTest
         try
         {
             LogStep(Status.Info, "Starting Random NavBar Purchase Ticket Test");
-            
-            LogStep(Status.Info, "Navigated to URL");
-            CurrentStep = "Step GoToURL";
-            HomePage!.NavigateToNormalUrl();
 
             /*LogStep(Status.Info, "Clicked on Me Interesa button");
             CurrentStep = "Step ClickRandomMeInteresaButton";

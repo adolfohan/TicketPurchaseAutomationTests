@@ -38,11 +38,11 @@ public class HomePage(IWebDriver? driver) : BasePage(driver)
         List<string> normalTickets =
         [
             "Entradas-PortAventura-Park",
-            //"Puy-du-Fou-Combinada-Parque-Sueno-Toledo",
-            "Entradas-Isla-Magica",
-            "Entradas-Cabarceno",
-            "parqueatraccionesmadrid",
-            "acuariozaragoza"
+            "Puy-du-Fou-Combinada-Parque-Sueno-Toledo",
+            //"Entradas-Isla-Magica",
+            //"Entradas-Cabarceno",
+            //"parqueatraccionesmadrid",
+            //"acuariozaragoza"
         ];
 
         var normalTicket = normalTickets[Random.Next(normalTickets.Count)];

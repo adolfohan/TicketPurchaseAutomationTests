@@ -140,6 +140,10 @@ public class BaseTest
         /*LogStep(Status.Info, "Clicked Me Interesa button");
         currentStep = "Step ClickRandomMeInteresaButton";
         homePage.ClickOnRandomMeInteresaButton();*/
+        
+        LogStep(Status.Info, "Navigating to URL");
+        CurrentStep = "Step GoToURL";
+        HomePage!.NavigateToNormalUrl();
 
         LogStep(Status.Info, "Selected desired ticket");
         CurrentStep = "Step SelectDesiredTicket";
@@ -195,6 +199,10 @@ public class BaseTest
 
     protected void CommonSessionPurchaseSteps()
     {
+        LogStep(Status.Info, "Navigating to URL");
+        CurrentStep = "Step GoToURL";
+        HomePage!.NavigateToSessionUrl();
+        
         LogStep(Status.Info, "Selected desired ticket");
         CurrentStep = "Step SelectDesiredTicket";
         TicketsSelectionPage!.SelectNumberOfTickets();
@@ -222,6 +230,10 @@ public class BaseTest
 
     protected void CommonAdvancedDateSelectorPurchaseSteps()
     {
+        LogStep(Status.Info, "Navigating to URL");
+        CurrentStep = "Step GoToURL";
+        HomePage!.NavigateToAdvancedDateSelectorUrl();
+        
         LogStep(Status.Info, "Selected desired ticket");
         CurrentStep = "Step SelectDesiredTicket";
         TicketsSelectionPage!.SelectNumberOfTickets();

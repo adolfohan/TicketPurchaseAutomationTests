@@ -57,8 +57,8 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
 
         if (inputFields.Count <= 0) return;
         var selectedInputField = inputFields.FirstOrDefault(field => field.Displayed);
-        
-        var randomTicketNumber = random.Next(1, 6); 
+
+        var randomTicketNumber = random.Next(1, 6);
         Thread.Sleep(TimeSpan.FromSeconds(1));
         ClearAndSetInputValue(selectedInputField!, randomTicketNumber.ToString());
     }
