@@ -33,7 +33,7 @@ public abstract class ExtentManager
         htmlReporter.Config.DocumentTitle = testName + " Report";
         htmlReporter.Config.ReportName = testName + " Test Report";
 
-        //CleanUpOldSReports();
+        CleanUpOldSReports();
             
         return _extent;
     }
