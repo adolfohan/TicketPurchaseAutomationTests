@@ -56,5 +56,8 @@ steps:
       artifactName: 'TestArtifacts'
 
   - script: |
-      curl -X POST -H "Content-type: application/json" --data "{ \"text\": \"Voutick\" }" https://hooks.slack.com/services/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
-    displayName: 'Send report to Slack'
+      for file in $(Build.ArtifactStagingDirectory)/Reports/*.html
+      do
+        curl -F file=@$file -F "initial_comment=Informe de pruebas" -F channels=test -H "Authorization: Bearer k6lrGc8TGUFdvywqmt5qLQrH" https://slack.com/api/files.upload
+      done
+    displayName: 'Enviar informes a Slack'
