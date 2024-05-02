@@ -61,6 +61,7 @@ public class TicketsSelectionPage(IWebDriver? driver) : BasePage(driver)
         var randomTicketNumber = random.Next(1, 6);
         Thread.Sleep(TimeSpan.FromSeconds(1));
         ClearAndSetInputValue(selectedInputField!, randomTicketNumber.ToString());
+        Thread.Sleep(TimeSpan.FromSeconds(1));
     }
 
     public void ConfirmDate()
