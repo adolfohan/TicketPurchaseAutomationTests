@@ -54,10 +54,3 @@ steps:
     inputs:
       pathToPublish: '$(Build.ArtifactStagingDirectory)'
       artifactName: 'TestArtifacts'
-
-  - script: |
-      for file in $(Build.ArtifactStagingDirectory)/Reports/*.html
-      do
-        curl -F file=@"$file" -F "initial_comment=Informe de pruebas" -F channels=test -H "Authorization: Bearer k6lrGc8TGUFdvywqmt5qLQrH" https://slack.com/api/files.upload
-      done
-    displayName: 'Enviar informes a Slack'
