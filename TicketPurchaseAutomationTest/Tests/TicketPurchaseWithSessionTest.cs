@@ -108,6 +108,8 @@ public class TicketPurchaseWithSessionTest : BaseTest
         try
         {
             LogStep(Status.Info, "Starting Ticket Purchase With Wrong Name And Surname");
+            
+            CommonSessionPurchaseSteps();
 
             LogStep(Status.Info, "Entered Wrong Name And Surname");
             CurrentStep = "Step WrongNameAndSurname";

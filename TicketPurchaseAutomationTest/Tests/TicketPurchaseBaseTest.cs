@@ -33,6 +33,10 @@ public class TicketPurchaseBaseTest : BaseTest
             /*LogStep(Status.Info, "Clicked on Me Interesa button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
+            
+            LogStep(Status.Info, "Navigating to URL");
+            CurrentStep = "Step GoToURL";
+            HomePage!.NavigateToNormalUrl();
 
             LogStep(Status.Info, "Selected desired ticket");
             CurrentStep = "Step SelectDesiredTicket";
@@ -89,6 +93,10 @@ public class TicketPurchaseBaseTest : BaseTest
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
+            
+            LogStep(Status.Info, "Navigating to URL");
+            CurrentStep = "Step GoToURL";
+            HomePage!.NavigateToNormalUrl();
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";
@@ -146,6 +154,10 @@ public class TicketPurchaseBaseTest : BaseTest
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
+            
+            LogStep(Status.Info, "Navigating to URL");
+            CurrentStep = "Step GoToURL";
+            HomePage!.NavigateToNormalUrl();
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";
@@ -319,6 +331,10 @@ public class TicketPurchaseBaseTest : BaseTest
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
+            
+            LogStep(Status.Info, "Navigating to URL");
+            CurrentStep = "Step GoToURL";
+            HomePage!.NavigateToNormalUrl();
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";
@@ -375,6 +391,10 @@ public class TicketPurchaseBaseTest : BaseTest
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
+            
+            LogStep(Status.Info, "Navigating to URL");
+            CurrentStep = "Step GoToURL";
+            HomePage!.NavigateToNormalUrl();
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";
@@ -424,6 +444,10 @@ public class TicketPurchaseBaseTest : BaseTest
             /*LogStep(Status.Info, "Clicked on Random 'Me Interesa' Button");
             CurrentStep = "Step ClickRandomMeInteresaButton";
             HomePageSteps!.ClickOnRandomMeInteresaButton();*/
+            
+            LogStep(Status.Info, "Navigating to URL");
+            CurrentStep = "Step GoToURL";
+            HomePage!.NavigateToNormalUrl();
 
             LogStep(Status.Info, "Selected Desired Ticket");
             CurrentStep = "Step SelectDesiredTicket";

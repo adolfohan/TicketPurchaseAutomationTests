@@ -1,0 +1,49 @@
+<changelist name="Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]" date="1714645709664" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2/5/2024 12:28 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="TicketPurchaseAutomationTest/bin/Debug/net7.0/chromedriver.exe" />
+    <option name="AFTER_PATH" value="TicketPurchaseAutomationTest/bin/Debug/net7.0/chromedriver.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/chromedriver.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" />
+    <option name="AFTER_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/TicketPurchaseAutomationTest.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.CoreCompileInputs.cache" />
+    <option name="AFTER_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.csproj.CoreCompileInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/TicketPurchaseAutomationTest.csproj.CoreCompileInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" />
+    <option name="AFTER_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/ref/TicketPurchaseAutomationTest.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/TicketPurchaseAutomationTest.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfoInputs.cache" />
+    <option name="AFTER_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.AssemblyInfoInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/TicketPurchaseAutomationTest.AssemblyInfoInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" />
+    <option name="AFTER_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/TicketPurchaseAutomationTest.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/TicketPurchaseAutomationTest1.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" />
+    <option name="AFTER_PATH" value="TicketPurchaseAutomationTest/obj/Debug/net7.0/refint/TicketPurchaseAutomationTest.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/TicketPurchaseAutomationTest2.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" />
+    <option name="AFTER_PATH" value="TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/TicketPurchaseAutomationTest1.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" />
+    <option name="AFTER_PATH" value="TicketPurchaseAutomationTest/bin/Debug/net7.0/TicketPurchaseAutomationTest.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.TicketPurchaseAutomationTest/.idea/shelf/Uncommitted_changes_before_Update_at_2_5_2024_12_28_[Changes]/TicketPurchaseAutomationTest3.dll" />
+  </binary>
+</changelist>
